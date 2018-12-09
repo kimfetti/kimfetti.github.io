@@ -60,17 +60,17 @@
 #  - title: "Roadmap"
 #    url: "/roadmap/"
 
-- title: Blog
+- title: Blog Posts
   url: "/blog/"
   side: left
-#  dropdown:
-#  - title: "Blog Archive"
-#    url: "/blog/archive/"
+  dropdown:
+  - title: "Blog Archive"
+    url: "/blog/archive/"
 
-#- title: "Search"
-#  url: "/search/"
-#  side: right
+- title: "About"
+  url: "/info/"
+  side: right
 
-- title: "Contact"
+- title: Contact
   url: "/contact/"
   side: right

@@ -1,12 +1,17 @@
 - menu_name: "Extras"
 
+- name: "About Metis"
+  url: "https://www.thisismetis.com"
+  title: "Learn more about Metis"
+
+- name: "About Kimberly"
+  url: "/info/"
+  title: "Learn more about Kimberly"
+
 - name: "Contact"
   url: "/contact/"
   title: "Contact"
 
-- name: "Metis"
-  url: "https://www.thisismetis.com"
-  title: "This is Metis"
 
 #
 #- name: "RSS"
