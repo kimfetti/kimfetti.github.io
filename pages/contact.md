@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "Contact"
-meta_title: "Contact and use our contact form"
+meta_title: "Contact by using contact form"
 subheadline: ""
-teaser: "Want to get in touch? Use the contact form."
+teaser: ""
 permalink: "/contact/"
 ---
 
