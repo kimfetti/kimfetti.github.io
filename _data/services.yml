@@ -1,17 +1,22 @@
-- menu_name: "Services"
+- menu_name: "Extras"
 
 - name: "Contact"
   url: "/contact/"
   title: "Contact"
 
-- name: "RSS"
-  url: "/feed.xml"
-  title: "Subscribe to RSS Feed"
+- name: "Metis"
+  url: "https://www.thisismetis.com"
+  title: "This is Metis"
 
-- name: "Atom"
-  url: "/atom.xml"
-  title: "Subscribe to Atom Feed"
-
-- name: "sitemap.xml"
-  url: "/sitemap.xml"
-  title: "Sitemap for Google Webmaster Tools"
+#
+#- name: "RSS"
+#  url: "/feed.xml"
+#  title: "Subscribe to RSS Feed"
+#
+#- name: "Atom"
+#  url: "/atom.xml"
+#  title: "Subscribe to Atom Feed"
+#
+#- name: "sitemap.xml"
+#  url: "/sitemap.xml"
+#  title: "Sitemap for Google Webmaster Tools"
