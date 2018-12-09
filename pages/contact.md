@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Contact"
-meta_title: "Contact by using contact form"
+meta_title: "Contact Kimberly"
 subheadline: ""
 teaser: ""
 permalink: "/contact/"
