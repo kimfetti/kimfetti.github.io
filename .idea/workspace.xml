@@ -2,30 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/_head.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/_head.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/design/2015-08-16-typography.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/design/2015-08-16-typography.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/xslt/atom.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/xslt/atom.xslt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/xslt/rss.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/xslt/rss.xslt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/index_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/changelog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/changelog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/design/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/design/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/design/typography/typography/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/design/typography/typography/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/documentation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/documentation/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/getting-started/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/getting-started/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/headers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/headers/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/info/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/info/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/pages/info_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/info_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/roadmap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/roadmap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/search/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,28 +29,31 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="14" />
-          <entry key="md" value="9" />
+          <entry key="jpg" value="8" />
+          <entry key="md" value="10" />
+          <entry key="png" value="7" />
           <entry key="scss" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="14" />
-          <entry key="Markdown" value="9" />
+          <entry key="Image" value="15" />
+          <entry key="Markdown" value="10" />
           <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="39" />
-          <entry key="md" value="182" />
+          <entry key="md" value="630" />
           <entry key="scss" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="39" />
-          <entry key="Markdown" value="182" />
+          <entry key="Markdown" value="630" />
           <entry key="PLAIN_TEXT" value="42" />
         </counts>
       </usages-collector>
@@ -74,87 +61,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/_head.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-              <folding>
-                <element signature="e#1528#1655#0" />
-                <element signature="e#1658#1802#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/design/2015-08-16-typography.md">
+        <entry file="file://$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="476">
-                <caret line="48" column="79" selection-start-line="48" selection-start-column="79" selection-end-line="48" selection-end-column="79" />
-                <folding>
-                  <element signature="e#3007#3035#0" />
-                  <element signature="e#3211#3265#0" />
-                  <element signature="e#3267#3398#0" />
-                  <element signature="e#3401#3435#0" />
-                  <element signature="e#3695#3730#0" />
-                  <element signature="e#3980#3996#0" />
-                  <element signature="e#4160#4224#0" />
-                  <element signature="e#4226#4472#0" />
-                  <element signature="e#4476#4501#0" />
-                  <element signature="e#4600#4630#0" />
-                  <element signature="e#4638#4669#0" />
-                  <element signature="e#4670#4768#0" />
-                  <element signature="e#4771#4803#0" />
-                  <element signature="e#4880#4929#0" />
-                  <element signature="e#4931#5031#0" />
-                  <element signature="e#5034#5062#0" />
-                  <element signature="e#5064#5372#0" />
-                  <element signature="e#5122#5333#0" />
-                  <element signature="e#5220#5333#0" />
-                  <element signature="e#5375#5405#0" />
-                  <element signature="e#5407#5706#0" />
-                  <element signature="e#5463#5669#0" />
-                  <element signature="e#5558#5669#0" />
-                  <element signature="e#5708#5739#0" />
-                  <element signature="e#5741#5945#0" />
-                  <element signature="e#5947#6130#0" />
-                  <element signature="e#6132#6582#0" />
-                  <element signature="e#6585#6598#0" />
-                  <element signature="e#6638#6652#0" />
-                  <element signature="e#6713#6731#0" />
-                  <element signature="e#6766#6783#0" />
-                  <element signature="e#6822#6835#0" />
-                  <element signature="e#6914#6930#0" />
-                  <element signature="e#6964#6977#0" />
-                  <element signature="e#7071#7086#0" />
-                  <element signature="e#7169#7185#0" />
-                  <element signature="e#7266#7282#0" />
-                  <element signature="e#7361#7377#0" />
-                  <element signature="e#7421#7436#0" />
-                  <element signature="e#7512#7528#0" />
-                  <element signature="e#7608#7623#0" />
-                  <element signature="e#7717#7732#0" />
-                  <element signature="e#7784#7799#0" />
-                  <element signature="e#7853#7866#0" />
-                  <element signature="e#7897#7910#0" />
-                  <element signature="e#7944#7957#0" />
-                  <element signature="e#8072#8088#0" />
-                  <element signature="e#8146#8160#0" />
-                  <element signature="e#8208#8220#0" />
-                  <element signature="e#8722#8946#0" />
-                  <element signature="e#8948#8979#0" />
-                  <element signature="e#8981#9013#0" />
-                  <element signature="e#9015#9048#0" />
-                  <element signature="e#9050#9084#0" />
-                  <element signature="e#9086#9121#0" />
-                  <element signature="e#9162#9171#0" />
-                </folding>
+              <first_editor relative-caret-position="105">
+                <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/header5.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -185,10 +106,11 @@
         <option value="$PROJECT_DIR$/pages/contact.md" />
         <option value="$PROJECT_DIR$/_includes/_head.html" />
         <option value="$PROJECT_DIR$/_posts/design/2015-08-16-typography.md" />
+        <option value="$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1440" />
     <option name="height" value="813" />
@@ -216,6 +138,11 @@
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
               <item name="design" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -226,6 +153,11 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts/design" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -253,7 +185,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -387,22 +319,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/_head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="e#1528#1655#0" />
-            <element signature="e#1658#1802#0" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/images/icon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/mediaplayer_js-home.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/mediaplayer_js-thumb.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/mediaplayer_js-title.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/homepage_typography-thumb.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/homepage_typography.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/design/2015-08-16-typography.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="476">
-            <caret line="48" column="79" selection-start-line="48" selection-start-column="79" selection-end-line="48" selection-end-column="79" />
+          <first_editor relative-caret-position="255">
+            <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
             <folding>
               <element signature="e#3007#3035#0" />
               <element signature="e#3211#3265#0" />
@@ -461,6 +400,42 @@
               <element signature="e#9086#9121#0" />
               <element signature="e#9162#9171#0" />
             </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/birthday_planet_thumb.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/_head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="e#1528#1655#0" />
+            <element signature="e#1658#1802#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/header5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/nyc_night.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/nyc_bw.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/birthday_planet_header.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="105">
+            <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
           </first_editor>
           <second_editor />
         </state>
