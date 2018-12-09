@@ -60,12 +60,12 @@
 #  - title: "Roadmap"
 #    url: "/roadmap/"
 
-- title: Blog Posts
+- title: Blog
   url: "/blog/"
   side: left
-  dropdown:
-  - title: "Blog Archive"
-    url: "/blog/archive/"
+#  dropdown:
+#  - title: "Blog Archive"
+#    url: "/blog/archive/"
 
 - title: "About"
   url: "/info/"
