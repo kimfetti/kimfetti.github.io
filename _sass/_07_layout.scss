@@ -87,7 +87,7 @@ body.video cite { color: #fff; }
 }
 #masthead-no-image-header #logo img {
     float: right;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 /* Masthead › small-only
@@ -123,7 +123,7 @@ body.video cite { color: #fff; }
 @media #{$medium-only} {
     #logo img {
         float: right;
-        margin-top: 100px;
+        margin-top: 120px;
     }
     #masthead {
         height: 280px;
@@ -147,7 +147,7 @@ body.video cite { color: #fff; }
 @media #{$large-only} {
     #logo img {
         float: right;
-        margin-top: 120px;
+        margin-top: 140px;
     }
     #masthead {
         height: 310px;
@@ -171,7 +171,7 @@ body.video cite { color: #fff; }
 @media #{$xlarge-up} {
     #logo img {
         float: right;
-        margin-top: 140px;
+        margin-top: 160px;
     }
     #masthead {
         height: 380px;
