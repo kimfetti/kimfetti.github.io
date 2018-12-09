@@ -5,12 +5,12 @@ subheadline: "Analytic Approximations"
 meta_teaser: "Feeling Responsive uses Volkhov for headlines, Lato for everything else and if you are in need to show some code, it will be in Lucida Console."
 teaser: "<em>Feeling Responsive</em> uses <a href='https://www.google.com/fonts/specimen/Volkhov'>Volkhov</a> for headlines, <a href='https://www.google.com/fonts/specimen/Lato'>Lato</a> for everything else and if you are in need to show some code, it will be in <a href='http://www.microsoft.com/typography/fonts/family.aspx?FID=18'>Lucida Console</a> or <a href='http://en.wikipedia.org/wiki/Monaco_(typeface)'>Monaco</a>."
 header:
-    image: planet_tester.jpg
+    image: birthday_planet_header.jpg
     background-color: "#262930"
     caption: "Voyager Montage by NASA. Public Domain. Credit: NASA."
     caption_url: https://www.nasa.gov/index.html
 image:
-    thumb: typewriter-thumb.jpg
+    thumb: birthday_planet_thumb.jpg
     homepage: birthday_planet_header.jpg
     caption: "Credit: NASA"
     caption_url: https://www.nasa.gov/index.html
