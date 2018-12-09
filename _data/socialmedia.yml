@@ -3,7 +3,7 @@
   class: icon-github
   title: "Code and more"
 
-  name: LinkedIn
+- name: LinkedIn
   url: https://www.linkedin.com/in/kimberlyfessel/
   class: icon-linkedin
   title: "Professional profile"
