@@ -46,6 +46,8 @@ When working on Lato, Łukasz tried to carefully balance some potentially confli
 
 The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. “Male and female, serious but friendly. With the feeling of the Summer,” says Łukasz. Learn more at [www.latofonts.com][6]
 
+And you can also test math formulas like \\(\frac{1}{2}\cdot\frac{x^2}{\sqrt{N}}\\)
+
 
 ## About Volkhov &lt;h2&gt; 
 

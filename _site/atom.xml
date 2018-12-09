@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2018-12-09T15:14:32-05:00</updated>
+	<updated>2018-12-09T17:33:17-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -132,6 +132,8 @@
     &lt;p&gt;When working on Lato, Łukasz tried to carefully balance some potentially conflicting priorities. He wanted to create a typeface that would seem quite “transparent” when used in body text but would display some original traits when used in larger sizes. He used classical proportions (particularly visible in the uppercase) to give the letterforms familiar harmony and elegance. At the same time, he created a sleek sans serif look, which makes evident the fact that Lato was designed in 2010 — even though it does not follow any current trend.&lt;/p&gt;
 
     &lt;p&gt;The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. “Male and female, serious but friendly. With the feeling of the Summer,” says Łukasz. Learn more at &lt;a href=&quot;http://www.latofonts.com/&quot;&gt;www.latofonts.com&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;And you can also test math formulas like \(\frac{1}{2}\cdot\frac{x^2}{\sqrt{N}}\)&lt;/p&gt;
 
     &lt;h2 id=&quot;about-volkhov-h2&quot;&gt;About Volkhov &amp;lt;h2&amp;gt;&lt;/h2&gt;
 
