@@ -1,12 +1,12 @@
 ---
 layout: page-fullwidth
-title: "Finding Your Birthday Twin on Mars"
+title: "Finding Birthday (Problem) Twins on Mars"
 subheadline: "Analytic Approximations"
 meta_teaser: "Feeling Responsive uses Volkhov for headlines, Lato for everything else and if you are in need to show some code, it will be in Lucida Console."
 teaser: "<em>Feeling Responsive</em> uses <a href='https://www.google.com/fonts/specimen/Volkhov'>Volkhov</a> for headlines, <a href='https://www.google.com/fonts/specimen/Lato'>Lato</a> for everything else and if you are in need to show some code, it will be in <a href='http://www.microsoft.com/typography/fonts/family.aspx?FID=18'>Lucida Console</a> or <a href='http://en.wikipedia.org/wiki/Monaco_(typeface)'>Monaco</a>."
 header:
     image: birthday_planet_header.jpg
-    background-color: "#262930"
+    background-color: "#999999"
     caption: "Voyager Montage by NASA. Public Domain. Credit: NASA."
     caption_url: https://www.nasa.gov/index.html
 image:
@@ -34,20 +34,43 @@ categories:
 
 <div class="medium-8 medium-pull-4 columns" markdown="1">
 
-## Lato – A Sans Serif Typeface Family
+I was recently tasked with developing a challenge problem for the Metis data science bootcamp.  Perhaps it was my background in math or maybe my penchant for mild torture, but I decided to have students answer a few exercises from [Fifty Challenging Problems with Solutions][1] by Moesteller.  This is book is full of classic problems in probability, and I highly recommend it to anyone prepping for data science interviews!
 
-[<dfn>Lato</dfn>][4] is a sans serif typeface family started in the summer of 2010 by Warsaw-based designer Łukasz Dziedzic. »Lato« means »Summer« in Polish. In December 2010 the Lato family was published under the Open Font License by his foundry tyPoland, with support from Google. 
+One of my favorite sections in this book is the birthday series, which includes a version of the birthday problem.  This problem is about as famous as a probability question can get.  It has been featured on [NPR][2], written about in an [Arthur C. Clarke novel][3], and it even has its [own Wikipedia page][4]! 
 
-> <span class="teaser">I do not think of type as something that should be readable. It should be beautiful.</span><cite>[Ed Benguiat][3]</cite>
+The problem goes something along the lines of:
 
-In the last ten or so years, during which Łukasz has been designing type, most of his projects were rooted in a particular design task that he needed to solve. With Lato, it was no different. Originally, the family was conceived as a set of corporate fonts for a large client — who in the end decided to go in different stylistic direction, so the family became available for a public release.
+> <span class="teaser">You are throwing a party and inviting random people you have never met. What's the fewest number of people you need to invite to have at least 50% probability that two strangers will have the same birthday? (Birth year need not match.)</span>
 
-When working on Lato, Łukasz tried to carefully balance some potentially conflicting priorities. He wanted to create a typeface that would seem quite “transparent” when used in body text but would display some original traits when used in larger sizes. He used classical proportions (particularly visible in the uppercase) to give the letterforms familiar harmony and elegance. At the same time, he created a sleek sans serif look, which makes evident the fact that Lato was designed in 2010 — even though it does not follow any current trend.
+If you haven’t solved this one before, feel free to take a moment and give it a shot.  Be warned -- __spoilers ahead__!
 
-The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. “Male and female, serious but friendly. With the feeling of the Summer,” says Łukasz. Learn more at [www.latofonts.com][6]
+## Solving with Probability
 
-And you can also test math formulas like \\(\frac{1}{2}\cdot\frac{x^2}{\sqrt{N}}\\)
+Rather than the brute force approach, it turns out that the answer can be found much more easily by considering the complementary case; that is, “How many people can you invite to expect a 50% chance that all invited people have unique birthdays?”  This "unsuccessful" probability along with the "successful" probability will sum to one.  
 
+Keeping the complementary case in mind, note that the first person at your party can have their birthday on any calendar day, but after that, each person must have a different day.  Let \\(p_u\\) be the probability that \\(r\\) people each have a different birthday. We find
+\\[p_u = 1 \cdot \frac{N-1}{N} \cdot \frac{N-2}{N} \cdots \frac{N-r-1}{N} = \frac{N!}{(N-r)!N^r}\\]
+where \\(N\\) is the number of days in a year.  
+
+Backtracking to our original birthday problem, we now just need to find the minimum value of \\(r\\) people that satisfy:
+\\[p_{s} = 1 - \frac{N!}{(N-r)!N^r} > \frac{1}{2}\\]
+
+This expression doesn’t look so pleasant to be solved outright, so instead we can build a little solver in Python or the language of your choice to be able to compute \\(p_s\\) for any given \\(r\\) and \\(N\\).  Once we hit the \\(p_s = \frac{1}{2}\\) mark, we have our desired party size!  The table below illustrates the solution \\(r\\) for the 50% probability as well as a few others.
+
+| Party Sizes for Select \\(p_s\\)
+------ | ----- 
+| **\\({p_s}\\)** | \\({r}\\)     
+0.05    | 7
+0.1     | 10 
+0.25    | 15
+**0.5**     | **23**
+0.75    | 32
+0.9     | 41
+0.999   | 70
+
+If we invite just 23 people to our party, we will have a 50-50 chance that at least 2 people will share the same birthday, and inviting 60 or 70 people pretty much guarantees it.  
+
+So it’s plain to see that \\(p_s\\) increases rapidly as our party gets bigger here on Earth.  But this led me to consider: “What would happen if the party took place on, say, Mars or Jupiter?”  Or in less whimsical terms: "How many people would we need if we varied the year length, \\(N\\)?"
 
 ## About Volkhov &lt;h2&gt; 
 
@@ -285,13 +308,13 @@ If you need footnotes for your posts, articles and entries, the Kramdown-Parser 
 
 
 
- [1]: https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list
- [2]: http://phlow.de/
- [3]: http://en.wikipedia.org/wiki/Ed_Benguiat
- [4]: https://www.google.com/fonts/specimen/Lato
- [5]: https://www.google.com/fonts/specimen/Volkhov
- [6]: http://www.latofonts.com/
- [7]: http://modularscale.com/
+ [1]: https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8
+ [2]: https://www.npr.org/templates/story/story.php?storyId=4542341
+ [3]: https://en.wikipedia.org/wiki/A_Fall_of_Moondust
+ [4]: https://en.wikipedia.org/wiki/Birthday_problem
+ [5]: #
+ [6]: #
+ [7]: #
  [8]: #
  [9]: #
  [10]: #

@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/2018-12-09-planetary-birthdays.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/planet_tester.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/planets.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthdays/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthdays/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,30 +33,32 @@
         <counts>
           <entry key="html" value="14" />
           <entry key="jpg" value="8" />
-          <entry key="md" value="10" />
+          <entry key="md" value="11" />
           <entry key="png" value="7" />
           <entry key="scss" value="5" />
+          <entry key="yml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="14" />
           <entry key="Image" value="15" />
-          <entry key="Markdown" value="10" />
+          <entry key="Markdown" value="11" />
           <entry key="PLAIN_TEXT" value="5" />
+          <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="39" />
-          <entry key="md" value="675" />
+          <entry key="md" value="1640" />
           <entry key="scss" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="39" />
-          <entry key="Markdown" value="675" />
+          <entry key="Markdown" value="1640" />
           <entry key="PLAIN_TEXT" value="42" />
         </counts>
       </usages-collector>
@@ -54,11 +67,11 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md">
+        <entry file="file://$PROJECT_DIR$/_drafts/2018-12-09-planetary-birthdays.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="167">
-                <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+              <first_editor relative-caret-position="364">
+                <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
               </first_editor>
               <second_editor />
             </state>
@@ -94,12 +107,14 @@
         <option value="$PROJECT_DIR$/_includes/_head.html" />
         <option value="$PROJECT_DIR$/_posts/design/2015-08-16-typography.md" />
         <option value="$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md" />
+        <option value="$PROJECT_DIR$/_drafts/2018-12-09-planetary-birthdays.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-316" />
     <option name="y" value="23" />
-    <option name="width" value="1440" />
+    <option name="width" value="1541" />
     <option name="height" value="813" />
   </component>
   <component name="ProjectView">
@@ -117,6 +132,11 @@
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_drafts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -128,7 +148,7 @@
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -142,6 +162,9 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_drafts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_posts/design" />
     </key>
@@ -172,11 +195,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="813" extended-state="0" />
+    <frame x="-316" y="23" width="1541" height="813" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24248926" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22615077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" />
@@ -418,11 +441,14 @@
     <entry file="file://$PROJECT_DIR$/images/header5.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/design/2018-12-09-planetary-birthdays.md">
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/2018-12-09-planetary-birthdays.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="167">
-            <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+          <first_editor relative-caret-position="364">
+            <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
           </first_editor>
           <second_editor />
         </state>
