@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2018-12-09T20:13:10-05:00</updated>
+	<updated>2018-12-10T10:22:27-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -27,8 +27,8 @@
 	
 		<entry>
 			<id>http://localhost:4000//design/typography/typography/</id>
-			<title>Wonderful Typography</title>
-			<link href="http://localhost:4000//design/typography/typography/" rel="alternate" type="text/html" title="Wonderful Typography" />
+			<title>Default Post</title>
+			<link href="http://localhost:4000//design/typography/typography/" rel="alternate" type="text/html" title="Default Post" />
 			<updated>2015-08-16T00:00:00-04:00</updated>
 
 			
