@@ -1,12 +1,13 @@
-- name: GitHub
-  url: http://github.com/kimfetti
-  class: icon-github
-  title: "Code and more"
 
 - name: LinkedIn
   url: https://www.linkedin.com/in/kimberlyfessel/
   class: icon-linkedin
   title: "Professional profile"
+
+- name: GitHub
+  url: http://github.com/kimfetti
+  class: icon-github
+  title: "Code and more"
 
 
 #- name: YouTube

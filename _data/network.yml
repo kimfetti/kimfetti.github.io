@@ -1,9 +1,9 @@
 - menu_name: "Thank You"
 
-- name: "Headshots @ CP"
+- name: "Photoshoot @ CP"
   url: "http://www.connellypartners.com/who-we-are/"
   class: "network-entypo"
-  title: "Headshots @ CP"
+  title: "Photoshoot @ CP"
 
 #- name: "Built on Foundation"
 #  url: "http://foundation.zurb.com/"
