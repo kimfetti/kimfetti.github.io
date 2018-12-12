@@ -1,9 +1,9 @@
 ---
 layout: page-fullwidth
-title: "Finding Birthday (Problem) Twins on Mars"
+title: "Finding Birthday Problem Twins on Mars"
 subheadline: "Analytic Approximations"
-meta_teaser: "Feeling Responsive uses Volkhov for headlines, Lato for everything else and if you are in need to show some code, it will be in Lucida Console."
-teaser: "<em>Feeling Responsive</em> uses <a href='https://www.google.com/fonts/specimen/Volkhov'>Volkhov</a> for headlines, <a href='https://www.google.com/fonts/specimen/Lato'>Lato</a> for everything else and if you are in need to show some code, it will be in <a href='http://www.microsoft.com/typography/fonts/family.aspx?FID=18'>Lucida Console</a> or <a href='http://en.wikipedia.org/wiki/Monaco_(typeface)'>Monaco</a>."
+meta_teaser: "_The birthday problem is a classic probability question with a surprising result.  In this post, we will not only solve this classic but also consider how the solution differs for every planet in our solar system._"
+ser: ''
 header:
     image: birthday_planet_header.jpg
     background-color: "#999999"
@@ -59,11 +59,11 @@ This expression doesn’t look so pleasant to be solved outright, so instead we 
 
 | Party Sizes for Select \\(p_s\\)
 ------ | ----- 
-| **\\({p_s}\\)** | \\({r}\\)     
+| \\({p_s}\\) | \\({r}\\)     
 0.05    | 7
 0.1     | 10 
 0.25    | 15
-**0.5**     | **23**
+**0.5** | **23**
 0.75    | 32
 0.9     | 41
 0.999   | 70

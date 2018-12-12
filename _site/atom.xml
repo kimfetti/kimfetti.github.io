@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2018-12-10T10:22:27-05:00</updated>
+	<updated>2018-12-12T17:30:28-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -24,6 +24,133 @@
 
 	<generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator>
 
+	
+		<entry>
+			<id>http://localhost:4000//mathematics/visualizations/planetary-birthday-problem/</id>
+			<title>Finding Birthday Problem Twins on Mars</title>
+			<link href="http://localhost:4000//mathematics/visualizations/planetary-birthday-problem/" rel="alternate" type="text/html" title="Finding Birthday Problem Twins on Mars" />
+			<updated>2018-12-10T00:00:00-05:00</updated>
+
+			
+				
+				<author>
+					
+						<name>KFessel</name>
+					
+					
+					
+				</author>
+			
+			<summary>&lt;em&gt;The birthday problem is a classic probability question with a surprising result.  In this post, we will solve this classic and extend the result by considering how the solution differs for every planet in our solar system.&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//mathematics/visualizations/planetary-birthday-problem/">&lt;!--more--&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+&lt;div class=&quot;medium-4 medium-push-8 columns&quot;&gt;
+    &lt;div class=&quot;panel radius&quot;&gt;
+      &lt;p id=&quot;toc&quot;&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#solving-with-probability&quot; id=&quot;markdown-toc-solving-with-probability&quot;&gt;Solving with Probability&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#planetary-results&quot; id=&quot;markdown-toc-planetary-results&quot;&gt;Planetary Results&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;/div&gt;
+  &lt;/div&gt;&lt;!-- /.medium-4.columns --&gt;
+
+
+
+&lt;div class=&quot;medium-8 medium-pull-4 columns&quot;&gt;
+
+    &lt;p&gt;I was recently tasked with developing a challenge problem for the Metis data science bootcamp.  Perhaps it was my background in math or maybe my penchant for mild torture, but I decided to have students answer a few exercises from [Fifty Challenging Problems with Solutions][1] by Moesteller.  This is book is full of classic problems in probability, and I highly recommend it to anyone prepping for data science interviews!&lt;/p&gt;
+
+    &lt;p&gt;One of my favorite sections in this book is the birthday series, which includes a version of the birthday problem.  This problem is about as famous as a probability question can get.  It has been featured on [NPR][2], written about in an [Arthur C. Clarke novel][3], and it even has its [own Wikipedia page][4]!&lt;/p&gt;
+
+    &lt;p&gt;The problem goes something along the lines of:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;&lt;span class=&quot;teaser&quot;&gt;You are throwing a party and inviting random people you have never met. What’s the fewest number of people you need to invite to have at least 50% probability that two strangers will have the same birthday? (Birth year need not match.)&lt;/span&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;If you haven’t solved this one before, feel free to take a moment and give it a shot.  Be warned – &lt;strong&gt;spoilers ahead&lt;/strong&gt;!&lt;/p&gt;
+
+    &lt;h2 id=&quot;solving-with-probability&quot;&gt;Solving with Probability&lt;/h2&gt;
+
+    &lt;p&gt;Rather than the brute force approach, it turns out that the answer can be found much more easily by considering the complementary case; that is, “How many people can you invite to expect a 50% chance that all invited people have unique birthdays?”  This “unsuccessful” probability along with the “successful” probability will sum to one.&lt;/p&gt;
+
+    &lt;p&gt;Keeping the complementary case in mind, note that the first person at your party can have their birthday on any calendar day, but after that, each person must have a different day.  Let \(p_u\) be the probability that \(r\) people each have a different birthday. We find
+\[p_u = 1 \cdot \frac{N-1}{N} \cdot \frac{N-2}{N} \cdots \frac{N-r-1}{N} = \frac{N!}{(N-r)!N^r}\]
+where \(N\) is the number of days in a year.&lt;/p&gt;
+
+    &lt;p&gt;Backtracking to our original birthday problem, we now just need to find the minimum value of \(r\) people that satisfy:
+\[p_{s} = 1 - \frac{N!}{(N-r)!N^r} &amp;gt; \frac{1}{2}\]&lt;/p&gt;
+
+    &lt;p&gt;This expression doesn’t look so pleasant to be solved outright, so instead we can build a little solver in Python or the language of your choice to be able to compute \(p_s\) for any given \(r\) and \(N\).  Once we hit the \(p_s = \frac{1}{2}\) mark, we have our desired party size!  The table below illustrates the solution \(r\) for the 50% probability as well as a few others.&lt;/p&gt;
+
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Party Sizes for Select \(\boldsymbol{p_s}\)&lt;/th&gt;
+          &lt;th&gt; &lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;\({\boldsymbol{p_s}}\)&lt;/td&gt;
+          &lt;td&gt;\({\boldsymbol{r}}\)&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;0.05&lt;/td&gt;
+          &lt;td&gt;7&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;0.1&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;0.25&lt;/td&gt;
+          &lt;td&gt;15&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;0.5&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;23&lt;/strong&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;0.75&lt;/td&gt;
+          &lt;td&gt;32&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;0.9&lt;/td&gt;
+          &lt;td&gt;41&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;0.999&lt;/td&gt;
+          &lt;td&gt;70&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;p&gt;If we invite just 23 people to our party, we will have a 50-50 chance that at least 2 people will share the same birthday.  Inviting 60 or 70 people pretty much guarantees it.&lt;/p&gt;
+
+    &lt;p&gt;So it’s plain to see that \(p_s\) increases rapidly as our party gets bigger here on Earth.  But this led me to consider: “What would happen if the party took place on, say, Mars or Jupiter?”  Or in less whimsical terms: “How many people would we need if we varied the year length, \(N\)?”&lt;/p&gt;
+
+    &lt;h2 id=&quot;planetary-results&quot;&gt;Planetary Results&lt;/h2&gt;
+
+    &lt;iframe align=&quot;center&quot; width=&quot;600&quot; height=&quot;400&quot; src=&quot;https://public.tableau.com/views/PlanetaryBirthdayProblem/Planets-50?:embed=y&amp;amp;:display_count=yes&amp;amp;publish=yes&quot; /&gt;
+
+    &lt;p&gt;There is more text down here!&lt;/p&gt;
+
+    &lt;p&gt;And even more still!!&lt;/p&gt;
+  &lt;/div&gt;&lt;/div&gt;
+</content>
+
+			
+				<category term="mathematics" />
+			
+				<category term="visualizations" />
+			
+			
+
+			<published>2018-12-10T00:00:00-05:00</published>
+		</entry>
 	
 		<entry>
 			<id>http://localhost:4000//design/typography/typography/</id>
