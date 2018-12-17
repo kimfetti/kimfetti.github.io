@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2018-12-16T23:07:24-06:00</updated>
+	<updated>2018-12-17T07:40:02-06:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -44,7 +44,7 @@
 			<summary>&lt;em&gt;The birthday problem is a classic probability question with a surprising result.  In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system.&lt;/em&gt;</summary>
 			<content type="html" xml:base="http://localhost:4000//mathematics/visualizations/planetary-birthday-problem/">&lt;!--more--&gt;
 
-&lt;p&gt;I was recently asked to develop a challenge problem for the &lt;a href=&quot;https://www.thisismetis.com&quot;&gt;Metis&lt;/a&gt; data science bootcamp.  Perhaps it was my background in math or maybe my penchant for mild torture, but I decided to have students answer a few exercises from &lt;a href=&quot;https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8&quot;&gt;Fifty Challenging Problems with Solutions&lt;/a&gt; by Mosteller.  This is book is full of classic problems in probability, and I highly recommend it to anyone prepping for data science interviews!&lt;/p&gt;
+&lt;p&gt;I was recently asked to develop a challenge problem for the &lt;a href=&quot;https://www.thisismetis.com&quot;&gt;Metis&lt;/a&gt; data science bootcamp.  Perhaps it was my background in math or maybe my penchant for mild torture, but I decided to have students answer a few exercises from &lt;a href=&quot;https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8&quot;&gt;Fifty Challenging Problems with Solutions&lt;/a&gt; by Mosteller.  This book is full of classic problems in probability, and I highly recommend it to anyone prepping for data science interviews!&lt;/p&gt;
 
 &lt;p&gt;One of my favorite sections in this book is the birthday series, which includes a version of the birthday problem.  This problem is about as famous as a probability question can get.  It has been featured on &lt;a href=&quot;https://www.npr.org/templates/story/story.php?storyId=4542341&quot;&gt;NPR&lt;/a&gt;, written about in an &lt;a href=&quot;https://en.wikipedia.org/wiki/A_Fall_of_Moondust&quot;&gt;Arthur C. Clarke novel&lt;/a&gt;, and it even has its &lt;a href=&quot;https://en.wikipedia.org/wiki/Birthday_problem&quot;&gt;own Wikipedia page&lt;/a&gt;.&lt;/p&gt;
 
@@ -67,7 +67,7 @@ where \(N\) is the number of days in one year.&lt;/p&gt;
 &lt;p&gt;Backtracking to the original birthday problem, we now just need to find the minimum value of \(r\) people that satisfy:
 \[p_{s} = 1 - \frac{N!}{(N-r)!N^r} &amp;gt; \frac{1}{2}.\]&lt;/p&gt;
 
-&lt;p&gt;This expression doesn’t look all that pleasant to be solved outright, so instead we can build a little solver in Python–or the language of your choice!–to be able to compute \(p_s\) for any given \(r\) and \(N\).&lt;/p&gt;
+&lt;p&gt;This expression doesn’t look all that pleasant to be solved outright, so instead we can build a little solver in Python--or the language of your choice!--to be able to compute \(p_s\) for any given \(r\) and \(N\).&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def prob_birthday_success(r, N=365):
     if r &amp;gt; N: 
         return 1.
@@ -130,9 +130,9 @@ where \(N\) is the number of days in one year.&lt;/p&gt;
 
 &lt;h2 id=&quot;planetary-results&quot;&gt;Planetary Results&lt;/h2&gt;
 
-&lt;p&gt;The first step in solving the birthday problem for the rest of our solar system is gathering &lt;a href=&quot;https://www.universetoday.com/37507/years-of-the-planets/&quot;&gt;year lengths for each planet&lt;/a&gt;, which vary wildly from a meager 88 days on Mercury up to a whopping 60,182 days on Neptune.  In fact, your entire life will be confined to a single orbital period of Neptune and you will never experience a Neptunian birthday.  (Admittedly, the definition “birthday” gets a little murky on these other planets…  but more on this later.)&lt;/p&gt;
+&lt;p&gt;The first step in solving the birthday problem for the rest of our solar system is gathering &lt;a href=&quot;https://www.universetoday.com/37507/years-of-the-planets/&quot;&gt;year lengths for each planet&lt;/a&gt;, which vary wildly: from a meager 88 days on Mercury up to a whopping 60,182 days on Neptune.  In fact, your entire life will be confined to a single orbital period of Neptune.  There goes that Neptunian birthday party you’ve always wanted!  (Admittedly, the definition of a “birthday” gets a little murky on these other planets…  but more on this later.)&lt;/p&gt;
 
-&lt;p&gt;Once year lengths have been gathered, working out the problem for different values of \(N\) is as simple as returning to the Python function introduced earlier.  The required number of party goers to achieve a 50% probability of birthday matching on each planet can be found below. (As a child of the 80s, I must tell you it is &lt;em&gt;VERY&lt;/em&gt; difficult for me to not include Pluto on this chart.  But there’s always hope for a &lt;a href=&quot;https://www.space.com/40550-pluto-planet-debate-flares-up-again.html&quot;&gt;Plutonian comeback&lt;/a&gt;! 🙏)&lt;/p&gt;
+&lt;p&gt;Once year lengths have been gathered, working out the problem for different values of \(N\) is as simple as returning to the Python function introduced earlier.  The required number of party goers to achieve a 50% probability of birthday matching on each planet can be found below.  As a child of the 80s, I must tell you it is &lt;em&gt;VERY&lt;/em&gt; difficult for me to not include Pluto on this chart.  But there’s always hope for a &lt;a href=&quot;https://www.space.com/40550-pluto-planet-debate-flares-up-again.html&quot;&gt;Plutonian comeback&lt;/a&gt;! 🙏&lt;/p&gt;
 
 &lt;center&gt;
 &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;center&quot; width=&quot;1050&quot; height=&quot;500&quot; src=&quot;https://public.tableau.com/views/PlanetaryBirthdayProblem/Planets-50?:showVizHome=no&amp;amp;:embed=true&quot;&gt; &lt;/iframe&gt;
@@ -141,7 +141,7 @@ where \(N\) is the number of days in one year.&lt;/p&gt;
 
 &lt;p&gt;Even on Neptune where there are over 60,000 Earth days per year, we only require 290 people to have a 50% chance of matching birthdays.  That’s an amazingly small amount for such a massive number of days in each year!&lt;/p&gt;
 
-&lt;p&gt;So now we can turn back to our broader question: “What’s the overall trend as \(N\) increases?”  Well, the chart above is great for being able to read information associated with every planet, but it’s actually a bit misleading trendwise because both axes are on a log scale.  Let’s take a look at this same information but without the axial scaling.&lt;/p&gt;
+&lt;p&gt;So now back to our broader question: “What’s the overall trend as \(N\) increases?”  Well, the chart above is great for being able to read information associated with every planet, but it’s a bit misleading trendwise because both axes are on a log scale.  Let’s take a look at this same information without the axial scaling.&lt;/p&gt;
 
 &lt;center&gt;
 &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;center&quot; width=&quot;700&quot; height=&quot;400&quot; src=&quot;https://public.tableau.com/views/PlanetaryBirthdayProblem/Planets-50-Trueaxes?:showVizHome=no&amp;amp;:embed=true&quot;&gt; &lt;/iframe&gt;
@@ -152,33 +152,35 @@ where \(N\) is the number of days in one year.&lt;/p&gt;
 
 &lt;h2 id=&quot;expanding-solution-with-approximations&quot;&gt;Expanding Solution with Approximations&lt;/h2&gt;
 
-&lt;p&gt;We are about to embark upon the amazing world of expansions and approximations--AKA put your math pants on and fasten your seat belts!  (If this sort of nerdout isn’t your bag, no worries.  Just skip ahead to the end of this section where all will revealed… 🔮  Much of this work can be found in &lt;a href=&quot;https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8&quot;&gt;Mosteller&lt;/a&gt; as his solution to the birthday problem.)&lt;/p&gt;
+&lt;p&gt;We are about to embark upon the amazing world of expansions and approximations--AKA put your math pants on and fasten your seat belts!  (If this sort of nerdout isn’t your bag, no worries.  Just skip ahead to the end of this section where all will revealed… 🔮  Much of this work can also be found in &lt;a href=&quot;https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8&quot;&gt;Mosteller&lt;/a&gt; as his solution to the birthday problem.)&lt;/p&gt;
 
 &lt;p&gt;First recall that 
 \[e^{-x} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!}+ \cdots,\]
-so ultimately, \(e^{-x} \approx 1 - x\) for very small values of \(x\).  Now represent \(p_u\)--that’s the unsuccessful probability--as
+so ultimately, \(e^{-x} \approx 1 - x\) for very small values of \(x\).&lt;/p&gt;
+
+&lt;p&gt;Now represent \(p_u\)--that’s the unsuccessful probability--as
 \[p_u = \frac{N(N-1)(N-2)\cdots(N-r+1)}{N^r} = \frac{N^r - \hat{k}}{N^r} = 1 - \frac{k}{N}\]
-where \(k\) contains multiple factors but all are smaller than \(N\).  Combining these two expressions we then find that
+where \(k\) contains multiple factors but all are smaller than \(N\).&lt;/p&gt;
+
+&lt;p&gt;Combining these two expressions, we then find that
 \[p_u = 1 - \frac{k}{N} \approx e^{-k/N},\]
 which is valid because \(k/N\) is typically much smaller than one.&lt;/p&gt;
 
 &lt;p&gt;Now let’s further consider the values contained within \(k\).  Expanding out the numerator in \(p_u\), we have
 \[p_u=\frac{N(N-1)\cdots(N-r+1)}{N^r} = \frac{N^r - N^{r-1}\left[0+1+2+\cdots(r-1)\right] + \cdots}{N^r} = 1 - \frac{0 + 1 + 2 + \cdots (r-1)}{N} + \cdots.\]
-The value \(k\) represents several terms, but to leading order, it just looks the sum of 0 to \(r-1\).  More specificially,
+The quantity \(k\) represents several terms, but to leading order, it just looks a sum of the integers between 0 and \(r-1\).  More specificially,
 \[k \approx 0 + 1 + 2 + \cdots + r-1 = \sum_{i=0}^{r-1}j = \frac{r(r-1)}{2}.\]
 So where does this lead us?  Returning to our exponential expression above, we have
 \[p_u \approx e^{-k/N} \approx e^{-r(r-1)/2N},\]
-which looks MUCH nicer than the original expression we had for \(p_u\) that contained those factorials.  We can even come up with an expression to relate \(r\) to \(N\) more explicitly in the leading order.&lt;/p&gt;
+which looks &lt;em&gt;much&lt;/em&gt; more tractable than the original expression we had for \(p_u\) containing those factorials.  We can even come up with an expression to relate \(r\) to \(N\) more explicitly in the leading order.&lt;/p&gt;
 
-&lt;p&gt;Subbing in \(p_s = 1 - p_u\),
-\[e^{-r(r-1)/2N} \approx 1 - p_s\]
-and taking the natural log of each side, we eventually find
-\[-\frac{r(r-1)}{2N} \approx \ln{(1 - p_s)}\]
-and
+&lt;p&gt;Subbing in \(p_u = 1 - p_s\) and taking the natural log of each side, we eventually find
+\[\frac{r(r-1)}{2N} \approx -\ln{(1 - p_s)},\]
+which implies
 \[r(r-1) \approx -2N\ln{(1-p_s)}.\]
-So there you have it!  Subbing in any given value for \(p_s\) will fix the log factor and the other two quantities are related as
+So there you have it!  Selecting in any given value for \(p_s\) will fix the log factor and the other two quantities are related as
 \[\mathcal{O}\left(r\right) \sim \mathcal{O}\left(\sqrt{N}\right).\]
-The trend we saw in the planet chart was indeed a power relationship; specifically, \(r\) goes like \(\sqrt{N}\) as \(N\) increases in the birthday problem.  This means that even on planets with many, many days in a year, we don’t really need to increase our party size by all that much to ensure our 50-50 chance of finding birthday twins.&lt;/p&gt;
+The trend we saw in the planet chart was indeed a power relationship; specifically, \(r\) goes like \(\sqrt{N}\) as \(N\) increases for the birthday problem.  This means that even on planets with many, many days in a year, we don’t really need to increase our party size by all that much to ensure our 50-50 chance of finding birthday twins.&lt;/p&gt;
 
 &lt;h2 id=&quot;approximation-in-action&quot;&gt;Approximation in Action&lt;/h2&gt;
 &lt;p&gt;How good is this approximation in practice?  Well, the trendline we saw earlier in the true-scale axes chart was auto-fitted in Tableau with a power trend, and indeed, the equation for the resulting line was found to be&lt;/p&gt;
@@ -187,13 +189,13 @@ The trend we saw in the planet chart was indeed a power relationship; specifical
 
 &lt;p&gt;So our square-root relationship appears to hold true.&lt;/p&gt;
 
-&lt;p&gt;We can also more explicitly consider what happens to our approximation as \(N\) gets larger. Because we are estimating
+&lt;p&gt;We can also more explicitly consider what happens as \(N\) gets larger. Because we are estimating
 \[1-\frac{k}{N} \approx e^{-k/N},\]
 this approximation should actually become &lt;em&gt;more&lt;/em&gt; valid as \(N\) becomes larger since \(k/N\) will resultingly grow smaller.&lt;/p&gt;
 
-&lt;p&gt;Let’s now fix \(p_s = \frac{1}{2}\) and let \(r_{1/2}\) be the 50-50 chance party size. Plotting both the left-hand side of our approximation
+&lt;p&gt;Now set \(p_s = \frac{1}{2}\) and let \(r_{1/2}\) be the 50-50 chance party size. Plotting the left-hand side of our approximation
 \[\frac{r_{1/2}(r_{1/2}-1)}{2N} \approx -\ln{\frac{1}{2}}\]
-for various values of \(N\), we see below that this approximation indeed becomes more valid and encounters less variance about the \(-\ln{(1/2)}\) line as \(N \to \infty\).  (There is an added layer of complexity in this problem since we require \(r_{1/2}\) to be an integer; this requirement makes the approximation dance a bit about the \(-\ln{(1/2)}\) line even at large values of \(N\).)&lt;/p&gt;
+for various evenly sampled values of \(N\), we see in the figure below that this estimation indeed becomes more valid and encounters less variance about the \(-\ln{(1/2)}\) line as \(N \to \infty\).  (There is an added layer of complexity in this problem, however, because we require \(r_{1/2}\) to be an integer; this stipulations makes our approximation dance about the \(-\ln{(1/2)}\) line a bit even at large values of \(N\).)&lt;/p&gt;
 
 &lt;center&gt;
 &lt;img src=&quot;https://kimfetti.github.io/images/planetary-birthday-approx.png&quot; alt=&quot;Approximation chart&quot; width=&quot;900&quot; height=&quot;400&quot; /&gt;
@@ -201,7 +203,7 @@ for various values of \(N\), we see below that this approximation indeed becomes
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;The birthday problem is a classic that has been examined from several different angles.  I hope you’ve enjoyed this planetary rendition and the subsequent deep dive into analytic approximations.&lt;/p&gt;
+&lt;p&gt;The birthday problem is a classic that has been examined from several different angles.  I hope you’ve enjoyed this planetary rendition and the subsequent deep dive into analytic approximations to explore how \(r\) is related to year length.&lt;/p&gt;
 
 &lt;p&gt;A few final thoughts:&lt;/p&gt;
 
@@ -212,13 +214,13 @@ for various values of \(N\), we see below that this approximation indeed becomes
     &lt;p&gt;It turns out that the uniform distribution of birthdays we used throughout this post is actually a &lt;a href=&quot;https://www.jstor.org/stable/2318556?seq=1#page_scan_tab_contents&quot;&gt;worst-case scenario&lt;/a&gt; in terms of successfully finding birthmates.  If birthdays are skewed toward one day or another, the odds that you will find birthday twins at your party actually increase… but not significantly.  Attempts at calculating the birthday problem with real-world datasets have shown the 23-person group to be a pretty consistent solution, even when considering &lt;a href=&quot;https://www.stat.wisc.edu/techreports/tr591.pdf&quot;&gt;non-uniform distributions&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;I eluded to this earlier, but the idea of a “birthday” gets a bit murky when thinking about other planets.  I often mentioned my findings in terms of “Earth days” because I calculated each planet’s revolution about the Sun as the time it takes Earth to rotate about its own axis.  What does that mean in the context of this problem?&lt;/p&gt;
+    &lt;p&gt;I eluded to this earlier, but the idea of a “birthday” gets a bit complicated when thinking about other planets.  I often mentioned my findings in terms of “Earth days” because I calculated each planet’s revolution about the Sun in the number of times it takes Earth to rotate about its own axis.  What does that mean in the context of this problem?&lt;/p&gt;
 
     &lt;p&gt;Consider two cases: Jupiter and Mercury.&lt;/p&gt;
     &lt;ul&gt;
       &lt;li&gt;Firstly, Jupiter rotates about its own axis in about &lt;a href=&quot;https://www.universetoday.com/37507/years-of-the-planets/&quot;&gt;9 hours and 55 minutes&lt;/a&gt;, faster than any other planet in our solar system.  So while Jupiter takes roughly 4,333 Earth days to complete its orbit about the Sun, it actually takes 10,476 &lt;em&gt;Jovian&lt;/em&gt; days to complete this journey. That’s a lot more potential “birthdays!”&lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;Mercury, on the other hand, completes a rotation about its axis &lt;em&gt;slower&lt;/em&gt; than any other planet. It takes about 176 Earth days for Mercury to rotate, which is &lt;em&gt;longer&lt;/em&gt; than Mercury takes to revolve about the Sun.  Ultimately, a “year” on Mercury is half as long as a “day.”  The birthday problem is completely moot because everyone born in the same Mercurian year is automatically born on the same Mercurian day! (… Please disregard the fact that no one is ever actually born on Mercury. 😆)&lt;/p&gt;
+        &lt;p&gt;Mercury, on the other hand, completes a rotation about its axis &lt;em&gt;slower&lt;/em&gt; than any other planet. It takes about 176 Earth days for Mercury to rotate, which is &lt;em&gt;longer&lt;/em&gt; than it takes Mercury to revolve about the Sun.  Ultimately, a “year” on Mercury is half as long as a “day.”  The birthday problem is completely moot because everyone born in the same Mercurian year is automatically born on the same Mercurian day! (… Please disregard the fact that no one is ever actually born on Mercury. 😆)&lt;/p&gt;
 
         &lt;p&gt;I have chosen to disregard this planetary difference in the definition of a “day” for simplicity, but keeping with the same Python function introduced near the beginning of this post, we could relatively easily compute these revised birthday solutions.  Please let me know if you work this out!&lt;/p&gt;
       &lt;/li&gt;
