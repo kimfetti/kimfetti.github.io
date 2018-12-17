@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2018-12-16T19:22:37-06:00</updated>
+	<updated>2018-12-16T23:07:24-06:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -132,7 +132,7 @@ where \(N\) is the number of days in one year.&lt;/p&gt;
 
 &lt;p&gt;The first step in solving the birthday problem for the rest of our solar system is gathering &lt;a href=&quot;https://www.universetoday.com/37507/years-of-the-planets/&quot;&gt;year lengths for each planet&lt;/a&gt;, which vary wildly from a meager 88 days on Mercury up to a whopping 60,182 days on Neptune.  In fact, your entire life will be confined to a single orbital period of Neptune and you will never experience a Neptunian birthday.  (Admittedly, the definition “birthday” gets a little murky on these other planets…  but more on this later.)&lt;/p&gt;
 
-&lt;p&gt;Once year lengths have been gathered, working out the problem for different values of \(N\) is as simple as returning to the Python function introduced earlier.  The required number of party goers to achieve a 50% probability of birthday matching on each planet can be found below. (As a child of the 80s, I must tell you it is &lt;em&gt;VERY&lt;/em&gt; difficult for me to not include Pluto on this chart.  But there’s always hope for a &lt;a href=&quot;https://www.space.com/40550-pluto-planet-debate-flares-up-again.html&quot;&gt;Plutonian comeback&lt;/a&gt;! :pray:)&lt;/p&gt;
+&lt;p&gt;Once year lengths have been gathered, working out the problem for different values of \(N\) is as simple as returning to the Python function introduced earlier.  The required number of party goers to achieve a 50% probability of birthday matching on each planet can be found below. (As a child of the 80s, I must tell you it is &lt;em&gt;VERY&lt;/em&gt; difficult for me to not include Pluto on this chart.  But there’s always hope for a &lt;a href=&quot;https://www.space.com/40550-pluto-planet-debate-flares-up-again.html&quot;&gt;Plutonian comeback&lt;/a&gt;! 🙏)&lt;/p&gt;
 
 &lt;center&gt;
 &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; align=&quot;center&quot; width=&quot;1050&quot; height=&quot;500&quot; src=&quot;https://public.tableau.com/views/PlanetaryBirthdayProblem/Planets-50?:showVizHome=no&amp;amp;:embed=true&quot;&gt; &lt;/iframe&gt;
@@ -152,7 +152,7 @@ where \(N\) is the number of days in one year.&lt;/p&gt;
 
 &lt;h2 id=&quot;expanding-solution-with-approximations&quot;&gt;Expanding Solution with Approximations&lt;/h2&gt;
 
-&lt;p&gt;We are about to embark upon the amazing world of expansions and approximations--AKA put your math pants on and fasten your seat belts!  (If this sort of nerdout isn’t your bag, no worries.  Just skip ahead to the end of this section where all will revealed… :crystal_ball:  Much of this work can be found in &lt;a href=&quot;https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8&quot;&gt;Mosteller&lt;/a&gt; as his solution to the birthday problem.)&lt;/p&gt;
+&lt;p&gt;We are about to embark upon the amazing world of expansions and approximations--AKA put your math pants on and fasten your seat belts!  (If this sort of nerdout isn’t your bag, no worries.  Just skip ahead to the end of this section where all will revealed… 🔮  Much of this work can be found in &lt;a href=&quot;https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8&quot;&gt;Mosteller&lt;/a&gt; as his solution to the birthday problem.)&lt;/p&gt;
 
 &lt;p&gt;First recall that 
 \[e^{-x} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!}+ \cdots,\]
@@ -181,19 +181,19 @@ So there you have it!  Subbing in any given value for \(p_s\) will fix the log f
 The trend we saw in the planet chart was indeed a power relationship; specifically, \(r\) goes like \(\sqrt{N}\) as \(N\) increases in the birthday problem.  This means that even on planets with many, many days in a year, we don’t really need to increase our party size by all that much to ensure our 50-50 chance of finding birthday twins.&lt;/p&gt;
 
 &lt;h2 id=&quot;approximation-in-action&quot;&gt;Approximation in Action&lt;/h2&gt;
-&lt;p&gt;How good is this approximation in practice?  Well, the trendline we saw in the true-scale axes chart early was auto-fitted with Tableau with a power trend, and indeed, the equation for the resulting line was found to be&lt;/p&gt;
+&lt;p&gt;How good is this approximation in practice?  Well, the trendline we saw earlier in the true-scale axes chart was auto-fitted in Tableau with a power trend, and indeed, the equation for the resulting line was found to be&lt;/p&gt;
 
 &lt;p&gt;\[r = 1.28548 \cdot N^{0.491503}\]&lt;/p&gt;
 
-&lt;p&gt;So the square-root relationship appears to hold true.&lt;/p&gt;
+&lt;p&gt;So our square-root relationship appears to hold true.&lt;/p&gt;
 
 &lt;p&gt;We can also more explicitly consider what happens to our approximation as \(N\) gets larger. Because we are estimating
 \[1-\frac{k}{N} \approx e^{-k/N},\]
-this approximation should actually become &lt;strong&gt;more&lt;/strong&gt; valid as \(N\) becomes larger since \(k/N\) will resultingly grow smaller.&lt;/p&gt;
+this approximation should actually become &lt;em&gt;more&lt;/em&gt; valid as \(N\) becomes larger since \(k/N\) will resultingly grow smaller.&lt;/p&gt;
 
 &lt;p&gt;Let’s now fix \(p_s = \frac{1}{2}\) and let \(r_{1/2}\) be the 50-50 chance party size. Plotting both the left-hand side of our approximation
 \[\frac{r_{1/2}(r_{1/2}-1)}{2N} \approx -\ln{\frac{1}{2}}\]
-for various values of \(N\), we see below that this approximation becomes more valid and encounters less variance about the \(-\ln{(1/2)}\) line as \(N \to \infty\).  (There is an added layer of complexity in this problem since we require \(r_{1/2}\)) to be an integer.  This requirement results in the approximation dancing a bit about the \(-\ln{(1/2)}\) line.)&lt;/p&gt;
+for various values of \(N\), we see below that this approximation indeed becomes more valid and encounters less variance about the \(-\ln{(1/2)}\) line as \(N \to \infty\).  (There is an added layer of complexity in this problem since we require \(r_{1/2}\) to be an integer; this requirement makes the approximation dance a bit about the \(-\ln{(1/2)}\) line even at large values of \(N\).)&lt;/p&gt;
 
 &lt;center&gt;
 &lt;img src=&quot;https://kimfetti.github.io/images/planetary-birthday-approx.png&quot; alt=&quot;Approximation chart&quot; width=&quot;900&quot; height=&quot;400&quot; /&gt;
@@ -201,12 +201,29 @@ for various values of \(N\), we see below that this approximation becomes more v
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;The birthday problem is a classic that has been examined several different ways.  I hope you’ve enjoyed the planetary rendition and the deep dive into analytic approximations.&lt;/p&gt;
+&lt;p&gt;The birthday problem is a classic that has been examined from several different angles.  I hope you’ve enjoyed this planetary rendition and the subsequent deep dive into analytic approximations.&lt;/p&gt;
 
-&lt;p&gt;A few final thoughts to leave you with:&lt;/p&gt;
+&lt;p&gt;A few final thoughts:&lt;/p&gt;
+
 &lt;ol&gt;
-  &lt;li&gt;It is well-known that birthdays are not equally distributed throughout all 365 days here on Earth.  How does this non-uniformity affect our birthday solution?  It turns out that the uniform distribution of birthdays we used throughout this post is a worst-case scenario.  If birthdays are skewed to one day or the other, the odds that you will find birthday twins in your party actually increases… but not significantly.  Attempts at calculating the birthday problem for real-world datasets have shown the 23-person group to be a pretty consistent solution the 50% probability.&lt;/li&gt;
-  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is well-known that birthdays are &lt;a href=&quot;http://www.panix.com/~murphy/bday.html&quot;&gt;not equally distributed throughout all 365 days&lt;/a&gt;, especially if you focus on one region of the world.  So how does non-uniformity effect our birthday solution?&lt;/p&gt;
+
+    &lt;p&gt;It turns out that the uniform distribution of birthdays we used throughout this post is actually a &lt;a href=&quot;https://www.jstor.org/stable/2318556?seq=1#page_scan_tab_contents&quot;&gt;worst-case scenario&lt;/a&gt; in terms of successfully finding birthmates.  If birthdays are skewed toward one day or another, the odds that you will find birthday twins at your party actually increase… but not significantly.  Attempts at calculating the birthday problem with real-world datasets have shown the 23-person group to be a pretty consistent solution, even when considering &lt;a href=&quot;https://www.stat.wisc.edu/techreports/tr591.pdf&quot;&gt;non-uniform distributions&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I eluded to this earlier, but the idea of a “birthday” gets a bit murky when thinking about other planets.  I often mentioned my findings in terms of “Earth days” because I calculated each planet’s revolution about the Sun as the time it takes Earth to rotate about its own axis.  What does that mean in the context of this problem?&lt;/p&gt;
+
+    &lt;p&gt;Consider two cases: Jupiter and Mercury.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Firstly, Jupiter rotates about its own axis in about &lt;a href=&quot;https://www.universetoday.com/37507/years-of-the-planets/&quot;&gt;9 hours and 55 minutes&lt;/a&gt;, faster than any other planet in our solar system.  So while Jupiter takes roughly 4,333 Earth days to complete its orbit about the Sun, it actually takes 10,476 &lt;em&gt;Jovian&lt;/em&gt; days to complete this journey. That’s a lot more potential “birthdays!”&lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Mercury, on the other hand, completes a rotation about its axis &lt;em&gt;slower&lt;/em&gt; than any other planet. It takes about 176 Earth days for Mercury to rotate, which is &lt;em&gt;longer&lt;/em&gt; than Mercury takes to revolve about the Sun.  Ultimately, a “year” on Mercury is half as long as a “day.”  The birthday problem is completely moot because everyone born in the same Mercurian year is automatically born on the same Mercurian day! (… Please disregard the fact that no one is ever actually born on Mercury. 😆)&lt;/p&gt;
+
+        &lt;p&gt;I have chosen to disregard this planetary difference in the definition of a “day” for simplicity, but keeping with the same Python function introduced near the beginning of this post, we could relatively easily compute these revised birthday solutions.  Please let me know if you work this out!&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 </content>
@@ -219,475 +236,6 @@ for various values of \(N\), we see below that this approximation becomes more v
 			
 
 			<published>2018-12-10T00:00:00-06:00</published>
-		</entry>
-	
-		<entry>
-			<id>http://localhost:4000//design/typography/typography/</id>
-			<title>Default Post</title>
-			<link href="http://localhost:4000//design/typography/typography/" rel="alternate" type="text/html" title="Default Post" />
-			<updated>2015-08-16T00:00:00-05:00</updated>
-
-			
-				
-				<author>
-					
-						<name>KFessel</name>
-					
-					
-					
-				</author>
-			
-			<summary>&lt;em&gt;Feeling Responsive&lt;/em&gt; uses &lt;a href='https://www.google.com/fonts/specimen/Volkhov'&gt;Volkhov&lt;/a&gt; for headlines, &lt;a href='https://www.google.com/fonts/specimen/Lato'&gt;Lato&lt;/a&gt; for everything else and if you are in need to show some code, it will be in &lt;a href='http://www.microsoft.com/typography/fonts/family.aspx?FID=18'&gt;Lucida Console&lt;/a&gt; or &lt;a href='http://en.wikipedia.org/wiki/Monaco_(typeface)'&gt;Monaco&lt;/a&gt;.</summary>
-			<content type="html" xml:base="http://localhost:4000//design/typography/typography/">&lt;!--more--&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-&lt;div class=&quot;medium-4 medium-push-8 columns&quot;&gt;
-    &lt;div class=&quot;panel radius&quot;&gt;
-      &lt;p id=&quot;toc&quot;&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/p&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#lato--a-sans-serif-typeface-family&quot; id=&quot;markdown-toc-lato--a-sans-serif-typeface-family&quot;&gt;Lato – A Sans Serif Typeface Family&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#about-volkhov-h2&quot; id=&quot;markdown-toc-about-volkhov-h2&quot;&gt;About Volkhov &amp;lt;h2&amp;gt;&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#feeling-responsive-uses-volkhov-for--h3&quot; id=&quot;markdown-toc-feeling-responsive-uses-volkhov-for--h3&quot;&gt;Feeling Responsive uses Volkhov for…  &amp;lt;h3&amp;gt;&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#heading-in-volkhov-h4&quot; id=&quot;markdown-toc-heading-in-volkhov-h4&quot;&gt;Heading in Volkhov &amp;lt;h4&amp;gt;&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#heading-in-volkhov-h5&quot; id=&quot;markdown-toc-heading-in-volkhov-h5&quot;&gt;Heading in Volkhov &amp;lt;h5&amp;gt;&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#modular-scale&quot; id=&quot;markdown-toc-modular-scale&quot;&gt;Modular Scale&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#typographical-elements&quot; id=&quot;markdown-toc-typographical-elements&quot;&gt;Typographical Elements&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#hr-horizontal-line&quot; id=&quot;markdown-toc-hr-horizontal-line&quot;&gt;&amp;lt;hr&amp;gt; Horizontal Line&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#pre-displaying-code&quot; id=&quot;markdown-toc-pre-displaying-code&quot;&gt;&amp;lt;pre&amp;gt; Displaying Code&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#blockquote-quotation&quot; id=&quot;markdown-toc-blockquote-quotation&quot;&gt;&amp;lt;blockquote&amp;gt; Quotation&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#blockquote-and-cite--together&quot; id=&quot;markdown-toc-blockquote-and-cite--together&quot;&gt;&amp;lt;blockquote&amp;gt; and &amp;lt;cite&amp;gt;  together&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ol-ordered-lists&quot; id=&quot;markdown-toc-ol-ordered-lists&quot;&gt;&amp;lt;ol&amp;gt; Ordered Lists&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#ul-unordered-lists&quot; id=&quot;markdown-toc-ul-unordered-lists&quot;&gt;&amp;lt;ul&amp;gt; Unordered Lists&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#dl-definition-lists&quot; id=&quot;markdown-toc-dl-definition-lists&quot;&gt;&amp;lt;dl&amp;gt; Definition Lists&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#a&quot; id=&quot;markdown-toc-a&quot;&gt;&amp;lt;a&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#em&quot; id=&quot;markdown-toc-em&quot;&gt;&amp;lt;em&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#strong&quot; id=&quot;markdown-toc-strong&quot;&gt;&amp;lt;strong&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#small&quot; id=&quot;markdown-toc-small&quot;&gt;&amp;lt;small&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#s&quot; id=&quot;markdown-toc-s&quot;&gt;&amp;lt;s&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#cite&quot; id=&quot;markdown-toc-cite&quot;&gt;&amp;lt;cite&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#q&quot; id=&quot;markdown-toc-q&quot;&gt;&amp;lt;q&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#dfn&quot; id=&quot;markdown-toc-dfn&quot;&gt;&amp;lt;dfn&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#abbr&quot; id=&quot;markdown-toc-abbr&quot;&gt;&amp;lt;abbr&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#time&quot; id=&quot;markdown-toc-time&quot;&gt;&amp;lt;time&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#code&quot; id=&quot;markdown-toc-code&quot;&gt;&amp;lt;code&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#var&quot; id=&quot;markdown-toc-var&quot;&gt;&amp;lt;var&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#samp&quot; id=&quot;markdown-toc-samp&quot;&gt;&amp;lt;samp&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#kbd&quot; id=&quot;markdown-toc-kbd&quot;&gt;&amp;lt;kbd&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#sub&quot; id=&quot;markdown-toc-sub&quot;&gt;&amp;lt;sub&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#sup&quot; id=&quot;markdown-toc-sup&quot;&gt;&amp;lt;sup&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#i&quot; id=&quot;markdown-toc-i&quot;&gt;&amp;lt;i&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#b&quot; id=&quot;markdown-toc-b&quot;&gt;&amp;lt;b&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#u&quot; id=&quot;markdown-toc-u&quot;&gt;&amp;lt;u&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#mark&quot; id=&quot;markdown-toc-mark&quot;&gt;&amp;lt;mark&amp;gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#br&quot; id=&quot;markdown-toc-br&quot;&gt;&amp;lt;br&amp;gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#footnotes&quot; id=&quot;markdown-toc-footnotes&quot;&gt;Footnotes&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#h1-heading-in-volkhov&quot; id=&quot;markdown-toc-h1-heading-in-volkhov&quot;&gt;&amp;lt;h1&amp;gt;-Heading in Volkhov&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#h2-heading-in-volkhov&quot; id=&quot;markdown-toc-h2-heading-in-volkhov&quot;&gt;&amp;lt;h2&amp;gt;-Heading in Volkhov&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#h3-heading-in-volkhov&quot; id=&quot;markdown-toc-h3-heading-in-volkhov&quot;&gt;&amp;lt;h3&amp;gt;-Heading in Volkhov&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#h4-heading-in-volkhov&quot; id=&quot;markdown-toc-h4-heading-in-volkhov&quot;&gt;&amp;lt;h4&amp;gt;-Heading in Volkhov&lt;/a&gt;                &lt;ul&gt;
-                  &lt;li&gt;&lt;a href=&quot;#h5-heading-in-volkhov&quot; id=&quot;markdown-toc-h5-heading-in-volkhov&quot;&gt;&amp;lt;h5&amp;gt;-Heading in Volkhov&lt;/a&gt;                    &lt;ul&gt;
-                      &lt;li&gt;&lt;a href=&quot;#h6-heading-in-volkhov&quot; id=&quot;markdown-toc-h6-heading-in-volkhov&quot;&gt;&amp;lt;h6&amp;gt;-Heading in Volkhov&lt;/a&gt;&lt;/li&gt;
-                    &lt;/ul&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#tables&quot; id=&quot;markdown-toc-tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-    &lt;/div&gt;
-  &lt;/div&gt;&lt;!-- /.medium-4.columns --&gt;
-
-
-
-&lt;div class=&quot;medium-8 medium-pull-4 columns&quot;&gt;
-
-    &lt;h2 id=&quot;lato--a-sans-serif-typeface-family&quot;&gt;Lato – A Sans Serif Typeface Family&lt;/h2&gt;
-
-    &lt;p&gt;&lt;a href=&quot;https://www.google.com/fonts/specimen/Lato&quot;&gt;&lt;dfn&gt;Lato&lt;/dfn&gt;&lt;/a&gt; is a sans serif typeface family started in the summer of 2010 by Warsaw-based designer Łukasz Dziedzic. »Lato« means »Summer« in Polish. In December 2010 the Lato family was published under the Open Font License by his foundry tyPoland, with support from Google.&lt;/p&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;&lt;span class=&quot;teaser&quot;&gt;I do not think of type as something that should be readable. It should be beautiful.&lt;/span&gt;&lt;cite&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Ed_Benguiat&quot;&gt;Ed Benguiat&lt;/a&gt;&lt;/cite&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;p&gt;In the last ten or so years, during which Łukasz has been designing type, most of his projects were rooted in a particular design task that he needed to solve. With Lato, it was no different. Originally, the family was conceived as a set of corporate fonts for a large client — who in the end decided to go in different stylistic direction, so the family became available for a public release.&lt;/p&gt;
-
-    &lt;p&gt;When working on Lato, Łukasz tried to carefully balance some potentially conflicting priorities. He wanted to create a typeface that would seem quite “transparent” when used in body text but would display some original traits when used in larger sizes. He used classical proportions (particularly visible in the uppercase) to give the letterforms familiar harmony and elegance. At the same time, he created a sleek sans serif look, which makes evident the fact that Lato was designed in 2010 — even though it does not follow any current trend.&lt;/p&gt;
-
-    &lt;p&gt;The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. “Male and female, serious but friendly. With the feeling of the Summer,” says Łukasz. Learn more at &lt;a href=&quot;http://www.latofonts.com/&quot;&gt;www.latofonts.com&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt;And you can also test math formulas like \(\frac{1}{2}\cdot\frac{x^2}{\sqrt{N}}\)&lt;/p&gt;
-
-    &lt;h2 id=&quot;about-volkhov-h2&quot;&gt;About Volkhov &amp;lt;h2&amp;gt;&lt;/h2&gt;
-
-    &lt;p&gt;&lt;dfn&gt;Volkhov&lt;/dfn&gt; is a low-contrast seriffed typeface with a robust character, intended for providing a motivating reading experience. Volkhov was designed by Ivan Petrov.&lt;/p&gt;
-
-    &lt;h3 id=&quot;feeling-responsive-uses-volkhov-for--h3&quot;&gt;Feeling Responsive uses Volkhov for…  &amp;lt;h3&amp;gt;&lt;/h3&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;&amp;lt;h1&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h2&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h3&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h4&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h5&amp;gt;-headings&lt;/li&gt;
-      &lt;li&gt;&amp;lt;h6&amp;gt;-headings&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;h4 id=&quot;heading-in-volkhov-h4&quot;&gt;Heading in Volkhov &amp;lt;h4&amp;gt;&lt;/h4&gt;
-
-    &lt;p&gt;As a four-weight family it is well-suited for complex text environments being economic and legible, contemporary and prominent. Many of its design solutions relate to this purpose: large open counters, rather short descenders, and brutal asymmetric serifs.&lt;/p&gt;
-
-    &lt;h5 id=&quot;heading-in-volkhov-h5&quot;&gt;Heading in Volkhov &amp;lt;h5&amp;gt;&lt;/h5&gt;
-
-    &lt;p&gt;Spacing in Bold is slightly increased compared to the normal weight, because the bold mass is mostly grown inwards. The Italic has a steep angle and a distinctive calligraphically reminiscent character, as a counterpart to the rigorous Regular.&lt;/p&gt;
-
-    &lt;h2 id=&quot;modular-scale&quot;&gt;Modular Scale&lt;/h2&gt;
-
-    &lt;p&gt;&lt;em&gt;Feeling Responsive&lt;/em&gt; explores the &lt;em&gt;2:3 perfect fifth&lt;/em&gt; modular scale created with &lt;a href=&quot;http://modularscale.com/&quot;&gt;www.modular-scale.com&lt;/a&gt;. This is the modular scale of  &lt;em&gt;Feeling Responsive&lt;/em&gt;.&lt;/p&gt;
-
-    &lt;p&gt;44px @ 1:1.5 – Ideal text size&lt;br /&gt;
-16px @ 1:1.5 – Important number&lt;/p&gt;
-
-    &lt;table&gt;
-      &lt;thead&gt;
-        &lt;tr&gt;
-          &lt;th&gt;Modular Scale&lt;/th&gt;
-          &lt;th&gt; &lt;/th&gt;
-          &lt;th&gt; &lt;/th&gt;
-          &lt;th&gt; &lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody&gt;
-        &lt;tr&gt;
-          &lt;td&gt;44.000&lt;/td&gt;
-          &lt;td&gt;1&lt;/td&gt;
-          &lt;td&gt;2.75&lt;/td&gt;
-          &lt;td&gt;338.462&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;36.000&lt;/td&gt;
-          &lt;td&gt;0.818&lt;/td&gt;
-          &lt;td&gt;2.25&lt;/td&gt;
-          &lt;td&gt;276.923&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;29.333&lt;/td&gt;
-          &lt;td&gt;0.667&lt;/td&gt;
-          &lt;td&gt;1.833&lt;/td&gt;
-          &lt;td&gt;225.638&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;24.000&lt;/td&gt;
-          &lt;td&gt;0.545&lt;/td&gt;
-          &lt;td&gt;1.5&lt;/td&gt;
-          &lt;td&gt;184.615&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;19.555&lt;/td&gt;
-          &lt;td&gt;0.444&lt;/td&gt;
-          &lt;td&gt;1.222&lt;/td&gt;
-          &lt;td&gt;150.423&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;16.000&lt;/td&gt;
-          &lt;td&gt;0.364&lt;/td&gt;
-          &lt;td&gt;1&lt;/td&gt;
-          &lt;td&gt;123.077&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;h2 class=&quot;t60&quot; id=&quot;typographical-elements&quot;&gt;Typographical Elements&lt;/h2&gt;
-
-    &lt;p&gt;Here you’ll find the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list&quot;&gt;complete list of HTML5-Tags&lt;/a&gt; and this is how they look like.&lt;/p&gt;
-
-    &lt;h3 id=&quot;hr-horizontal-line&quot;&gt;&amp;lt;hr&amp;gt; Horizontal Line&lt;/h3&gt;
-    &lt;hr /&gt;
-
-    &lt;h3 id=&quot;pre-displaying-code&quot;&gt;&amp;lt;pre&amp;gt; Displaying Code&lt;/h3&gt;
-    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Code Blocks&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-    &lt;/div&gt;
-
-    &lt;h3 id=&quot;blockquote-quotation&quot;&gt;&amp;lt;blockquote&amp;gt; Quotation&lt;/h3&gt;
-    &lt;blockquote&gt;Everything happens for a reason. (Britney Spears)&lt;/blockquote&gt;
-
-    &lt;h3 id=&quot;blockquote-and-cite--together&quot;&gt;&amp;lt;blockquote&amp;gt; and &amp;lt;cite&amp;gt;  together&lt;/h3&gt;
-
-    &lt;blockquote&gt;
-      &lt;p&gt;Age is an issue of mind over matter. If you don’t mind, it doesn’t matter.
-&lt;cite&gt;Mark Twain&lt;/cite&gt;&lt;/p&gt;
-    &lt;/blockquote&gt;
-
-    &lt;h3 id=&quot;ol-ordered-lists&quot;&gt;&amp;lt;ol&amp;gt; Ordered Lists&lt;/h3&gt;
-
-    &lt;ol&gt;
-      &lt;li&gt;Ordered List&lt;/li&gt;
-      &lt;li&gt;Second List Item&lt;/li&gt;
-      &lt;li&gt;Third List Item
-        &lt;ol&gt;
-          &lt;li&gt;Second Level First Item&lt;/li&gt;
-          &lt;li&gt;Second Level Second Item&lt;/li&gt;
-          &lt;li&gt;Second Level Third Item
-            &lt;ol&gt;
-              &lt;li&gt;And a third level First Item&lt;/li&gt;
-              &lt;li&gt;And a third level Second Item&lt;/li&gt;
-              &lt;li&gt;And a third level Third Item&lt;/li&gt;
-            &lt;/ol&gt;
-          &lt;/li&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Fourth List Item&lt;/li&gt;
-      &lt;li&gt;Fifth List Item&lt;/li&gt;
-    &lt;/ol&gt;
-
-    &lt;h3 id=&quot;ul-unordered-lists&quot;&gt;&amp;lt;ul&amp;gt; Unordered Lists&lt;/h3&gt;
-
-    &lt;ul&gt;
-      &lt;li&gt;Unordered List&lt;/li&gt;
-      &lt;li&gt;Second List Item&lt;/li&gt;
-      &lt;li&gt;Third List Item
-        &lt;ul&gt;
-          &lt;li&gt;Second Level First Item&lt;/li&gt;
-          &lt;li&gt;Second Level Second Item&lt;/li&gt;
-          &lt;li&gt;Second Level Third Item
-            &lt;ul&gt;
-              &lt;li&gt;And a third level First Item&lt;/li&gt;
-              &lt;li&gt;And a third level Second Item&lt;/li&gt;
-              &lt;li&gt;And a third level Third Item&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;Fourth List Item&lt;/li&gt;
-      &lt;li&gt;Fifth List Item&lt;/li&gt;
-    &lt;/ul&gt;
-
-    &lt;h3 id=&quot;dl-definition-lists&quot;&gt;&amp;lt;dl&amp;gt; Definition Lists&lt;/h3&gt;
-
-    &lt;dl&gt;
-      &lt;dt&gt;Definition List&lt;/dt&gt;
-      &lt;dd&gt;Bacon ipsum dolor sit amet spare ribs brisket ribeye, andouille sirloin bresaola frankfurter corned beef capicola bacon. Salami beef ribs sirloin, short loin hamburger shoulder t-bone.&lt;/dd&gt;
-      &lt;dt&gt;Beef ribs jowl swine porchetta&lt;/dt&gt;
-      &lt;dd&gt;Sirloin tenderloin swine frankfurter pork loin pork capicola ham hock strip steak ribeye beef ribs. Hamburger t-bone ribeye ham prosciutto bresaola.&lt;/dd&gt;
-      &lt;dt&gt;Pancetta flank sirloin pork&lt;/dt&gt;
-      &lt;dd&gt;short ribs shankle prosciutto landjaeger. Beef ribs turkey shoulder drumstick. Leberkas pork belly ribeye, bresaola jerky strip steak tenderloin bacon landjaeger short ribs beef ribs. Flank pork chop fatback tail kielbasa filet mignon jowl landjaeger bresaola tongue corned beef biltong.&lt;/dd&gt;
-      &lt;dd&gt;Landjaeger spare ribs fatback corned beef tenderloin drumstick, swine chicken beef turkey biltong doner tri-tip filet mignon.&lt;/dd&gt;
-    &lt;/dl&gt;
-
-    &lt;h3 id=&quot;a&quot;&gt;&amp;lt;a&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;&lt;a href=&quot;http://phlow.de/&quot;&gt;Links&lt;/a&gt; make the web exceptional.&lt;/p&gt;
-
-    &lt;h3 id=&quot;em&quot;&gt;&amp;lt;em&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;Let’s &lt;em&gt;emphasize&lt;/em&gt; how important responsive webdesign is.&lt;/p&gt;
-
-    &lt;h3 id=&quot;strong&quot;&gt;&amp;lt;strong&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;This looks like &lt;strong&gt;bold&lt;/strong&gt; text.&lt;/p&gt;
-
-    &lt;h3 id=&quot;small&quot;&gt;&amp;lt;small&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;&lt;small&gt;This is small text.&lt;/small&gt;&lt;/p&gt;
-
-    &lt;h3 id=&quot;s&quot;&gt;&amp;lt;s&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;It’s nice getting things done. Just strike through &lt;s&gt;finished tasks&lt;/s&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;cite&quot;&gt;&amp;lt;cite&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;&lt;cite&gt;Albert Einstein&lt;/cite&gt;&lt;/p&gt;
-
-    &lt;h3 id=&quot;q&quot;&gt;&amp;lt;q&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;If you use &amp;lt;q&amp;gt; your text gets &lt;q&gt;automagically quotes around the text passage&lt;/q&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;dfn&quot;&gt;&amp;lt;dfn&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;The &amp;lt;dfn&amp;gt; tag is a phrase tag. It defines a &lt;dfn&gt;definition term&lt;/dfn&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;abbr&quot;&gt;&amp;lt;abbr&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;The &lt;abbr title=&quot;World Health Organization&quot;&gt;WHO&lt;/abbr&gt; was founded in 1948.&lt;/p&gt;
-
-    &lt;h3 id=&quot;time&quot;&gt;&amp;lt;time&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;The concert took place on &lt;time datetime=&quot;2001-05-15 19:00&quot;&gt;May 15&lt;/time&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;code&quot;&gt;&amp;lt;code&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;Some &lt;code class=&quot;highlighter-rouge&quot;&gt;code: lucida console&lt;/code&gt; displayed.&lt;/p&gt;
-
-    &lt;h3 id=&quot;var&quot;&gt;&amp;lt;var&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;The &amp;lt;var&amp;gt; tag is a phrase tag. It defines a &lt;var&gt;variable&lt;/var&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;samp&quot;&gt;&amp;lt;samp&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;Text surrounded by &amp;lt;samp&amp;gt; &lt;samp&gt;looks like this in monospace&lt;/samp&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;kbd&quot;&gt;&amp;lt;kbd&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;Copycats enjoy pressing &lt;kbd&gt;CMD&lt;/kbd&gt; + &lt;kbd&gt;c&lt;/kbd&gt; and &lt;kbd&gt;CMD&lt;/kbd&gt; + &lt;kbd&gt;v&lt;/kbd&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;sub&quot;&gt;&amp;lt;sub&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;This text &lt;sub&gt;lays low&lt;/sub&gt; and chills a bit.&lt;/p&gt;
-
-    &lt;h3 id=&quot;sup&quot;&gt;&amp;lt;sup&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;This text &lt;sup&gt;gets high&lt;/sup&gt; above the clouds.&lt;/p&gt;
-
-    &lt;h3 id=&quot;i&quot;&gt;&amp;lt;i&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;This looks &lt;i&gt;italic&lt;/i&gt;.&lt;/p&gt;
-
-    &lt;h3 id=&quot;b&quot;&gt;&amp;lt;b&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;This looks &lt;b&gt;bold&lt;/b&gt;, too.&lt;/p&gt;
-
-    &lt;h3 id=&quot;u&quot;&gt;&amp;lt;u&amp;gt;&lt;/h3&gt;
-
-    &lt;div&gt;&lt;p&gt;&lt;u&gt;Underlining&lt;/u&gt; content for emphasize is not the best choice. You can't read it so well.&lt;/p&gt;&lt;/div&gt;
-
-    &lt;h3 id=&quot;mark&quot;&gt;&amp;lt;mark&amp;gt;&lt;/h3&gt;
-    &lt;p&gt;Let’s &lt;mark&gt;mark this hint&lt;/mark&gt; to give you a clue.&lt;/p&gt;
-
-    &lt;h3 id=&quot;br&quot;&gt;&amp;lt;br&amp;gt;&lt;/h3&gt;
-
-    &lt;p&gt;Need a break? I give you three!&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-    &lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
-
-    &lt;p&gt;If you need footnotes for your posts, articles and entries, the Kramdown-Parser &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; got you covered. How to use footnotes? Read this footnote. &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
-
-    &lt;h1 id=&quot;h1-heading-in-volkhov&quot;&gt;&amp;lt;h1&amp;gt;-Heading in Volkhov&lt;/h1&gt;
-
-    &lt;h2 id=&quot;h2-heading-in-volkhov&quot;&gt;&amp;lt;h2&amp;gt;-Heading in Volkhov&lt;/h2&gt;
-
-    &lt;h3 id=&quot;h3-heading-in-volkhov&quot;&gt;&amp;lt;h3&amp;gt;-Heading in Volkhov&lt;/h3&gt;
-
-    &lt;h4 id=&quot;h4-heading-in-volkhov&quot;&gt;&amp;lt;h4&amp;gt;-Heading in Volkhov&lt;/h4&gt;
-
-    &lt;h5 id=&quot;h5-heading-in-volkhov&quot;&gt;&amp;lt;h5&amp;gt;-Heading in Volkhov&lt;/h5&gt;
-
-    &lt;h6 id=&quot;h6-heading-in-volkhov&quot;&gt;&amp;lt;h6&amp;gt;-Heading in Volkhov&lt;/h6&gt;
-
-    &lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
-
-    &lt;p&gt;Even tables are responsive thanks to foundation. A table can consist of these elements.&lt;/p&gt;
-
-    &lt;table&gt;
-  &lt;caption&gt;&amp;lt;table&amp;gt; defines an HTML table&lt;/caption&gt;
-  &lt;colgroup&gt;
-    &lt;col span=&quot;1&quot; style=&quot;width: 15%;&quot; /&gt;
-    &lt;col span=&quot;1&quot; style=&quot;width: 50%;&quot; /&gt;
-    &lt;col span=&quot;1&quot; style=&quot;width: 35%;&quot; /&gt;
-  &lt;/colgroup&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;HTML Tag&lt;/th&gt;
-      &lt;th&gt;Defintion&lt;/th&gt;
-      &lt;th&gt;Style&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;caption&amp;gt;&lt;/td&gt;
-      &lt;td&gt;defines a table caption&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;font-weight: bold;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;colgroup&amp;gt;&lt;/td&gt;
-      &lt;td&gt;specifies a group of one or more columns in a table for 
-formatting. The &amp;lt;colgroup&amp;gt; tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;col&amp;gt;&lt;/td&gt;
-      &lt;td&gt;specifies column properties for each column within a `&amp;lt;colgroup&amp;gt;` 
-element&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;thead&amp;gt;&lt;/td&gt;
-      &lt;td&gt;is used to group header content in an HTML table&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;font-weight: bold;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;tbody&amp;gt;&lt;/td&gt;
-      &lt;td&gt;is used to group the body content in an HTML table&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;tr&amp;gt;&lt;/td&gt;
-      &lt;td&gt;defines a row in an HTML table&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;th&amp;gt;&lt;/td&gt;
-      &lt;td&gt;defines a header cell in an HTML table&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;font-weight: bold;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;td&amp;gt;&lt;/td&gt;
-      &lt;td&gt;defines a standard cell in an HTML table&lt;/td&gt;
-      &lt;td&gt;&lt;code&gt;font-weight: normal;&lt;/code&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&amp;lt;tfoot&amp;gt;&lt;/td&gt;
-      &lt;td&gt;is used to group footer content in an HTML table&lt;/td&gt;
-      &lt;td&gt;no styling needed&lt;/td&gt;
-    &lt;/tr&gt;
-&amp;lt;/table&amp;gt;
-
-
-
-
-
-
-
-&amp;lt;/div&amp;gt;&lt;!-- /.medium-8.columns --&gt;
-&amp;lt;/div&amp;gt;&lt;!-- /.row --&gt;
-
-
-&lt;/tbody&gt;&lt;/table&gt;
-  &lt;/div&gt;&lt;/div&gt;
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;Find out more about Kramdown on &lt;a href=&quot;http://kramdown.gettalong.org/&quot;&gt;http://kramdown.gettalong.org/&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;Kramdown has an excellent documentation of all its features. Check out, on how to &lt;a href=&quot;http://kramdown.gettalong.org/syntax.html#footnotes&quot;&gt;footnotes&lt;/a&gt;. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-</content>
-
-			
-				<category term="design" />
-			
-				<category term="typography" />
-			
-			
-
-			<published>2015-08-16T00:00:00-05:00</published>
 		</entry>
 	
 </feed>

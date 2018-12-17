@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +51,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="39" />
-          <entry key="md" value="13416" />
+          <entry key="md" value="14166" />
           <entry key="scss" value="50" />
           <entry key="yml" value="53" />
         </counts>
@@ -54,7 +59,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="39" />
-          <entry key="Markdown" value="13416" />
+          <entry key="Markdown" value="14166" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="YAML" value="53" />
         </counts>
@@ -67,8 +72,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="335">
-                <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
+              <first_editor relative-caret-position="314">
+                <caret line="177" column="398" selection-start-line="177" selection-start-column="398" selection-end-line="177" selection-end-column="398" />
               </first_editor>
               <second_editor />
             </state>
@@ -238,7 +243,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="70" y="67" width="1309" height="717" extended-state="0" />
+    <frame x="32" y="42" width="1309" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26282558" />
@@ -540,8 +545,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="335">
-            <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
+          <first_editor relative-caret-position="314">
+            <caret line="177" column="398" selection-start-line="177" selection-start-column="398" selection-end-line="177" selection-end-column="398" />
           </first_editor>
           <second_editor />
         </state>

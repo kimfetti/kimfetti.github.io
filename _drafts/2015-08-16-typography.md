@@ -1,19 +1,19 @@
 ---
 layout: page-fullwidth
-title: "Wonderful Typography"
+title: "Default Post"
 subheadline: "Reading Experience"
 meta_teaser: "Feeling Responsive uses Volkhov for headlines, Lato for everything else and if you are in need to show some code, it will be in Lucida Console."
 teaser: "<em>Feeling Responsive</em> uses <a href='https://www.google.com/fonts/specimen/Volkhov'>Volkhov</a> for headlines, <a href='https://www.google.com/fonts/specimen/Lato'>Lato</a> for everything else and if you are in need to show some code, it will be in <a href='http://www.microsoft.com/typography/fonts/family.aspx?FID=18'>Lucida Console</a> or <a href='http://en.wikipedia.org/wiki/Monaco_(typeface)'>Monaco</a>."
 header:
-    image: homepage_typography.jpg
+    image: header_typewriter.jpg
     background-color: "#262930"
-    caption: This is a caption for the header image with link
-    caption_url: https://unsplash.com/
+    caption: Test Image
+    caption_url: https://www.wikipedia.org
 image:
-    thumb:  homepage_typography-thumb.jpg
-    homepage: homepage_typography.jpg
-    caption: Image by Antonio
-    caption_url: "http://www.aisleone.net/"
+    thumb:  typewriter-thumb.jpg
+    homepage: header_typewriter.jpg
+    caption: Test Image
+    caption_url: "https://www.wikipedia.org"
 categories:
     - design
     - typography
