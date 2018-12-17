@@ -185,9 +185,9 @@ for various values of \\(N\\), we see below that this approximation becomes more
 
 The birthday problem is a classic that has been examined several different ways.  I hope you've enjoyed the planetary rendition and the deep dive into analytic approximations.
 
-A few final thoughts to leave you with:
-1.  It is well-known that birthdays are not equally distributed throughout all 365 days here on Earth.  How does this non-uniformity affect our birthday solution?  It turns out that the uniform distribution of birthdays we used throughout this post is a worst-case scenario.  If birthdays are skewed to one day or the other, the odds that you will find birthday twins in your party actually increases... but not significantly.  Attempts at calculating the birthday problem for real-world datasets have shown the 23-person group to be a pretty consistent solution the 50% probability.
-1.  
+A few final thoughts:
+1.  It is well-known that birthdays are [not equally distributed throughout all 365 days][8], especially if you focus on one region of the world.  So how does this non-uniformity effect our birthday solution?  It turns out that the uniform distribution of birthdays we used throughout this post is actually a [worst-case scenario][9] in terms of successfully finding birthmates.  If birthdays are skewed toward one day or another, the odds that you will find birthday twins at your party actually increases... but not significantly.  Attempts at calculating the birthday problem with real-world datasets have shown the 23-person group to be a pretty consistent solution even when considering [non-uniform distributions][10].
+1.  I eluded to this earlier, but the idea of a "birthday" gets a bit murky when considering other planets.  I have often mentioned my findings in terms of "Earth days" because I have calculated each plaent's revolution around the sun by the amount of time it takes Earth to rotate about its own axis.  What does that mean in the context of this problem?  Consider two cases: Jupiter and Mercury.  Firstly, Jupiter rotates about its own axis in about [9 hours and 55 minutes][5], faster than another other planet in our solar system.  So while Jupiter takes about 4,333 Earth days to complete a rotation about the sun, it actually takes 10,476 Jovian days to complete this journey\--that's a lot more potential "birthdays!"  Mercury, on the other hand, completes a rotation about its own axis _slower_ than any other planet. It takes about 176 Earth days for Mercury to rotate, which is actually longer than it takes to revolve about the Sun.  Ultimately, a year on Mercury is half as long as a day on Mercury.  The birthday problem is completely moot because everyone born in the same Mercurian year is automatically born on the same Mercurian day! (Please disregard the fact that no one is ever actually born on Mercury. :satisfied:)
 
 
  [1]: https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8
@@ -197,6 +197,6 @@ A few final thoughts to leave you with:
  [5]: https://www.universetoday.com/37507/years-of-the-planets/
  [6]: https://www.space.com/40550-pluto-planet-debate-flares-up-again.html
  [7]: https://www.thisismetis.com
- [8]: #
- [9]: #
- [10]: #
+ [8]: http://www.panix.com/~murphy/bday.html
+ [9]: https://www.jstor.org/stable/2318556?seq=1#page_scan_tab_contents
+ [10]: https://www.stat.wisc.edu/techreports/tr591.pdf

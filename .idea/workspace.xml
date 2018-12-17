@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/birthday_planet_header_4.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_01_settings_colors.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_01_settings_colors.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_04_settings_global.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_04_settings_global.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2018-12-10-planetary-birthday-problem.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/_01_settings_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/_01_settings_colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/css/atom.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/css/atom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/css/rss.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/css/rss.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/css/styles_feeling_responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/css/styles_feeling_responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +46,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="39" />
-          <entry key="md" value="11635" />
+          <entry key="md" value="13416" />
           <entry key="scss" value="50" />
           <entry key="yml" value="53" />
         </counts>
@@ -71,7 +54,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="39" />
-          <entry key="Markdown" value="11635" />
+          <entry key="Markdown" value="13416" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="YAML" value="53" />
         </counts>
@@ -84,8 +67,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="357">
-                <caret line="193" column="47" lean-forward="true" selection-start-line="193" selection-start-column="47" selection-end-line="193" selection-end-column="47" />
+              <first_editor relative-caret-position="335">
+                <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
               </first_editor>
               <second_editor />
             </state>
@@ -157,8 +140,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="70" />
-    <option name="y" value="67" />
+    <option name="x" value="32" />
+    <option name="y" value="42" />
     <option name="width" value="1309" />
     <option name="height" value="717" />
   </component>
@@ -557,8 +540,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="357">
-            <caret line="193" column="47" lean-forward="true" selection-start-line="193" selection-start-column="47" selection-end-line="193" selection-end-column="47" />
+          <first_editor relative-caret-position="335">
+            <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
           </first_editor>
           <second_editor />
         </state>
