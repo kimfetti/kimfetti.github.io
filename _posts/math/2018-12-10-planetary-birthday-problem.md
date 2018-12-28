@@ -18,6 +18,8 @@ image:
 categories:
     - mathematics
     - visualizations
+show_meta: true
+comments: true
 ---
 <!--more-->
 
@@ -30,7 +32,7 @@ One of my favorite sections in this book is the birthday series, which includes 
 
 The problem goes something along the lines of:
 
-> <span class="teaser">You are throwing a party and inviting random people you have never met. What's the fewest number of people you need to invite to have at least 50% probability that two strangers will have the same birthday? <br>(Birth year need not match.)</span>
+> <span class="teaser">You are throwing a party and inviting random people you have never met. What's the fewest number of <br> people you need to invite to have at least 50% probability that two strangers will have the same birthday? <br>(Birth year need not match.)</span>
 
 If you haven’t solved this one before, feel free to take a moment and give it a shot.  Be warned -- __spoilers ahead__!
 
@@ -46,14 +48,16 @@ Backtracking to the original birthday problem, we now just need to find the mini
 \\[p_{s} = 1 - \frac{N!}{(N-r)!N^r} > \frac{1}{2}.\\]
 
 This expression doesn’t look all that pleasant to be solved outright, so instead we can build a little solver in Python\--or the language of your choice!\--to be able to compute \\(p_s\\) for any given \\(r\\) and \\(N\\). 
-~~~
+
+```
 def prob_birthday_success(r, N=365):
     if r > N: 
         return 1.
     factorial = reduce(lambda x, y: x*y, range(N-r+1, N+1))
     power = N**r
     return (1 - factorial/power)
-~~~
+```
+ 
 We steadily increase \\(r\\) and once we hit the \\(p_s \geq \frac{1}{2}\\) mark, we have our desired party size.  The table below illustrates solutions for 50% probability as well as a few others values of \\(p_s\\).
 
 <center>
@@ -134,7 +138,7 @@ Ah ha!  Viewing the data this way, a trend that looks roughly like a power relat
 
 ## Expanding Solution with Approximations
 
-We are about to embark upon the amazing world of expansions and approximations\--AKA put your math pants on and fasten your seat belts!  (If this sort of nerdout isn't your bag, no worries.  Just skip ahead to the end of this section where all will revealed... 🔮  Much of this work can also be found in [Mosteller][1] as his solution to the birthday problem.)
+We are about to embark upon the amazing world of expansions and approximations\--AKA put your math pants on and fasten your seat belts!  (If this sort of nerdout isn't your thing, no worries.  Just skip ahead to the end of this section where all will revealed... 🔮  Much of this work can also be found in [Mosteller][1] as his solution to the birthday problem.)
 
 First recall that 
 \\[e^{-x} = 1 - x + \frac{x^2}{2!} - \frac{x^3}{3!}+ \cdots,\\]
@@ -158,7 +162,7 @@ which looks _much_ more tractable than the original expression we had for \\(p_u
 
 Subbing in \\(p_u = 1 - p_s\\) and taking the natural log of each side, we eventually find
 \\[\frac{r(r-1)}{2N} \approx -\ln{(1 - p_s)},\\]
-which implies
+which means
 \\[r(r-1) \approx -2N\ln{(1-p_s)}.\\]
 So there you have it!  Selecting in any given value for \\(p_s\\) will fix the log factor and the other two quantities are related as
 \\[\mathcal{O}\left(r\right) \sim \mathcal{O}\left(\sqrt{N}\right).\\]
@@ -176,11 +180,11 @@ We can also more explicitly consider what happens as \\(N\\) gets larger. Becaus
 this approximation should actually become *more* valid as \\(N\\) becomes larger since \\(k/N\\) will resultingly grow smaller.  
 
 Now set \\(p_s = \frac{1}{2}\\) and let \\(r_{1/2}\\) be the 50-50 chance party size. Plotting the left-hand side of our approximation
-\\[\frac{r_{1/2}(r_{1/2}-1)}{2N} \approx -\ln{\frac{1}{2}}\\]
-for various evenly sampled values of \\(N\\), we see in the figure below that this estimation indeed becomes more valid and encounters less variance about the \\(-\ln{(1/2)}\\) line as \\(N \to \infty\\).  (There is an added layer of complexity in this problem, however, because we require \\(r_{1/2}\\) to be an integer; this stipulations makes our approximation dance about the \\(-\ln{(1/2)}\\) line a bit even at large values of \\(N\\).)
+\\[\frac{r_{1/2}(r_{1/2}-1)}{2N} \approx \ln{2}\\]
+for various evenly sampled values of \\(N\\), we see in the figure below that this estimation indeed becomes more valid and encounters less variance about \\(\ln{(2)}\\) as \\(N \to \infty\\).  (There is an added layer of complexity in this problem, however, because we require \\(r_{1/2}\\) to be an integer; this stipulation makes our approximation dance about the line a bit even at large values of \\(N\\).)
 
 <center>
-<img src="{{ site.urlimg }}planetary-birthday-approx.png" alt="Approximation chart" width = "900" height = "400">
+<img src="{{ site.urlimg }}planetary-birthday-approx.png" alt="Approximation plot" width = "900" height = "400">
 </center>
 
 ## Conclusion
@@ -189,17 +193,20 @@ The birthday problem is a classic that has been examined from several different 
 
 A few final thoughts:
 
-1.  It is well-known that birthdays are [not equally distributed throughout all 365 days][8], especially if you focus on one region of the world.  So how does non-uniformity effect our birthday solution?  
+1.  It is well-known that birthdays are [not equally distributed throughout all 365 days][8], especially if you focus on one region of the world.  So how does non-uniformity affect our birthday solution?  
 
      It turns out that the uniform distribution of birthdays we used throughout this post is actually a [worst-case scenario][9] in terms of successfully finding birthmates.  If birthdays are skewed toward one day or another, the odds that you will find birthday twins at your party actually increase... but not significantly.  Attempts at calculating the birthday problem with real-world datasets have shown the 23-person group to be a pretty consistent solution, even when considering [non-uniform distributions][10].
 
 1.  I eluded to this earlier, but the idea of a "birthday" gets a bit complicated when thinking about other planets.  I often mentioned my findings in terms of "Earth days" because I calculated each planet's revolution about the Sun in the number of times it takes Earth to rotate about its own axis.  What does that mean in the context of this problem?  
 
      Consider two cases: Jupiter and Mercury.  
-     * Firstly, Jupiter rotates about its own axis in about [9 hours and 55 minutes][5], faster than any other planet in our solar system.  So while Jupiter takes roughly 4,333 Earth days to complete its orbit about the Sun, it actually takes 10,476 _Jovian_ days to complete this journey. That's a lot more potential "birthdays!"  
-     * Mercury, on the other hand, completes a rotation about its axis _slower_ than any other planet. It takes about 176 Earth days for Mercury to rotate, which is *longer* than it takes Mercury to revolve about the Sun.  Ultimately, a "year" on Mercury is half as long as a "day."  The birthday problem is completely moot because everyone born in the same Mercurian year is automatically born on the same Mercurian day! (... Please disregard the fact that no one is ever actually born on Mercury. 😆)
+     * Firstly, Jupiter rotates about its own axis in about [9 hours and 55 minutes][5], faster than any other planet in our solar system.  So while Jupiter takes roughly 4,333 Earth days to complete its orbit about the Sun, this actually amounts to 10,476 _Jovian_ days.  That's a lot more potential "birthdays!"  
+     * Mercury, on the other hand, completes a rotation about its axis _slower_ than any other planet. It takes about 176 Earth days for Mercury to rotate, which is *longer* than Mercury's revolution about the Sun.  Ultimately, a "year" on Mercury is half as long as a "day."  The birthday problem is completely moot because everyone born in the same Mercurian year is automatically born on the same Mercurian day! (... Please ignore the fact that no one is ever actually born on Mercury. 😆)
      
-        I have chosen to disregard this planetary difference in the definition of a "day" for simplicity, but keeping with the same Python function introduced near the beginning of this post, we could relatively easily compute these revised birthday solutions.  Please let me know if you work this out!
+     <br>
+     I have chosen to disregard this planetary difference in the definition of a "day" for simplicity, but keeping with the same Python function introduced near the beginning of this post, we could relatively easily compute revised birthday solutions.  Please let me know if you work this out!
+
+[Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb)  ||  [Check out this viz on Tableau!](https://public.tableau.com/profile/kimberly.fessel#!/vizhome/PlanetaryBirthdayProblem/Planets-50)
 
  [1]: https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8
  [2]: https://www.npr.org/templates/story/story.php?storyId=4542341
