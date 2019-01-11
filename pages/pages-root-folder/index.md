@@ -7,16 +7,23 @@
 layout: frontpage
 header:
   image_fullwidth: header5.png
-# widget1:
-#  title: "Blog & Portfolio"
-#  url: 'http://phlow.github.io/feeling-responsive/blog/'
-#  image: widget-1-302x182.jpg
-#  text: 'Every good portfolio website has a blog with fresh news, thoughts and develop&shy;ments of your activities. <em>Feeling Responsive</em> offers you a fully functional blog with an archive page to give readers a quick overview of all your posts.'
+widget1:
+  title: "One Day at Bootcamp"
+  url: 'https://www.meetup.com/Metis-New-York-Data-Science/events/257900190/'
+  image: ODAB_Jan2019.png
+  text: 'Kimberly will be instructing the Metis NYC <em>One Day at Bootcamp</em> on January 26th to give participants a chance to see what the experience is really like!  Attendees will receive free, interactive training in Python, focusing on Pandas and SciKit Learn.'
+widget2:
+  title: "Solving the Birthday Problem on Mars"
+  url: 'http://kimfetti.github.io/mathematics/visualizations/planetary-birthday-problem/'
+  image: birthday_planet_thumb.jpg
+  text: 'The birthday problem is a classic probability question with a surprising result. In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system.'
+
+#  text: 'The birthday problem is a classic probability question with a surprising result. In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system.'
 # widget2:
-#  title: "Why use this theme?"
-#  url: 'http://phlow.github.io/feeling-responsive/info/'
-#  text: '<em>Feeling Responsive</em> is heavily customizable.<br/>1. Language-Support :)<br/>2. Optimized for speed and it&#39;s responsive.<br/>3. Built on <a href="http://foundation.zurb.com/">Foundation Framework</a>.<br/>4. Seven different Headers.<br/>5. Customizable navigation, footer,...'
-#  video: '<a href="#" data-reveal-id="videoModal"><img src="http://phlow.github.io/feeling-responsive/images/start-video-feeling-responsive-302x182.jpg" width="302" height="182" alt=""/></a>'
+#  title: 'One Day at Bootcamp'
+#  url: 'https://www.meetup.com/Metis-New-York-Data-Science/events/257900190/'
+#  image: birthday_planet_thumb.jpg
+#  text: 'Kimberly will be instructing Metis NYC's “One Day at Bootcamp” on January 26th to give participants a chance to see what the experience is really like!  Attendees will receive free, interactive training in Python, focusing on Pandas and SciKit Learn.'
 # widget3:
 #  title: "Download Theme"
 #  url: 'https://github.com/Phlow/feeling-responsive'
