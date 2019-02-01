@@ -7,16 +7,16 @@
 layout: frontpage
 header:
   image_fullwidth: header5.png
-widget1:
-  title: "One Day at Bootcamp"
-  url: 'https://www.meetup.com/Metis-New-York-Data-Science/events/257900190/'
-  image: ODAB_Jan2019.png
-  text: 'Kimberly will be instructing the Metis NYC <em>One Day at Bootcamp</em> on January 26th to give participants a chance to see what the experience is really like!  Attendees will receive free, interactive training in Python, focusing on Pandas and SciKit Learn.'
-widget2:
-  title: "Solving the Birthday Problem on Mars"
-  url: 'http://kimfetti.github.io/mathematics/visualizations/planetary-birthday-problem/'
-  image: birthday_planet_thumb.jpg
-  text: 'The birthday problem is a classic probability question with a surprising result. In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system.'
+#widget1:
+#  title: "One Day at Bootcamp"
+#  url: 'https://www.meetup.com/Metis-New-York-Data-Science/events/257900190/'
+#  image: ODAB_Jan2019.png
+#  text: 'Kimberly will be instructing the Metis NYC <em>One Day at Bootcamp</em> on January 26th to give participants a chance to see what the experience is really like!  Attendees will receive free, interactive training in Python, focusing on Pandas and SciKit Learn.'
+#widget2:
+#  title: "Solving the Birthday Problem on Mars"
+#  url: 'http://kimfetti.github.io/mathematics/visualizations/planetary-birthday-problem/'
+#  image: birthday_planet_thumb.jpg
+#  text: 'The birthday problem is a classic probability question with a surprising result. In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system.'
 
 #  text: 'The birthday problem is a classic probability question with a surprising result. In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system.'
 # widget2:
