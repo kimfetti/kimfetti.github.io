@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-01-11T10:44:51-05:00</updated>
+	<updated>2019-07-17T18:00:18-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -24,6 +24,121 @@
 
 	<generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator>
 
+	
+		<entry>
+			<id>http://localhost:4000//algorithms/lit_review/object-detection-challenges/</id>
+			<title>5 Important Object Detection Challenges and their Solutions</title>
+			<link href="http://localhost:4000//algorithms/lit_review/object-detection-challenges/" rel="alternate" type="text/html" title="5 Important Object Detection Challenges and their Solutions" />
+			<updated>2019-07-15T00:00:00-04:00</updated>
+
+			
+				
+				<author>
+					
+						<name>KFessel</name>
+					
+					
+					
+				</author>
+			
+			<summary>&lt;em&gt;Object detection is super hard, but don't worry... humans are smart!&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//algorithms/lit_review/object-detection-challenges/">&lt;!--more--&gt;
+
+&lt;p&gt;Content for “abstract” including&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Object detection has made a lot of gains&lt;/li&gt;
+  &lt;li&gt;But it wasn’t easy!&lt;/li&gt;
+  &lt;li&gt;Much harder than object classification in many ways
+    &lt;ul&gt;
+      &lt;li&gt;Multiple objects in one image&lt;/li&gt;
+      &lt;li&gt;Localization&lt;/li&gt;
+      &lt;li&gt;Spatial component should be preserved&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;What is object detection?  Leads to video tracking&lt;/li&gt;
+  &lt;li&gt;Applications&lt;/li&gt;
+  &lt;li&gt;History
+    &lt;ul&gt;
+      &lt;li&gt;Manual feature collection&lt;/li&gt;
+      &lt;li&gt;Major gains once CNN applied to problem&lt;/li&gt;
+      &lt;li&gt;Image depicting methods on a timeline (+ challenges overcome by each that can be referenced later)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;challenges&quot;&gt;Challenges&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-dual-priorities-object-localization-and-classification&quot;&gt;1. Dual priorities: Object localization and classification&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Regions of interest (independent of class, pipeline solution)&lt;/li&gt;
+  &lt;li&gt;Multi-task loss function&lt;/li&gt;
+  &lt;li&gt;Multiple objects in one image&lt;/li&gt;
+  &lt;li&gt;New metrics: IOU&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-objects-have-multiple-spatial-scales-and-aspect-ratios&quot;&gt;2. Objects have multiple spatial scales and aspect ratios&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Warping of ROI before being fed into CNN (R-CNN)&lt;/li&gt;
+  &lt;li&gt;SPP layer&lt;/li&gt;
+  &lt;li&gt;Anchors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-spatial-position-is-relevant&quot;&gt;3. Spatial position IS relevant&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Image classification does not do this&lt;/li&gt;
+  &lt;li&gt;Fully connected layers (slow)&lt;/li&gt;
+  &lt;li&gt;?? (I forgot this solution… )&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;4-speed&quot;&gt;4. Speed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Heading toward RT detection in videos – need to process images very quickly&lt;/li&gt;
+  &lt;li&gt;Fast R-CNN (process image through CNN first)&lt;/li&gt;
+  &lt;li&gt;Faster R-CNN (separate RPN)&lt;/li&gt;
+  &lt;li&gt;YOLO (multi-task optimization, all in one go, no alternate optimization like Faster R-CNN)&lt;/li&gt;
+  &lt;li&gt;SSD?&lt;/li&gt;
+  &lt;li&gt;Truncated SVD&lt;/li&gt;
+  &lt;li&gt;Trade speed and accuracy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5-pose-lighting-occlusions&quot;&gt;5. Pose, lighting, occlusions&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;More information needed here.  Include these or not?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Much harder than image classification tasks&lt;/li&gt;
+  &lt;li&gt;Future challenges like adding LSTM, time component to video processing.  Currently one frame at a time&lt;/li&gt;
+  &lt;li&gt;Marry speed and accuracy&lt;/li&gt;
+  &lt;li&gt;Check out review’s future stuff again&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb&quot;&gt;Check out this code on GitHub!&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://public.tableau.com/profile/kimberly.fessel#!/vizhome/PlanetaryBirthdayProblem/Planets-50&quot;&gt;Check out this viz on Tableau!&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+</content>
+
+			
+				<category term="algorithms" />
+			
+				<category term="lit_review" />
+			
+			
+
+			<published>2019-07-15T00:00:00-04:00</published>
+		</entry>
 	
 		<entry>
 			<id>http://localhost:4000//mathematics/visualizations/planetary-birthday-problem/</id>

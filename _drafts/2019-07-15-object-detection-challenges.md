@@ -6,15 +6,15 @@ meta_teaser: "Object detection is super hard, but humans are smart!"
 teaser: "<em>Object detection is super hard, but don't worry... humans are smart!</em>"
 
 header:
-    image: birthday_planet_header.jpg
+    image: kim_tree.jpg
     background-color: "#999999"
-    caption: "Voyager Montage by NASA. Public Domain. Credit: NASA."
+    caption: "Personal photo.  Author at Haleakalā National Park."
     caption_url: https://www.nasa.gov/index.html
 image:
-    thumb: birthday_planet_thumb.jpg
-    homepage: birthday_planet_header.jpg
-    caption: "Credit: NASA"
-    caption_url: https://www.nasa.gov/index.html
+    thumb: kim_tree_thumb.jpg
+    homepage: kim_tree.jpg
+    caption: "Personal photo"
+    caption_url: 
 categories:
     - algorithms
     - lit_review
