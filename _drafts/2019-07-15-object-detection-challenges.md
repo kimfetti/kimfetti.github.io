@@ -11,7 +11,7 @@ header:
     caption: "Personal photo.  Author at Haleakalā National Park."
     caption_url: https://www.nasa.gov/index.html
 image:
-    thumb: kim_tree_thumb.jpg
+    thumb: kim_tree_thumb.png
     homepage: kim_tree.jpg
     caption: "Personal photo"
     caption_url: 
