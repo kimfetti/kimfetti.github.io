@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>5 Important Object Detection Challenges and their Solutions</title>
+	<title>5 Important Object Detection Challenges and Solutions</title>
 
     <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/styles_feeling_responsive.css">
 
@@ -30,20 +30,20 @@
 
 
 	<!-- Search Engine Optimization -->
-	<meta name="description" content="Object detection is super hard, but don&#39;t worry... humans are smart!">
+	<meta name="description" content="Object detection problems provide several unique challenges beyond image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to overcome these complications.">
 	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ">
 	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" >
 	
 	<link rel="author" href="https://plus.google.com/105464329327164540117">
 	
 	
-	<link rel="canonical" href="http://localhost:4000//algorithms/lit_review/object-detection-challenges/">
+	<link rel="canonical" href="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/">
 
 
 	<!-- Facebook Open Graph -->
-	<meta property="og:title" content="5 Important Object Detection Challenges and their Solutions">
-	<meta property="og:description" content="Object detection is super hard, but don&#39;t worry... humans are smart!">
-	<meta property="og:url" content="http://localhost:4000//algorithms/lit_review/object-detection-challenges/">
+	<meta property="og:title" content="5 Important Object Detection Challenges and Solutions">
+	<meta property="og:description" content="Object detection problems provide several unique challenges beyond image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to overcome these complications.">
+	<meta property="og:url" content="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Kimberly Fessel Blog">
@@ -56,8 +56,8 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="">
 	<meta name="twitter:creator" content="">
-	<meta name="twitter:title" content="5 Important Object Detection Challenges and their Solutions">
-	<meta name="twitter:description" content="Object detection is super hard, but don&#39;t worry... humans are smart!">
+	<meta name="twitter:title" content="5 Important Object Detection Challenges and Solutions">
+	<meta name="twitter:description" content="Object detection problems provide several unique challenges beyond image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to overcome these complications.">
 	
 	
 
@@ -212,7 +212,7 @@
 <div id="masthead-with-background-color" style="background: #999999;">
 	<div class="row">
 		<figure class="small-12 columns">
-			<img src="https://kimfetti.github.io/images//kim_tree.jpg" alt="Kimberly Fessel Blog">
+			<img src="https://kimfetti.github.io/images//kim_tree_header.png" alt="Kimberly Fessel Blog">
 		</figure><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
@@ -237,13 +237,13 @@
 	<div class="medium-12 columns">
 		<article>
 			<header>
-				<p class="subheadline">Algorithms</p>
-				<h1>5 Important Object Detection Challenges and their Solutions</h1>
+				<p class="subheadline">Reviews</p>
+				<h1>5 Important Object Detection Challenges and Solutions</h1>
 			</header>
 
 			
 			<p class="teaser">
-				<em>Object detection is super hard, but don't worry... humans are smart!</em>
+				<em>Object detection problems provide several unique challenges beyond image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications.</em>
 			</p>
 			
 
@@ -277,7 +277,25 @@
 
 <h2 id="challenges">Challenges</h2>
 
-<h3 id="1-dual-priorities-object-localization-and-classification">1. Dual priorities: Object localization and classification</h3>
+<h3 id="1-dual-priorities-object-localization-and-classification">1. Dual priorities: object localization and classification</h3>
+
+<p>The first major complication of object detection is its added goal: not only do we want to classify an image’s objects but also to determine the objects’ positions, generally referred to as the <em>object localization</em> task in literature.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.</p>
+
+<p>a. Pipeline methods with region proposals</p>
+
+<p>b. One-shot regression with multi-task loss function</p>
+
+<h4 id="metrics">Metrics</h4>
+<p>Another interesting consequence of having multiple objectives is the need for special metrics to score object detection methods.  Two such metrics, IOU and mAP, are common among the object detection community and are typically reported when comparing techniques.</p>
+
+<p>a. IOU</p>
+
+<p>IOU stands for intersection over union and is used to judge appropriate object localization.</p>
+
+<p>b. mAP</p>
+
+<p>mAP, or mean average precision, on the other hand, assesses the classification task.</p>
+
 <ul>
   <li>Regions of interest (independent of class, pipeline solution)</li>
   <li>Multi-task loss function</li>
@@ -310,16 +328,18 @@
   <li>Trade speed and accuracy</li>
 </ul>
 
-<h3 id="5-pose-lighting-occlusions">5. Pose, lighting, occlusions</h3>
+<h3 id="5-data">5. Data</h3>
 <ul>
-  <li>More information needed here.  Include these or not?</li>
+  <li>Lots of data for image classification (ImageNet), not so much for image detection (COCO)</li>
+  <li>YOLO9000 attempt to leverage both for training</li>
 </ul>
 
 <h2 id="conclusion">Conclusion</h2>
 <ul>
   <li>Much harder than image classification tasks</li>
   <li>Future challenges like adding LSTM, time component to video processing.  Currently one frame at a time</li>
-  <li>Marry speed and accuracy</li>
+  <li>Marry speed and accuracy AND extend object class space</li>
+  <li>Also: pose, occlusions, lighting (same issues that image classification has but maybe even more so since also trying to localize object)</li>
   <li>Check out review’s future stuff again</li>
 </ul>
 
@@ -347,7 +367,7 @@
 				<time class="icon-calendar pr20" datetime="2019-07-15T00:00:00-04:00" itemprop="datePublished"> 2019-07-15</time>
 				
 
-				<span class="icon-archive pr20"> ALGORITHMS · LIT_REVIEW</span>
+				<span class="icon-archive pr20"> ALGORITHMS · LITERATURE REVIEWS</span>
 				<br />
 				<span class="pr20"></span>
 			</p>
@@ -374,7 +394,7 @@
 			    <script type="text/javascript">
 			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 			        var disqus_shortname = 'kimfetti-github-io'; 
-			        var disqus_identifier = '/algorithms/lit_review/object-detection-challenges/';
+			        var disqus_identifier = '/algorithms/literature%20reviews/object-detection-challenges/';
 
 			        /* * * DON'T EDIT BELOW THIS LINE * * */
 			        (function() {

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-07-17T18:02:08-04:00</updated>
+	<updated>2019-07-19T15:45:55-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -26,9 +26,9 @@
 
 	
 		<entry>
-			<id>http://localhost:4000//algorithms/lit_review/object-detection-challenges/</id>
-			<title>5 Important Object Detection Challenges and their Solutions</title>
-			<link href="http://localhost:4000//algorithms/lit_review/object-detection-challenges/" rel="alternate" type="text/html" title="5 Important Object Detection Challenges and their Solutions" />
+			<id>http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/</id>
+			<title>5 Important Object Detection Challenges and Solutions</title>
+			<link href="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/" rel="alternate" type="text/html" title="5 Important Object Detection Challenges and Solutions" />
 			<updated>2019-07-15T00:00:00-04:00</updated>
 
 			
@@ -41,8 +41,8 @@
 					
 				</author>
 			
-			<summary>&lt;em&gt;Object detection is super hard, but don't worry... humans are smart!&lt;/em&gt;</summary>
-			<content type="html" xml:base="http://localhost:4000//algorithms/lit_review/object-detection-challenges/">&lt;!--more--&gt;
+			<summary>&lt;em&gt;Object detection problems provide several unique challenges beyond image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications.&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/">&lt;!--more--&gt;
 
 &lt;p&gt;Content for “abstract” including&lt;/p&gt;
 &lt;ul&gt;
@@ -72,7 +72,25 @@
 
 &lt;h2 id=&quot;challenges&quot;&gt;Challenges&lt;/h2&gt;
 
-&lt;h3 id=&quot;1-dual-priorities-object-localization-and-classification&quot;&gt;1. Dual priorities: Object localization and classification&lt;/h3&gt;
+&lt;h3 id=&quot;1-dual-priorities-object-localization-and-classification&quot;&gt;1. Dual priorities: object localization and classification&lt;/h3&gt;
+
+&lt;p&gt;The first major complication of object detection is its added goal: not only do we want to classify an image’s objects but also to determine the objects’ positions, generally referred to as the &lt;em&gt;object localization&lt;/em&gt; task in literature.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.&lt;/p&gt;
+
+&lt;p&gt;a. Pipeline methods with region proposals&lt;/p&gt;
+
+&lt;p&gt;b. One-shot regression with multi-task loss function&lt;/p&gt;
+
+&lt;h4 id=&quot;metrics&quot;&gt;Metrics&lt;/h4&gt;
+&lt;p&gt;Another interesting consequence of having multiple objectives is the need for special metrics to score object detection methods.  Two such metrics, IOU and mAP, are common among the object detection community and are typically reported when comparing techniques.&lt;/p&gt;
+
+&lt;p&gt;a. IOU&lt;/p&gt;
+
+&lt;p&gt;IOU stands for intersection over union and is used to judge appropriate object localization.&lt;/p&gt;
+
+&lt;p&gt;b. mAP&lt;/p&gt;
+
+&lt;p&gt;mAP, or mean average precision, on the other hand, assesses the classification task.&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Regions of interest (independent of class, pipeline solution)&lt;/li&gt;
   &lt;li&gt;Multi-task loss function&lt;/li&gt;
@@ -105,16 +123,18 @@
   &lt;li&gt;Trade speed and accuracy&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;5-pose-lighting-occlusions&quot;&gt;5. Pose, lighting, occlusions&lt;/h3&gt;
+&lt;h3 id=&quot;5-data&quot;&gt;5. Data&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;More information needed here.  Include these or not?&lt;/li&gt;
+  &lt;li&gt;Lots of data for image classification (ImageNet), not so much for image detection (COCO)&lt;/li&gt;
+  &lt;li&gt;YOLO9000 attempt to leverage both for training&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Much harder than image classification tasks&lt;/li&gt;
   &lt;li&gt;Future challenges like adding LSTM, time component to video processing.  Currently one frame at a time&lt;/li&gt;
-  &lt;li&gt;Marry speed and accuracy&lt;/li&gt;
+  &lt;li&gt;Marry speed and accuracy AND extend object class space&lt;/li&gt;
+  &lt;li&gt;Also: pose, occlusions, lighting (same issues that image classification has but maybe even more so since also trying to localize object)&lt;/li&gt;
   &lt;li&gt;Check out review’s future stuff again&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -133,7 +153,7 @@
 			
 				<category term="algorithms" />
 			
-				<category term="lit_review" />
+				<category term="literature reviews" />
 			
 			
 

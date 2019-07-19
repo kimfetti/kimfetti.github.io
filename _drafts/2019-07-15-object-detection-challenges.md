@@ -1,23 +1,23 @@
 ---
 layout: page-fullwidth
-title: "5 Important Object Detection Challenges and their Solutions"
-subheadline: "Algorithms"
-meta_teaser: "Object detection is super hard, but humans are smart!"
-teaser: "<em>Object detection is super hard, but don't worry... humans are smart!</em>"
+title: "5 Important Object Detection Challenges and Solutions"
+subheadline: "Reviews"
+meta_teaser: "Object detection is super hard, but don't worry... humans are smart!"
+teaser: "<em>Object detection problems provide several unique challenges beyond image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications.</em>"
 
 header:
-    image: kim_tree.jpg
+    image: kim_tree_header.png
     background-color: "#999999"
     caption: "Personal photo.  Author at Haleakalā National Park."
     caption_url: https://www.nasa.gov/index.html
 image:
     thumb: kim_tree_thumb.png
-    homepage: kim_tree.jpg
+    homepage: kim_tree_header.png
     caption: "Personal photo"
     caption_url: 
 categories:
     - algorithms
-    - lit_review
+    - literature reviews
 show_meta: true
 comments: true
 ---
@@ -43,7 +43,25 @@ Content for "abstract" including
 
 ## Challenges
 
-### 1. Dual priorities: Object localization and classification
+### 1. Dual priorities: object localization and classification
+
+The first major complication of object detection is its added goal: not only do we want to classify an image's objects but also to determine the objects' positions, generally referred to as the _object localization_ task in literature.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.
+
+a. Pipeline methods with region proposals
+
+b. One-shot regression with multi-task loss function
+
+#### Metrics
+Another interesting consequence of having multiple objectives is the need for special metrics to score object detection methods.  Two such metrics, IOU and mAP, are common among the object detection community and are typically reported when comparing techniques.
+
+a. IOU 
+
+IOU stands for intersection over union and is used to judge appropriate object localization.
+
+b. mAP 
+
+mAP, or mean average precision, on the other hand, assesses the classification task.
+
 - Regions of interest (independent of class, pipeline solution)
 - Multi-task loss function
 - Multiple objects in one image
@@ -71,13 +89,15 @@ Content for "abstract" including
 - Truncated SVD
 - Trade speed and accuracy
 
-### 5. Pose, lighting, occlusions
-- More information needed here.  Include these or not?
+### 5. Data
+- Lots of data for image classification (ImageNet), not so much for image detection (COCO)
+- YOLO9000 attempt to leverage both for training
 
 ## Conclusion
 - Much harder than image classification tasks
 - Future challenges like adding LSTM, time component to video processing.  Currently one frame at a time
-- Marry speed and accuracy
+- Marry speed and accuracy AND extend object class space
+- Also: pose, occlusions, lighting (same issues that image classification has but maybe even more so since also trying to localize object)
 - Check out review's future stuff again
 
 
