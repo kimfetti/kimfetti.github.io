@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-07-19T15:45:55-04:00</updated>
+	<updated>2019-07-19T17:09:19-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -41,8 +41,12 @@
 					
 				</author>
 			
-			<summary>&lt;em&gt;Object detection problems provide several unique challenges beyond image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications.&lt;/em&gt;</summary>
+			<summary>&lt;em&gt;Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to address these complications.&lt;/em&gt;</summary>
 			<content type="html" xml:base="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/">&lt;!--more--&gt;
+
+&lt;p&gt;The field of computer vision has experience substantial progress recently owing largely to advances in deep learning, specifically convolutional neural nets (CNNs).  Image classification, where a computer classifies or assigns labels to an image based on its content, can often see great results simply by leveraging pre-trained neural nets and fine-tuning the last few throughput layers.&lt;/p&gt;
+
+&lt;p&gt;Classifying &lt;em&gt;and&lt;/em&gt; finding individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like &lt;a href=&quot;https://cloud.google.com/vision/docs/drag-and-drop&quot;&gt;Google&lt;/a&gt; and &lt;a href=&quot;https://www.ibm.com/watson/services/visual-recognition/&quot;&gt;IBM&lt;/a&gt;. But all of this progress wasn’t easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After further introducing the topic, let’s take a deep dive into several of the interesting obstacles object detection problems raise along with methods researchers have proposed as resulting solutions.&lt;/p&gt;
 
 &lt;p&gt;Content for “abstract” including&lt;/p&gt;
 &lt;ul&gt;

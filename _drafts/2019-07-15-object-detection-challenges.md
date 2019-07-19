@@ -2,13 +2,13 @@
 layout: page-fullwidth
 title: "5 Important Object Detection Challenges and Solutions"
 subheadline: "Reviews"
-meta_teaser: "Object detection is super hard, but don't worry... humans are smart!"
-teaser: "<em>Object detection problems provide several unique challenges beyond image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications.</em>"
+meta_teaser: "Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to address these complications."
+teaser: "<em>Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to address these complications.</em>"
 
 header:
     image: kim_tree_header.png
     background-color: "#999999"
-    caption: "Personal photo.  Author at Haleakalā National Park."
+    caption: "Personal photo process with YOLOv2.  Author at Haleakalā National Park."
     caption_url: https://www.nasa.gov/index.html
 image:
     thumb: kim_tree_thumb.png
@@ -24,13 +24,9 @@ comments: true
 <!--more-->
 
 
-Content for "abstract" including
-- Object detection has made a lot of gains
-- But it wasn't easy!
-- Much harder than object classification in many ways
-    - Multiple objects in one image
-    - Localization
-    - Spatial component should be preserved
+The field of computer vision has experience substantial progress recently owing largely to advances in deep learning, specifically convolutional neural nets (CNNs).  Image classification, where a computer classifies or assigns labels to an image based on its content, can often see great results simply by leveraging pre-trained neural nets and fine-tuning the last few throughput layers.  
+
+Classifying _and_ finding individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like [Google][1] and [IBM][2]. But all of this progress wasn't easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After further introducing the topic, let's take a deep dive into several of the interesting obstacles object detection problems raise along with methods researchers have proposed as resulting solutions.
 
 
 ## Introduction
@@ -103,5 +99,5 @@ mAP, or mean average precision, on the other hand, assesses the classification t
 
 [Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb)  ||  [Check out this viz on Tableau!](https://public.tableau.com/profile/kimberly.fessel#!/vizhome/PlanetaryBirthdayProblem/Planets-50)
 
- [1]: https://www.amazon.com/Challenging-Problems-Probability-Solutions-Mathematics-ebook/dp/B00A3M0VV8
- [2]: https://www.npr.org/templates/story/story.php?storyId=4542341
+ [1]: https://cloud.google.com/vision/docs/drag-and-drop
+ [2]: https://www.ibm.com/watson/services/visual-recognition/
