@@ -11,6 +11,7 @@
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +24,7 @@
     <session id="497264545">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="17" />
+          <entry key="project.closed" value="18" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
@@ -40,7 +41,7 @@
           <entry key="html" value="29" />
           <entry key="jpg" value="9" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="40" />
+          <entry key="md" value="41" />
           <entry key="png" value="7" />
           <entry key="scss" value="23" />
           <entry key="txt" value="1" />
@@ -52,7 +53,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="29" />
           <entry key="Image" value="16" />
-          <entry key="Markdown" value="40" />
+          <entry key="Markdown" value="41" />
           <entry key="PLAIN_TEXT" value="25" />
           <entry key="YAML" value="9" />
         </counts>
@@ -60,7 +61,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="42" />
-          <entry key="md" value="22953" />
+          <entry key="md" value="24237" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -68,7 +69,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="42" />
-          <entry key="Markdown" value="22953" />
+          <entry key="Markdown" value="24237" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="YAML" value="89" />
         </counts>
@@ -77,24 +78,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-07-15-object-detection-challenges.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="333">
-                <caret line="28" column="612" selection-start-line="28" selection-start-column="612" selection-end-line="28" selection-end-column="612" />
+              <first_editor relative-caret-position="207">
+                <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-07-15-object-detection-challenges.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="560">
-                <caret line="215" column="74" selection-start-line="215" selection-start-column="74" selection-end-line="215" selection-end-column="74" />
+              <first_editor relative-caret-position="420">
+                <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
               </first_editor>
               <second_editor />
             </state>
@@ -608,8 +609,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="560">
-            <caret line="215" column="74" selection-start-line="215" selection-start-column="74" selection-end-line="215" selection-end-column="74" />
+          <first_editor relative-caret-position="207">
+            <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
           </first_editor>
           <second_editor />
         </state>
@@ -618,8 +619,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-07-15-object-detection-challenges.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="333">
-            <caret line="28" column="612" selection-start-line="28" selection-start-column="612" selection-end-line="28" selection-end-column="612" />
+          <first_editor relative-caret-position="420">
+            <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
           </first_editor>
           <second_editor />
         </state>

@@ -1,6 +1,6 @@
 ---
 layout: page-fullwidth
-title: "5 Important Object Detection Challenges and Solutions"
+title: "5 Significant Object Detection Challenges and Solutions"
 subheadline: "Reviews"
 meta_teaser: "Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to address these complications."
 teaser: "<em>Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to address these complications.</em>"
@@ -30,8 +30,13 @@ Classifying _and_ finding individual objects within an image, however, was consi
 
 
 ## Introduction
-- What is object detection?  Leads to video tracking
-- Applications
+
+### What is object detection?
+
+While image classification has one primary classification objective, the goal of object detection is to draw rectangular bounding boxes around objects of interest as well as identify what object each box contains. A single image can consist of many different objects, so multiple bounding boxes may be drawn for each example.  Object detection [applications are basically limitless][3], but some functions include people or animal counting (ref), face detection, self-driving cars, or even ball tracking in sports.  These applications require many different kinds of objects to be detected, often with a high degree of both accuracy and speed to meet the demands of real-time video tracking.
+
+### History
+
 - History
     - Manual feature collection
     - Major gains once CNN applied to problem
@@ -41,7 +46,7 @@ Classifying _and_ finding individual objects within an image, however, was consi
 
 ### 1. Dual priorities: object localization and classification
 
-The first major complication of object detection is its added goal: not only do we want to classify an image's objects but also to determine the objects' positions, generally referred to as the _object localization_ task in literature.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.
+The first major complication of object detection is its added goal: not only do we want to classify an image's objects but also to determine the objects' positions, generally referred to as the _object localization_ task.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.
 
 a. Pipeline methods with region proposals
 
@@ -101,3 +106,4 @@ mAP, or mean average precision, on the other hand, assesses the classification t
 
  [1]: https://cloud.google.com/vision/docs/drag-and-drop
  [2]: https://www.ibm.com/watson/services/visual-recognition/
+ [3]: https://www.quora.com/What-are-some-interesting-applications-of-object-detection

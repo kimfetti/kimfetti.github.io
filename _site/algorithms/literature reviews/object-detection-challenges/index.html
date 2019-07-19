@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>5 Important Object Detection Challenges and Solutions</title>
+	<title>5 Significant Object Detection Challenges and Solutions</title>
 
     <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/styles_feeling_responsive.css">
 
@@ -41,7 +41,7 @@
 
 
 	<!-- Facebook Open Graph -->
-	<meta property="og:title" content="5 Important Object Detection Challenges and Solutions">
+	<meta property="og:title" content="5 Significant Object Detection Challenges and Solutions">
 	<meta property="og:description" content="Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to address these complications.">
 	<meta property="og:url" content="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/">
 	<meta property="og:locale" content="en_EN">
@@ -56,7 +56,7 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="">
 	<meta name="twitter:creator" content="">
-	<meta name="twitter:title" content="5 Important Object Detection Challenges and Solutions">
+	<meta name="twitter:title" content="5 Significant Object Detection Challenges and Solutions">
 	<meta name="twitter:description" content="Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to address these complications.">
 	
 	
@@ -238,7 +238,7 @@
 		<article>
 			<header>
 				<p class="subheadline">Reviews</p>
-				<h1>5 Important Object Detection Challenges and Solutions</h1>
+				<h1>5 Significant Object Detection Challenges and Solutions</h1>
 			</header>
 
 			
@@ -253,23 +253,15 @@
 
 <p>Classifying <em>and</em> finding individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like <a href="https://cloud.google.com/vision/docs/drag-and-drop">Google</a> and <a href="https://www.ibm.com/watson/services/visual-recognition/">IBM</a>. But all of this progress wasn’t easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After further introducing the topic, let’s take a deep dive into several of the interesting obstacles object detection problems raise along with methods researchers have proposed as resulting solutions.</p>
 
-<p>Content for “abstract” including</p>
-<ul>
-  <li>Object detection has made a lot of gains</li>
-  <li>But it wasn’t easy!</li>
-  <li>Much harder than object classification in many ways
-    <ul>
-      <li>Multiple objects in one image</li>
-      <li>Localization</li>
-      <li>Spatial component should be preserved</li>
-    </ul>
-  </li>
-</ul>
-
 <h2 id="introduction">Introduction</h2>
+
+<h3 id="what-is-object-detection">What is object detection?</h3>
+
+<p>While image classification has one primary classification objective, the goal of object detection is to draw rectangular bounding boxes around objects of interest as well as identify what object each box contains. A single image can consist of many different objects, so multiple bounding boxes may be drawn for each example.  Object detection <a href="https://www.quora.com/What-are-some-interesting-applications-of-object-detection">applications are basically limitless</a>, but some functions include people or animal counting (ref), face detection, self-driving cars, or even ball tracking in sports.  These applications require many different kinds of objects to be detected, often with a high degree of both accuracy and speed to meet the demands of real-time video tracking.</p>
+
+<h3 id="history">History</h3>
+
 <ul>
-  <li>What is object detection?  Leads to video tracking</li>
-  <li>Applications</li>
   <li>History
     <ul>
       <li>Manual feature collection</li>
@@ -283,7 +275,7 @@
 
 <h3 id="1-dual-priorities-object-localization-and-classification">1. Dual priorities: object localization and classification</h3>
 
-<p>The first major complication of object detection is its added goal: not only do we want to classify an image’s objects but also to determine the objects’ positions, generally referred to as the <em>object localization</em> task in literature.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.</p>
+<p>The first major complication of object detection is its added goal: not only do we want to classify an image’s objects but also to determine the objects’ positions, generally referred to as the <em>object localization</em> task.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.</p>
 
 <p>a. Pipeline methods with region proposals</p>
 
