@@ -30,7 +30,7 @@
 
 
 	<!-- Search Engine Optimization -->
-	<meta name="description" content="Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to address these complications.">
+	<meta name="description" content="Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to overcome these complications.">
 	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ">
 	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" >
 	
@@ -42,7 +42,7 @@
 
 	<!-- Facebook Open Graph -->
 	<meta property="og:title" content="5 Significant Object Detection Challenges and Solutions">
-	<meta property="og:description" content="Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to address these complications.">
+	<meta property="og:description" content="Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to overcome these complications.">
 	<meta property="og:url" content="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
@@ -57,7 +57,7 @@
 	<meta name="twitter:site" content="">
 	<meta name="twitter:creator" content="">
 	<meta name="twitter:title" content="5 Significant Object Detection Challenges and Solutions">
-	<meta name="twitter:description" content="Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to address these complications.">
+	<meta name="twitter:description" content="Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to overcome these complications.">
 	
 	
 
@@ -221,7 +221,7 @@
 
 
 <div class="masthead-caption">
-	<a href="https://www.nasa.gov/index.html">Personal photo process with YOLOv2.  Author at Haleakalā National Park.</a>
+	<a href="https://www.nasa.gov/index.html">Personal photo processed with YOLOv2.  Author at Haleakalā National Park.</a>
 </div>
 
 
@@ -243,21 +243,21 @@
 
 			
 			<p class="teaser">
-				<em>Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to address these complications.</em>
+				<em>Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications.</em>
 			</p>
 			
 
 			<!--more-->
 
-<p>The field of computer vision has experience substantial progress recently owing largely to advances in deep learning, specifically convolutional neural nets (CNNs).  Image classification, where a computer classifies or assigns labels to an image based on its content, can often see great results simply by leveraging pre-trained neural nets and fine-tuning the last few throughput layers.</p>
+<p>The field of computer vision has experienced substantial progress recently owing largely to advances in deep learning, specifically convolutional neural nets (CNNs).  Image classification, where a computer classifies or assigns labels to an image based on its content, can often see great results simply by leveraging pre-trained neural nets and fine-tuning the last few throughput layers.</p>
 
-<p>Classifying <em>and</em> finding individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like <a href="https://cloud.google.com/vision/docs/drag-and-drop">Google</a> and <a href="https://www.ibm.com/watson/services/visual-recognition/">IBM</a>. But all of this progress wasn’t easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After further introducing the topic, let’s take a deep dive into several of the interesting obstacles object detection problems raise along with methods researchers have proposed as resulting solutions.</p>
+<p>Classifying <em>and</em> finding individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like <a href="https://cloud.google.com/vision/docs/drag-and-drop">Google</a> and <a href="https://www.ibm.com/watson/services/visual-recognition/">IBM</a>. But all of this progress wasn’t easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After further introducing the topic, let’s take a deep dive into several of the interesting obstacles object detection problems raise along with several emerging solutions.</p>
 
 <h2 id="introduction">Introduction</h2>
 
 <h3 id="what-is-object-detection">What is object detection?</h3>
 
-<p>While image classification has one primary classification objective, the goal of object detection is to draw rectangular bounding boxes around objects of interest as well as identify what object each box contains. A single image can consist of many different objects, so multiple bounding boxes may be drawn for each example.  Object detection <a href="https://www.quora.com/What-are-some-interesting-applications-of-object-detection">applications are basically limitless</a>, but some functions include people or animal counting (ref), face detection, self-driving cars, or even ball tracking in sports.  These applications require many different kinds of objects to be detected, often with a high degree of both accuracy and speed to meet the demands of real-time video tracking.</p>
+<p>While image classification has one primary classification objective, the goal of object detection is to draw rectangular bounding boxes around objects of interest as well as identify what object each box contains. A single image can consist of many different objects, so multiple bounding boxes may be drawn for each example.  Object detection <a href="https://www.quora.com/What-are-some-interesting-applications-of-object-detection">applications are basically limitless</a>, but some uses include people or animal counting (ref), face detection, self-driving cars, or even ball tracking in sports.  These applications require many different kinds of objects to be detected, often with a high degree of both accuracy and speed to meet the demands of real-time video tracking.</p>
 
 <h3 id="history">History</h3>
 
