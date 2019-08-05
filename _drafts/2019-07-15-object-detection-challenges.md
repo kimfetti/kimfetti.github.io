@@ -57,7 +57,7 @@ Another interesting consequence of having multiple objectives is the need for sp
 
 a. IOU 
 
-IOU stands for intersection over union and is used to judge appropriate object localization.
+IOU stands for intersection over union and is used to judge appropriate object localization and to inform the object classification metric, mAP.
 
 b. mAP 
 
