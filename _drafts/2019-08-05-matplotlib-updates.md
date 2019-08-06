@@ -27,55 +27,74 @@ Intro statements - the defaults for matplotlib aren't great.  Can move to Seabor
 
 I recently gave a talk at ODSC NYC about data visualization...
 
-# Remove spines
+## Remove Spines
 
-One of the first matplotlib default that we may want to update is the black box that surrounds each plot.  There are a few ways to do this, but one way is to get the current axis through pyplot and update the visibility of each desired spine.
+The first matplotlib default that we may want to update is the black box that surrounds each plot, so called "spines" in matplotlib.  One way to do this is to [get the current axis][1] through pyplot and update the visibility of each spine as desired.
 
 Let's say we want to turn off the top and right spines, for example.  If we have imported matplotlib's pyplot submodule with:
 ```
 from matplotlib import pyplot as plt
 ```
-we just need to add the following to our code:
+we just need to add the following to our code to improve matplotlib's defaults:
 ```
 plt.gca().spines['top'].set_visible(False)
 plt.gca().spines['right'].set_visible(False)
 ```
-and we will have improved upon matplotlib's defaults.
 
 <center>
-<img src="{{ site.urlimg }}spines.png" alt="Update matplotlib spines" width = "900">
+<img src="{{ site.urlimg }}spines.png" alt="Update matplotlib spines" width = "800">
+<p><em>Removing distracting spines can help people focus on your visual.</em></p>
 </center>
 
 
+## Explore Color Options
+
+Matplotlib's [default colors just got an update][2] but you can still easily update them to make your plots more attractive or even to reflect your company's brand colors.
+
+### Hex Codes 
+
+One of my favorite methods for updating matplotlib's colors is to directly pass [hex codes][3] into the color argument because it allows me to be very specific about my color choices.  
+
+```
+plt.scatter(..., color='#2E9336')
+```
+
+[This handy tool by W3 schools][4] can help you select an appropriate hex color by testing it against white and black text as well as comparing several lighter and darker shades.  Alternatively, if you want to take a more scientific approach to choosing your palette, you can check out [Colorgorical][5] by Connor Gramazio out of the Brown Visualization Research Lab.  The Colorgorical tool allows you to build a color palette by balancing various preferences like human perceptual difference and aesthetic pleasure.
 
 
-# Explore color options
+### xkcd Colors
 
-## Hex codes 
-Colorgorical
+Another great way to update matplotlib's default colors is to utilize the [xkcd color library][6].  These 954 colors were specifically curated and named by the several hundred thousand participants of the [xkcd color name survey][7].  You can use them in matplotlib by prefixing their names with 'xkcd:'.
 
-## xkcd library
+```
+plt.scatter(..., color='xkcd:shamrock green')
+```
 
-
-# Layer visuals
-
-## zorder
-
-## alpha
-
+<center>
+<img src="{{ site.urlimg }}spines.png" alt="Update matplotlib spines" width = "800">
+<p><em>Removing distracting spines can help people focus on your visual.</em></p>
+</center>
 
 
-# Annotate main points
+## Layer Visuals
 
-## Add a rectangle to direct attention
+### zorder
+
+### alpha
 
 
 
-# Baseline and highlight
+## Annotate main points
 
-## Horizontal and vertical lines
+### Add a rectangle to direct attention
 
-## Background shading 
+
+
+## Baseline and highlight
+
+### Horizontal and vertical lines
+
+### Background shading 
 
 Also include zorder, alpha here
 
@@ -83,6 +102,15 @@ Also include zorder, alpha here
 
 
 [Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb)  ||  [Check out my conference materials with Google Colab!](https://public.tableau.com/profile/kimberly.fessel#!/vizhome/PlanetaryBirthdayProblem/Planets-50)
+
+
+ [1]: https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.gca.html
+ [2]: https://matplotlib.org/3.1.1/users/dflt_style_changes.html#colors-color-cycles-and-color-maps
+ [3]: https://htmlcolorcodes.com/
+ [4]: https://www.w3schools.com/colors/colors_picker.asp
+ [5]: http://vrl.cs.brown.edu/color
+ [6]: https://xkcd.com/color/rgb/
+ [7]: https://blog.xkcd.com/2010/05/03/color-survey-results/
 
 
 
