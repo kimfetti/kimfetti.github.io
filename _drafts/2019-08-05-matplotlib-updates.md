@@ -71,7 +71,7 @@ plt.scatter(..., color='xkcd:shamrock green')
 ```
 
 <center>
-<img src="{{ site.urlimg }}color.png" alt="Explore matplotlib colors" width = "800">
+<img src="{{ site.urlimg }}color.png" alt="Explore matplotlib colors" width = "900">
 <p><em>Matplotlib default colors can easily be updated by passing hex codes or referencing the xkcd library.</em></p>
 </center>
 
@@ -82,7 +82,7 @@ Matplotlib allows users to layer multiple graphics on top of each other, which c
 
 ### Opacity
 
-The alpha property in matplotlib controls an object's opacity.  This value ranges from zero to one with zero being fully transparent (invisible :eyes:) and one being entirely opaque.  Reducing alpha will make your plot objects see-through, allowing multiple layers to be seen at once, and this may also be useful if you are building a scatter plot with overlapping points.
+The alpha property in matplotlib controls an object's opacity.  This value ranges from zero to one with zero being fully transparent (invisible 👀) and one being entirely opaque.  Reducing alpha will make your plot objects see-through, allowing multiple layers to be seen at once, and this may also be useful if you are building a scatter plot with overlapping points.
 
 ```
 plt.scatter(..., alpha=0.5)
@@ -95,7 +95,17 @@ plt.scatter(..., alpha=0.5)
 
 ### Order
 
+Matplotlib's zorder property, however, controls how close objects are to the foreground.  Objects with smaller values for zorder are closer to the background, while those larger zorder values appear closer to the front.  For example, if I'm making a scatter plot with an accompanying line plot, I can bring the line forward by making its zorder larger.
 
+```
+plt.scatter(..., zorder=1)
+plt.plot(..., zorder=2)
+```
+
+<center>
+<img src="{{ site.urlimg }}zorder.png" alt="Control layer order with zorder" width = "800">
+<p><em> Plot objects can be brought to the foreground or background by changing zorder.</em></p>
+</center>
 
 
 ## Annotate main points
