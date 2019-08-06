@@ -42,7 +42,7 @@ plt.gca().spines['right'].set_visible(False)
 ```
 
 <center>
-<img src="{{ site.urlimg }}spines.png" alt="Update matplotlib spines" width = "800">
+<img src="{{ site.urlimg }}spines.png" alt="Remove matplotlib spines" width = "800">
 <p><em>Removing distracting spines can help people focus on your visual.</em></p>
 </center>
 
@@ -59,7 +59,7 @@ One of my favorite methods for updating matplotlib's colors is to directly pass 
 plt.scatter(..., color='#2E9336')
 ```
 
-[This handy tool by W3 schools][4] can help you select an appropriate hex color by testing it against white and black text as well as comparing several lighter and darker shades.  Alternatively, if you want to take a more scientific approach to choosing your palette, you can check out [Colorgorical][5] by Connor Gramazio out of the Brown Visualization Research Lab.  The Colorgorical tool allows you to build a color palette by balancing various preferences like human perceptual difference and aesthetic pleasure.
+[This handy tool][4] can help you select an appropriate hex color by testing it against white and black text as well as comparing several lighter and darker shades.  Alternatively, you can take a more scientific approach to choosing your palette by checking out [Colorgorical][5] by Connor Gramazio out of the Brown Visualization Research Lab.  The Colorgorical tool allows you to build a color palette by balancing various preferences like human perceptual difference and aesthetic pleasure.
 
 
 ### xkcd Colors
@@ -71,16 +71,30 @@ plt.scatter(..., color='xkcd:shamrock green')
 ```
 
 <center>
-<img src="{{ site.urlimg }}spines.png" alt="Update matplotlib spines" width = "800">
-<p><em>Removing distracting spines can help people focus on your visual.</em></p>
+<img src="{{ site.urlimg }}color.png" alt="Explore matplotlib colors" width = "800">
+<p><em>Matplotlib default colors can easily be updated by passing hex codes or referencing the xkcd library.</em></p>
 </center>
 
 
 ## Layer Visuals
 
-### zorder
+Matplotlib allows users to layer multiple graphics on top of each other, which can help when comparing results or setting baselines.  Two useful properties can help control layer opacity (`alpha`) and ordering (`zorder`).
 
-### alpha
+### Opacity
+
+The alpha property in matplotlib controls an object's opacity.  This value ranges from zero to one with zero being fully transparent (invisible :eyes:) and one being entirely opaque.  Reducing alpha will make your plot objects see-through, allowing multiple layers to be seen at once, and this may also be useful if you are building a scatter plot with overlapping points.
+
+```
+plt.scatter(..., alpha=0.5)
+```
+
+<center>
+<img src="{{ site.urlimg }}alpha.png" alt="Adjust matplotlib opacity" width = "800">
+<p><em>Adjusting opacity by reducing alpha can help visualize points that overlap.</em></p>
+</center>
+
+### Order
+
 
 
 
@@ -101,7 +115,7 @@ Also include zorder, alpha here
 
 
 
-[Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb)  ||  [Check out my conference materials with Google Colab!](https://public.tableau.com/profile/kimberly.fessel#!/vizhome/PlanetaryBirthdayProblem/Planets-50)
+[Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb)  ||  [Check out my ODSC conference materials with Google Colab!](bit.ly/odscNyc19_dataviz)
 
 
  [1]: https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.gca.html
