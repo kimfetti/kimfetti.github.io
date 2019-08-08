@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-08-08T13:06:07-04:00</updated>
+	<updated>2019-08-08T13:22:25-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -151,8 +151,25 @@ plt.plot(..., zorder=2)
 &lt;p&gt;For the examples that follows, let’s consider the interplay between fat and sugar in our cereal dataset.  Simply plotting this relationship doesn’t look too interesting at first, but it turns out the median fat per cup for these cereals is just 1 gram because many cereals contain no fat at all.  Adding this baseline helps people understand this fact much quicker.&lt;/p&gt;
 
 &lt;center&gt;
-&lt;img src=&quot;https://kimfetti.github.io/images/baseline.png&quot; alt=&quot;Add a baseline&quot; width=&quot;900&quot; /&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/baseline.png&quot; alt=&quot;Add a baseline&quot; width=&quot;800&quot; /&gt;
 &lt;p&gt;&lt;em&gt; A horizontal or vertical baseline can help set the stage for your data.&lt;/em&gt;&lt;/p&gt;
+&lt;/center&gt;
+
+&lt;p&gt;In some cases, you may want to completely remove the default x- and y-axes that matplotlib provides and create your own axes based on some aggregate of the data.  This situation just requires removing spines as we did before, removing tick marks, and adding a horizontal and vertical lines.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#Remove ticks
+plt.xticks([])
+plt.yticks([])
+
+#Horizontal and vertical lines
+plt.axhline(Y_POSITION, ...)  #horizontal line
+plt.axvline(X_POSITION, ...)  #vertical line
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/new_axes.png&quot; alt=&quot;Add a baseline&quot; width=&quot;600&quot; /&gt;
+&lt;p&gt;&lt;em&gt; You can also create new axes for your data by removing spines and ticks and adding custom lines.&lt;/em&gt;&lt;/p&gt;
 &lt;/center&gt;
 
 &lt;h3 id=&quot;rectangle&quot;&gt;Rectangle&lt;/h3&gt;

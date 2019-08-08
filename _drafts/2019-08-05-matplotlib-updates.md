@@ -135,11 +135,26 @@ Adding a baseline to your visuals helps set expectations, which a shaded region 
 For the examples that follows, let's consider the interplay between fat and sugar in our cereal dataset.  Simply plotting this relationship doesn't look too interesting at first, but it turns out the median fat per cup for these cereals is just 1 gram because many cereals contain no fat at all.  Adding this baseline helps people understand this fact much quicker.
 
 <center>
-<img src="{{ site.urlimg }}baseline.png" alt="Add a baseline" width = "900">
+<img src="{{ site.urlimg }}baseline.png" alt="Add a baseline" width = "800">
 <p><em> A horizontal or vertical baseline can help set the stage for your data.</em></p>
 </center>
 
+In some cases, you may want to completely remove the default x- and y-axes that matplotlib provides and create your own axes based on some aggregate of the data.  This situation just requires removing spines as we did before, removing tick marks, and adding a horizontal and vertical lines.
 
+```
+#Remove ticks
+plt.xticks([])
+plt.yticks([])
+
+#Horizontal and vertical lines
+plt.axhline(Y_POSITION, ...)  #horizontal line
+plt.axvline(X_POSITION, ...)  #vertical line
+```
+
+<center>
+<img src="{{ site.urlimg }}new_axes.png" alt="Add a baseline" width = "600">
+<p><em> You can also create new axes for your data by removing spines and ticks and adding custom lines.</em></p>
+</center>
 
 ### Rectangle
 
