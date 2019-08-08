@@ -25,7 +25,9 @@ comments: true
 
 Intro statements - the defaults for matplotlib aren't great.  Can move to Seaborn (more on that later) but you can also use special commands to make your matplotlib plots look a lot better.
 
-I recently gave a talk at ODSC NYC about data visualization...
+I recently gave a talk at ODSC NYC about data visualization...  
+
+Cereal data used for all examples below
 
 ## Remove Spines
 
@@ -49,14 +51,14 @@ plt.gca().spines['right'].set_visible(False)
 
 ## Explore Color Options
 
-Matplotlib's [default colors just got an update][2] but you can still easily update them to make your plots more attractive or even to reflect your company's brand colors.
+Matplotlib's [default colors just got an update][2] but you can still easily change them to make your plots more attractive or even to reflect your company's brand colors.
 
 ### Hex Codes 
 
 One of my favorite methods for updating matplotlib's colors is to directly pass [hex codes][3] into the color argument because it allows me to be very specific about my color choices.  
 
 ```
-plt.scatter(..., color='#2E9336')
+plt.scatter(..., color='#009900')
 ```
 
 [This handy tool][4] can help you select an appropriate hex color by testing it against white and black text as well as comparing several lighter and darker shades.  Alternatively, you can take a more scientific approach to choosing your palette by checking out [Colorgorical][5] by Connor Gramazio out of the Brown Visualization Research Lab.  The Colorgorical tool allows you to build a color palette by balancing various preferences like human perceptual difference and aesthetic pleasure.
@@ -90,7 +92,7 @@ plt.scatter(..., alpha=0.5)
 
 <center>
 <img src="{{ site.urlimg }}alpha.png" alt="Adjust matplotlib opacity" width = "800">
-<p><em>Adjusting opacity by reducing alpha can help visualize points that overlap.</em></p>
+<p><em>Reducing opacity by decreasing alpha can help visualize points that overlap.</em></p>
 </center>
 
 ### Order
@@ -103,20 +105,34 @@ plt.plot(..., zorder=2)
 ```
 
 <center>
-<img src="{{ site.urlimg }}zorder.png" alt="Control layer order with zorder" width = "800">
-<p><em> Plot objects can be brought to the foreground or background by changing zorder.</em></p>
+<img src="{{ site.urlimg }}zorder.png" alt="Control layer order with zorder" width = "600">
+<p><em> Plot objects can be brought to the foreground or pushed to the background by changing zorder.</em></p>
 </center>
 
 
-## Annotate main points
+## Annotate Main Points or Examples
 
-### Add a rectangle to direct attention
+An extremely powerful way to convey a specific point or add validity to your results is to directly annotate your matplotlib visuals with main points or specific illustrative examples.  To do this, just add annotation code specifying the desired text and position to your matplotlib visual.
+
+```
+plt.annotate(TEXT, (X_POSITION, Y_POSITION))
+```
+
+When first approaching this cereal dataset, one might assume that "rating" is some kind score indicating cereals that consumers prefer.  In the zorder figure above, however, I built a quick linear regression model which shows that the correlation between calories per cup and ratings is practically non-existent, which makes the theory that "rating" is a consumer preference score unlikely.  This misconception becomes even more obvious once I take a look at the extremes: Cap'n Crunch has a very low rating while All-Bran with Extra Fiber is rated very highly.  And the cereal with the most calories per cup, Grape Nuts, is likely not meant to be consumed in such large quantities!
+
+<center>
+<img src="{{ site.urlimg }}annotate.png" alt="Control layer order with zorder" width = "600">
+<p><em> Plot objects can be brought to the foreground or pushed to the background by changing zorder.</em></p>
+</center>
+
+
+## Baseline and Highlight
 
 
 
-## Baseline and highlight
+### Horizontal and Vertical Lines
 
-### Horizontal and vertical lines
+### Rectangle
 
 ### Background shading 
 
