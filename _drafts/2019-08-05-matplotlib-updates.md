@@ -58,7 +58,7 @@ Matplotlib's [default colors just got an update][2] but you can still easily cha
 One of my favorite methods for updating matplotlib's colors is to directly pass [hex codes][3] into the color argument because it allows me to be very specific about my color choices.  
 
 ```
-plt.scatter(..., color='#009900')
+plt.scatter(..., color='#0000CC')
 ```
 
 [This handy tool][4] can help you select an appropriate hex color by testing it against white and black text as well as comparing several lighter and darker shades.  Alternatively, you can take a more scientific approach to choosing your palette by checking out [Colorgorical][5] by Connor Gramazio out of the Brown Visualization Research Lab.  The Colorgorical tool allows you to build a color palette by balancing various preferences like human perceptual difference and aesthetic pleasure.
@@ -69,7 +69,7 @@ plt.scatter(..., color='#009900')
 Another great way to update matplotlib's default colors is to utilize the [xkcd color library][6].  These 954 colors were specifically curated and named by the several hundred thousand participants of the [xkcd color name survey][7].  You can use them in matplotlib by prefixing their names with 'xkcd:'.
 
 ```
-plt.scatter(..., color='xkcd:shamrock green')
+plt.scatter(..., color='xkcd:lightish blue')
 ```
 
 <center>
@@ -121,16 +121,25 @@ plt.annotate(TEXT, (X_POSITION, Y_POSITION))
 When first approaching this cereal dataset, one might assume that "rating" is some kind score indicating cereals that consumers prefer.  In the zorder figure above, however, I built a quick linear regression model which shows that the correlation between calories per cup and ratings is practically non-existent, which makes the theory that "rating" is a consumer preference score unlikely.  This misconception becomes even more obvious once I take a look at the extremes: Cap'n Crunch has a very low rating while All-Bran with Extra Fiber is rated very highly.  And the cereal with the most calories per cup, Grape Nuts, is likely not meant to be consumed in such large quantities!
 
 <center>
-<img src="{{ site.urlimg }}annotate.png" alt="Annotate examples" width = "600">
-<p><em> Plot objects can be brought to the foreground or pushed to the background by changing zorder.</em></p>
+<img src="{{ site.urlimg }}annotate.png" alt="Annotate examples" width = "700">
+<p><em> Annotating your visuals with a few examples can add legitimacy.</em></p>
 </center>
 
 
 ## Baseline and Highlight
 
-
+Adding a baseline to your visuals helps set expectations, which a shaded region can further emphasize your conclusions.  A simple horizontal line or background shading provides others with appropriate context and can speed along their understanding of your results. 
 
 ### Horizontal and Vertical Lines
+
+For the examples that follows, let's consider the interplay between fat and sugar in our cereal dataset.  Simply plotting this relationship doesn't look too interesting at first, but it turns out the median fat per cup for these cereals is just 1 gram because many cereals contain no fat at all.  Adding this baseline helps people understand this fact much quicker.
+
+<center>
+<img src="{{ site.urlimg }}baseline.png" alt="Add a baseline" width = "900">
+<p><em> A horizontal or vertical baseline can help set the stage for your data.</em></p>
+</center>
+
+
 
 ### Rectangle
 
