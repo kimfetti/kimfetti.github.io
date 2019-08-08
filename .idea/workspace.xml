@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2019-08-05-matplotlib-updates.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/color.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/color.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/zorder.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/zorder.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/color.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/color.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/zorder.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/zorder.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +59,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="42" />
-          <entry key="md" value="33982" />
+          <entry key="md" value="33999" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -73,7 +67,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="42" />
-          <entry key="Markdown" value="33980" />
+          <entry key="Markdown" value="33997" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="2" />
           <entry key="YAML" value="89" />
@@ -87,8 +81,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="250">
-                <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+              <first_editor relative-caret-position="386">
+                <caret line="123" column="63" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="63" />
               </first_editor>
               <second_editor />
             </state>
@@ -611,8 +605,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="250">
-            <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+          <first_editor relative-caret-position="386">
+            <caret line="123" column="63" selection-start-line="123" selection-start-column="63" selection-end-line="123" selection-end-column="63" />
           </first_editor>
           <second_editor />
         </state>

@@ -121,7 +121,7 @@ plt.annotate(TEXT, (X_POSITION, Y_POSITION))
 When first approaching this cereal dataset, one might assume that "rating" is some kind score indicating cereals that consumers prefer.  In the zorder figure above, however, I built a quick linear regression model which shows that the correlation between calories per cup and ratings is practically non-existent, which makes the theory that "rating" is a consumer preference score unlikely.  This misconception becomes even more obvious once I take a look at the extremes: Cap'n Crunch has a very low rating while All-Bran with Extra Fiber is rated very highly.  And the cereal with the most calories per cup, Grape Nuts, is likely not meant to be consumed in such large quantities!
 
 <center>
-<img src="{{ site.urlimg }}annotate.png" alt="Control layer order with zorder" width = "600">
+<img src="{{ site.urlimg }}annotate.png" alt="Annotate examples" width = "600">
 <p><em> Plot objects can be brought to the foreground or pushed to the background by changing zorder.</em></p>
 </center>
 
