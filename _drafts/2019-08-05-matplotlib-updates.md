@@ -5,6 +5,7 @@ subheadline: "Data Visualizations"
 meta_teaser: "Matplotlib's default properties often yield unappealing plots that can be off-putting to many users.  This post offers several simple ways to improve upon these defaults and help spruce up your matplotlib visualizations."
 teaser: "<em>Matplotlib's default properties often yield unappealing plots that can be off-putting to many users.  This post offers several simple ways to improve upon these defaults and help spruce up your matplotlib visualizations.</em>"
 
+
 header:
     image: lego_header.jpg
     background-color: "#999999"
