@@ -34,11 +34,11 @@ Cereal data used for all examples below
 The first matplotlib default that we may want to update is the black box that surrounds each plot, so called "spines" in matplotlib.  One way to do this is to [get the current axis][1] through pyplot and update the visibility of each spine as desired.
 
 Let's say we want to turn off the top and right spines, for example.  If we have imported matplotlib's pyplot submodule with:
-```
+```python
 from matplotlib import pyplot as plt
 ```
 we just need to add the following to our code to improve matplotlib's defaults:
-```
+```python
 plt.gca().spines['top'].set_visible(False)
 plt.gca().spines['right'].set_visible(False)
 ```
@@ -57,7 +57,7 @@ Matplotlib's [default colors just got an update][2] but you can still easily cha
 
 One of my favorite methods for updating matplotlib's colors is to directly pass [hex codes][3] into the color argument because it allows me to be very specific about my color choices.  
 
-```
+```python
 plt.scatter(..., color='#0000CC')
 ```
 
@@ -68,7 +68,7 @@ plt.scatter(..., color='#0000CC')
 
 Another great way to update matplotlib's default colors is to utilize the [xkcd color library][6].  These 954 colors were specifically curated and named by the several hundred thousand participants of the [xkcd color name survey][7].  You can use them in matplotlib by prefixing their names with 'xkcd:'.
 
-```
+```python
 plt.scatter(..., color='xkcd:lightish blue')
 ```
 
@@ -86,7 +86,7 @@ Matplotlib allows users to layer multiple graphics on top of each other, which c
 
 The alpha property in matplotlib controls an object's opacity.  This value ranges from zero to one with zero being fully transparent (invisible 👀) and one being entirely opaque.  Reducing alpha will make your plot objects see-through, allowing multiple layers to be seen at once, and this may also be useful if you are building a scatter plot with overlapping points.
 
-```
+```python
 plt.scatter(..., alpha=0.5)
 ```
 
@@ -99,7 +99,7 @@ plt.scatter(..., alpha=0.5)
 
 Matplotlib's zorder property, however, controls how close objects are to the foreground.  Objects with smaller values for zorder are closer to the background, while those larger zorder values appear closer to the front.  For example, if I'm making a scatter plot with an accompanying line plot, I can bring the line forward by making its zorder larger.
 
-```
+```python
 plt.scatter(..., zorder=1)
 plt.plot(..., zorder=2)
 ```
@@ -114,7 +114,7 @@ plt.plot(..., zorder=2)
 
 An extremely powerful way to convey a specific point or add validity to your results is to directly annotate your matplotlib visuals with main points or specific illustrative examples.  To do this, just add annotation code specifying the desired text and position to your matplotlib visual.
 
-```
+```python
 plt.annotate(TEXT, (X_POSITION, Y_POSITION), ...)
 ```
 
@@ -128,7 +128,7 @@ When first approaching this cereal dataset, one might assume that "rating" is so
 
 ## Baseline and Highlight
 
-Adding a baseline to your visuals helps set expectations, which a shaded region can further emphasize your conclusions.  A simple horizontal line or background shading provides others with appropriate context and can speed along their understanding of your results. 
+Adding a baseline to your visuals helps set expectations, while a shaded region can further emphasize your conclusions.  A simple horizontal line or background shading provides others with appropriate context and can speed along their understanding of your results. 
 
 ### Horizontal and Vertical Lines
 
@@ -141,7 +141,7 @@ For the examples that follows, let's consider the interplay between fat and suga
 
 In some cases, you may want to completely remove the default x- and y-axes that matplotlib provides and create your own axes based on some aggregate of the data.  This situation just requires removing spines as we did before, removing tick marks, and adding a horizontal and vertical lines.
 
-```
+```python
 #Remove ticks
 plt.xticks([])
 plt.yticks([])
@@ -164,17 +164,63 @@ Once we have plotted the cereals' fat vs sugars with these new axes, we can now 
 from matplotlib.patches import Rectangle
 ```
 
-Then you just need to grab your current axes and add a rectangular patch.
+Then you just need to grab your current axes and add a rectangular patch:
 
 ```python
-plt.gca().add_patch(Rectangle(X_POSITION, Y_POSITION), WIDTH, HEIGHT, ...)
+plt.gca().add_patch(Rectangle(X_POSITION, Y_POSITION), WIDTH, HEIGHT, ...),
 ```
 
 where the x- and y-position refer to the lower lefthand corner.
 
-### Background shading 
+<center>
+<img src="{{ site.urlimg }}rectangle.png" alt="Add a rectangle" width = "600">
+<p><em> To draw people toward a particular part of your visual, consider adding a rectangle.</em></p>
+</center>
 
-Also include zorder, alpha here
+### Shading 
+
+Instead of using a rectangle, shading provides another option for drawing attention to a particular region on your plot.  There are a few ways to do this.  
+
+Firstly, if you'd like to highlight an entire horizontal or vertical region, you can use `axhspan` or `axvspan` by adding the following to your plot code:
+
+```python
+plt.axhspan(Y_START, Y_END, ...)  #horizontal shading
+plt.axvspan(X_START, X_END, ...)  #vertical shading
+```
+
+Previous options like `alpha` and `zorder` also help here because you will likely want to make your shading more transparent and/or move it to the background of your figure.
+
+<center>
+<img src="{{ site.urlimg }}shade.png" alt="Shading for highlighting" width = "600">
+<p><em> Background shading also provides an effective way to highlight a particular region of your plot.</em></p>
+</center>
+
+
+Another way to add shading is to define two lines and fill between them.  This method even takes an optional argument called `where` which allows you to filter your highlight region.
+
+```python
+plt.gca().fill_between(X_VALUES, LINE1, LINE2, WHERE=FILTER, ...)
+```
+
+To shade the same region that we drew a rectangle around previously, we can just predefine an array of equally spaced x-values and filter on them as needed.
+
+```python
+sugars = np.linspace(df.sugars_per_cup.min(), df.sugars_per_cup.max(), 1000)
+
+plt.gca().fill_between(sugars, df.fat_per_cup.median(), df.fat_per_cup.max()*1.05, 
+                       WHERE=sugars < df.sugars_per_cup.median(), ...)
+```
+
+<center>
+<img src="{{ site.urlimg }}fill_between.png" alt="Fill between lines" width = "600">
+<p><em> Background shading can also be accomplished by filling between two lines.</em></p>
+</center>
+
+
+
+## Conclusion
+
+mostly about telling story quicker - highlight annotate, layering.  and removing extraneous bits spines, ticks etc.
 
 
 

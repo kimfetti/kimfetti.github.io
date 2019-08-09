@@ -260,12 +260,12 @@
 <p>The first matplotlib default that we may want to update is the black box that surrounds each plot, so called “spines” in matplotlib.  One way to do this is to <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.gca.html">get the current axis</a> through pyplot and update the visibility of each spine as desired.</p>
 
 <p>Let’s say we want to turn off the top and right spines, for example.  If we have imported matplotlib’s pyplot submodule with:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>from matplotlib import pyplot as plt
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 </code></pre>
 </div>
 <p>we just need to add the following to our code to improve matplotlib’s defaults:</p>
-<div class="highlighter-rouge"><pre class="highlight"><code>plt.gca().spines['top'].set_visible(False)
-plt.gca().spines['right'].set_visible(False)
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'top'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'right'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -282,7 +282,7 @@ plt.gca().spines['right'].set_visible(False)
 
 <p>One of my favorite methods for updating matplotlib’s colors is to directly pass <a href="https://htmlcolorcodes.com/">hex codes</a> into the color argument because it allows me to be very specific about my color choices.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>plt.scatter(..., color='#0000CC')
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#0000CC'</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -292,7 +292,7 @@ plt.gca().spines['right'].set_visible(False)
 
 <p>Another great way to update matplotlib’s default colors is to utilize the <a href="https://xkcd.com/color/rgb/">xkcd color library</a>.  These 954 colors were specifically curated and named by the several hundred thousand participants of the <a href="https://blog.xkcd.com/2010/05/03/color-survey-results/">xkcd color name survey</a>.  You can use them in matplotlib by prefixing their names with ‘xkcd:’.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>plt.scatter(..., color='xkcd:lightish blue')
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'xkcd:lightish blue'</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -309,7 +309,7 @@ plt.gca().spines['right'].set_visible(False)
 
 <p>The alpha property in matplotlib controls an object’s opacity.  This value ranges from zero to one with zero being fully transparent (invisible 👀) and one being entirely opaque.  Reducing alpha will make your plot objects see-through, allowing multiple layers to be seen at once, and this may also be useful if you are building a scatter plot with overlapping points.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>plt.scatter(..., alpha=0.5)
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -322,8 +322,8 @@ plt.gca().spines['right'].set_visible(False)
 
 <p>Matplotlib’s zorder property, however, controls how close objects are to the foreground.  Objects with smaller values for zorder are closer to the background, while those larger zorder values appear closer to the front.  For example, if I’m making a scatter plot with an accompanying line plot, I can bring the line forward by making its zorder larger.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>plt.scatter(..., zorder=1)
-plt.plot(..., zorder=2)
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -336,7 +336,7 @@ plt.plot(..., zorder=2)
 
 <p>An extremely powerful way to convey a specific point or add validity to your results is to directly annotate your matplotlib visuals with main points or specific illustrative examples.  To do this, just add annotation code specifying the desired text and position to your matplotlib visual.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>plt.annotate(TEXT, (X_POSITION, Y_POSITION), ...)
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">TEXT</span><span class="p">,</span> <span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="n">Y_POSITION</span><span class="p">),</span> <span class="o">...</span><span class="p">)</span>
 </code></pre>
 </div>
 
@@ -349,7 +349,7 @@ plt.plot(..., zorder=2)
 
 <h2 id="baseline-and-highlight">Baseline and Highlight</h2>
 
-<p>Adding a baseline to your visuals helps set expectations, which a shaded region can further emphasize your conclusions.  A simple horizontal line or background shading provides others with appropriate context and can speed along their understanding of your results.</p>
+<p>Adding a baseline to your visuals helps set expectations, while a shaded region can further emphasize your conclusions.  A simple horizontal line or background shading provides others with appropriate context and can speed along their understanding of your results.</p>
 
 <h3 id="horizontal-and-vertical-lines">Horizontal and Vertical Lines</h3>
 
@@ -362,13 +362,13 @@ plt.plot(..., zorder=2)
 
 <p>In some cases, you may want to completely remove the default x- and y-axes that matplotlib provides and create your own axes based on some aggregate of the data.  This situation just requires removing spines as we did before, removing tick marks, and adding a horizontal and vertical lines.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>#Remove ticks
-plt.xticks([])
-plt.yticks([])
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#Remove ticks</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
 
-#Horizontal and vertical lines
-plt.axhline(Y_POSITION, ...)  #horizontal line
-plt.axvline(X_POSITION, ...)  #vertical line
+<span class="c">#Horizontal and vertical lines</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">Y_POSITION</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c">#horizontal line</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c">#vertical line</span>
 </code></pre>
 </div>
 
@@ -385,17 +385,60 @@ plt.axvline(X_POSITION, ...)  #vertical line
 </code></pre>
 </div>
 
-<p>Then you just need to grab your current axes and add a rectangular patch.</p>
+<p>Then you just need to grab your current axes and add a rectangular patch:</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="n">Y_POSITION</span><span class="p">),</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="n">Y_POSITION</span><span class="p">),</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="o">...</span><span class="p">),</span>
 </code></pre>
 </div>
 
 <p>where the x- and y-position refer to the lower lefthand corner.</p>
 
-<h3 id="background-shading">Background shading</h3>
+<center>
+<img src="https://kimfetti.github.io/images/rectangle.png" alt="Add a rectangle" width="600" />
+<p><em> To draw people toward a particular part of your visual, consider adding a rectangle.</em></p>
+</center>
 
-<p>Also include zorder, alpha here</p>
+<h3 id="shading">Shading</h3>
+
+<p>Instead of using a rectangle, shading provides another option for drawing attention to a particular region on your plot.  There are a few ways to do this.</p>
+
+<p>Firstly, if you’d like to highlight an entire horizontal or vertical region, you can use <code class="highlighter-rouge">axhspan</code> or <code class="highlighter-rouge">axvspan</code> by adding the following to your plot code:</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">axhspan</span><span class="p">(</span><span class="n">Y_START</span><span class="p">,</span> <span class="n">Y_END</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c">#horizontal shading</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">X_START</span><span class="p">,</span> <span class="n">X_END</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c">#vertical shading</span>
+</code></pre>
+</div>
+
+<p>Previous options like <code class="highlighter-rouge">alpha</code> and <code class="highlighter-rouge">zorder</code> also help here because you will likely want to make your shading more transparent and/or move it to the background of your figure.</p>
+
+<center>
+<img src="https://kimfetti.github.io/images/shade.png" alt="Shading for highlighting" width="600" />
+<p><em> Background shading also provides an effective way to highlight a particular region of your plot.</em></p>
+</center>
+
+<p>Another way to add shading is to define two lines and fill between them.  This method even takes an optional argument called <code class="highlighter-rouge">where</code> which allows you to filter your highlight region.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">X_VALUES</span><span class="p">,</span> <span class="n">LINE1</span><span class="p">,</span> <span class="n">LINE2</span><span class="p">,</span> <span class="n">WHERE</span><span class="o">=</span><span class="n">FILTER</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>To shade the same region that we drew a rectangle around previously, we can just predefine an array of equally spaced x-values and filter on them as needed.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">sugars</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sugars_per_cup</span><span class="o">.</span><span class="nb">min</span><span class="p">(),</span> <span class="n">df</span><span class="o">.</span><span class="n">sugars_per_cup</span><span class="o">.</span><span class="nb">max</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">sugars</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">fat_per_cup</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">df</span><span class="o">.</span><span class="n">fat_per_cup</span><span class="o">.</span><span class="nb">max</span><span class="p">()</span><span class="o">*</span><span class="mf">1.05</span><span class="p">,</span> 
+                       <span class="n">WHERE</span><span class="o">=</span><span class="n">sugars</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">sugars_per_cup</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="o">...</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<center>
+<img src="https://kimfetti.github.io/images/fill_between.png" alt="Fill between lines" width="600" />
+<p><em> Background shading can also be accomplished by filling between two lines.</em></p>
+</center>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>mostly about telling story quicker - highlight annotate, layering.  and removing extraneous bits spines, ticks etc.</p>
 
 <table>
   <tbody>
