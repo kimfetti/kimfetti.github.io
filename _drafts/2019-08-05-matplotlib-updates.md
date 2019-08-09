@@ -7,11 +7,11 @@ teaser: "<em>Matplotlib's default properties often yield unappealing plots that 
 
 header:
     image: lego_header.jpg
-    background-color: "#FFFFFF"
+    background-color: "#999999"
     caption: "Matplotlib default and update constructed by author. Kaggle cereal dataset."
     caption_url: https://www.kaggle.com/crawford/80-cereals
 image:
-    thumb: lego_header.jpg
+    thumb: lego_thumb.jpg
     homepage: lego_header.jpg
     caption: "Kaggle cereal dataset."
     caption_url: https://www.kaggle.com/crawford/80-cereals
