@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-08-09T09:30:53-04:00</updated>
+	<updated>2019-08-09T09:42:05-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -207,7 +207,7 @@
 &lt;p&gt;Previous options like &lt;code class=&quot;highlighter-rouge&quot;&gt;alpha&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;zorder&lt;/code&gt; also help here because you will likely want to make your shading more transparent and/or move it to the background of your figure.&lt;/p&gt;
 
 &lt;center&gt;
-&lt;img src=&quot;https://kimfetti.github.io/images/shade.png&quot; alt=&quot;Shading for highlighting&quot; width=&quot;600&quot; /&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/shading.png&quot; alt=&quot;Shading for highlighting&quot; width=&quot;800&quot; /&gt;
 &lt;p&gt;&lt;em&gt; Background shading also provides an effective way to highlight a particular region of your plot.&lt;/em&gt;&lt;/p&gt;
 &lt;/center&gt;
 

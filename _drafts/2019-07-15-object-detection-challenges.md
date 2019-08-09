@@ -9,7 +9,7 @@ header:
     image: kim_tree_header.png
     background-color: "#999999"
     caption: "Personal photo processed with YOLOv2.  Author at Haleakalā National Park."
-    caption_url: https://www.nasa.gov/index.html
+    caption_url:
 image:
     thumb: kim_tree_thumb.png
     homepage: kim_tree_header.png

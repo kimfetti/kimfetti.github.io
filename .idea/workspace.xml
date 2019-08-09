@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2019-08-05-matplotlib-updates.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/2019-08-05-matplotlib-updates.md" beforeDir="false" afterPath="$PROJECT_DIR$/_drafts/2019-08-05-matplotlib-updates.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-updates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-updates/index.html" afterDir="false" />
     </list>
@@ -57,7 +57,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="42" />
-          <entry key="md" value="39124" />
+          <entry key="md" value="39256" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -65,7 +65,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="42" />
-          <entry key="Markdown" value="39119" />
+          <entry key="Markdown" value="39251" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="5" />
           <entry key="YAML" value="89" />
@@ -76,23 +76,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="423">
-                <caret line="215" column="80" selection-start-line="215" selection-start-column="80" selection-end-line="215" selection-end-column="80" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="1590">
-                <caret line="106" selection-start-line="106" selection-end-line="109" />
+              <first_editor relative-caret-position="165">
+                <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
@@ -167,8 +155,8 @@
         <option value="$PROJECT_DIR$/_drafts/2019-03-20-gini-eda.md" />
         <option value="$PROJECT_DIR$/_posts/reviews/2019-07-15-object-detection-challenges.md" />
         <option value="$PROJECT_DIR$/_posts/2019-07-15-object-detection-challenges.md" />
-        <option value="$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md" />
         <option value="$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md" />
+        <option value="$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md" />
       </list>
     </option>
   </component>
@@ -201,12 +189,6 @@
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
               <item name="math" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-              <item name="viz" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -600,16 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1590">
-            <caret line="106" selection-start-line="106" selection-end-line="109" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -623,8 +595,18 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="423">
-            <caret line="215" column="80" selection-start-line="215" selection-start-column="80" selection-end-line="215" selection-end-column="80" />
+          <first_editor relative-caret-position="102">
+            <caret line="193" column="81" selection-start-line="193" selection-start-column="81" selection-end-line="193" selection-end-column="81" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>

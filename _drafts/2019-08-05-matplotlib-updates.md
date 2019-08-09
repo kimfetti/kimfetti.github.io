@@ -191,7 +191,7 @@ plt.axvspan(X_START, X_END, ...)  #vertical shading
 Previous options like `alpha` and `zorder` also help here because you will likely want to make your shading more transparent and/or move it to the background of your figure.
 
 <center>
-<img src="{{ site.urlimg }}shade.png" alt="Shading for highlighting" width = "600">
+<img src="{{ site.urlimg }}shading.png" alt="Shading for highlighting" width = "800">
 <p><em> Background shading also provides an effective way to highlight a particular region of your plot.</em></p>
 </center>
 
