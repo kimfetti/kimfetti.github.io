@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-updates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-updates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/new_axes.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/new_axes.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +57,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="42" />
-          <entry key="md" value="36052" />
+          <entry key="md" value="37061" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -64,9 +65,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="42" />
-          <entry key="Markdown" value="36050" />
+          <entry key="Markdown" value="37058" />
           <entry key="PLAIN_TEXT" value="50" />
-          <entry key="Python" value="2" />
+          <entry key="Python" value="3" />
           <entry key="YAML" value="89" />
         </counts>
       </usages-collector>
@@ -78,8 +79,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="284">
-                <caret line="160" column="23" lean-forward="true" selection-start-line="160" selection-start-column="23" selection-end-line="160" selection-end-column="23" />
+              <first_editor relative-caret-position="1231">
+                <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
               </first_editor>
               <second_editor />
             </state>
@@ -602,8 +603,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="284">
-            <caret line="160" column="23" lean-forward="true" selection-start-line="160" selection-start-column="23" selection-end-line="160" selection-end-column="23" />
+          <first_editor relative-caret-position="1231">
+            <caret line="177" lean-forward="true" selection-start-line="177" selection-end-line="177" />
           </first_editor>
           <second_editor />
         </state>

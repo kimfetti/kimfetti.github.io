@@ -115,7 +115,7 @@ plt.plot(..., zorder=2)
 An extremely powerful way to convey a specific point or add validity to your results is to directly annotate your matplotlib visuals with main points or specific illustrative examples.  To do this, just add annotation code specifying the desired text and position to your matplotlib visual.
 
 ```
-plt.annotate(TEXT, (X_POSITION, Y_POSITION))
+plt.annotate(TEXT, (X_POSITION, Y_POSITION), ...)
 ```
 
 When first approaching this cereal dataset, one might assume that "rating" is some kind score indicating cereals that consumers prefer.  In the zorder figure above, however, I built a quick linear regression model which shows that the correlation between calories per cup and ratings is practically non-existent, which makes the theory that "rating" is a consumer preference score unlikely.  This misconception becomes even more obvious once I take a look at the extremes: Cap'n Crunch has a very low rating while All-Bran with Extra Fiber is rated very highly.  And the cereal with the most calories per cup, Grape Nuts, is likely not meant to be consumed in such large quantities!
@@ -158,6 +158,20 @@ plt.axvline(X_POSITION, ...)  #vertical line
 
 ### Rectangle
 
+Once we have plotted the cereals' fat vs sugars with these new axes, we can now see that there are very few cereals that are low in sugar but high in fat, which makes sense because cereals aren't typically savory.  To clearly make this point, we could draw attention to the upper left quadrant by drawing a rectangle around this area.  There are several shapes that you can draw on your matplotlib graphs via the [patches module][8], including a rectangle or even a [dolphin][9].  First import code for the rectangle patch.
+
+```python
+from matplotlib.patches import Rectangle
+```
+
+Then you just need to grab your current axes and add a rectangular patch.
+
+```python
+plt.gca().add_patch(Rectangle(X_POSITION, Y_POSITION), WIDTH, HEIGHT, ...)
+```
+
+where the x- and y-position refer to the lower lefthand corner.
+
 ### Background shading 
 
 Also include zorder, alpha here
@@ -175,6 +189,8 @@ Also include zorder, alpha here
  [5]: http://vrl.cs.brown.edu/color
  [6]: https://xkcd.com/color/rgb/
  [7]: https://blog.xkcd.com/2010/05/03/color-survey-results/
+ [8]: https://matplotlib.org/3.1.1/api/patches_api.html#module-matplotlib.patches
+ [9]: https://matplotlib.org/3.1.1/gallery/shapes_and_collections/dolphin.html#sphx-glr-gallery-shapes-and-collections-dolphin-py
 
 
 

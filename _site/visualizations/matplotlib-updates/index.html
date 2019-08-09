@@ -336,7 +336,7 @@ plt.plot(..., zorder=2)
 
 <p>An extremely powerful way to convey a specific point or add validity to your results is to directly annotate your matplotlib visuals with main points or specific illustrative examples.  To do this, just add annotation code specifying the desired text and position to your matplotlib visual.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>plt.annotate(TEXT, (X_POSITION, Y_POSITION))
+<div class="highlighter-rouge"><pre class="highlight"><code>plt.annotate(TEXT, (X_POSITION, Y_POSITION), ...)
 </code></pre>
 </div>
 
@@ -378,6 +378,20 @@ plt.axvline(X_POSITION, ...)  #vertical line
 </center>
 
 <h3 id="rectangle">Rectangle</h3>
+
+<p>Once we have plotted the cereals’ fat vs sugars with these new axes, we can now see that there are very few cereals that are low in sugar but high in fat, which makes sense because cereals aren’t typically savory.  To clearly make this point, we could draw attention to the upper left quadrant by drawing a rectangle around this area.  There are several shapes that you can draw on your matplotlib graphs via the <a href="https://matplotlib.org/3.1.1/api/patches_api.html#module-matplotlib.patches">patches module</a>, including a rectangle or even a <a href="https://matplotlib.org/3.1.1/gallery/shapes_and_collections/dolphin.html#sphx-glr-gallery-shapes-and-collections-dolphin-py">dolphin</a>.  First import code for the rectangle patch.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Rectangle</span>
+</code></pre>
+</div>
+
+<p>Then you just need to grab your current axes and add a rectangular patch.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="n">Y_POSITION</span><span class="p">),</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>where the x- and y-position refer to the lower lefthand corner.</p>
 
 <h3 id="background-shading">Background shading</h3>
 

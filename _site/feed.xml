@@ -101,7 +101,7 @@ plt.plot(..., zorder=2)
 
 &lt;p&gt;An extremely powerful way to convey a specific point or add validity to your results is to directly annotate your matplotlib visuals with main points or specific illustrative examples.  To do this, just add annotation code specifying the desired text and position to your matplotlib visual.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plt.annotate(TEXT, (X_POSITION, Y_POSITION))
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plt.annotate(TEXT, (X_POSITION, Y_POSITION), ...)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -143,6 +143,20 @@ plt.axvline(X_POSITION, ...)  #vertical line
 &lt;/center&gt;
 
 &lt;h3 id=&quot;rectangle&quot;&gt;Rectangle&lt;/h3&gt;
+
+&lt;p&gt;Once we have plotted the cereals’ fat vs sugars with these new axes, we can now see that there are very few cereals that are low in sugar but high in fat, which makes sense because cereals aren’t typically savory.  To clearly make this point, we could draw attention to the upper left quadrant by drawing a rectangle around this area.  There are several shapes that you can draw on your matplotlib graphs via the &lt;a href=&quot;https://matplotlib.org/3.1.1/api/patches_api.html#module-matplotlib.patches&quot;&gt;patches module&lt;/a&gt;, including a rectangle or even a &lt;a href=&quot;https://matplotlib.org/3.1.1/gallery/shapes_and_collections/dolphin.html#sphx-glr-gallery-shapes-and-collections-dolphin-py&quot;&gt;dolphin&lt;/a&gt;.  First import code for the rectangle patch.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matplotlib.patches&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Rectangle&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Then you just need to grab your current axes and add a rectangular patch.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gca&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_patch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rectangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Y_POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HEIGHT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;where the x- and y-position refer to the lower lefthand corner.&lt;/p&gt;
 
 &lt;h3 id=&quot;background-shading&quot;&gt;Background shading&lt;/h3&gt;
 
