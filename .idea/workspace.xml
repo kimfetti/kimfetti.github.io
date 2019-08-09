@@ -57,7 +57,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="42" />
-          <entry key="md" value="39415" />
+          <entry key="md" value="39497" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -65,7 +65,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="42" />
-          <entry key="Markdown" value="39410" />
+          <entry key="Markdown" value="39492" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="5" />
           <entry key="YAML" value="89" />
@@ -91,8 +91,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
               </first_editor>
               <second_editor />
             </state>
@@ -623,8 +623,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           </first_editor>
           <second_editor />
         </state>

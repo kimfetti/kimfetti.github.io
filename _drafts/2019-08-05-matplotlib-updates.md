@@ -6,13 +6,13 @@ meta_teaser: "Matplotlib's default properties often yield unappealing plots that
 teaser: "<em>Matplotlib's default properties often yield unappealing plots that can be off-putting to many users.  This post offers several simple ways to improve upon these defaults and help spruce up your matplotlib visualizations.</em>"
 
 header:
-    image: matplotlib_header.png
+    image: lego_header.jpg
     background-color: "#FFFFFF"
     caption: "Matplotlib default and update constructed by author. Kaggle cereal dataset."
     caption_url: https://www.kaggle.com/crawford/80-cereals
 image:
-    thumb: matplotlib_thumb.png
-    homepage: matplotlib_header.png
+    thumb: lego_header.jpg
+    homepage: lego_header.jpg
     caption: "Kaggle cereal dataset."
     caption_url: https://www.kaggle.com/crawford/80-cereals
 categories:
