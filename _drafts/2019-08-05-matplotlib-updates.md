@@ -6,15 +6,15 @@ meta_teaser: "Matplotlib's default properties often yield unappealing plots that
 teaser: "<em>Matplotlib's default properties often yield unappealing plots that can be off-putting to many users.  This post offers several simple ways to improve upon these defaults and help spruce up your matplotlib visualizations.</em>"
 
 header:
-    image: birthday_planet_header.jpg
-    background-color: "#999999"
-    caption: "Voyager Montage by NASA. Public Domain. Credit: NASA."
-    caption_url: https://www.nasa.gov/index.html
+    image: matplotlib_header.png
+    background-color: "#FFFFFF"
+    caption: "Matplotlib default and update constructed by author. Kaggle cereal dataset."
+    caption_url: https://www.kaggle.com/crawford/80-cereals
 image:
-    thumb: birthday_planet_thumb.jpg
-    homepage: birthday_planet_header.jpg
-    caption: "Credit: NASA"
-    caption_url: https://www.nasa.gov/index.html
+    thumb: matplotlib_thumb.png
+    homepage: matplotlib_header.png
+    caption: "Kaggle cereal dataset."
+    caption_url: https://www.kaggle.com/crawford/80-cereals
 categories:
     - visualizations
 show_meta: true
@@ -237,6 +237,6 @@ mostly about telling story quicker - highlight annotate, layering.  and removing
  [7]: https://blog.xkcd.com/2010/05/03/color-survey-results/
  [8]: https://matplotlib.org/3.1.1/api/patches_api.html#module-matplotlib.patches
  [9]: https://matplotlib.org/3.1.1/gallery/shapes_and_collections/dolphin.html#sphx-glr-gallery-shapes-and-collections-dolphin-py
-
+ [10]: https://www.kaggle.com/crawford/80-cereals
 
 
