@@ -5,13 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2019-08-05-matplotlib-updates.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/lego_header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/lego_header.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-updates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-updates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lego_header.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/lego_header.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,15 +23,15 @@
     <session id="497264545">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="4" />
-          <entry key="project.open.time.5" value="12" />
+          <entry key="project.open.time.5" value="13" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,7 +41,7 @@
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="15" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="54" />
+          <entry key="md" value="55" />
           <entry key="png" value="8" />
           <entry key="scss" value="28" />
           <entry key="txt" value="1" />
@@ -53,7 +53,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="33" />
           <entry key="Image" value="24" />
-          <entry key="Markdown" value="54" />
+          <entry key="Markdown" value="55" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="YAML" value="9" />
         </counts>
@@ -61,7 +61,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="58" />
-          <entry key="md" value="39572" />
+          <entry key="md" value="40590" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -69,7 +69,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="58" />
-          <entry key="Markdown" value="39567" />
+          <entry key="Markdown" value="40585" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="5" />
           <entry key="YAML" value="89" />
@@ -79,12 +79,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <first_editor relative-caret-position="330">
+                <caret line="27" column="347" selection-start-line="27" selection-start-column="347" selection-end-line="27" selection-end-column="347" />
               </first_editor>
               <second_editor />
             </state>
@@ -92,18 +92,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_drafts/2019-03-20-gini-eda.md">
+        <entry file="file://$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="540">
-                <caret line="36" column="44" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="77" />
+              <first_editor relative-caret-position="165">
+                <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_layouts/page-fullwidth.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -178,8 +178,8 @@
         <option value="$PROJECT_DIR$/_posts/reviews/2019-07-15-object-detection-challenges.md" />
         <option value="$PROJECT_DIR$/_posts/2019-07-15-object-detection-challenges.md" />
         <option value="$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md" />
-        <option value="$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md" />
         <option value="$PROJECT_DIR$/_layouts/page-fullwidth.html" />
+        <option value="$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md" />
       </list>
     </option>
   </component>
@@ -201,6 +201,11 @@
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_drafts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -282,7 +287,7 @@
     <frame x="37" y="43" width="1309" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34490922" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3504341" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -500,16 +505,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="165">
-            <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/birthday_planet_header.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -581,23 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/2014-10-09-header-full-width-image.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -616,10 +594,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="330">
+            <caret line="27" column="347" selection-start-line="27" selection-start-column="347" selection-end-line="27" selection-end-column="347" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/page-fullwidth.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="71" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>

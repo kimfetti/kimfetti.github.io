@@ -9,13 +9,13 @@ teaser: "<em>Matplotlib's default properties often yield unappealing plots that 
 header:
     image: lego_header.jpg
     background-color: "#999999"
-    caption: "Matplotlib default and update constructed by author. Kaggle cereal dataset."
-    caption_url: https://www.kaggle.com/crawford/80-cereals
+    caption: "Photo by Alice Bartlett. Cropped and resized by author."
+    caption_url: http://bit.ly/31rt1Zq
 image:
     thumb: lego_thumb.jpg
     homepage: lego_header.jpg
-    caption: "Kaggle cereal dataset."
-    caption_url: https://www.kaggle.com/crawford/80-cereals
+    caption: "Photo by Alice Bartlett. Cropped by author."
+    caption_url: http://bit.ly/31rt1Zq
 categories:
     - visualizations
 show_meta: true
@@ -23,12 +23,10 @@ comments: true
 ---
 <!--more-->
 
+Matplotlib is typically the first data visualization package that Python programmers learn.  While its users can create basic figures with just a few lines of code, these resulting default plots often prove insufficient in both design aesthetics and communicative power.  Simple adjustments can lead to dramatic improvements, however, and in this post, I will share several such tips on upgrading basic matplotlib figures.
 
-Intro statements - the defaults for matplotlib aren't great.  Can move to Seaborn (more on that later) but you can also use special commands to make your matplotlib plots look a lot better.
+In the examples that follow, I will be using information found in [this Kaggle dataset about cereals][10].  I have normalized three features (calories, fat, and sugar) by serving size to better compare cereal trends and ratings.  Details about these data transformations and the code used to produce each example figure can be found on [GitHub][11].
 
-I recently gave a talk at ODSC NYC about data visualization...  
-
-Cereal data used for all examples below
 
 ## Remove Spines
 
@@ -226,7 +224,7 @@ mostly about telling story quicker - highlight annotate, layering.  and removing
 
 
 
-[Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb)  ||  [Check out my ODSC conference materials with Google Colab!](bit.ly/odscNyc19_dataviz)
+[Check out this code on GitHub!][11]  ||  [Check out my ODSC conference materials with Google Colab!](bit.ly/odscNyc19_dataviz)
 
 
  [1]: https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.gca.html
@@ -239,5 +237,6 @@ mostly about telling story quicker - highlight annotate, layering.  and removing
  [8]: https://matplotlib.org/3.1.1/api/patches_api.html#module-matplotlib.patches
  [9]: https://matplotlib.org/3.1.1/gallery/shapes_and_collections/dolphin.html#sphx-glr-gallery-shapes-and-collections-dolphin-py
  [10]: https://www.kaggle.com/crawford/80-cereals
+ [11]: https://github.com/kimfetti/Blog/blob/master/matplotlib_tips.ipynb
 
 

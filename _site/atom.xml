@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-08-09T11:15:33-04:00</updated>
+	<updated>2019-08-10T18:04:08-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -44,11 +44,9 @@
 			<summary>&lt;em&gt;Matplotlib's default properties often yield unappealing plots that can be off-putting to many users.  This post offers several simple ways to improve upon these defaults and help spruce up your matplotlib visualizations.&lt;/em&gt;</summary>
 			<content type="html" xml:base="http://localhost:4000//visualizations/matplotlib-updates/">&lt;!--more--&gt;
 
-&lt;p&gt;Intro statements - the defaults for matplotlib aren’t great.  Can move to Seaborn (more on that later) but you can also use special commands to make your matplotlib plots look a lot better.&lt;/p&gt;
+&lt;p&gt;Matplotlib is typically the first data visualization package that Python programmers learn.  While its users can create basic figures with just a few lines of code, these resulting default plots often prove insufficient in both design aesthetics and communicative power.  Simple adjustments can lead to dramatic improvements, however, and in this post, I will share several such tips on upgrading basic matplotlib figures.&lt;/p&gt;
 
-&lt;p&gt;I recently gave a talk at ODSC NYC about data visualization…&lt;/p&gt;
-
-&lt;p&gt;Cereal data used for all examples below&lt;/p&gt;
+&lt;p&gt;In the examples that follow, I will be using information found in &lt;a href=&quot;https://www.kaggle.com/crawford/80-cereals&quot;&gt;this Kaggle dataset about cereals&lt;/a&gt;.  I have normalized three features (calories, fat, and sugar) by serving size to better compare cereal trends and ratings.  Details about these data transformations and the code used to produce each example figure can be found on &lt;a href=&quot;https://github.com/kimfetti/Blog/blob/master/matplotlib_tips.ipynb&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;remove-spines&quot;&gt;Remove Spines&lt;/h2&gt;
 
@@ -238,7 +236,7 @@
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;&lt;a href=&quot;https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb&quot;&gt;Check out this code on GitHub!&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/kimfetti/Blog/blob/master/matplotlib_tips.ipynb&quot;&gt;Check out this code on GitHub!&lt;/a&gt;&lt;/td&gt;
       &lt;td&gt; &lt;/td&gt;
       &lt;td&gt;&lt;a href=&quot;bit.ly/odscNyc19_dataviz&quot;&gt;Check out my ODSC conference materials with Google Colab!&lt;/a&gt;&lt;/td&gt;
     &lt;/tr&gt;
