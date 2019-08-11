@@ -237,7 +237,7 @@
 	<div class="medium-12 columns">
 		<article>
 			<header>
-				<p class="subheadline">Data Visualizations</p>
+				<p class="subheadline">Data Visualization</p>
 				<h1>Simple Ways to Improve Your Matplotlib</h1>
 			</header>
 
@@ -249,23 +249,28 @@
 
 			<!--more-->
 
-<p>Matplotlib is typically the first data visualization package that Python programmers learn.  While its users can create basic figures with just a few lines of code, these resulting default plots often prove insufficient in both design aesthetics and communicative power.  Simple adjustments can lead to dramatic improvements, however, and in this post, I will share several such tips on upgrading basic matplotlib figures.</p>
+<p><a href="https://matplotlib.org/">Matplotlib</a> is typically the first data visualization package that Python programmers learn.  While its users can create basic figures with just a few lines of code, these resulting default plots often prove insufficient in both design aesthetics and communicative power.  Simple adjustments can lead to dramatic improvements, however, and in this post, I will share several such tips on upgrading basic Matplotlib figures.</p>
 
-<p>In the examples that follow, I will be using information found in <a href="https://www.kaggle.com/crawford/80-cereals">this Kaggle dataset about cereals</a>.  I have normalized three features (calories, fat, and sugar) by serving size to better compare cereal trends and ratings.  Details about these data transformations and the code used to produce each example figure can be found on <a href="https://github.com/kimfetti/Blog/blob/master/matplotlib_tips.ipynb">GitHub</a>.</p>
+<p>In the examples that follow, I will be using information found in <a href="https://www.kaggle.com/crawford/80-cereals">this Kaggle dataset about cereals</a>.  I have normalized three features (calories, fat, and sugar) by serving size to better compare cereal trends and ratings.  Details about these data transformations and the code used to generate each example figure can be found on <a href="https://github.com/kimfetti/Blog/blob/master/matplotlib_tips.ipynb">GitHub</a>.</p>
 
 <h2 id="remove-spines">Remove Spines</h2>
 
-<p>The first matplotlib default that we may want to update is the black box that surrounds each plot, so called “spines” in matplotlib.  One way to do this is to <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.gca.html">get the current axis</a> through pyplot and update the visibility of each spine as desired.</p>
+<p>The first Matplotlib default to update is that black box surrounding each plot, comprised of four so-called “spines.”  To adjust them we first <a href="https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.gca.html">get our figure’s axes</a> via pyplot and then change the visibility of each individual spine as desired.</p>
 
-<p>Let’s say we want to turn off the top and right spines, for example.  If we have imported matplotlib’s pyplot submodule with:</p>
+<p>Let’s say, for example, we want to remove the top and right spines.  If we have imported Matplotlib’s pyplot submodule with:</p>
+
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 </code></pre>
 </div>
-<p>we just need to add the following to our code to improve matplotlib’s defaults:</p>
+
+<p>we just need to add the following to our code:</p>
+
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'top'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'right'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 </code></pre>
 </div>
+
+<p>and the top and right spines will no longer appear.  Removing these distracting lines allows more focus to be directed toward your data.</p>
 
 <center>
 <img src="https://kimfetti.github.io/images/spines.png" alt="Remove matplotlib spines" width="800" />
@@ -278,17 +283,17 @@
 
 <h3 id="hex-codes">Hex Codes</h3>
 
-<p>One of my favorite methods for updating matplotlib’s colors is to directly pass <a href="https://htmlcolorcodes.com/">hex codes</a> into the color argument because it allows me to be very specific about my color choices.</p>
+<p>One of my favorite methods for updating Matplotlib’s colors is directly passing <a href="https://htmlcolorcodes.com/">hex codes</a> into the color argument because it allows me to be extremely specific about my color choices.</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#0000CC'</span><span class="p">)</span>
 </code></pre>
 </div>
 
-<p><a href="https://www.w3schools.com/colors/colors_picker.asp">This handy tool</a> can help you select an appropriate hex color by testing it against white and black text as well as comparing several lighter and darker shades.  Alternatively, you can take a more scientific approach to choosing your palette by checking out <a href="http://vrl.cs.brown.edu/color">Colorgorical</a> by Connor Gramazio out of the Brown Visualization Research Lab.  The Colorgorical tool allows you to build a color palette by balancing various preferences like human perceptual difference and aesthetic pleasure.</p>
+<p><a href="https://www.w3schools.com/colors/colors_picker.asp">This handy tool</a> can help you select an appropriate hex color by testing it against white and black text as well as comparing several lighter and darker shades.  Alternatively, you can take a more scientific approach when choosing your palette by checking out <a href="http://vrl.cs.brown.edu/color">Colorgorical</a> by Connor Gramazio from the Brown Visualization Research Lab.  The Colorgorical tool allows you to build a color palette by balancing various preferences like human perceptual difference and aesthetic pleasure.</p>
 
 <h3 id="xkcd-colors">xkcd Colors</h3>
 
-<p>Another great way to update matplotlib’s default colors is to utilize the <a href="https://xkcd.com/color/rgb/">xkcd color library</a>.  These 954 colors were specifically curated and named by the several hundred thousand participants of the <a href="https://blog.xkcd.com/2010/05/03/color-survey-results/">xkcd color name survey</a>.  You can use them in matplotlib by prefixing their names with ‘xkcd:’.</p>
+<p>The <a href="https://xkcd.com/color/rgb/">xkcd color library</a> provides another great way to update Matplotlib’s default colors.  These 954 colors were specifically curated and named by the several hundred thousand participants of the <a href="https://blog.xkcd.com/2010/05/03/color-survey-results/">xkcd color name survey</a>.  You can use them in Matplotlib by prefixing their names with “xkcd:”.</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'xkcd:lightish blue'</span><span class="p">)</span>
 </code></pre>
@@ -296,16 +301,16 @@
 
 <center>
 <img src="https://kimfetti.github.io/images/color.png" alt="Explore matplotlib colors" width="900" />
-<p><em>Matplotlib default colors can easily be updated by passing hex codes or referencing the xkcd library.</em></p>
+<p><em>Matplotlib's default colors can easily be updated by passing hex codes or referencing the xkcd library.</em></p>
 </center>
 
 <h2 id="layer-visuals">Layer Visuals</h2>
 
-<p>Matplotlib allows users to layer multiple graphics on top of each other, which can help when comparing results or setting baselines.  Two useful properties can help control layer opacity (<code class="highlighter-rouge">alpha</code>) and ordering (<code class="highlighter-rouge">zorder</code>).</p>
+<p>Matplotlib allows users to layer multiple graphics on top of each other, which proves convenient when comparing results or setting baselines.  Two useful properties should be utilized while layering: 1) <code class="highlighter-rouge">alpha</code> for controlling each component’s opacity and 2) <code class="highlighter-rouge">zorder</code> for setting objects to the foreground or background.</p>
 
 <h3 id="opacity">Opacity</h3>
 
-<p>The alpha property in matplotlib controls an object’s opacity.  This value ranges from zero to one with zero being fully transparent (invisible 👀) and one being entirely opaque.  Reducing alpha will make your plot objects see-through, allowing multiple layers to be seen at once, and this may also be useful if you are building a scatter plot with overlapping points.</p>
+<p>The alpha property in Matplotlib adjusts an object’s opacity.  This value ranges from zero to one with zero being fully transparent (invisible 👀) and one being entirely opaque.  Reducing alpha will make your plot objects see-through, allowing multiple layers to be seen at once as well as allowing overlapping points to be distinguished, say, in a scatter plot.</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
 </code></pre>
@@ -313,36 +318,36 @@
 
 <center>
 <img src="https://kimfetti.github.io/images/alpha.png" alt="Adjust matplotlib opacity" width="800" />
-<p><em>Reducing opacity by decreasing alpha can help visualize points that overlap.</em></p>
+<p><em>Decreasing alpha reduces opacity and can help you visualize overlapping points.</em></p>
 </center>
 
 <h3 id="order">Order</h3>
 
-<p>Matplotlib’s zorder property, however, controls how close objects are to the foreground.  Objects with smaller values for zorder are closer to the background, while those larger zorder values appear closer to the front.  For example, if I’m making a scatter plot with an accompanying line plot, I can bring the line forward by making its zorder larger.</p>
+<p>Matplotlib’s zorder property determines how close objects are to the foreground.  Objects with smaller zorder values appear closer to the background, while those with larger values present closer to the front.  If I’m making a scatter plot with an accompanying line plot, for example, I can bring the line forward by increasing its zorder.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c">#background</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>     <span class="c">#foreground</span>
 </code></pre>
 </div>
 
 <center>
 <img src="https://kimfetti.github.io/images/zorder.png" alt="Control layer order with zorder" width="600" />
-<p><em> Plot objects can be brought to the foreground or pushed to the background by changing zorder.</em></p>
+<p><em> Plot objects can be brought to the foreground or pushed to the background by adjusting zorder.</em></p>
 </center>
 
 <h2 id="annotate-main-points-or-examples">Annotate Main Points or Examples</h2>
 
-<p>An extremely powerful way to convey a specific point or add validity to your results is to directly annotate your matplotlib visuals with main points or specific illustrative examples.  To do this, just add annotation code specifying the desired text and position to your matplotlib visual.</p>
+<p>Many visuals can benefit from the annotation of main points or specific, illustrative examples because these directly convey our ideas and boost the validity of our results.  To add text a Matplotlib figure, just include annotation code specifying the desired text and its location.</p>
 
 <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">TEXT</span><span class="p">,</span> <span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="n">Y_POSITION</span><span class="p">),</span> <span class="o">...</span><span class="p">)</span>
 </code></pre>
 </div>
 
-<p>When first approaching this cereal dataset, one might assume that “rating” is some kind score indicating cereals that consumers prefer.  In the zorder figure above, however, I built a quick linear regression model which shows that the correlation between calories per cup and ratings is practically non-existent, which makes the theory that “rating” is a consumer preference score unlikely.  This misconception becomes even more obvious once I take a look at the extremes: Cap’n Crunch has a very low rating while All-Bran with Extra Fiber is rated very highly.  And the cereal with the most calories per cup, Grape Nuts, is likely not meant to be consumed in such large quantities!</p>
+<p>The cereal dataset used to produced this blog’s visuals contains nutritional information about several brand name cereals along with a feature labeled as “rating.”  One might firstly assume that “rating” is a score indicating cereals that consumers prefer.  In the zorder figure above, however, I built a quick linear regression model showing that the correlation between calories per cup and rating is practically non-existent, and it seems unlikely that calories would not factor into consumer preference. We may already be skeptical about our initial assumption about “rating,” but this misconception becomes even more obvious once I examine the extremes: Cap’n Crunch is the lowest rated cereal while All-Bran with Extra Fiber rates the highest.  Annotating the figure with these representative examples immediately dispels false assumptions about “rating,” which more likely indicates a cereal’s nutritional value. (I have also annotated the cereal with the most calories per cup; Grape Nuts is likely not meant to be consumed in such large quantities! 😆)</p>
 
 <center>
 <img src="https://kimfetti.github.io/images/annotate.png" alt="Annotate examples" width="700" />
-<p><em> Annotating your visuals with a few examples can add legitimacy.</em></p>
+<p><em> Annotating your visuals with a few examples can improve communication and add legitimacy.</em></p>
 </center>
 
 <h2 id="baseline-and-highlight">Baseline and Highlight</h2>
