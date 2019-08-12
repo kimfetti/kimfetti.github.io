@@ -177,7 +177,7 @@ from matplotlib.patches import Rectangle
 Then to create a rectangle on the figure, grab the current axes and add a rectangular patch with its location, width, and height:
 
 ```python
-plt.gca().add_patch(Rectangle((X_POSITION, Y_POSITION), WIDTH, HEIGHT, ...),
+plt.gca().add_patch(Rectangle((X_POSITION, Y_POSITION), WIDTH, HEIGHT, ...)
 ```
 
 Here, the x- and y-positions refer to the placement of the lower-left corner of the rectangle.
@@ -231,7 +231,7 @@ plt.gca().fill_between(sugars, df.fat_per_cup.median(), df.fat_per_cup.max(),
 
 Matplotlib often gets a bad reputation due to its poor defaults and the shear amount of code needed to produce decent looking visuals.  Hopefully, the tips provided in this blog will help you address the first issue, though I'll admit that the final few example figures required many updates and subsequently a sizable amount of code.  If the required bulk of code bothers you, the [Seaborn][14] visualization library is an excellent alternative to Matplotlib.  It comes with better defaults overall, demands fewer lines of code, and supports customization via traditional Matplotlib syntax if needed.
 
-The main thing to keep in mind when you visualize data--no matter which package you choose--is your audience.  The suggestions I've offered here aim to smooth out the data communication process by 1) removing extraneous bits like unneccessary spines or tick marks, 2) telling the data story quicker by setting expectations with layering and baselines, and 3) highlighting main conclusions with shading and annotations.  The resulting aesthetics also improve, but the primary goal is stronger and more seamless data communication.
+The main thing to keep in mind when you visualize data--no matter which package you choose--is your audience.  The suggestions I've offered here aim to smooth out the data communication process by 1) removing extraneous bits like unnecessary spines or tick marks, 2) telling the data story quicker by setting expectations with layering and baselines, and 3) highlighting main conclusions with shading and annotations.  The resulting aesthetics also improve, but the primary goal is stronger and more seamless data communication.
 
 <em>I recently shared content similar to this in a data visualization talk at [ODSC NYC][13].  You can access my original conference materials as well as the code that powers each example figure in the links below.</em>
 
