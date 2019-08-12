@@ -3,25 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/2019-08-05-matplotlib-updates.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/alpha.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/alpha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/annotate.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/annotate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/color.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/color.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/spines.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/spines.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/zorder.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/zorder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/new_axes.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/new_axes.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-updates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-updates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/alpha.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/alpha.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/annotate.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/annotate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/color.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/color.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/spines.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/spines.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/zorder.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/zorder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-updates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/new_axes.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/new_axes.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,15 +27,16 @@
     <session id="497264545">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="25" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.5" value="13" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -51,7 +46,7 @@
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="15" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="56" />
+          <entry key="md" value="58" />
           <entry key="png" value="8" />
           <entry key="scss" value="28" />
           <entry key="txt" value="1" />
@@ -63,7 +58,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="33" />
           <entry key="Image" value="24" />
-          <entry key="Markdown" value="56" />
+          <entry key="Markdown" value="58" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="YAML" value="9" />
         </counts>
@@ -71,7 +66,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="58" />
-          <entry key="md" value="42525" />
+          <entry key="md" value="47618" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -79,53 +74,16 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="58" />
-          <entry key="Markdown" value="42520" />
+          <entry key="Markdown" value="47610" />
           <entry key="PLAIN_TEXT" value="50" />
-          <entry key="Python" value="5" />
+          <entry key="Python" value="8" />
           <entry key="YAML" value="89" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="224">
-                <caret line="127" column="68" selection-start-line="127" selection-start-column="68" selection-end-line="127" selection-end-column="68" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="165">
-                <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="2775">
-                <caret line="185" selection-start-line="185" selection-end-line="187" selection-end-column="9" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -184,6 +142,7 @@
         <option value="$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md" />
         <option value="$PROJECT_DIR$/_layouts/page-fullwidth.html" />
         <option value="$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md" />
+        <option value="$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md" />
       </list>
     </option>
   </component>
@@ -227,6 +186,11 @@
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
               <item name="viz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_sass" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -284,9 +248,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="37" y="43" width="1309" height="717" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3504341" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35595897" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -311,14 +274,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_drafts/2014-09-14-video.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/2014-10-09-header-image-color.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -597,16 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="2775">
-            <caret line="185" selection-start-line="185" selection-end-line="187" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -617,11 +562,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="545">
+            <caret line="185" selection-start-line="185" selection-end-line="187" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="224">
-            <caret line="127" column="68" selection-start-line="127" selection-start-column="68" selection-end-line="127" selection-end-column="68" />
+          <first_editor relative-caret-position="45">
+            <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="90">
+            <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           </first_editor>
           <second_editor />
         </state>
