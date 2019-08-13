@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-08-12T11:46:02-04:00</updated>
+	<updated>2019-08-13T18:12:22-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -191,7 +191,7 @@
 
 &lt;p&gt;Then to create a rectangle on the figure, grab the current axes and add a rectangular patch with its location, width, and height:&lt;/p&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gca&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_patch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rectangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Y_POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HEIGHT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;plt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gca&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_patch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Rectangle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;X_POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Y_POSITION&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;WIDTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;HEIGHT&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
@@ -244,7 +244,7 @@
 
 &lt;p&gt;Matplotlib often gets a bad reputation due to its poor defaults and the shear amount of code needed to produce decent looking visuals.  Hopefully, the tips provided in this blog will help you address the first issue, though I’ll admit that the final few example figures required many updates and subsequently a sizable amount of code.  If the required bulk of code bothers you, the &lt;a href=&quot;https://seaborn.pydata.org/&quot;&gt;Seaborn&lt;/a&gt; visualization library is an excellent alternative to Matplotlib.  It comes with better defaults overall, demands fewer lines of code, and supports customization via traditional Matplotlib syntax if needed.&lt;/p&gt;
 
-&lt;p&gt;The main thing to keep in mind when you visualize data–no matter which package you choose–is your audience.  The suggestions I’ve offered here aim to smooth out the data communication process by 1) removing extraneous bits like unneccessary spines or tick marks, 2) telling the data story quicker by setting expectations with layering and baselines, and 3) highlighting main conclusions with shading and annotations.  The resulting aesthetics also improve, but the primary goal is stronger and more seamless data communication.&lt;/p&gt;
+&lt;p&gt;The main thing to keep in mind when you visualize data–no matter which package you choose–is your audience.  The suggestions I’ve offered here aim to smooth out the data communication process by 1) removing extraneous bits like unnecessary spines or tick marks, 2) telling the data story quicker by setting expectations with layering and baselines, and 3) highlighting main conclusions with shading and annotations.  The resulting aesthetics also improve, but the primary goal is stronger and more seamless data communication.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;I recently shared content similar to this in a data visualization talk at &lt;a href=&quot;https://odsc.com/training/portfolio/custom-data-visualizations-with-python/&quot;&gt;ODSC NYC&lt;/a&gt;.  You can access my original conference materials as well as the code that powers each example figure in the links below.&lt;/em&gt;&lt;/p&gt;
 

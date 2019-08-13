@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,10 +26,10 @@
           <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="4" />
-          <entry key="project.open.time.5" value="13" />
+          <entry key="project.open.time.5" value="14" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="26" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -33,7 +39,7 @@
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="15" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="59" />
+          <entry key="md" value="60" />
           <entry key="png" value="8" />
           <entry key="scss" value="28" />
           <entry key="txt" value="1" />
@@ -45,7 +51,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="33" />
           <entry key="Image" value="24" />
-          <entry key="Markdown" value="59" />
+          <entry key="Markdown" value="60" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="YAML" value="9" />
         </counts>
@@ -70,14 +76,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
+        <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-08-20-object-detection-challenges.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="158">
-                <caret line="235" column="112" selection-start-line="235" selection-start-column="112" selection-end-line="235" selection-end-column="112" />
-              </first_editor>
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -147,8 +151,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-40" />
-    <option name="y" value="-882" />
+    <option name="y" value="23" />
     <option name="width" value="1309" />
     <option name="height" value="717" />
   </component>
@@ -179,6 +182,12 @@
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
               <item name="math" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_posts" type="462c0819:PsiDirectoryNode" />
+              <item name="reviews" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -247,10 +256,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-40" y="-882" width="1309" height="717" extended-state="0" />
+    <frame x="0" y="23" width="1309" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3614838" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3670087" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -275,14 +284,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_drafts/2014-10-09-header-image-color.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_02_settings_typography.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -577,9 +578,17 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="158">
-            <caret line="235" column="112" selection-start-line="235" selection-start-column="112" selection-end-line="235" selection-end-column="112" />
+          <first_editor relative-caret-position="3795">
+            <caret line="253" column="82" lean-forward="true" selection-start-line="253" selection-start-column="82" selection-end-line="253" selection-end-column="82" />
           </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-08-20-object-detection-challenges.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor />
           <second_editor />
         </state>
       </provider>
