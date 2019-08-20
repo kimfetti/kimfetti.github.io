@@ -13,7 +13,7 @@ header:
 image:
     thumb: kim_tree_thumb.png
     homepage: kim_tree_header.png
-    caption: "Personal photo"
+    caption: "Personal photo processed with YOLOv2.  Author at Haleakalā National Park."
     caption_url: 
 categories:
     - algorithms
@@ -26,16 +26,18 @@ comments: true
 
 The field of computer vision has experienced substantial progress recently owing largely to advances in deep learning, specifically convolutional neural nets (CNNs).  Image classification, where a computer classifies or assigns labels to an image based on its content, can often see great results simply by leveraging pre-trained neural nets and fine-tuning the last few throughput layers.  
 
-Classifying _and_ finding individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like [Google][1] and [IBM][2]. But all of this progress wasn't easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After further introducing the topic, let's take a deep dive into several of the interesting obstacles object detection problems raise along with several emerging solutions.
+Classifying _and_ finding an unknown number of individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like [Google][1] and [IBM][2]. But all of this progress wasn't easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After further introducing the topic, let's take a deep dive into several of the interesting obstacles object detection problems raise along with several emerging solutions.
 
 
 ## Introduction
 
 ### What is object detection?
 
-While image classification has one primary classification objective, the goal of object detection is to draw rectangular bounding boxes around objects of interest as well as identify what object each box contains. A single image can consist of many different objects, so multiple bounding boxes may be drawn for each example.  Object detection [applications are basically limitless][3], but some uses include people or animal counting (ref), face detection, self-driving cars, or even ball tracking in sports.  These applications require many different kinds of objects to be detected, often with a high degree of both accuracy and speed to meet the demands of real-time video tracking.
+While image classification has one primary classification objective, the goal of object detection is to draw rectangular bounding boxes around objects of interest as well as identify what object each box contains. A single image can consist of many different objects, so multiple bounding boxes may be drawn for each example.  Object detection [applications are basically limitless][3], but some uses include people or [animal counting][4], face detection, self-driving cars, or even ball tracking in sports.  These applications require many different kinds of objects to be detected, often with a high degree of both accuracy and speed to meet the demands of real-time video tracking.
 
 ### History
+
+One of the first successful object detection frameworks was proposed by [Viola and Jones][5] in 2001.  This system, primarily used for face detection, yielded impressive detection rates and even boasted real-time detection at 15 frames per second.  This algorithm takes advantage of the fact that human faces share similar properities.  Viola and Jones constructed a set of specifically designed [Haar Features][6] to capture facial characteristics and then fed these engineered features to a variant of AdaBoost to recognize and localize faces in test images.  While this algorithm showed impressive test times and detection rates, it suffered to generalize to other object types and changes in facial tilt.  The histogram of oriented gradients (HOG) method 
 
 - History
     - Manual feature collection
@@ -46,18 +48,23 @@ While image classification has one primary classification objective, the goal of
 
 ### 1. Dual priorities: object localization and classification
 
-The first major complication of object detection is its added goal: not only do we want to classify an image's objects but also to determine the objects' positions, generally referred to as the _object localization_ task.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.
+The first major complication of object detection is its added goal: not only do we want to classify image objects but also to determine the objects' positions, generally referred to as the _object localization_ task.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.
 
 a. Pipeline methods with region proposals
 
 b. One-shot regression with multi-task loss function
 
 #### Metrics
-Another interesting consequence of having multiple objectives is the need for special metrics to score object detection methods.  Two such metrics, IOU and mAP, are common among the object detection community and are typically reported when comparing techniques.
+Another interesting consequence of having multiple objectives is the need for special metrics to score object detection methods.  Two such metrics, IOU and mAP, are common among the object detection community and are typically used to compare techniques.
 
 a. IOU 
 
-IOU stands for intersection over union and is used to judge appropriate object localization and to inform the object classification metric, mAP.
+IOU stands for intersection over union. This measurement judges object localization and informs the main object detection metric, mAP.
+
+<center>
+<img src="{{ site.urlimg }}iou.png" alt="Intersection over Union" width = "500">
+<p><em> The intersection over union metric in object detection judges the accuracy of the object localization task.</em></p>
+</center>
 
 b. mAP 
 
@@ -102,8 +109,8 @@ mAP, or mean average precision, on the other hand, assesses the classification t
 - Check out review's future stuff again
 
 
-[Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb)  ||  [Check out this viz on Tableau!](https://public.tableau.com/profile/kimberly.fessel#!/vizhome/PlanetaryBirthdayProblem/Planets-50)
-
  [1]: https://cloud.google.com/vision/docs/drag-and-drop
  [2]: https://www.ibm.com/watson/services/visual-recognition/
  [3]: https://www.quora.com/What-are-some-interesting-applications-of-object-detection
+ [4]: https://lev.cs.rpi.edu/public/papers/parham_wacv_2016.pdf
+ [5]: https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework

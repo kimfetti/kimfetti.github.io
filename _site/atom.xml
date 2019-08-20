@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-08-13T18:12:22-04:00</updated>
+	<updated>2019-08-20T11:20:41-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -24,6 +24,134 @@
 
 	<generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator>
 
+	
+		<entry>
+			<id>http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/</id>
+			<title>5 Significant Object Detection Challenges and Solutions</title>
+			<link href="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/" rel="alternate" type="text/html" title="5 Significant Object Detection Challenges and Solutions" />
+			<updated>2019-08-13T00:00:00-04:00</updated>
+
+			
+				
+				<author>
+					
+						<name>KFessel</name>
+					
+					
+					
+				</author>
+			
+			<summary>&lt;em&gt;Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications.&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/">&lt;!--more--&gt;
+
+&lt;p&gt;The field of computer vision has experienced substantial progress recently owing largely to advances in deep learning, specifically convolutional neural nets (CNNs).  Image classification, where a computer classifies or assigns labels to an image based on its content, can often see great results simply by leveraging pre-trained neural nets and fine-tuning the last few throughput layers.&lt;/p&gt;
+
+&lt;p&gt;Classifying &lt;em&gt;and&lt;/em&gt; finding an unknown number of individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like &lt;a href=&quot;https://cloud.google.com/vision/docs/drag-and-drop&quot;&gt;Google&lt;/a&gt; and &lt;a href=&quot;https://www.ibm.com/watson/services/visual-recognition/&quot;&gt;IBM&lt;/a&gt;. But all of this progress wasn’t easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After further introducing the topic, let’s take a deep dive into several of the interesting obstacles object detection problems raise along with several emerging solutions.&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;h3 id=&quot;what-is-object-detection&quot;&gt;What is object detection?&lt;/h3&gt;
+
+&lt;p&gt;While image classification has one primary classification objective, the goal of object detection is to draw rectangular bounding boxes around objects of interest as well as identify what object each box contains. A single image can consist of many different objects, so multiple bounding boxes may be drawn for each example.  Object detection &lt;a href=&quot;https://www.quora.com/What-are-some-interesting-applications-of-object-detection&quot;&gt;applications are basically limitless&lt;/a&gt;, but some uses include people or &lt;a href=&quot;https://lev.cs.rpi.edu/public/papers/parham_wacv_2016.pdf&quot;&gt;animal counting&lt;/a&gt;, face detection, self-driving cars, or even ball tracking in sports.  These applications require many different kinds of objects to be detected, often with a high degree of both accuracy and speed to meet the demands of real-time video tracking.&lt;/p&gt;
+
+&lt;h3 id=&quot;history&quot;&gt;History&lt;/h3&gt;
+
+&lt;p&gt;One of the first successful object detection frameworks was proposed by &lt;a href=&quot;https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework&quot;&gt;Viola and Jones&lt;/a&gt; in 2001.  This system, primarily used for face detection, yielded impressive detection rates and even boasted real-time detection at 15 frames per second.  This algorithm takes advantage of the fact that human faces share similar properities.  Viola and Jones constructed a set of specifically designed [Haar Features][6] to capture facial characteristics and then fed these engineered features to a variant of AdaBoost to recognize and localize faces in test images.  While this algorithm showed impressive test times and detection rates, it suffered to generalize to other object types and changes in facial tilt.  The histogram of oriented gradients (HOG) method&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;History
+    &lt;ul&gt;
+      &lt;li&gt;Manual feature collection&lt;/li&gt;
+      &lt;li&gt;Major gains once CNN applied to problem&lt;/li&gt;
+      &lt;li&gt;Image depicting methods on a timeline (+ challenges overcome by each that can be referenced later)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;challenges&quot;&gt;Challenges&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-dual-priorities-object-localization-and-classification&quot;&gt;1. Dual priorities: object localization and classification&lt;/h3&gt;
+
+&lt;p&gt;The first major complication of object detection is its added goal: not only do we want to classify image objects but also to determine the objects’ positions, generally referred to as the &lt;em&gt;object localization&lt;/em&gt; task.  Researchers often take one of two approaches to address this issue: 1) pipelines with region proposals or 2) one-shot regression methods with a multi-task loss function.&lt;/p&gt;
+
+&lt;p&gt;a. Pipeline methods with region proposals&lt;/p&gt;
+
+&lt;p&gt;b. One-shot regression with multi-task loss function&lt;/p&gt;
+
+&lt;h4 id=&quot;metrics&quot;&gt;Metrics&lt;/h4&gt;
+&lt;p&gt;Another interesting consequence of having multiple objectives is the need for special metrics to score object detection methods.  Two such metrics, IOU and mAP, are common among the object detection community and are typically used to compare techniques.&lt;/p&gt;
+
+&lt;p&gt;a. IOU&lt;/p&gt;
+
+&lt;p&gt;IOU stands for intersection over union. This measurement judges object localization and informs the main object detection metric, mAP.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/iou.png&quot; alt=&quot;Intersection over Union&quot; width=&quot;500&quot; /&gt;
+&lt;p&gt;&lt;em&gt; The intersection over union metric in object detection judges the accuracy of the object localization task.&lt;/em&gt;&lt;/p&gt;
+&lt;/center&gt;
+
+&lt;p&gt;b. mAP&lt;/p&gt;
+
+&lt;p&gt;mAP, or mean average precision, on the other hand, assesses the classification task.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Regions of interest (independent of class, pipeline solution)&lt;/li&gt;
+  &lt;li&gt;Multi-task loss function&lt;/li&gt;
+  &lt;li&gt;Multiple objects in one image&lt;/li&gt;
+  &lt;li&gt;New metrics: IOU&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;2-objects-have-multiple-spatial-scales-and-aspect-ratios&quot;&gt;2. Objects have multiple spatial scales and aspect ratios&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Warping of ROI before being fed into CNN (R-CNN)&lt;/li&gt;
+  &lt;li&gt;SPP layer&lt;/li&gt;
+  &lt;li&gt;Anchors&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-spatial-position-is-relevant&quot;&gt;3. Spatial position IS relevant&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Image classification does not do this&lt;/li&gt;
+  &lt;li&gt;Fully connected layers (slow)&lt;/li&gt;
+  &lt;li&gt;?? (I forgot this solution… )&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;4-speed&quot;&gt;4. Speed&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Heading toward RT detection in videos – need to process images very quickly&lt;/li&gt;
+  &lt;li&gt;Fast R-CNN (process image through CNN first)&lt;/li&gt;
+  &lt;li&gt;Faster R-CNN (separate RPN)&lt;/li&gt;
+  &lt;li&gt;YOLO (multi-task optimization, all in one go, no alternate optimization like Faster R-CNN)&lt;/li&gt;
+  &lt;li&gt;SSD?&lt;/li&gt;
+  &lt;li&gt;Truncated SVD&lt;/li&gt;
+  &lt;li&gt;Trade speed and accuracy&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5-data&quot;&gt;5. Data&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Lots of data for image classification (ImageNet), not so much for image detection (COCO)&lt;/li&gt;
+  &lt;li&gt;YOLO9000 attempt to leverage both for training&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Much harder than image classification tasks&lt;/li&gt;
+  &lt;li&gt;Future challenges like adding LSTM, time component to video processing.  Currently one frame at a time&lt;/li&gt;
+  &lt;li&gt;Marry speed and accuracy AND extend object class space&lt;/li&gt;
+  &lt;li&gt;Also: pose, occlusions, lighting (same issues that image classification has but maybe even more so since also trying to localize object)&lt;/li&gt;
+  &lt;li&gt;Check out review’s future stuff again&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+
+			
+				<category term="algorithms" />
+			
+				<category term="literature reviews" />
+			
+			
+
+			<published>2019-08-13T00:00:00-04:00</published>
+		</entry>
 	
 		<entry>
 			<id>http://localhost:4000//visualizations/matplotlib-improvements/</id>
