@@ -47,6 +47,11 @@ The final category of object detection algorithms are the so-called "single-shot
 One of the first successful object detection frameworks was proposed by [Viola and Jones][5] in 2001.  This system, primarily used for face detection, yielded impressive detection rates and even boasted real-time detection at 15 frames per second.  This algorithm takes advantage of the fact that human faces share similar properities.  Viola and Jones constructed a set of specifically designed [Haar Features][6] to capture facial characteristics and then fed these engineered features to a variant of AdaBoost to recognize and localize faces in test images.  While this algorithm showed impressive test times and detection rates, it suffered to generalize to other object types and changes in facial tilt.  The histogram of oriented gradients (HOG) method 
 -->
 
+<center>
+<img src="{{ site.urlimg }}objdet_history.png" alt="History of Object Detection" width = "500">
+<p><em> The history of object detection comprises of roughly three eras: machine learning, regional-based CNNs, and single shot detectors.  Many other significant approaches are not listed here for brevity. Image [Source][8], [Source][9], [Source][10], [Source][11].</em></p>
+</center>
+
 - History
     - Manual feature collection
     - Major gains once CNN applied to problem
@@ -127,3 +132,7 @@ where \\(p \equiv\\) precision and \\(r \equiv\\) recall.  The exact details of 
  [4]: https://lev.cs.rpi.edu/public/papers/parham_wacv_2016.pdf
  [5]: https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework
  [7]: https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
+ [8]: https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework
+ [9]: https://commons.wikimedia.org/wiki/File:Dlib_Learned-HOG-Detector.jpg
+ [10]: https://arxiv.org/abs/1311.2524
+ [11]: https://arxiv.org/abs/1506.02640
