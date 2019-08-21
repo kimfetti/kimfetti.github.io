@@ -26,7 +26,15 @@
 
 &lt;h3 id=&quot;history&quot;&gt;History&lt;/h3&gt;
 
-&lt;p&gt;One of the first successful object detection frameworks was proposed by &lt;a href=&quot;https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework&quot;&gt;Viola and Jones&lt;/a&gt; in 2001.  This system, primarily used for face detection, yielded impressive detection rates and even boasted real-time detection at 15 frames per second.  This algorithm takes advantage of the fact that human faces share similar properities.  Viola and Jones constructed a set of specifically designed [Haar Features][6] to capture facial characteristics and then fed these engineered features to a variant of AdaBoost to recognize and localize faces in test images.  While this algorithm showed impressive test times and detection rates, it suffered to generalize to other object types and changes in facial tilt.  The histogram of oriented gradients (HOG) method&lt;/p&gt;
+&lt;p&gt;The first successful object detection frameworks relied on more traditional machine learning techniques.  These methods required extensive feature engineering to learn representative object patterns a priori before passing to a machine learning classifier like a support vector machine.  These approaches, such as the Viola-Jones algorithm, showed impressive test times and detection rates, but they often struggled to generalize to other object types or object poses.&lt;/p&gt;
+
+&lt;p&gt;The advent of CNNs brought great improvement to the world of object detection because it allows for more robust feature sets to be learned directly from the images and allowed for nonlinear response. (when) Regional-proposal methods like R-CNN (and the subsequent Fast R-CNN and Faster R-CNN) depend on convolutional feature maps of select candidate regions to determine objectness (object present or not) as well as object classification.  These deep learning approaches have been so successful that the large majority of object detection leverages deep learning for at least some portion of the process, though HOG paired with tree-based methods is still performant for pedestrian detection problems (ref).&lt;/p&gt;
+
+&lt;p&gt;The final category of object detection algorithms are the so-called “single-shot detectors” (when?)  Rather than following the pipeline-type approach of regional-based methods, these systems, such as SSD and YOLO, seek to perform object detection in a single shot.&lt;/p&gt;
+
+&lt;!--
+One of the first successful object detection frameworks was proposed by [Viola and Jones][5] in 2001.  This system, primarily used for face detection, yielded impressive detection rates and even boasted real-time detection at 15 frames per second.  This algorithm takes advantage of the fact that human faces share similar properities.  Viola and Jones constructed a set of specifically designed [Haar Features][6] to capture facial characteristics and then fed these engineered features to a variant of AdaBoost to recognize and localize faces in test images.  While this algorithm showed impressive test times and detection rates, it suffered to generalize to other object types and changes in facial tilt.  The histogram of oriented gradients (HOG) method 
+--&gt;
 
 &lt;ul&gt;
   &lt;li&gt;History
@@ -49,20 +57,24 @@
 &lt;p&gt;b. One-shot regression with multi-task loss function&lt;/p&gt;
 
 &lt;h4 id=&quot;metrics&quot;&gt;Metrics&lt;/h4&gt;
-&lt;p&gt;Another interesting consequence of having multiple objectives is the need for special metrics to score object detection methods.  Two such metrics, IOU and mAP, are common among the object detection community and are typically used to compare techniques.&lt;/p&gt;
+&lt;p&gt;Another interesting consequence of having multiple objectives is the need for special metrics to score object detection methods.  Two such metrics, IOU and mAP, prevail among the object detection community and are typical when reporting results or analyzing multiple approaches.&lt;/p&gt;
 
-&lt;p&gt;a. IOU&lt;/p&gt;
+&lt;h5 id=&quot;iou&quot;&gt;IOU&lt;/h5&gt;
 
-&lt;p&gt;IOU stands for intersection over union. This measurement judges object localization and informs the main object detection metric, mAP.&lt;/p&gt;
+&lt;p&gt;IOU stands for intersection over union.  This measurement judges object localization and also informs the main object detection metric, mAP.  IOU compares the actual and predicted bounding boxes by calculating the area of their overlap divided by the total area of these two boxes.  Generally, IOU above 50% is defined as a positive match.&lt;/p&gt;
 
 &lt;center&gt;
 &lt;img src=&quot;https://kimfetti.github.io/images/iou.png&quot; alt=&quot;Intersection over Union&quot; width=&quot;500&quot; /&gt;
-&lt;p&gt;&lt;em&gt; The intersection over union metric in object detection judges the accuracy of the object localization task.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt; The intersection over union metric judges the exactness of the object localization task.&lt;/em&gt;&lt;/p&gt;
 &lt;/center&gt;
 
-&lt;p&gt;b. mAP&lt;/p&gt;
+&lt;h5 id=&quot;map&quot;&gt;mAP&lt;/h5&gt;
 
-&lt;p&gt;mAP, or mean average precision, on the other hand, assesses the classification task.&lt;/p&gt;
+&lt;p&gt;mAP, or mean average precision, on the other hand, assesses the classification task. mAP computes the mean of the average precision (AP) across all object classes in the dataset.  Once a list of bounding box predictions have been constructed, those meeting a prescribed IOU level (often 50%) are deemed positives while others are negatives.  Now beginning with the precision-recall (PR) curve for just one object class, AP approximates the area under the PR curve:&lt;/p&gt;
+
+&lt;p&gt;\[ AP = \int_0^1 p(r) dr,\]&lt;/p&gt;
+
+&lt;p&gt;where \(p \equiv\) precision and \(r \equiv\) recall.  The exact details of this calculation varies a bit between datasets–COCO uses 101-point interpolation, for example–but overall, AP attempts to aggregate precision over all values of recall, from zero to one.  mAP then is just the numerical mean of each of these AP values for every object class in the dataset.  For more a more robust discussion on how mAP is defined for each  dataset, check out &lt;a href=&quot;https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173&quot;&gt;this blog post&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Regions of interest (independent of class, pipeline solution)&lt;/li&gt;

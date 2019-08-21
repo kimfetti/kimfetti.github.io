@@ -3,16 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2019-08-20-object-detection-challenges.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/2019-08-13-object-detection-challenges.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/iou.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/iou.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/iou.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/iou.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +40,7 @@
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="15" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="64" />
+          <entry key="md" value="65" />
           <entry key="png" value="8" />
           <entry key="scss" value="28" />
           <entry key="txt" value="1" />
@@ -55,7 +52,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="33" />
           <entry key="Image" value="24" />
-          <entry key="Markdown" value="64" />
+          <entry key="Markdown" value="65" />
           <entry key="PLAIN_TEXT" value="30" />
           <entry key="YAML" value="9" />
         </counts>
@@ -63,7 +60,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="58" />
-          <entry key="md" value="48970" />
+          <entry key="md" value="53326" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -71,7 +68,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="58" />
-          <entry key="Markdown" value="48962" />
+          <entry key="Markdown" value="53318" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="8" />
           <entry key="YAML" value="89" />
@@ -85,8 +82,20 @@
         <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-08-13-object-detection-challenges.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="233">
-                <caret line="65" column="114" selection-start-line="65" selection-start-column="114" selection-end-line="65" selection-end-column="114" />
+              <first_editor relative-caret-position="262">
+                <caret line="41" column="299" selection-start-line="41" selection-start-column="299" selection-end-line="41" selection-end-column="299" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="1119">
+                <caret line="185" selection-start-line="185" selection-end-line="187" selection-end-column="9" />
               </first_editor>
               <second_editor />
             </state>
@@ -170,7 +179,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1309" />
     <option name="height" value="717" />
@@ -276,7 +285,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1309" height="717" extended-state="0" />
+    <frame x="0" y="23" width="1309" height="717" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.38358328" />
@@ -570,16 +579,6 @@
     <entry file="file://$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md" />
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md" />
     <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-08-20-object-detection-challenges.md" />
-    <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="2698">
-            <caret line="185" selection-start-line="185" selection-end-line="187" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -590,11 +589,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1119">
+            <caret line="185" selection-start-line="185" selection-end-line="187" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-08-13-object-detection-challenges.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="233">
-            <caret line="65" column="114" selection-start-line="65" selection-start-column="114" selection-end-line="65" selection-end-column="114" />
+          <first_editor relative-caret-position="262">
+            <caret line="41" column="299" selection-start-line="41" selection-start-column="299" selection-end-line="41" selection-end-column="299" />
           </first_editor>
           <second_editor />
         </state>
