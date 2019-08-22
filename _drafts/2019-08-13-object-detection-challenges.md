@@ -145,13 +145,31 @@ Another big challenge in object detection is the fact that objects of interest m
 
 With its updated region proposal network, Faster R-CNN employs anchor boxes as initial guesses for its RoIs.  Anchor boxes are distributed throughout the image and _used to initialize the RPN_.  The shape and sizes of these boxes are carefully chosen to span a range of different sizes and aspect ratios with the hopes that all types of objects can be detected and the coordinates need not be updated too much during the optimization.  Other frameworks, including single-shot detectors, have leveraged these anchor boxes as starting points for RoI selection.
 
+<center>
+<img src="{{ site.urlimg }}anchors.png" alt="Anchor boxes as initial RoIs" width = "500">
+<p><em> Carefully chosen anchor boxes of varying size and aspect ratio can be used to make initial guesses for the regions of interest and help detect objects of different sizes and shapes.</em></p>
+</center>
+
 #### Multiple feature maps
+
+Single-shot detectors need to pay special consideration to this issue of multiple scales because they need to not only classify objects and adjust bounding boxes but also come up with the regions of interest all in one shot from the CNN.  If only the final CNN layers are used to look for objects, only the largest objects will be found because smaller objects can be lost during the downsampling of the pooling layers.  To solve this problem and be able to detect smaller objects, single-shot detectors typically detect objects using multiple different CNN layers including earlier layers that have not yet lost as much resolution.  Predictions can either be made independently and fused together (SSD) or multiple layers can be concatenated before predictions are made (YOLO).  Even with these precautions, single-shot detectors are notoriously bad at detecting small objects, especially those tight groupings like a flock of birds.  The third and most recent version of YOLO appears to have corrected this shortcoming a bit, but all detection methods tend to perform better for larger objects in general.  Increasing input image resolution may also help with small object accuracy.
+
+<center>
+<img src="{{ site.urlimg }}ssd.png" alt="SSD with multiple feature maps" width = "500">
+<p><em> Feature maps from multiple layers of the SSD CNN are used to make object detections at multiple scales.</em></p>
+</center>
 
 #### Feature Pyramid Network
 
+The feature pyramid network (FPN) concept takes this idea of multiple feature layers one step further.  Images first pass through the typical CNN pathway so that the final layers are more semantically rich.  Then to obtain better resolution and localization of objects learned, a top down pathway is also implemented thus upsampling the feature map and regaining higher resolution.  While this top down pathway is good for learning objects of varying sizes, spatial positions can get skewed.  To improve the localization of objects detected, lateral connections are added between the original feature maps and the corresponding reconstructed layers.  FPN provides one of the strongest ways to detect objects of varying sizes and this technique was added to YOLO in version 3.
 
 
-All detection methods tend to perform better for larger objects
+<center>
+<img src="{{ site.urlimg }}fpn.png" alt="Feature pyramid network" width = "500">
+<p><em> The feature pyramid network is able to detect objects of varying sizes by reconstructing higher resolution layers from those with semantic strength.</em></p>
+</center>
+
+
 
 
 <!--
