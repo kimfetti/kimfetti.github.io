@@ -7,7 +7,9 @@
       <change beforePath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/objdet_history.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/objdet_history.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/objdet_history.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/objdet_history.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +60,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="58" />
-          <entry key="md" value="53706" />
+          <entry key="md" value="58233" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -66,7 +68,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="58" />
-          <entry key="Markdown" value="53698" />
+          <entry key="Markdown" value="58225" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="8" />
           <entry key="YAML" value="89" />
@@ -80,8 +82,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-08-13-object-detection-challenges.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="363">
-                <caret line="51" column="265" selection-start-line="51" selection-start-column="265" selection-end-line="51" selection-end-column="265" />
+              <first_editor relative-caret-position="-75">
+                <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
               </first_editor>
               <second_editor />
             </state>
@@ -92,8 +94,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="1119">
-                <caret line="185" selection-start-line="185" selection-end-line="187" selection-end-column="9" />
+              <first_editor relative-caret-position="372">
+                <caret line="167" selection-start-line="167" selection-end-line="167" selection-end-column="70" />
               </first_editor>
               <second_editor />
             </state>
@@ -590,8 +592,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="1119">
-            <caret line="185" selection-start-line="185" selection-end-line="187" selection-end-column="9" />
+          <first_editor relative-caret-position="372">
+            <caret line="167" selection-start-line="167" selection-end-line="167" selection-end-column="70" />
           </first_editor>
           <second_editor />
         </state>
@@ -600,8 +602,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-08-13-object-detection-challenges.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="363">
-            <caret line="51" column="265" selection-start-line="51" selection-start-column="265" selection-end-line="51" selection-end-column="265" />
+          <first_editor relative-caret-position="-75">
+            <caret line="98" lean-forward="true" selection-start-line="98" selection-end-line="98" />
           </first_editor>
           <second_editor />
         </state>
