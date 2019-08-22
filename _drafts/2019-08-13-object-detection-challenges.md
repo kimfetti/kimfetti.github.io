@@ -52,7 +52,7 @@ One of the first successful object detection frameworks was proposed by [Viola a
 -->
 
 <center>
-<img src="{{ site.urlimg }}objdet_history.png" alt="History of Object Detection" width = "500">
+<img src="{{ site.urlimg }}objdet_history.png" alt="History of Object Detection" width = "650">
 <p><em> The history of object detection comprises of roughly three eras: machine learning, regional-based CNNs, and single shot detectors.  <br>Note: Many other significant approaches not listed here for brevity only.</em></p>
 </center>
 
@@ -73,13 +73,13 @@ The first major complication of object detection is its added goal: not only do 
 
 Fast R-CNN saw several improvements over R-CNN.  Along with the dramatic speed-up introduced by passing each image through the CNN base only once, Ross Girshick et al. were also able to improve accuracy by unifying the object detection training into the optimization of one multi-task loss function.  Each candidate ROI is judged against true objects with this loss function, comprising of two types of terms:
 
-\\[\mathcal{L}(p, u, t^u, v) = \overbrace{\mathcal{L}_c(p,u)}^{classification} + \overbrace{\lambda(u\geq 1) \mathcal{L}_l(t^u, v)}^{localization}, \\]
+\\[\mathcal{L}(p, u, t^u, v) = \overbrace{\mathcal{L}_c(p,u)}^{classification} + \lambda\overbrace{\left[u\geq 1\right] \mathcal{L}_l(t^u, v)}^{localization}, \\]
 
-where the classification term is log loss for the true object class, \\(u\\), and the localization term is a smooth \\(L_1\\) loss for the four positional components.  Here \\(\lambda\\) may be adjusted to prioritize either classification or localization more heavily.
+where the classification term is log loss for the true object class, \\(u\\), and the localization term is a smooth \\(L_1\\) loss for the four positional components, which applies to all classes except the background where \\(u=0\\).  Here \\(\lambda\\) may be adjusted to prioritize either classification or localization more heavily.
 
 #### YOLO
 
-YOLO, a single-shot detector, takes the multi-task loss function even further.  YOLO begins by laying an \\(S \cross S)\\ grid out on each image and allowing each grid cell \\(B\\) possible bounding boxes of varying sizes.  For each true object present in the image, the grid cell associated with the object's center is responsible for predicting this object.  The loss function thus consists of terms for each of the \\(S^2\\) grid locations, each of the \\(B)\\ possible bounding boxes, and each of the \\(C\\) classes in the dataset.  Minimization of the resulting loss function allows this method to not only perform the classification and localization tasks, but also to propose regions of interest by checking if an object is present in a predefined grid cell-bounding box pair. 
+YOLO, a single-shot detector, takes the multi-task loss function even further.  YOLO begins by laying an \\(S \times S\\) grid out on each image and allowing each grid cell \\(B\\) possible bounding boxes of varying sizes.  For each true object present in the image, the grid cell associated with the object's center is responsible for predicting this object.  The loss function thus consists of terms for each of the \\(S^2\\) grid locations, each of the \\(B\\) possible bounding boxes, and each of the \\(C\\) classes in the dataset.  Minimization of the resulting loss function allows this method to not only perform the classification and localization tasks, but also to propose regions of interest by checking if an object is present in a predefined grid cell-bounding box pair. 
 
 The first version of YOLO primarily made localization errors, however, later iterations just penalized localization errors more heavily and saw improvement.  YOLO also  rarely produced false positives, that is, incorrectly labeling the background as an object; Fast R-CNN made many more such background errors.  Using the full image as context to both propose regions and classify them appears to be why YOLO does much better than Fast R-CNN at this since Fast R-CNN has an entirely separate ROI selection routine.
 
@@ -110,20 +110,21 @@ where \\(p \equiv\\) precision and \\(r \equiv\\) recall.  The exact details of 
 - New metrics: IOU
 -->
 
+### 2. Speed
 
-### 2. Objects have multiple spatial scales and aspect ratios
-- Warping of ROI before being fed into CNN (R-CNN)
-- SPP layer
-- Anchors
+Object detection algorithms need to not only be accurate when classifying and localizing important objects in images, they also need to be incredibly fast at prediction time in order to extend to the real-time detection required for video processing.  Several key improvements have been offered over the years to boost the speed of these algorithms, reducing test time from 0.02 frames per second (R-CNN) to 155 fps (Fast YOLO).
 
+The first major improvements in speed come from the R-CNN, Fast R-CNN, and Faster R-CNN systems, all developed by Ross Girshick's group.  R-CNN uses selective search to generate 2,000 proposal ROIs.  Each ROI is then processed through CNN layers to then refine the bounding box coordinates and classify each found object.  A huge bottleneck in this approach is that each of the 2000 ROIs must be processed with the CNN base individually.  Fast R-CNN solves this speed issue by first processing the entire image with the CNN base to build a feature map for the entire image.  The ROIs generated by selective search are then paired to the appropriate location on the feature map before processing with the final layers.  This reduction in passes through the CNN base yields a 20-fold reduction in processing time.
 
-### 3. Spatial position IS relevant 
-- Image classification does not do this
-- Fully connected layers (slow)
-- ?? (I forgot this solution... )
+While Fast R-CNN is much speedier than R-CNN, yet another bottleneck persists: the initial creation of the region proposals with selective search.  It takes approximately 2.3 seconds for each image to be processed with Fast R-CNN, and selective search accounts for a full 2 seconds of that time!  Faster R-CNN eliminates this process and generates ROIs with a separate sub-neural network.  _Inital guesses for bounding boxes are allowed to be less precise knowing that the downstream regression task will correct these localization errors._ This change creates another 10X speed-up, and this Faster R-CNN method tests at a rate of about 7-18 fps.
 
+While this means we have cut test time from 49 seconds per image to about 0.2 seconds which is quite impressive, videos are typically shot at at least 24 fps, so as it stands, Faster R-CNN will not be able to keep pace.  The final bottleneck to overcome in Faster R-CNN is the separate components of the regional proposal network and the detection network.  Single-shot detectors, on the other hand, create region proposals in the same pass as the classification and localization tasks thus dramatically decreasing test time per image.  Fast YOLO has even been able to achieve rates of 155 fps; however, reaching such speeds certainly comes with a cost as classification and localization accuracy sharply drop off at these speeds.  
 
-### 4. Speed
+Ultimately, today's object detection algorithms attempt to strike a balance between speed and accuracy.  Several design choices beyond just the detection framework can influence these outcomes.  For example, YOLOv3 allows for images of varying resolutions: high res images typically see higher accuracy but slower processing times, and vice versa.  The choice of the CNN base also influences the speed-accuracy tradeoff.  Here, deep networks like the 164-layer Inception-ResNet-V2 yield impressive accuracy in terms of mAP, but pale in comparision to systems construced with VGG-16 in terms of speed.  These design choices, along with the selection of the object detection framework, determine whether speed or accuracy are prioritized more.
+
+_Faster R-CNN still better accuracy than SSDs in general_
+
+<!--
 - Heading toward RT detection in videos -- need to process images very quickly
 - Fast R-CNN (process image through CNN first)
 - Faster R-CNN (separate RPN)
@@ -131,10 +132,54 @@ where \\(p \equiv\\) precision and \\(r \equiv\\) recall.  The exact details of 
 - SSD?
 - Truncated SVD
 - Trade speed and accuracy
+-->
 
-### 5. Data
+### 3. Multiple spatial scales and aspect ratios
+- Warping of ROI before being fed into CNN (R-CNN)
+- SPP layer
+- Anchors
+
+Another big challenge in object detection is the fact that objects of interest may come in a wide range of sizes and aspect ratios.  Several techniques have been tried to address these issues.
+
+#### Anchor boxes
+
+With its updated region proposal network, Faster R-CNN employs anchor boxes as initial guesses for its RoIs.  Anchor boxes are distributed throughout the image and _used to initialize the RPN_.  The shape and sizes of these boxes are carefully chosen to span a range of different sizes and aspect ratios with the hopes that all types of objects can be detected and the coordinates need not be updated too much during the optimization.  Other frameworks, including single-shot detectors, have leveraged these anchor boxes as starting points for RoI selection.
+
+#### Multiple feature maps
+
+#### Feature Pyramid Network
+
+
+
+All detection methods tend to perform better for larger objects
+
+
+<!--
+### 3. Spatial position IS relevant 
+- Image classification does not do this
+- Fully connected layers (slow)
+- ?? (I forgot this solution... )
+-->
+
+
+
+### 4. Limited data
 - Lots of data for image classification (ImageNet), not so much for image detection (COCO)
 - YOLO9000 attempt to leverage both for training
+
+### 5. Class imbalance
+
+Class imbalance is an issue for most classification problems, and object detection also feels this pain.  Consider a typical photograph.  More likely than not, this typical photograph will contain a few main objects and the remainder of the image will be part of the background.  R-CNN begins with 2000 candidate ROIs per image--just imagine how many of these regions don't contain an object and are considered negatives!
+
+Rather than continuing to learn more about the background regions, hard example mining filters the negative examples done to those that the model performs worst one.  Some approaches also cap the ratio of picked negatives (background) to positives (objects), say, no greater than 3:1.
+
+Non-maximal suppression (NMS) is also used by many object detection algorithms to correct for the fact that one object may be detected multiple times by the proposed RoIs.  With NMS the ....
+
+More recently focal loss has been used to reduce the effects of class imbalance.  Focal loss replaces the traditional classification log loss as
+\\[ FL(p_u) = -(1-p_u)^\gamma \log(p_u)\\]
+where \\(p_u \equiv \\) predicted class probability for the actual true class and \\(\gamma > 0\\).  The effect of this additional factor reduces the loss for well-classified examples, thus deemphasizing observations with high class confidence, such as regions that clearly contain background.  This helps deemphasize classes with many examples that the model knows well, such as the background.
+
+
 
 ## Conclusion
 - Much harder than image classification tasks
