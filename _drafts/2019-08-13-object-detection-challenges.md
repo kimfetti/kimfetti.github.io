@@ -135,9 +135,11 @@ _Faster R-CNN still better accuracy than SSDs in general_
 -->
 
 ### 3. Multiple spatial scales and aspect ratios
+<!--
 - Warping of ROI before being fed into CNN (R-CNN)
 - SPP layer
 - Anchors
+-->
 
 Another big challenge in object detection is the fact that objects of interest may come in a wide range of sizes and aspect ratios.  Several techniques have been tried to address these issues.
 
@@ -155,17 +157,17 @@ With its updated region proposal network, Faster R-CNN employs anchor boxes as i
 Single-shot detectors need to pay special consideration to this issue of multiple scales because they need to not only classify objects and adjust bounding boxes but also come up with the regions of interest all in one shot from the CNN.  If only the final CNN layers are used to look for objects, only the largest objects will be found because smaller objects can be lost during the downsampling of the pooling layers.  To solve this problem and be able to detect smaller objects, single-shot detectors typically detect objects using multiple different CNN layers including earlier layers that have not yet lost as much resolution.  Predictions can either be made independently and fused together (SSD) or multiple layers can be concatenated before predictions are made (YOLO).  Even with these precautions, single-shot detectors are notoriously bad at detecting small objects, especially those tight groupings like a flock of birds.  The third and most recent version of YOLO appears to have corrected this shortcoming a bit, but all detection methods tend to perform better for larger objects in general.  Increasing input image resolution may also help with small object accuracy.
 
 <center>
-<img src="{{ site.urlimg }}ssd.png" alt="SSD with multiple feature maps" width = "500">
+<img src="{{ site.urlimg }}ssd.png" alt="SSD with multiple feature maps" width = "800">
 <p><em> Feature maps from multiple layers of the SSD CNN are used to make object detections at multiple scales.</em></p>
 </center>
 
-#### Feature Pyramid Network
+#### Feature pyramid network
 
-The feature pyramid network (FPN) concept takes this idea of multiple feature layers one step further.  Images first pass through the typical CNN pathway so that the final layers are more semantically rich.  Then to obtain better resolution and localization of objects learned, a top down pathway is also implemented thus upsampling the feature map and regaining higher resolution.  While this top down pathway is good for learning objects of varying sizes, spatial positions can get skewed.  To improve the localization of objects detected, lateral connections are added between the original feature maps and the corresponding reconstructed layers.  FPN provides one of the strongest ways to detect objects of varying sizes and this technique was added to YOLO in version 3.
+The [feature pyramid network (FPN)][12] concept takes this idea of multiple feature layers one step further.  Images first pass through the typical CNN pathway so that the final layers are more semantically rich.  Then to obtain better resolution and localization of objects learned, a top down pathway is also implemented thus upsampling the feature map and regaining higher resolution.  While this top down pathway is good for learning objects of varying sizes, spatial positions can get skewed.  To improve the localization of objects detected, lateral connections are added between the original feature maps and the corresponding reconstructed layers.  FPN provides one of the strongest ways to detect objects of varying sizes and this technique was added to YOLO in version 3.
 
 
 <center>
-<img src="{{ site.urlimg }}fpn.png" alt="Feature pyramid network" width = "500">
+<img src="{{ site.urlimg }}fpn.png" alt="Feature pyramid network" width = "450">
 <p><em> The feature pyramid network is able to detect objects of varying sizes by reconstructing higher resolution layers from those with semantic strength.</em></p>
 </center>
 
@@ -182,8 +184,23 @@ The feature pyramid network (FPN) concept takes this idea of multiple feature la
 
 
 ### 4. Limited data
+
+One of the biggest hurdles for object detection thus far is the unfortunate limited amount of annotated data available.  Dataset for object detection typicallky contain ground truth examples of a dozen to a hundred classes of objects, as compared to image classification datasets with upwards of 100,000 different classes.  Tags for image classification are often solicited and provided by users for free (think of parsing the text of someone's vacation photo captions); whereas, gathering ground truth labels and bounding boxes for object detection is incredibly tedious work.
+
+One of the leading currently available datasets for object detection is the COCO dataset provided by Microsoft.  This set contains 300,000 segmented images with [80 different categories][13] of objects at broad scales with very precise labeled locations.  Images contain about 7 objects each on average.  While this dataset is incredibly helpful, if someone is looking for objects not contained within the 80 selected items, they won't be able to find them by training solely on this dataset.
+
+A very interesting approach at solving for this problem comes from YOLO9000, or the second version of YOLO.  This work contains several important updates for YOLO but it also aims to narrow difference in dataset sizes between image classification and detection as it is trained simultaneously both on COCO and [ImageNet][14], a tagged dataset tens of thousands of object classes, typically reserved for image classification.  YOLO9000 uses the COCO detection information to precisely locate objects and the classification images to then increase the algorithm's "vocabulary." YOLO9000 leverages the fact that ImageNet's labels are taken from WordNet and contain a very hierarchical structure.  A hierarchical WordTree is this built to first detect an object's concept (such as "dog") and then uses a softmax function on the predicted class probabilities to drill down into specifics (such as "Siberian husky").  Overall, this approach appears to work well for concepts well known to COCO, such as animals, but performs more poorly for new types of concepts such as equipment or clothing since these types of items are not detected during the objectness phase and are not found in COCO.
+
+<center>
+<img src="{{ site.urlimg }}yolo9000.png" alt="YOLO9000 WordTree and examples" width = "450">
+<p><em> YOLO9000 training is trained with both COCO for accurate detection and ImageNet for increase classification options.</em></p>
+</center>
+
+
+<!--
 - Lots of data for image classification (ImageNet), not so much for image detection (COCO)
 - YOLO9000 attempt to leverage both for training
+-->
 
 ### 5. Class imbalance
 
@@ -217,3 +234,6 @@ where \\(p_u \equiv \\) predicted class probability for the actual true class an
  [9]: https://commons.wikimedia.org/wiki/File:Dlib_Learned-HOG-Detector.jpg
  [10]: https://arxiv.org/abs/1311.2524
  [11]: https://arxiv.org/abs/1506.02640
+ [12]: https://arxiv.org/pdf/1612.03144.pdf
+ [13]: https://github.com/pjreddie/darknet/blob/master/data/coco.names
+ [14]: http://www.image-net.org/

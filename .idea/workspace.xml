@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2019-08-13-object-detection-challenges.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
@@ -61,7 +62,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="58" />
-          <entry key="md" value="69077" />
+          <entry key="md" value="72295" />
           <entry key="scss" value="50" />
           <entry key="yml" value="89" />
         </counts>
@@ -69,7 +70,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="58" />
-          <entry key="Markdown" value="69069" />
+          <entry key="Markdown" value="72287" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="8" />
           <entry key="YAML" value="89" />
@@ -83,8 +84,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-08-13-object-detection-challenges.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="458">
-                <caret line="168" column="155" selection-start-line="168" selection-start-column="155" selection-end-line="168" selection-end-column="155" />
+              <first_editor relative-caret-position="424">
+                <caret line="195" column="110" selection-start-line="195" selection-start-column="110" selection-end-line="195" selection-end-column="110" />
               </first_editor>
               <second_editor />
             </state>
@@ -603,8 +604,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-08-13-object-detection-challenges.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="458">
-            <caret line="168" column="155" selection-start-line="168" selection-start-column="155" selection-end-line="168" selection-end-column="155" />
+          <first_editor relative-caret-position="424">
+            <caret line="195" column="110" selection-start-line="195" selection-start-column="110" selection-end-line="195" selection-end-column="110" />
           </first_editor>
           <second_editor />
         </state>
