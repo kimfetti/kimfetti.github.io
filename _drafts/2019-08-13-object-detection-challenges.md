@@ -26,12 +26,18 @@ comments: true
 <!--more-->
 
 
+
 The field of computer vision has experienced substantial progress recently owing largely to advances in deep learning, specifically convolutional neural nets (CNNs).  Image classification, where a computer classifies or assigns labels to an image based on its content, can often see great results simply by leveraging pre-trained neural nets and fine-tuning the last few throughput layers.  
 
-Classifying _and_ finding an unknown number of individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like [Google][1] and [IBM][2]. But all of this progress wasn't easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After further introducing the topic, let's take a deep dive into several of the interesting obstacles object detection problems raise along with several emerging solutions.
+Classifying _and_ finding an unknown number of individual objects within an image, however, was considered an extremely difficult problem only a few years ago.  This task, called object detection, is now feasible and has even been productized by companies like [Google][1] and [IBM][2]. But all of this progress wasn't easy!  Object detection presents many substantial challenges beyond what is required for image classification.  After a brief introduction to  the topic, let's take a deep dive into several of the interesting obstacles these problems face along with several emerging solutions.
 
 
 ## Introduction
+
+The ultimate purpose of object detection is to locate important items, draw rectangular bounding boxes around them, and determine the class of each item discovered.  Applications of object detection arise in [many different fields][3] including detecting pedestrians for self-driving cars, monitoring agricultural crops, and even real-time ball tracking for sports.  Researchers have dedicated a substantial amount of work towards this goal over the years: from Viola and Jones's facial detection algorithm published in 2001 up to [RetinaNet][15], a fast, highly accurate one-state detection framework released in 2017.  The introduction of CNNs marks a pivotal moment in object detection history, as nearly all modern systems use CNNs in some form.  That said, the remainder of this post will focus on deep learning solutions for object detection, though similar challenges confront other approaches as well.
+
+<!--
+
 
 ### What is object detection?
 
@@ -47,16 +53,15 @@ The final category of object detection algorithms are another type of deep learn
 
 
 
-<!--
 One of the first successful object detection frameworks was proposed by [Viola and Jones][5] in 2001.  This system, primarily used for face detection, yielded impressive detection rates and even boasted real-time detection at 15 frames per second.  This algorithm takes advantage of the fact that human faces share similar properities.  Viola and Jones constructed a set of specifically designed [Haar Features][6] to capture facial characteristics and then fed these engineered features to a variant of AdaBoost to recognize and localize faces in test images.  While this algorithm showed impressive test times and detection rates, it suffered to generalize to other object types and changes in facial tilt.  The histogram of oriented gradients (HOG) method 
--->
+
 
 <center>
 <img src="{{ site.urlimg }}objdet_history.png" alt="History of Object Detection" width = "650">
 <p><em> The history of object detection comprises of roughly three eras: machine learning, regional-based CNNs, and single shot detectors.  <br>Note: Many other significant approaches not listed here for brevity only.</em></p>
 </center>
 
-<!--
+
 - History
     - Manual feature collection
     - Major gains once CNN applied to problem
@@ -65,24 +70,26 @@ One of the first successful object detection frameworks was proposed by [Viola a
 
 ## Challenges
 
-### 1. Dual priorities: object localization and classification
+### 1. Dual priorities: object classification and localization
 
-The first major complication of object detection is its added goal: not only do we want to classify image objects but also to determine the objects' positions, generally referred to as the _object localization_ task.  Researchers most often use a multi-task loss function, which penalizes both misclassifications and localization errors, to address this issue.
+The first major complication of object detection is its added goal: not only do we want to classify image objects but also to determine the objects' positions, generally referred to as the _object localization_ task.  To address this issue, researchers most often use a multi-task loss function to penalize both misclassifications and localization errors.
 
-#### Fast R-CNN
 
-Fast R-CNN saw several improvements over R-CNN.  Along with the dramatic speed-up introduced by passing each image through the CNN base only once, Ross Girshick et al. were also able to improve accuracy by unifying the object detection training into the optimization of one multi-task loss function.  Each candidate ROI is judged against true objects with this loss function, comprising of two types of terms:
+Regional-based CNNs represent one popular class of object detection frameworks.  These methods consist of the generation of region proposals where objects are likely to be located followed by CNN processing to classify and further refine object localization.  Ross Girshick et al. developed [Fast R-CNN][17] to improve upon their initial results with [R-CNN][18]. As its name implies, Fast R-CNN saw a dramatic speed-up, but accuracy also improved because the classification and localization tasks were unified into the optimization of one multi-task loss function.  Each proposed region that may contain an object is judged against the image's true labeled objects.  Each predicted region incurs penalties for both false classification and misalignment of the bounding box.  Thus the loss function consists of two kinds of terms:
 
 \\[\mathcal{L}(p, u, t^u, v) = \overbrace{\mathcal{L}_c(p,u)}^{classification} + \lambda\overbrace{\left[u\geq 1\right] \mathcal{L}_l(t^u, v)}^{localization}, \\]
 
-where the classification term is log loss for the true object class, \\(u\\), and the localization term is a smooth \\(L_1\\) loss for the four positional components, which applies to all classes except the background where \\(u=0\\).  Here \\(\lambda\\) may be adjusted to prioritize either classification or localization more heavily.
+where the classification term imposes log loss to the probability of the true object class \\(u\\) and the localization term is a smooth \\(L_1\\) loss for the four positional components that define the rectangle.  Note that the localization penalty does not apply when no object is present (the background class).  Also the parameter \\(\lambda\\) may be adjusted to prioritize either classification or localization more strongly.
 
+<!--
 #### YOLO
 
 YOLO, a single-shot detector, takes the multi-task loss function even further.  YOLO begins by laying an \\(S \times S\\) grid out on each image and allowing each grid cell \\(B\\) possible bounding boxes of varying sizes.  For each true object present in the image, the grid cell associated with the object's center is responsible for predicting this object.  The loss function thus consists of terms for each of the \\(S^2\\) grid locations, each of the \\(B\\) possible bounding boxes, and each of the \\(C\\) classes in the dataset.  Minimization of the resulting loss function allows this method to not only perform the classification and localization tasks, but also to propose regions of interest by checking if an object is present in a predefined grid cell-bounding box pair. 
 
 The first version of YOLO primarily made localization errors, however, later iterations just penalized localization errors more heavily and saw improvement.  YOLO also  rarely produced false positives, that is, incorrectly labeling the background as an object; Fast R-CNN made many more such background errors.  Using the full image as context to both propose regions and classify them appears to be why YOLO does much better than Fast R-CNN at this since Fast R-CNN has an entirely separate ROI selection routine.
+-->
 
+<!--
 #### Metrics
 Another interesting consequence of having multiple objectives is the need for special metrics to evaluate object detection methods.  Two such metrics, IoU and mAP, prevail among the object detection community and are typical when reporting results or analyzing multiple approaches.
 
@@ -103,6 +110,8 @@ mAP, or mean average precision, on the other hand, assesses the classification t
 
 where \\(p \equiv\\) precision and \\(r \equiv\\) recall.  The exact details of this calculation varies a bit between datasets--COCO uses 101-point interpolation, for example--but overall, AP attempts to aggregate precision over all values of recall, from zero to one.  mAP then is just the numerical mean of each of these AP values for every object class in the dataset.  For more a more robust discussion on how mAP is defined for each  dataset, check out [this blog post][7]. 
 
+-->
+
 <!--
 - Regions of interest (independent of class, pipeline solution)
 - Multi-task loss function
@@ -110,21 +119,30 @@ where \\(p \equiv\\) precision and \\(r \equiv\\) recall.  The exact details of 
 - New metrics: IOU
 -->
 
-### 2. Speed
+### 2. Speed for real-time detection
 
-Object detection algorithms need to not only be accurate when classifying and localizing important objects in images, they also need to be incredibly fast at prediction time in order to extend to the real-time detection required for video processing.  Several key improvements have been offered over the years to boost the speed of these algorithms, reducing test time from 0.02 frames per second (R-CNN) to 155 fps (Fast YOLO).
+Object detection algorithms need to not only be accurate when classifying and localizing important objects, they also need to be incredibly fast at prediction time to meet the real-time demands of video processing.  Several key enhancements over the years have boosted the speed of these algorithms, improving test time from the 0.02 frames per second (fps) of R-CNN to the impressive 155 fps of Fast YOLO.
 
+As the names imply, Fast R-CNN and Faster R-CNN were built to speed up the original R-CNN method.  R-CNN uses [selective search][16] to generate 2,000 candidate regions of interest (ROIs) and passes each ROI through a CNN base individually causing a massive bottleneck since this CNN processing is quite slow. Fast R-CNN instead sends the entire image through the CNN base just once and then matches the ROIs created with selective search to the CNN feature map, yielding a 20-fold reduction in processing time.  While Fast R-CNN is much speedier than R-CNN, yet another bottleneck persists.  It takes approxiamtely 2.3 seconds for Fast R-CNN to perform object detection on a single image, and selective search accounts for a full 2 seconds of that time!  Faster R-CNN replaces selective search with a separate sub-neural network to generate ROIs, creating another 10x speed up and thus testing at a rate of about 7-18 fps.
+
+<!--
 The first major improvements in speed come from the R-CNN, Fast R-CNN, and Faster R-CNN systems, all developed by Ross Girshick's group.  R-CNN uses selective search to generate 2,000 proposal ROIs.  Each ROI is then processed through CNN layers to then refine the bounding box coordinates and classify each found object.  A huge bottleneck in this approach is that each of the 2000 ROIs must be processed with the CNN base individually.  Fast R-CNN solves this speed issue by first processing the entire image with the CNN base to build a feature map for the entire image.  The ROIs generated by selective search are then paired to the appropriate location on the feature map before processing with the final layers.  This reduction in passes through the CNN base yields a 20-fold reduction in processing time.
 
 While Fast R-CNN is much speedier than R-CNN, yet another bottleneck persists: the initial creation of the region proposals with selective search.  It takes approximately 2.3 seconds for each image to be processed with Fast R-CNN, and selective search accounts for a full 2 seconds of that time!  Faster R-CNN eliminates this process and generates ROIs with a separate sub-neural network.  _Inital guesses for bounding boxes are allowed to be less precise knowing that the downstream regression task will correct these localization errors._ This change creates another 10X speed-up, and this Faster R-CNN method tests at a rate of about 7-18 fps.
+-->
 
-While this means we have cut test time from 49 seconds per image to about 0.2 seconds which is quite impressive, videos are typically shot at at least 24 fps, so as it stands, Faster R-CNN will not be able to keep pace.  The final bottleneck to overcome in Faster R-CNN is the separate components of the regional proposal network and the detection network.  Single-shot detectors, on the other hand, create region proposals in the same pass as the classification and localization tasks thus dramatically decreasing test time per image.  Fast YOLO has even been able to achieve rates of 155 fps; however, reaching such speeds certainly comes with a cost as classification and localization accuracy sharply drop off at these speeds.  
-
-Ultimately, today's object detection algorithms attempt to strike a balance between speed and accuracy.  Several design choices beyond just the detection framework can influence these outcomes.  For example, YOLOv3 allows for images of varying resolutions: high res images typically see higher accuracy but slower processing times, and vice versa.  The choice of the CNN base also influences the speed-accuracy tradeoff.  Here, deep networks like the 164-layer Inception-ResNet-V2 yield impressive accuracy in terms of mAP, but pale in comparision to systems construced with VGG-16 in terms of speed.  These design choices, along with the selection of the object detection framework, determine whether speed or accuracy are prioritized more.
-
-_Faster R-CNN still better accuracy than SSDs in general_
+Despite these impressive improvements to R-CNN, videos are typically shot at at least 24 fps, meaning Faster R-CNN will likely not keep pace.  Regional-based methods consist of two separate phases: proposing regions and processing them. This task separation proves to be somewhat inefficient.  Another major type of object detection systems relies on a unified one-state approach instead.  These so-called single-shot detectors aim to fully locate and classify objects during a single pass ove the image, thus substantially decreasing test time.  One such single-shot detector YOLO begins by laying out a grid over the image and allows each grid cell to detect a fixed number of objects of varying sizes.  For each true object present in the image, the grid cell associated with the object's center is responsible for predicting this object.  A complex, multi-term loss function then ensures that all localization and classification occurs within one process.  One version of this method, Fast YOLO, has even achieved rates of 155 fps; however, classification and localization accuracy drops off sharply at this elevated speed.
 
 <!--
+While this means we have cut test time from 49 seconds per image to about 0.2 seconds which is quite impressive, videos are typically shot at at least 24 fps, so as it stands, Faster R-CNN will not be able to keep pace.  The final bottleneck to overcome in Faster R-CNN is the separate components of the regional proposal network and the detection network.  Single-shot detectors, on the other hand, create region proposals in the same pass as the classification and localization tasks thus dramatically decreasing test time per image.  Fast YOLO has even been able to achieve rates of 155 fps; however, reaching such speeds certainly comes with a cost as classification and localization accuracy sharply drop off at these speeds.  
+-->
+
+Ultimately, today's object detection algorithms attempt to strike a balance between speed and accuracy.  Several design choices beyond the detection framework influence these outcomes.  For example, YOLOv3 allows images of varying resolutions--high-res images typically see better accuracy but slower processing times.  The choice of the CNN base also affects the speed-accuracy tradeoff.  Very deep networks like the 164 layers used in Inception-ResNet-V2 yield impressive accuracy, but pale in comparision to frameworks with VGG-16 in terms of speed.  Object detection design choices are made in context depending on whether speed or accuracy takes priority. 
+
+
+
+<!--
+_Faster R-CNN still better accuracy than SSDs in general_
 - Heading toward RT detection in videos -- need to process images very quickly
 - Fast R-CNN (process image through CNN first)
 - Faster R-CNN (separate RPN)
@@ -192,7 +210,7 @@ One of the leading currently available datasets for object detection is the COCO
 A very interesting approach at solving for this problem comes from YOLO9000, or the second version of YOLO.  This work contains several important updates for YOLO but it also aims to narrow difference in dataset sizes between image classification and detection as it is trained simultaneously both on COCO and [ImageNet][14], a tagged dataset tens of thousands of object classes, typically reserved for image classification.  YOLO9000 uses the COCO detection information to precisely locate objects and the classification images to then increase the algorithm's "vocabulary." YOLO9000 leverages the fact that ImageNet's labels are taken from WordNet and contain a very hierarchical structure.  A hierarchical WordTree is this built to first detect an object's concept (such as "dog") and then uses a softmax function on the predicted class probabilities to drill down into specifics (such as "Siberian husky").  Overall, this approach appears to work well for concepts well known to COCO, such as animals, but performs more poorly for new types of concepts such as equipment or clothing since these types of items are not detected during the objectness phase and are not found in COCO.
 
 <center>
-<img src="{{ site.urlimg }}yolo9000.png" alt="YOLO9000 WordTree and examples" width = "450">
+<img src="{{ site.urlimg }}yolo9000.png" alt="YOLO9000 WordTree and examples" width = "700">
 <p><em> YOLO9000 training is trained with both COCO for accurate detection and ImageNet for increase classification options.</em></p>
 </center>
 
@@ -217,11 +235,17 @@ where \\(p_u \equiv \\) predicted class probability for the actual true class an
 
 
 ## Conclusion
+Object detection turns out to be a much harder than image classification tasks, particularly because of these five challenges: dual priorities, speed, multiple scales, limited data, and class imbalance.  Researchers have dedicated much effort to address these challenges and have presented some amazing solutions thus far.  A primary design decision still persists: the prioritization of accuracy for boosted mAP or speed.  Two of the most powerful object detection frameworks currently in play included RetinaNet with a complex CNN base, FPN for detecting multiple scales, and focal loss to adjust for class imbalance.  This method shows impressive accuracy scores at _how accurate is it?_  YOLO also continues to be popular among the object detection community due to its speed in processing up to 100+ fps.  Several great improvements have been introduced to YOLO in the last few years making the third version just as accurate as SSD but three times faster.  It also shows similar performance compared to RetinaNet if comparing AP\\(_{50}\\).
+
+Some challenges still persist, however.  Small objects are still difficult for any of these frameworks.  It is especially difficult to detect small objects bunched together in a group due to resulting partial occlusions.  Real-time detection at a top-level accuracy (both classification and localization) is still a challenge as well.  Current methods often need to sacrifice one or the other, so researchers are still trying to marry the two.  Another interesting challenge which may see more research is extending object detection from 2D bounding boxes to 3D bounding cubes.  Furthermore, video tracking may also see important improvements in the future.  Rather than processing each frame of a video, perhaps we can take advantage of some assumed continuity between frames to reduce computation and smooth out object detections from frame to frame.  Event though many interesting challenges have seen creative solutions, all of these additional challenges and many more mean that object detection research is certainly not done!
+
+<!--
 - Much harder than image classification tasks
 - Future challenges like adding LSTM, time component to video processing.  Currently one frame at a time
 - Marry speed and accuracy AND extend object class space
 - Also: pose, occlusions, lighting (same issues that image classification has but maybe even more so since also trying to localize object)
 - Check out review's future stuff again
+-->
 
 
  [1]: https://cloud.google.com/vision/docs/drag-and-drop
@@ -237,3 +261,7 @@ where \\(p_u \equiv \\) predicted class probability for the actual true class an
  [12]: https://arxiv.org/pdf/1612.03144.pdf
  [13]: https://github.com/pjreddie/darknet/blob/master/data/coco.names
  [14]: http://www.image-net.org/
+ [15]: https://arxiv.org/abs/1708.02002
+ [16]: https://koen.me/research/pub/uijlings-ijcv2013-draft.pdf
+ [17]: https://arxiv.org/pdf/1504.08083.pdf
+ [18]: https://arxiv.org/pdf/1311.2524.pdf
