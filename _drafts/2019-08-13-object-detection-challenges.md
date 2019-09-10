@@ -159,34 +159,34 @@ _Faster R-CNN still better accuracy than SSDs in general_
 - Anchors
 -->
 
-Another big challenge in object detection is the fact that objects of interest may come in a wide range of sizes and aspect ratios.  Several techniques have been tried to address these issues.
+For many applications of object detection, items of interest may appear in a wide range of sizes and aspect ratios.  Practitioners leverage several techniques to ensure detection algorithms are able to capture objects at multiple scales and views.
 
 #### Anchor boxes
 
-With its updated region proposal network, Faster R-CNN employs anchor boxes as initial guesses for its RoIs.  Anchor boxes are distributed throughout the image and _used to initialize the RPN_.  The shape and sizes of these boxes are carefully chosen to span a range of different sizes and aspect ratios with the hopes that all types of objects can be detected and the coordinates need not be updated too much during the optimization.  Other frameworks, including single-shot detectors, have leveraged these anchor boxes as starting points for RoI selection.
+Instead of selective search, Faster R-CNN's updated region proposal network uses a small sliding window across the image's convolutional feature map to generate candidate RoIs.  Multiple RoIs are predicted at each position and are described relative to the so-called anchor boxes.  The shape and sizes of these anchor boxes are carefully chosen to span a range of different sizes and aspect ratios.  This allows various types of objects to be detected with the hopes that the bounding box coordinates need not be updated much during the localization task.  Other frameworks, including single-shot detectors, also adopt anchor boxes to initialize regions of interest.
 
 <center>
-<img src="{{ site.urlimg }}anchors.png" alt="Anchor boxes as initial RoIs" width = "500">
-<p><em> Carefully chosen anchor boxes of varying size and aspect ratio can be used to make initial guesses for the regions of interest and help detect objects of different sizes and shapes.</em></p>
+<img src="{{ site.urlimg }}anchors.png" alt="Anchor boxes" width = "500">
+<p><em> Carefully chosen anchor boxes of varying sizes and aspect ratios help create diverse regions of interest.</em></p>
 </center>
 
 #### Multiple feature maps
 
-Single-shot detectors need to pay special consideration to this issue of multiple scales because they need to not only classify objects and adjust bounding boxes but also come up with the regions of interest all in one shot from the CNN.  If only the final CNN layers are used to look for objects, only the largest objects will be found because smaller objects can be lost during the downsampling of the pooling layers.  To solve this problem and be able to detect smaller objects, single-shot detectors typically detect objects using multiple different CNN layers including earlier layers that have not yet lost as much resolution.  Predictions can either be made independently and fused together (SSD) or multiple layers can be concatenated before predictions are made (YOLO).  Even with these precautions, single-shot detectors are notoriously bad at detecting small objects, especially those tight groupings like a flock of birds.  The third and most recent version of YOLO appears to have corrected this shortcoming a bit, but all detection methods tend to perform better for larger objects in general.  Increasing input image resolution may also help with small object accuracy.
+Single-shot detectors must place special emphasis on the issue of multiple scales because they detect objects with a single pass through the CNN framework.  If objects are detected from the final CNN layers alone, only the largest objects will be found as smaller objects may lose signal during downsampling in the pooling layers.  To address this problem, single-shot detectors typically look for objects with multiple CNN layers including earlier layers where higher resolution remains.  Despite the precaution of using multiple feature maps, single-shot detectors are notoriously bad at detecting small objects, especially those in tight groupings like a flock of birds, though [recent YOLO developments][19] appear promising.  
 
 <center>
 <img src="{{ site.urlimg }}ssd.png" alt="SSD with multiple feature maps" width = "800">
-<p><em> Feature maps from multiple layers of the SSD CNN are used to make object detections at multiple scales.</em></p>
+<p><em> Feature maps from multiple CNN layers help predict objects at multiple scales.</em></p>
 </center>
 
 #### Feature pyramid network
 
-The [feature pyramid network (FPN)][12] concept takes this idea of multiple feature layers one step further.  Images first pass through the typical CNN pathway so that the final layers are more semantically rich.  Then to obtain better resolution and localization of objects learned, a top down pathway is also implemented thus upsampling the feature map and regaining higher resolution.  While this top down pathway is good for learning objects of varying sizes, spatial positions can get skewed.  To improve the localization of objects detected, lateral connections are added between the original feature maps and the corresponding reconstructed layers.  FPN provides one of the strongest ways to detect objects of varying sizes and this technique was added to YOLO in version 3.
+The [feature pyramid network (FPN)][12] takes the concept of multiple feature maps one step further.  Images first pass through the typical CNN pathway, yielding semantically rich final layers.  Then to regain better resolution, FPN creates a top-down pathway by upsampling the feature map.  While the top-down pathway helps detect objects of varying sizes, spatial positions may be skewed.  Lateral connections are added between the original feature maps and the corresponding reconstructed layers to improve object localization.  FPN currently provides one of the leading ways to detect objects at multiple scales, and YOLO was augmented with this technique in [version 3][19].
 
 
 <center>
 <img src="{{ site.urlimg }}fpn.png" alt="Feature pyramid network" width = "450">
-<p><em> The feature pyramid network is able to detect objects of varying sizes by reconstructing higher resolution layers from those with semantic strength.</em></p>
+<p><em> The feature pyramid network detects objects of varying sizes by reconstructing high resolution layers from layers with greater semantic strength.</em></p>
 </center>
 
 
@@ -203,15 +203,15 @@ The [feature pyramid network (FPN)][12] concept takes this idea of multiple feat
 
 ### 4. Limited data
 
-One of the biggest hurdles for object detection thus far is the unfortunate limited amount of annotated data available.  Dataset for object detection typicallky contain ground truth examples of a dozen to a hundred classes of objects, as compared to image classification datasets with upwards of 100,000 different classes.  Tags for image classification are often solicited and provided by users for free (think of parsing the text of someone's vacation photo captions); whereas, gathering ground truth labels and bounding boxes for object detection is incredibly tedious work.
+Another substantial hurdle for object detection is the limited amount of annotated data currently available.  Object detection datasets typically contain ground truth examples for about a dozen to a hundred types of objects, while image classification datasets can include upwards of 100,000 different classes.  Furthermore, crowd sourcing often produces image classification tags for free (for example, by parsing the text of user-provided photo captions).  Gathering ground truth labels along with accurate bounding boxes for object detection, however, remains incredibly tedious work.
 
-One of the leading currently available datasets for object detection is the COCO dataset provided by Microsoft.  This set contains 300,000 segmented images with [80 different categories][13] of objects at broad scales with very precise labeled locations.  Images contain about 7 objects each on average.  While this dataset is incredibly helpful, if someone is looking for objects not contained within the 80 selected items, they won't be able to find them by training solely on this dataset.
+The COCO dataset, provided by Microsoft, currently leads as one of the best object detection datasets.  COCO contains 300,000 segmented images with [80 different categories][13] of objects with very precise location labels.  Each image contains about 7 objects on average, and objects appear at very broad scales.  As helpful as this dataset is, object types outside of these 80 select items will not be recognized if training solely on COCO.
 
-A very interesting approach at solving for this problem comes from YOLO9000, or the second version of YOLO.  This work contains several important updates for YOLO but it also aims to narrow difference in dataset sizes between image classification and detection as it is trained simultaneously both on COCO and [ImageNet][14], a tagged dataset tens of thousands of object classes, typically reserved for image classification.  YOLO9000 uses the COCO detection information to precisely locate objects and the classification images to then increase the algorithm's "vocabulary." YOLO9000 leverages the fact that ImageNet's labels are taken from WordNet and contain a very hierarchical structure.  A hierarchical WordTree is this built to first detect an object's concept (such as "dog") and then uses a softmax function on the predicted class probabilities to drill down into specifics (such as "Siberian husky").  Overall, this approach appears to work well for concepts well known to COCO, such as animals, but performs more poorly for new types of concepts such as equipment or clothing since these types of items are not detected during the objectness phase and are not found in COCO.
+A very interesting approach to ameliorate this issue comes from YOLO9000, the [second version of YOLO][20].  YOLO9000 incorporates many important updates into YOLO, but it also aims to narrow the dataset gap between object detection and image classification.  YOLO9000 trains simultaneously on both COCO and [ImageNet][14], an image classification dataset with tens of thousands of object classes.  COCO information helps precisely locate objects, while ImageNet increases YOLO's classification "vocabulary."  A hierarchical WordTree allows YOLO9000 to first detect an object's concept (such as "animal/dog") and to then drill down into specifics (such as "Siberian husky").  This approach appears to work well for concepts known to COCO like animals but performs more poorly on concepts less prevalent in COCO like equipment or clothing.
 
 <center>
 <img src="{{ site.urlimg }}yolo9000.png" alt="YOLO9000 WordTree and examples" width = "700">
-<p><em> YOLO9000 training is trained with both COCO for accurate detection and ImageNet for increase classification options.</em></p>
+<p><em> YOLO9000 trains on both COCO and ImageNet to increase classification "vocabulary."</em></p>
 </center>
 
 
@@ -222,22 +222,25 @@ A very interesting approach at solving for this problem comes from YOLO9000, or 
 
 ### 5. Class imbalance
 
-Class imbalance is an issue for most classification problems, and object detection also feels this pain.  Consider a typical photograph.  More likely than not, this typical photograph will contain a few main objects and the remainder of the image will be part of the background.  R-CNN begins with 2000 candidate ROIs per image--just imagine how many of these regions don't contain an object and are considered negatives!
+Class imbalance proves to be an issue for most classification problems, and object detection is no exception.  Consider a typical photograph.  More likely than not, the photograph contains a few main objects while the remainder of the image is filled with background.  Recall that selective search in R-CNN produces 2,000 candidate ROIs per image--a very large majority of these regions do not contain objects and are considered negatives.
 
+<!--
 Rather than continuing to learn more about the background regions, hard example mining filters the negative examples done to those that the model performs worst one.  Some approaches also cap the ratio of picked negatives (background) to positives (objects), say, no greater than 3:1.
 
 Non-maximal suppression (NMS) is also used by many object detection algorithms to correct for the fact that one object may be detected multiple times by the proposed RoIs.  With NMS the ....
+-->
 
-More recently focal loss has been used to reduce the effects of class imbalance.  Focal loss replaces the traditional classification log loss as
-\\[ FL(p_u) = -(1-p_u)^\gamma \log(p_u)\\]
-where \\(p_u \equiv \\) predicted class probability for the actual true class and \\(\gamma > 0\\).  The effect of this additional factor reduces the loss for well-classified examples, thus deemphasizing observations with high class confidence, such as regions that clearly contain background.  This helps deemphasize classes with many examples that the model knows well, such as the background.
+A recent approach called focal loss is implemented in [RetinaNet][15] and helps reduce the effects of class imbalance.  In the optimization loss function, focal loss replaces the traditional log loss used to penalize misclassifications:
+\\[ FL(p_u) = -\overbrace{(1-p_u)^\gamma\;}^{*} \log(p_u)\\]
+where \\(p_u \\) is the predicted class probability for the true class and \\(\gamma > 0\\).  The additional factor (\*) reduces loss for well-classified examples with high probabilities. The overall effect thus deemphasizes classes with many examples that the model knows well, such as the background.  Though they occupy the minority classes, objects of interest receive more significance and see improved accuracy.
 
 
 
 ## Conclusion
-Object detection turns out to be a much harder than image classification tasks, particularly because of these five challenges: dual priorities, speed, multiple scales, limited data, and class imbalance.  Researchers have dedicated much effort to address these challenges and have presented some amazing solutions thus far.  A primary design decision still persists: the prioritization of accuracy for boosted mAP or speed.  Two of the most powerful object detection frameworks currently in play included RetinaNet with a complex CNN base, FPN for detecting multiple scales, and focal loss to adjust for class imbalance.  This method shows impressive accuracy scores at _how accurate is it?_  YOLO also continues to be popular among the object detection community due to its speed in processing up to 100+ fps.  Several great improvements have been introduced to YOLO in the last few years making the third version just as accurate as SSD but three times faster.  It also shows similar performance compared to RetinaNet if comparing AP\\(_{50}\\).
+Object detection is customarily considered to be much harder than image classification, particularly because of these five challenges: dual priorities, speed, multiple scales, limited data, and class imbalance.  Researchers have dedicated much effort to face these challenges, yielding oftentimes amazing results.  Substantial challenges still persist, however.
 
-Some challenges still persist, however.  Small objects are still difficult for any of these frameworks.  It is especially difficult to detect small objects bunched together in a group due to resulting partial occlusions.  Real-time detection at a top-level accuracy (both classification and localization) is still a challenge as well.  Current methods often need to sacrifice one or the other, so researchers are still trying to marry the two.  Another interesting challenge which may see more research is extending object detection from 2D bounding boxes to 3D bounding cubes.  Furthermore, video tracking may also see important improvements in the future.  Rather than processing each frame of a video, perhaps we can take advantage of some assumed continuity between frames to reduce computation and smooth out object detections from frame to frame.  Event though many interesting challenges have seen creative solutions, all of these additional challenges and many more mean that object detection research is certainly not done!
+Basically all object detection frameworks continue to struggle with small objects, especially those bunched together with partial occlusions.  Real-time detection with top-level classification and localization accuracy remains challenging and practioners must often prioritize one or the other when making design decisions.  An interesting enhancement that may see more research in the future would extend the current two-dimensional bounding boxes into three-dimensional bounding cubes.  Furthermore, video tracking could see improvements if some continuity between frames were assumed rather than processing each frame individually.  Even though many object detection obstacles have seen creative solutions, these additional challenges--and plenty more--mean object detection research is certainly not done!
+
 
 <!--
 - Much harder than image classification tasks
@@ -265,3 +268,5 @@ Some challenges still persist, however.  Small objects are still difficult for a
  [16]: https://koen.me/research/pub/uijlings-ijcv2013-draft.pdf
  [17]: https://arxiv.org/pdf/1504.08083.pdf
  [18]: https://arxiv.org/pdf/1311.2524.pdf
+ [19]: https://arxiv.org/pdf/1804.02767.pdf
+ [20]: https://arxiv.org/pdf/1612.08242.pdf
