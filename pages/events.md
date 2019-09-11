@@ -8,15 +8,71 @@ header:
 permalink: "/events/"
 ---
 
-# Conferences
 
-# Meetups
+<!-- CONFERENCES -->
+
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Conferences</h3><br>
+    </div><!-- /.small-12.columns -->
+</div>
+
+<div class="row">
+  <div class="large-4 columns">
+      <center>
+      <h5>Demystifying Data Science</h5>
+      <a href="https://www.thisismetis.com/demystifying-data-science">
+      <img src="{{ site.urlimg }}DDS_July2019.png" alt="DDS July 2019"></a>
+      <h5>30 July 19</h5>
+      <p>Introduction to Python</p>
+      <a href="http://bit.ly/DDS19_Intro_to_Python">Colab Notebook</a>
+      </center>
+  </div>
+  <div class="large-4 columns">
+      <center>
+      <a href="https://www.meetup.com/Metis-New-York-Data-Science/events/261490888/"><img src="{{ site.urlimg }}AMA_June2019.png" alt="AMA June 2019"></a>
+      <h5>29 June 19</h5>
+      <p>Ask Me Anything about Transitioning to Data Science from Academia</p>
+      <a href="https://www.thisismetis.com/blog/ama-recap-transition-academia-data-science-metis-senior-data-scientist-kimberly-fessel">Recap Blog</a>
+      </center>
+  </div>
+  <div class="large-4 columns">
+      <img src="http://placehold.it/303x170/ffffff/ffffff&amp;text=text">
+  </div>
+</div>
 
 
-<img src="{{ site.urlimg }}ODAB_Jan2019.png" alt="Anchor boxes" width = "200">
 
-- (9 July 19) Ask Me Anything about the Math Needed for Data Science [event][1]
-- (4 June 19) Ask Me Anything about Transitioning to Data Science from Academia [event][2], [recap blog][3]
+<!-- MEETUPS -->
+
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Meetups</h3><br>
+    </div><!-- /.small-12.columns -->
+</div>
+
+<div class="row">
+  <div class="large-4 columns">
+      <center>
+      <a href="https://www.meetup.com/Metis-New-York-Data-Science/events/262135459/">
+      <img src="{{ site.urlimg }}AMA_July2019.png" alt="AMA June 2019"></a>
+      <h5>9 July 19</h5>
+      <p>Ask Me Anything about the Math Needed for Data Science</p>
+      </center>
+  </div>
+  <div class="large-4 columns">
+      <center>
+      <a href="https://www.meetup.com/Metis-New-York-Data-Science/events/261490888/"><img src="{{ site.urlimg }}AMA_June2019.png" alt="AMA June 2019"></a>
+      <h5>4 June 19</h5>
+      <p>Ask Me Anything about Transitioning to Data Science from Academia</p>
+      <a href="https://www.thisismetis.com/blog/ama-recap-transition-academia-data-science-metis-senior-data-scientist-kimberly-fessel">Recap Blog</a>
+      </center>
+  </div>
+  <div class="large-4 columns">
+      <img src="http://placehold.it/303x170/ffffff/ffffff&amp;text=text">
+  </div>
+</div>
+
 
 <!--
 <a class="radius button small" href="{{ site.url }}{{ site.baseurl }}/documentation/">Check out the documentation for all the tricks ›</a>
