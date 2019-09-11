@@ -67,9 +67,9 @@
 #  - title: "Blog Archive"
 #    url: "/blog/archive/"
 
-#- title: Events
-#  url: "/events/"
-#  side: left
+- title: Events
+  url: "/events/"
+  side: left
 
 - title: "About"
   url: "/info/"

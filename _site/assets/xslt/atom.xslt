@@ -135,6 +135,12 @@
 
           
           
+        
+
+              
+
+          
+          
             
             
               <li class="divider"></li>
@@ -187,6 +193,21 @@
             
             
               <li><a  href="http://localhost:4000//blog/">Blog</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a  href="http://localhost:4000//events/">Events</a></li>
               <li class="divider"></li>
 
             
