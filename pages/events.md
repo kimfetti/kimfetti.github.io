@@ -26,7 +26,7 @@ permalink: "/events/"
       <img src="{{ site.urlimg }}DDS_July2019.png" alt="DDS July 2019"></a>
       <h5>30 July 19</h5>
       <p>Introduction to Python</p>
-      <a href="http://bit.ly/DDS19_Intro_to_Python">Colab Notebook</a>
+      <p><a href="http://bit.ly/DDS19_Intro_to_Python">Colab Notebook</a></p>
       </center>
   </div>
   <div class="large-4 columns">
