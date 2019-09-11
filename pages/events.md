@@ -36,7 +36,7 @@ permalink: "/events/"
       <a href="https://odsc.com/training/portfolio/custom-data-visualizations-with-python/"><img src="{{ site.urlimg }}ODSC_June2019.png" alt="ODSC June 2019"></a>
       <h5>29 June 19</h5>
       <p>Custom Data Visualizations with Python</p>
-      <a href="http://bit.ly/odscNyc19_dataviz">Colab Notebook</a>
+      <p><a href="http://bit.ly/odscNyc19_dataviz">Colab Notebook</a></p>
       </center>
   </div>
   <div class="large-4 columns">
@@ -68,7 +68,7 @@ permalink: "/events/"
       <a href="https://www.meetup.com/Metis-New-York-Data-Science/events/261490888/"><img src="{{ site.urlimg }}AMA_June2019.png" alt="AMA June 2019"></a>
       <h5>4 June 19</h5>
       <p>Ask Me Anything about Transitioning to Data Science from Academia</p>
-      <a href="https://www.thisismetis.com/blog/ama-recap-transition-academia-data-science-metis-senior-data-scientist-kimberly-fessel">Recap Blog</a>
+      <p><a href="https://www.thisismetis.com/blog/ama-recap-transition-academia-data-science-metis-senior-data-scientist-kimberly-fessel">Recap Blog</a></p>
       </center>
   </div>
   <div class="large-4 columns">
