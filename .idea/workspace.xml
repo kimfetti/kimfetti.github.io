@@ -3,32 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/xslt/atom.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/xslt/atom.xslt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/xslt/rss.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/xslt/rss.xslt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/index_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/changelog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/changelog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/design/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/design/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/documentation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/documentation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/events/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/events/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/getting-started/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/getting-started/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/headers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/headers/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/info/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/info/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/pages/info_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/info_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/roadmap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/roadmap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/search/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/events.md" beforeDir="false" afterPath="$PROJECT_DIR$/pages/events.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,16 +17,16 @@
     <session id="497264545">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="34" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="4" />
-          <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="5" />
           <entry key="project.open.time.5" value="18" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="35" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -96,17 +73,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_site/blog/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="308" selection-start-line="308" selection-end-line="308" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -279,9 +246,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="33" width="1309" height="717" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41515392" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42146805" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -582,8 +548,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_site/blog/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        <state relative-caret-position="161">
+          <caret line="298" lean-forward="true" selection-start-line="298" selection-end-line="298" />
         </state>
       </provider>
     </entry>
