@@ -67,7 +67,7 @@ For many applications of object detection, items of interest may appear in a wid
 
 #### Anchor boxes
 
-Instead of selective search, Faster R-CNN's updated region proposal network uses a small sliding window across the image's convolutional feature map to generate candidate RoIs.  Multiple RoIs are predicted at each position and are described relative to reference _anchor boxes_.  The shapes and sizes of these anchor boxes are carefully chosen to span a range of different scales and aspect ratios.  This allows various types of objects to be detected with the hopes that the bounding box coordinates need not be adjusted much during the localization task.  Other frameworks, including single-shot detectors, also adopt anchor boxes to initialize regions of interest.
+Instead of selective search, Faster R-CNN's updated region proposal network uses a small sliding window across the image's convolutional feature map to generate candidate RoIs.  Multiple RoIs may be predicted at each position and are described relative to reference _anchor boxes_.  The shapes and sizes of these anchor boxes are carefully chosen to span a range of different scales and aspect ratios.  This allows various types of objects to be detected with the hopes that the bounding box coordinates need not be adjusted much during the localization task.  Other frameworks, including single-shot detectors, also adopt anchor boxes to initialize regions of interest.
 
 <center>
 <img src="{{ site.urlimg }}anchors.png" alt="Anchor boxes" width = "500">
