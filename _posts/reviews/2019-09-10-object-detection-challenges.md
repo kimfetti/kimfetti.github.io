@@ -34,7 +34,7 @@ Classifying _and_ finding an unknown number of individual objects within an imag
 
 ## Introduction
 
-The ultimate purpose of object detection is to locate important items, draw rectangular bounding boxes around them, and determine the class of each item discovered.  Applications of object detection arise in [many different fields][3] including detecting pedestrians for self-driving cars, monitoring agricultural crops, and even real-time ball tracking for sports.  Researchers have dedicated a substantial amount of work towards this goal over the years: from [Viola and Jones][5]'s facial detection algorithm published in 2001 to [RetinaNet][15], a fast, highly accurate one-state detection framework released in 2017.  The introduction of CNNs marks a pivotal moment in object detection history, as nearly all modern systems use CNNs in some form.  That said, the remainder of this post will focus on deep learning solutions for object detection, though similar challenges confront other approaches as well.
+The ultimate purpose of object detection is to locate important items, draw rectangular bounding boxes around them, and determine the class of each item discovered.  Applications of object detection arise in [many different fields][3] including detecting pedestrians for self-driving cars, monitoring agricultural crops, and even real-time ball tracking for sports.  Researchers have dedicated a substantial amount of work towards this goal over the years: from [Viola and Jones][5]'s facial detection algorithm published in 2001 to [RetinaNet][15], a fast, highly accurate one-state detection framework released in 2017.  The introduction of CNNs marks a pivotal moment in object detection history, as nearly all modern systems use CNNs in some form.  That said, the remainder of this post will focus on deep learning solutions for object detection, though similar challenges confront other approaches as well.  To learn more about the basics of object detection, check out my post on the Metis blog: "[A Beginner's Guide to Object Detection][4]."
 
 
 ## Challenges
@@ -127,6 +127,7 @@ Basically all object detection frameworks continue to struggle with small object
  [1]: https://cloud.google.com/vision/docs/drag-and-drop
  [2]: https://www.ibm.com/watson/services/visual-recognition/
  [3]: https://www.quora.com/What-are-some-interesting-applications-of-object-detection
+ [4]: https://www.thisismetis.com/blog/a-beginners-guide-to-object-detection
  [5]: https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework
  [12]: https://arxiv.org/pdf/1612.03144.pdf
  [13]: https://github.com/pjreddie/darknet/blob/master/data/coco.names

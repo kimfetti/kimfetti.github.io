@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,16 +15,16 @@
     <session id="497264545">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="37" />
+          <entry key="project.closed" value="39" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="5" />
           <entry key="project.open.time.5" value="19" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -33,7 +34,7 @@
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="15" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="77" />
+          <entry key="md" value="78" />
           <entry key="png" value="9" />
           <entry key="scss" value="31" />
           <entry key="txt" value="1" />
@@ -45,7 +46,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="52" />
           <entry key="Image" value="25" />
-          <entry key="Markdown" value="77" />
+          <entry key="Markdown" value="78" />
           <entry key="PLAIN_TEXT" value="33" />
           <entry key="YAML" value="19" />
         </counts>
@@ -53,7 +54,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="165" />
-          <entry key="md" value="88194" />
+          <entry key="md" value="88362" />
           <entry key="scss" value="50" />
           <entry key="yml" value="142" />
         </counts>
@@ -61,7 +62,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="165" />
-          <entry key="Markdown" value="88186" />
+          <entry key="Markdown" value="88354" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="8" />
           <entry key="YAML" value="142" />
@@ -96,8 +97,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="236">
-                <caret line="69" column="198" selection-start-line="69" selection-start-column="198" selection-end-line="69" selection-end-column="198" />
+              <first_editor relative-caret-position="151">
+                <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               </first_editor>
               <second_editor />
             </state>
@@ -187,6 +188,7 @@
         <option value="$PROJECT_DIR$/_site/blog/index.html" />
         <option value="$PROJECT_DIR$/pages/events.md" />
         <option value="$PROJECT_DIR$/blog/archive.html" />
+        <option value="$PROJECT_DIR$/_drafts/2019-08-13-obj-det-chall-old.md" />
         <option value="$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md" />
       </list>
     </option>
@@ -194,7 +196,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="60" />
     <option name="y" value="33" />
-    <option name="width" value="1309" />
+    <option name="width" value="1370" />
     <option name="height" value="717" />
   </component>
   <component name="ProjectView">
@@ -202,12 +204,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_drafts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -235,7 +243,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,10 +295,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="33" width="1309" height="717" extended-state="0" />
+    <frame x="60" y="33" width="1370" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.43409628" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.42771083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -316,9 +323,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/css/styles_feeling_responsive.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/homepage_typography.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -589,11 +593,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/2019-08-13-obj-det-chall-old.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="387">
+            <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="236">
-            <caret line="69" column="198" selection-start-line="69" selection-start-column="198" selection-end-line="69" selection-end-column="198" />
+          <first_editor relative-caret-position="151">
+            <caret line="21" column="27" lean-forward="true" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
           </first_editor>
           <second_editor />
         </state>
