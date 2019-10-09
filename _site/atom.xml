@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-09-11T17:59:42-04:00</updated>
+	<updated>2019-10-09T12:42:26-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -50,7 +50,7 @@
 
 &lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
-&lt;p&gt;The ultimate purpose of object detection is to locate important items, draw rectangular bounding boxes around them, and determine the class of each item discovered.  Applications of object detection arise in &lt;a href=&quot;https://www.quora.com/What-are-some-interesting-applications-of-object-detection&quot;&gt;many different fields&lt;/a&gt; including detecting pedestrians for self-driving cars, monitoring agricultural crops, and even real-time ball tracking for sports.  Researchers have dedicated a substantial amount of work towards this goal over the years: from &lt;a href=&quot;https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework&quot;&gt;Viola and Jones&lt;/a&gt;’s facial detection algorithm published in 2001 to &lt;a href=&quot;https://arxiv.org/abs/1708.02002&quot;&gt;RetinaNet&lt;/a&gt;, a fast, highly accurate one-state detection framework released in 2017.  The introduction of CNNs marks a pivotal moment in object detection history, as nearly all modern systems use CNNs in some form.  That said, the remainder of this post will focus on deep learning solutions for object detection, though similar challenges confront other approaches as well.&lt;/p&gt;
+&lt;p&gt;The ultimate purpose of object detection is to locate important items, draw rectangular bounding boxes around them, and determine the class of each item discovered.  Applications of object detection arise in &lt;a href=&quot;https://www.quora.com/What-are-some-interesting-applications-of-object-detection&quot;&gt;many different fields&lt;/a&gt; including detecting pedestrians for self-driving cars, monitoring agricultural crops, and even real-time ball tracking for sports.  Researchers have dedicated a substantial amount of work towards this goal over the years: from &lt;a href=&quot;https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework&quot;&gt;Viola and Jones&lt;/a&gt;’s facial detection algorithm published in 2001 to &lt;a href=&quot;https://arxiv.org/abs/1708.02002&quot;&gt;RetinaNet&lt;/a&gt;, a fast, highly accurate one-state detection framework released in 2017.  The introduction of CNNs marks a pivotal moment in object detection history, as nearly all modern systems use CNNs in some form.  That said, the remainder of this post will focus on deep learning solutions for object detection, though similar challenges confront other approaches as well.  To learn more about the basics of object detection, check out my post on the Metis blog: “&lt;a href=&quot;https://www.thisismetis.com/blog/a-beginners-guide-to-object-detection&quot;&gt;A Beginner’s Guide to Object Detection&lt;/a&gt;.”&lt;/p&gt;
 
 &lt;h2 id=&quot;challenges&quot;&gt;Challenges&lt;/h2&gt;
 
@@ -72,7 +72,7 @@
 
 &lt;p&gt;Despite these impressive improvements, videos are typically shot at at least 24 fps, meaning Faster R-CNN will likely not keep pace.  Regional-based methods consist of two separate phases: proposing regions and processing them. This task separation proves to be somewhat inefficient.  Another major type of object detection systems relies on a unified one-state approach instead.  These so-called single-shot detectors fully locate and classify objects during a single pass over the image, which substantially decreases test time.  One such single-shot detector &lt;a href=&quot;https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Redmon_You_Only_Look_CVPR_2016_paper.pdf&quot;&gt;YOLO&lt;/a&gt; begins by laying out a grid over the image and allows each grid cell to detect a fixed number of objects of varying sizes.  For each true object present in the image, the grid cell associated with the object’s center is responsible for predicting this object.  A complex, multi-term loss function then ensures that all localization and classification occurs within one process.  One version of this method, Fast YOLO, has even achieved rates of 155 fps; however, classification and localization accuracy drops off sharply at this elevated speed.&lt;/p&gt;
 
-&lt;p&gt;Ultimately, today’s object detection algorithms attempt to strike a balance between speed and accuracy.  Several design choices beyond the detection framework influence these outcomes.  For example, &lt;a href=&quot;https://arxiv.org/pdf/1804.02767.pdf&quot;&gt;YOLOv3&lt;/a&gt; allows images of varying resolution: high-res images typically see better accuracy but slower processing times and vice versa for low-res images.  The choice of the CNN base also affects the speed-accuracy tradeoff.  Very deep networks like the 164 layers used in Inception-ResNet-V2 yield impressive accuracy, but pale in comparision to frameworks with VGG-16 in terms of speed.  Object detection design choices must be made in context depending on whether speed or accuracy takes priority.&lt;/p&gt;
+&lt;p&gt;Ultimately, today’s object detection algorithms attempt to strike a balance between speed and accuracy.  Several design choices beyond the detection framework influence these outcomes.  For example, &lt;a href=&quot;https://arxiv.org/pdf/1804.02767.pdf&quot;&gt;YOLOv3&lt;/a&gt; allows images of varying resolution: high-res images typically see better accuracy but slower processing times and vice versa for low-res images.  The choice of the CNN base also affects the speed-accuracy tradeoff.  Very deep networks like the 164 layers used in Inception-ResNet-V2 yield impressive accuracy, but pale in comparison to frameworks with VGG-16 in terms of speed.  Object detection design choices must be made in context depending on whether speed or accuracy takes priority.&lt;/p&gt;
 
 &lt;h3 id=&quot;3-multiple-spatial-scales-and-aspect-ratios&quot;&gt;3. Multiple spatial scales and aspect ratios&lt;/h3&gt;
 
@@ -80,7 +80,7 @@
 
 &lt;h4 id=&quot;anchor-boxes&quot;&gt;Anchor boxes&lt;/h4&gt;
 
-&lt;p&gt;Instead of selective search, Faster R-CNN’s updated region proposal network uses a small sliding window across the image’s convolutional feature map to generate candidate RoIs.  Multiple RoIs are predicted at each position and are described relative to reference &lt;em&gt;anchor boxes&lt;/em&gt;.  The shapes and sizes of these anchor boxes are carefully chosen to span a range of different scales and aspect ratios.  This allows various types of objects to be detected with the hopes that the bounding box coordinates need not be adjusted much during the localization task.  Other frameworks, including single-shot detectors, also adopt anchor boxes to initialize regions of interest.&lt;/p&gt;
+&lt;p&gt;Instead of selective search, Faster R-CNN’s updated region proposal network uses a small sliding window across the image’s convolutional feature map to generate candidate RoIs.  Multiple RoIs may be predicted at each position and are described relative to reference &lt;em&gt;anchor boxes&lt;/em&gt;.  The shapes and sizes of these anchor boxes are carefully chosen to span a range of different scales and aspect ratios.  This allows various types of objects to be detected with the hopes that the bounding box coordinates need not be adjusted much during the localization task.  Other frameworks, including single-shot detectors, also adopt anchor boxes to initialize regions of interest.&lt;/p&gt;
 
 &lt;center&gt;
 &lt;img src=&quot;https://kimfetti.github.io/images/anchors.png&quot; alt=&quot;Anchor boxes&quot; width=&quot;500&quot; /&gt;
@@ -129,7 +129,7 @@ where \(p_u \) is the predicted class probability for the true class and \(\gamm
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;Object detection is customarily considered to be much harder than image classification, particularly because of these five challenges: dual priorities, speed, multiple scales, limited data, and class imbalance.  Researchers have dedicated much effort to overcome these difficulties, yielding oftentimes amazing results; however, significant challenges still persist.&lt;/p&gt;
 
-&lt;p&gt;Basically all object detection frameworks continue to struggle with small objects, especially those bunched together with partial occlusions.  Real-time detection with top-level classification and localization accuracy remains challenging, and practitioners must often prioritize one or the other when making design decisions.  Video tracking may see improvements in the future if some continuity between frames is assumed rather than processing each frame individually.  Futhermore, an interesting enhancement that may see more exploration would extend the current two-dimensional bounding boxes into three-dimensional bounding cubes.  Even though many object detection obstacles have seen creative solutions, these additional considerations–and plenty more–signal that object detection research is certainly not done!&lt;/p&gt;
+&lt;p&gt;Basically all object detection frameworks continue to struggle with small objects, especially those bunched together with partial occlusions.  Real-time detection with top-level classification and localization accuracy remains challenging, and practitioners must often prioritize one or the other when making design decisions.  Video tracking may see improvements in the future if some continuity between frames is assumed rather than processing each frame individually.  Furthermore, an interesting enhancement that may see more exploration would extend the current two-dimensional bounding boxes into three-dimensional bounding cubes.  Even though many object detection obstacles have seen creative solutions, these additional considerations–and plenty more–signal that object detection research is certainly not done!&lt;/p&gt;
 
 </content>
 
@@ -141,6 +141,41 @@ where \(p_u \) is the predicted class probability for the true class and \(\gamm
 			
 
 			<published>2019-09-10T00:00:00-04:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/</id>
+			<title>A Beginner's Guide to Object Detection</title>
+			<link href="http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/" rel="alternate" type="text/html" title="A Beginner's Guide to Object Detection" />
+			<updated>2019-09-01T00:00:00-04:00</updated>
+
+			
+				
+				<author>
+					
+						<name>KFessel</name>
+					
+					
+					
+				</author>
+			
+			<summary>&lt;em&gt;This post covers the basics of object detection: what it is, various approaches to it, the measurements used to judge its results, along with a few important considerations of modern object detection.&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/">&lt;!--more--&gt;
+
+&lt;p&gt;Computer vision refers to the process by which computers interpret information from digital images or videos. While humans can quickly determine what items are present in a photograph and where those items are located, computers must be trained to do so, often with massive amounts of images and corresponding object labels. This task, called &lt;em&gt;object detection&lt;/em&gt;, was considered incredibly challenging just a few years ago, but recent developments in deep learning, specifically convolutional neural networks (CNNs), have substantially improved computers’ ability to successfully locate and identify objects.&lt;/p&gt;
+
+&lt;p&gt;Please continue to the &lt;a href=&quot;https://www.thisismetis.com/blog/a-beginners-guide-to-object-detection&quot;&gt;Metis blog&lt;/a&gt; to read my full post covering the basics of object detection.&lt;/p&gt;
+
+</content>
+
+			
+				<category term="algorithms" />
+			
+				<category term="literature reviews" />
+			
+			
+
+			<published>2019-09-01T00:00:00-04:00</published>
 		</entry>
 	
 		<entry>

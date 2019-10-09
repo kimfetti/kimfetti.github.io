@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/events/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/events/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +32,10 @@
           <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="5" />
-          <entry key="project.open.time.5" value="19" />
+          <entry key="project.open.time.5" value="20" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="41" />
+          <entry key="project.opened" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -34,7 +45,7 @@
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="15" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="78" />
+          <entry key="md" value="80" />
           <entry key="png" value="9" />
           <entry key="scss" value="31" />
           <entry key="txt" value="1" />
@@ -46,7 +57,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="52" />
           <entry key="Image" value="25" />
-          <entry key="Markdown" value="78" />
+          <entry key="Markdown" value="80" />
           <entry key="PLAIN_TEXT" value="33" />
           <entry key="YAML" value="19" />
         </counts>
@@ -54,7 +65,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="165" />
-          <entry key="md" value="88363" />
+          <entry key="md" value="88736" />
           <entry key="scss" value="50" />
           <entry key="yml" value="142" />
         </counts>
@@ -62,7 +73,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="165" />
-          <entry key="Markdown" value="88355" />
+          <entry key="Markdown" value="88728" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="8" />
           <entry key="YAML" value="142" />
@@ -73,18 +84,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/events.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="1050">
-                <caret line="70" column="157" selection-start-line="70" selection-start-column="157" selection-end-line="70" selection-end-column="157" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/archive.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -94,11 +93,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md">
+        <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="361">
-                <caret line="129" column="76" lean-forward="true" selection-start-line="129" selection-start-column="76" selection-end-line="129" selection-end-column="76" />
+              <first_editor relative-caret-position="375">
+                <caret line="25" column="99" selection-start-line="25" selection-start-column="99" selection-end-line="25" selection-end-column="99" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_drafts/2014-07-10-page.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="255">
+                <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
               </first_editor>
               <second_editor />
             </state>
@@ -190,6 +201,7 @@
         <option value="$PROJECT_DIR$/blog/archive.html" />
         <option value="$PROJECT_DIR$/_drafts/2019-08-13-obj-det-chall-old.md" />
         <option value="$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md" />
+        <option value="$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md" />
       </list>
     </option>
   </component>
@@ -298,7 +310,7 @@
     <frame x="60" y="33" width="1370" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2929217" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29743975" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -323,9 +335,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/images/homepage_typography.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/header_typewriter.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -343,16 +352,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="1472">
             <caret line="100" selection-start-line="100" selection-end-line="100" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_drafts/2014-07-10-page.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="210">
-            <caret line="14" selection-start-line="14" selection-end-line="17" selection-end-column="36" />
           </first_editor>
           <second_editor />
         </state>
@@ -606,8 +605,28 @@
     <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="361">
-            <caret line="129" column="76" lean-forward="true" selection-start-line="129" selection-start-column="76" selection-end-line="129" selection-end-column="76" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="30" lean-forward="true" selection-end-line="141" selection-end-column="43" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/2014-07-10-page.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="255">
+            <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="375">
+            <caret line="25" column="99" selection-start-line="25" selection-start-column="99" selection-end-line="25" selection-end-column="99" />
           </first_editor>
           <second_editor />
         </state>
