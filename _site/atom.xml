@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-10-09T13:03:16-04:00</updated>
+	<updated>2019-10-09T13:33:10-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -24,6 +24,89 @@
 
 	<generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator>
 
+	
+		<entry>
+			<id>http://localhost:4000//data/youtube-data/</id>
+			<title>How to Gather Data from YouTube</title>
+			<link href="http://localhost:4000//data/youtube-data/" rel="alternate" type="text/html" title="How to Gather Data from YouTube" />
+			<updated>2019-10-09T00:00:00-04:00</updated>
+
+			
+				
+				<author>
+					
+						<name>KFessel</name>
+					
+					
+					
+				</author>
+			
+			<summary>&lt;em&gt;teaser statement&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//data/youtube-data/">&lt;ul&gt;
+  &lt;li&gt;Youtube contains a wealth of data&lt;/li&gt;
+  &lt;li&gt;stats about the number of searches, videos on youtube (large numbers to visualize?)&lt;/li&gt;
+  &lt;li&gt;how youtube search compares to google search
+    &lt;ul&gt;
+      &lt;li&gt;querying youtube might help someone determine what kind of information is available on a given topic&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;how I have used youtube to gather data in the past
+    &lt;ul&gt;
+      &lt;li&gt;videos for object detection&lt;/li&gt;
+      &lt;li&gt;lessons on selenium&lt;/li&gt;
+      &lt;li&gt;text for NLP projects&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;videos&quot;&gt;Videos&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;youtube-dl&lt;/li&gt;
+  &lt;li&gt;simple as youtube-dl url&lt;/li&gt;
+  &lt;li&gt;live and full videos&lt;/li&gt;
+  &lt;li&gt;choose your download quality and/or speed&lt;/li&gt;
+  &lt;li&gt;files are returned as .mp4&lt;/li&gt;
+  &lt;li&gt;collect meta data?&lt;/li&gt;
+  &lt;li&gt;link to docs for full options
+    &lt;ul&gt;
+      &lt;li&gt;full playlist, thumbnail images, etc.&lt;/li&gt;
+      &lt;li&gt;public files or send authentication credentials via tool&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;search-results&quot;&gt;Search Results&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Selenium
+  -brief intro to Selenium: links to download + driver&lt;/li&gt;
+  &lt;li&gt;include some code snippets on how to launch selenium to navigate to youtube&lt;/li&gt;
+  &lt;li&gt;how to scroll with Selenium + YT scroll bug with link&lt;/li&gt;
+  &lt;li&gt;how to grab video title, authors, links&lt;/li&gt;
+  &lt;li&gt;mention results may vary depending on browser + version&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;transcripts&quot;&gt;Transcripts&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;navigate to a link previously found (click or direct Selenium to this url)&lt;/li&gt;
+  &lt;li&gt;… how to do this?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;YT provides wealth of public information in a variety of formats for a variety of potential data science projects&lt;/li&gt;
+  &lt;li&gt;be sure not to overwhelm the servers and not get blocked (?)&lt;/li&gt;
+  &lt;li&gt;whether looking for video content for computer vision projects or text data for NLP, …&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+
+			
+				<category term="data" />
+			
+			
+
+			<published>2019-10-09T00:00:00-04:00</published>
+		</entry>
 	
 		<entry>
 			<id>http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/</id>
@@ -160,9 +243,7 @@ where \(p_u \) is the predicted class probability for the true class and \(\gamm
 				</author>
 			
 			<summary>&lt;em&gt;This post covers the basics of object detection: what it is, various approaches to it, the measurements used to judge its results, along with a few important considerations of modern object detection.&lt;/em&gt;</summary>
-			<content type="html" xml:base="http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/">&lt;!--more--&gt;
-
-&lt;p&gt;Computer vision refers to the process by which computers interpret information from digital images or videos. While humans can quickly determine what items are present in a photograph and where those items are located, computers must be trained to do so, often with massive amounts of images and corresponding object labels. This task, called &lt;em&gt;object detection&lt;/em&gt;, was considered incredibly challenging just a few years ago, but recent developments in deep learning, specifically convolutional neural networks (CNNs), have substantially improved computers’ ability to successfully locate and identify objects.&lt;/p&gt;
+			<content type="html" xml:base="http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/">&lt;p&gt;Computer vision refers to the process by which computers interpret information from digital images or videos. While humans can quickly determine what items are present in a photograph and where those items are located, computers must be trained to do so, often with massive amounts of images and corresponding object labels. This task, called &lt;em&gt;object detection&lt;/em&gt;, was considered incredibly challenging just a few years ago, but recent developments in deep learning, specifically convolutional neural networks (CNNs), have substantially improved computers’ ability to successfully locate and identify objects.&lt;/p&gt;
 
 &lt;p&gt;Please continue to the &lt;a href=&quot;https://www.thisismetis.com/blog/a-beginners-guide-to-object-detection&quot;&gt;Metis blog&lt;/a&gt; to read my full post covering the basics of object detection.&lt;/p&gt;
 

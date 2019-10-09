@@ -20,7 +20,7 @@ categories:
 show_meta: true
 comments: true
 ---
-<!--more-->
+
 
 Computer vision refers to the process by which computers interpret information from digital images or videos. While humans can quickly determine what items are present in a photograph and where those items are located, computers must be trained to do so, often with massive amounts of images and corresponding object labels. This task, called *object detection*, was considered incredibly challenging just a few years ago, but recent developments in deep learning, specifically convolutional neural networks (CNNs), have substantially improved computers’ ability to successfully locate and identify objects. 
 
