@@ -7,6 +7,7 @@ teaser: "<em>This post covers the basics of object detection: what it is, variou
 
 header:
     background-color: "#999999"
+    image: logo.png
 image:
     thumb: giraffe-thumb.png
     homepage: giraffe-yolo.png

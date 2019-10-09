@@ -15,10 +15,10 @@
 #  class: icon-youtube
 #  title: "Videos, Video-Anleitungen und Filme von Phlow auf YouTube"
 
-#- name: Twitter
-#  url: http://twitter.com/phlow
-#  class: icon-twitter
-#  title: "Immer das Neuste von Phlow gibt es auf Twitter"
+- name: Twitter
+  url: http://twitter.com/kimberlyfessel
+  class: icon-twitter
+  title: "Social on Twitter"
 
 #- name: Mixcloud
 #  url: http://www.mixcloud.com/phlow/
