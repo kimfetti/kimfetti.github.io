@@ -9,10 +9,10 @@ header:
     background-color: "#999999"
     image: logo.png
 image:
-    thumb: youtube.png
+    thumb: youtube-thumb.png
     homepage: youtube.png
     title: youtube.png
-    caption: "Photos by Arnold Chao and Brick 101. Cropped and modified by author"
+    caption: "Photos by Arnold Chao and Brick 101. Cropped and modified by author."
     caption_url: "https://flickr.com/photos/arnisto/1715332001/in/photolist-3BzwrF-R6inUo-aqc1Ri-8oHoz1-hcQm7X-dWBzVY-29LWgMB-gdTXM-9hhvio-zr4aM-zr357-r8nhEr-4jeF2Y-8gyi5q-zhqjfS-oXuvM-7zWdYW-EntY3-7dV87f-9gcEjm-4waMSd-dPcqJ1-9tWqkt-73mRjD-6vHHN-9ND6qW-4Ls1n-7rVXe8-8cueSK-8HgEn-9bS1Yk-4VdL9E-69GvS-5pP95S-pAMhgX-6Q79yV-6bPYWj-oXuSG-6eYDxe-9g9FGZ-5KgjW1-4cxBq1-7dnJEz-9gcEy1-dYNpgq-5sRBUe-dYwVBt-5cWCxY-c57o9b-o7ha9s"
 categories:
     - data
