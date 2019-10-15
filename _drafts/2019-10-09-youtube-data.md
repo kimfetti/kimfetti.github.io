@@ -22,8 +22,13 @@ comments: true
 
 - Youtube contains a wealth of data
 - stats about the number of searches, videos on youtube (large numbers to visualize?)
+<center>
+<img src="{{ site.urlimg }}youtube_figures.png" alt="YouTube sees over 30 million users each" width = "600">
+</center>
+
 - how youtube search compares to google search 
     - querying youtube might help someone determine what kind of information is available on a given topic
+
 - how I have used youtube to gather data in the past
     - videos for object detection
     - lessons on selenium
@@ -31,6 +36,27 @@ comments: true
     
     
 ## Videos
+
+For a recent object detection, I wanted to test out detection on both still images as well as processed videos.  So the first data you may want to extract from YouTube are the videos themselves.  You can easily download videos from YouTube using a Python-based tool called `youtube-dl` that runs from your command line. After following the [installation instructions](https://ytdl-org.github.io/youtube-dl/download.html), downloading a single video is as simple as typing
+```bash
+youtube-dl [video URL]
+```
+into your command line and pressing enter, where `[video URL]` should be filled in with the link of your desired video.  This video will then be downloaded from YouTube and saved in your current working directory.
+
+Videos on YouTube are typically available in a few different formats and at various quality levels.  You can check all possible formats for a video by including the -F flag:
+```bash
+youtube-dl -F [video URL]
+``` 
+This will return a list of possible video formats that are available labeled with a format code.  Then to specify a particular download format, just include the format code in your command:
+```bash
+youtube-dl -f [format code] [video URL]
+```
+
+Besides single videos, `youtube-dl` can be used to download multiple videos at a time, entire playlists, or clips from live streams.  You can also collect metadata about your video by including the `--write-info-json` flag.  `youtube-dl` can even be use to download video content from [several other platforms](https://ytdl-org.github.io/youtube-dl/supportedsites.html) like twitch, NPR, or vimeo.  Account credentials can also be passed in with the tool for sites that require passwords. Check out [the documentation](https://github.com/ytdl-org/youtube-dl/blob/master/README.md#readme) for a full list of additional options for added flexibility.
+
+<em> also mention this tool is avaiable for Unix, Windows, or Mac. And you can use it [built in to your Python code too](https://github.com/ytdl-org/youtube-dl#embedding-youtube-dl)! </em>
+
+<!--
 - youtube-dl
 - simple as youtube-dl url
 - live and full videos
@@ -40,6 +66,7 @@ comments: true
 - link to docs for full options
     - full playlist, thumbnail images, etc.
     - public files or send authentication credentials via tool
+-->
     
     
 ## Search Results
@@ -52,8 +79,10 @@ comments: true
 
 
 ## Transcripts
-- navigate to a link previously found (click or direct Selenium to this url)
+- navigate to a link previously found (click or direct Selenium to this url) -- no selenium!
 - ... how to do this?
+-schweettt... use youtube_transcript_api tool as CLI or python import library
+-need to know more about the YT api (calls per hour limit?)  if this gets turned off, go back to selenium.
 
 
 ## Conclusion
