@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_data/authors.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/authors.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithms/literature reviews/beginners-guide-object-detection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithms/literature reviews/beginners-guide-object-detection/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/2019-10-09-youtube-data.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/data/youtube-data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/youtube-data/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
     </list>
@@ -29,13 +23,13 @@
           <entry key="project.closed" value="42" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="5" />
-          <entry key="project.open.time.2" value="5" />
+          <entry key="project.open.time.2" value="6" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="5" />
           <entry key="project.open.time.5" value="20" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="42" />
+          <entry key="project.opened" value="43" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -46,7 +40,7 @@
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="21" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="88" />
+          <entry key="md" value="91" />
           <entry key="png" value="27" />
           <entry key="scss" value="31" />
           <entry key="txt" value="5" />
@@ -58,7 +52,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="53" />
           <entry key="Image" value="50" />
-          <entry key="Markdown" value="88" />
+          <entry key="Markdown" value="91" />
           <entry key="PLAIN_TEXT" value="37" />
           <entry key="YAML" value="27" />
         </counts>
@@ -66,7 +60,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="165" />
-          <entry key="md" value="90454" />
+          <entry key="md" value="90550" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -74,7 +68,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="165" />
-          <entry key="Markdown" value="90446" />
+          <entry key="Markdown" value="90542" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="8" />
           <entry key="YAML" value="217" />
@@ -83,7 +77,44 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="339">
+                <caret line="25" column="81" selection-start-line="25" selection-start-column="81" selection-end-line="25" selection-end-column="81" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="3330">
+                <caret line="222" selection-start-line="222" selection-end-line="225" selection-end-column="9" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="150">
+                <caret line="10" selection-start-line="10" selection-end-line="15" selection-end-column="17" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -170,8 +201,8 @@
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_data/socialmedia.yml" />
         <option value="$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md" />
-        <option value="$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md" />
         <option value="$PROJECT_DIR$/_data/authors.yml" />
+        <option value="$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md" />
       </list>
     </option>
   </component>
@@ -186,6 +217,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,7 +269,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,9 +322,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="33" width="1380" height="717" extended-state="0" />
+    <frame x="89" y="75" width="1178" height="717" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29521674" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3089789" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -454,16 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="3330">
-            <caret line="222" selection-start-line="222" selection-end-line="225" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -482,26 +504,6 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="105">
             <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="75">
-            <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="410">
-            <caret line="52" column="2" selection-start-line="52" selection-start-column="2" selection-end-line="52" selection-end-column="2" />
           </first_editor>
           <second_editor />
         </state>
@@ -571,6 +573,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/favicon-32x32.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-01-beginners-guide-object-detection.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="150">
+            <caret line="10" selection-start-line="10" selection-end-line="15" selection-end-column="17" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="3330">
+            <caret line="222" selection-start-line="222" selection-end-line="225" selection-end-column="9" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="339">
+            <caret line="25" column="81" selection-start-line="25" selection-start-column="81" selection-end-line="25" selection-end-column="81" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
