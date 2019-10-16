@@ -11,7 +11,7 @@ widget1:
   title: "Simple Ways to Improve Your Matplotlib"
   url: '/visualizations/matplotlib-improvements/'
   image: lego_thumb.jpg
-  text: "Matplotlib's default properties often yield unappealing plots that can be off-putting to many users.  This post offers several simple ways to improve upon these defaults and help spruce up basic Matplotlib visualizations."
+  text: "This post offers several simple ways to improve upon these defaults and help spruce up basic Matplotlib visualizations."
 widget2:
   title: "A Beginner's Guide to Object Detection"
   url: 'https://www.thisismetis.com/blog/a-beginners-guide-to-object-detection'
