@@ -2,18 +2,45 @@
 layout: page-fullwidth
 show_meta: false
 title: "Events"
-teaser: "Check out Kimberly's past and upcoming events"
+teaser: 
 header:
    image_fullwidth: "nyc_night.png"
 permalink: "/events/"
 ---
+
+<!-- UPCOMING -->
+
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Upcoming</h3><br>
+    </div><!-- /.small-12.columns -->
+</div>
+
+<div class="row">
+  <div class="large-4 columns">
+      <center>
+      <h5>Invitations to Industry at OSU</h5>
+      <br>
+      <a href="https://www.erdosinstitute.org/invitations-to-industry">
+      <img src="{{ site.urlimg }}OSU_Dec2019.png" alt="OSU December 2019"></a>
+      <h5>2 Dec 2019</h5>
+      </center>
+  </div>
+  <div class="large-4 columns">
+      <img src="http://placehold.it/303x170/ffffff/ffffff&amp;text=text">
+  </div>
+  <div class="large-4 columns">
+      <img src="http://placehold.it/303x170/ffffff/ffffff&amp;text=text">
+  </div>
+</div>
+
 
 
 <!-- CONFERENCES -->
 
 <div class="row">
     <div class="small-12 columns">
-        <h3>Conferences</h3><br>
+        <h3>Past Conferences</h3><br>
     </div><!-- /.small-12.columns -->
 </div>
 
@@ -50,7 +77,7 @@ permalink: "/events/"
 
 <div class="row">
     <div class="small-12 columns">
-        <h3>Meetups</h3><br>
+        <h3>Past Talks and Meetups</h3><br>
     </div><!-- /.small-12.columns -->
 </div>
 
