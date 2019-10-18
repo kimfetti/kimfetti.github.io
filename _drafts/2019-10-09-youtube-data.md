@@ -20,6 +20,14 @@ show_meta: true
 comments: true
 ---
 
+
+Since its 2005 inception, YouTube has entertained, educated, and inspired more than [one billion people](https://biographon.com/youtube-stats/).  Its users now upload 300 hours of video content every minute, and YouTube ranks globally as the [2nd most visited website](https://www.alexa.com/siteinfo/youtube.com).  YouTube clearly dominates as the world's premier source of [cute baby moments](https://www.youtube.com/watch?v=_OBlgSz8sSM), [epic sports fails](https://www.youtube.com/watch?v=vq8G81oOHhY), and [hilarious cat videos](https://www.youtube.com/watch?v=AS7_6Uv_Bn0), but its vast troves of content can also be leverage to strengthen a wide variety of data science projects.  In this post, I share how you can access three types of YouTube data: the videos themselves for use in computer vision tasks, the video transcripts for natural language processing (NLP), and search results for hybrid machine learning approaches.
+<center>
+<img src="{{ site.urlimg }}youtube_figures.png" alt="YouTube sees over 30 million users each" width = "600">
+</center>
+
+
+<!--
 - Youtube contains a wealth of data
 - stats about the number of searches, videos on youtube (large numbers to visualize?)
 <center>
@@ -33,11 +41,11 @@ comments: true
     - videos for object detection
     - lessons on selenium
     - text for NLP projects
-    
+-->    
     
 ## Videos
 
-For a recent object detection, I wanted to test out detection on both still images as well as processed videos.  So the first data you may want to extract from YouTube are the videos themselves.  You can easily download videos from YouTube using a Python-based tool called `youtube-dl` that runs from your command line. After following the [installation instructions](https://ytdl-org.github.io/youtube-dl/download.html), downloading a single video is as simple as typing
+For a recent object detection project, I wanted to test out detection on both still images and short video clips.  So the first data you may want to extract from YouTube are the videos themselves.  You can easily download videos from YouTube using a Python-based tool called `youtube-dl` that runs from your command line. After following the [installation instructions](https://ytdl-org.github.io/youtube-dl/download.html), downloading a single video is as simple as typing
 ```bash
 youtube-dl [video URL]
 ```
@@ -79,6 +87,15 @@ Besides single videos, `youtube-dl` can be used to download multiple videos at a
 
 
 ## Transcripts
+YouTube also provides another fantastic data source that sometimes goes overlooked.  Many videos come with manual or auto-transcriptions, sometimes with multiple languages available, to provide video subtitles.  You can obtain these transcripts quite easily and then use them for many interesting natural language processing projects.
+
+The `youtube-transcipt-api` tool provides an incredibly easy way to obtain YouTube transcripts.  This Python code can either be used through your command line or as a package imported in Python.  After following the [download instructions](https://pypi.org/project/youtube-transcript-api/), you can download any transcript of your choosing through your command line by running:
+```bash
+youtube-transcript-api [video ID]
+```
+Note that for this tool you should submit the video ID as opposed to the entire URL.  (For example, if you would like to download the transcript for our Metis )
+
+
 - navigate to a link previously found (click or direct Selenium to this url) -- no selenium!
 - ... how to do this?
 -schweettt... use youtube_transcript_api tool as CLI or python import library
@@ -86,7 +103,11 @@ Besides single videos, `youtube-dl` can be used to download multiple videos at a
 
 
 ## Conclusion
-- YT provides wealth of public information in a variety of formats for a variety of potential data science projects
-- be sure not to overwhelm the servers and not get blocked (?)
-- whether looking for video content for computer vision projects or text data for NLP, ...
 
+YouTube's vast content library provides not only perpetual entertainment for the masses but also copious amounts of data for data scientists. The open-source tools `youtube-dl` and `youtube-transcript-api` greatly simplify the acquision of videos and video transcripts, respectively.  These programs may be run from the command line if you only need a few videos, or they may be imported as libraries into Python scripts for larger scale data automation. You can obtain YouTube search restuls by directly querying the YouTube API, or you can scrape the site via Selenium to achieve enhanced (?) search results.  Whether your project requires object detection, topic modeling, or regression for video popularity, YouTube might provide just the data you need, and hopefully, armed with the tips from this post, your data acquision phase will proceed exceptionally smoothly.
+
+<!--
+- YT provides wealth of public information in a variety of formats for a variety of potential data science projects
+- be sure not to overwhelm the servers and not get blocked (?) <<<
+- whether looking for video content for computer vision projects or text data for NLP, ...
+-->
