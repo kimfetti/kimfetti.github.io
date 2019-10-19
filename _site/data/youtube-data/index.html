@@ -277,7 +277,7 @@
 
 			<p>Since its 2005 inception, YouTube has entertained, educated, and inspired more than <a href="https://biographon.com/youtube-stats/">one billion people</a>.  Its users now upload 300 hours of video content every minute, and YouTube ranks globally as the <a href="https://www.alexa.com/siteinfo/youtube.com">2nd most visited website</a>.  YouTube clearly dominates as the world’s premier source of <a href="https://www.youtube.com/watch?v=_OBlgSz8sSM">cute baby moments</a>, <a href="https://www.youtube.com/watch?v=vq8G81oOHhY">epic sports fails</a>, and <a href="https://www.youtube.com/watch?v=AS7_6Uv_Bn0">hilarious cat videos</a>, but its vast troves of content can also be leverage to strengthen a wide variety of data science projects.  In this post, I share how you can access three types of YouTube data: the videos themselves for use in computer vision tasks, the video transcripts for natural language processing (NLP), and search results for hybrid machine learning approaches.</p>
 <center>
-<img src="https://kimfetti.github.io/images/youtube_figures.png" alt="YouTube sees over 30 million users each" width="600" />
+<img src="https://kimfetti.github.io/images/youtube_figures.png" alt="YouTube sees over 30 million users each day" width="600" />
 </center>
 
 <!--
@@ -329,31 +329,80 @@
     - public files or send authentication credentials via tool
 -->
 
-<h2 id="search-results">Search Results</h2>
-<ul>
-  <li>Selenium
-  -brief intro to Selenium: links to download + driver</li>
-  <li>include some code snippets on how to launch selenium to navigate to youtube</li>
-  <li>how to scroll with Selenium + YT scroll bug with link</li>
-  <li>how to grab video title, authors, links</li>
-  <li>mention results may vary depending on browser + version</li>
-</ul>
-
 <h2 id="transcripts">Transcripts</h2>
-<p>YouTube also provides another fantastic data source that sometimes goes overlooked.  Many videos come with manual or auto-transcriptions, sometimes with multiple languages available, to provide video subtitles.  You can obtain these transcripts quite easily and then use them for many interesting natural language processing projects.</p>
+<p>YouTube also provides another fantastic data source that sometimes goes overlooked.  Many videos come with manual or automated transcriptions, sometimes with multiple languages available, to provide video subtitles.  You can obtain these transcripts quite easily and then use them for many interesting natural language processing projects.</p>
 
-<p>The <code class="highlighter-rouge">youtube-transcipt-api</code> tool provides an incredibly easy way to obtain YouTube transcripts.  This Python code can either be used through your command line or as a package imported in Python.  After following the <a href="https://pypi.org/project/youtube-transcript-api/">download instructions</a>, you can download any transcript of your choosing through your command line by running:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>youtube-transcript-api <span class="o">[</span>video ID]
+<p>The <code class="highlighter-rouge">youtube-transcipt-api</code> tool provides an incredibly easy way to obtain YouTube transcripts.  This Python code can either be used through your command line or as a package imported in Python.  After following the <a href="https://pypi.org/project/youtube-transcript-api/">download instructions</a>, you can download video transcripts from your command line by running:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>youtube_transcript_api <span class="o">[</span>first video ID] <span class="o">[</span>second video ID] ...
 </code></pre>
 </div>
-<p>Note that for this tool you should submit the video ID as opposed to the entire URL.  (For example, if you would like to download the transcript for our Metis )</p>
+<p>Note that for this tool you should submit the video IDs as opposed to the entire URLs.  (For example, our “Welcome to Metis” video lives at <code class="highlighter-rouge">https://www.youtube.com/watch?v=9UuFTwUxkLw</code>.  To download the transcript for this video, run <code class="highlighter-rouge">youtube_transcript_api 9UuFTwUxkLw</code> in your command line.)</p>
 
-<ul>
-  <li>navigate to a link previously found (click or direct Selenium to this url) – no selenium!</li>
-  <li>… how to do this?
--schweettt… use youtube_transcript_api tool as CLI or python import library
--need to know more about the YT api (calls per hour limit?)  if this gets turned off, go back to selenium.</li>
-</ul>
+<p>The resulting data for this query will be structured like:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="n">video</span> <span class="n">ID</span> <span class="n">string</span><span class="p">:</span> <span class="p">[</span>  
+                     <span class="p">{</span>
+                         <span class="s">'text'</span><span class="p">:</span> <span class="s">'hi there'</span><span class="p">,</span>
+                         <span class="s">'start'</span><span class="p">:</span> <span class="mf">2.32</span><span class="p">,</span>
+                         <span class="s">'duration'</span><span class="p">:</span> <span class="mf">3.11</span>
+                     <span class="p">},</span>
+                     <span class="p">{</span>
+                         <span class="s">'text'</span><span class="p">:</span> <span class="s">'what is your name'</span><span class="p">,</span>
+                         <span class="s">'start'</span><span class="p">:</span> <span class="mf">7.53</span><span class="p">,</span>
+                         <span class="s">'duration'</span><span class="p">:</span> <span class="mf">7.08</span>
+                     <span class="p">},</span> <span class="o">...</span>
+                  <span class="p">],</span> 
+ <span class="o">...</span>
+ <span class="p">}</span>
+</code></pre>
+</div>
+<p>so you will be able to analyze what was said in the video, when it was said, and how long it was said for.  If you prefer to analyze the only the text, you could write a simple Python script <a href="">like this one</a> to concatenate the full text.</p>
+
+<p>Just like <code class="highlighter-rouge">youtube-dl</code>, you can pass additional options to this tool to specify things like your download languages and if you’d like your return format to be json.  Check out <a href="https://pypi.org/project/youtube-transcript-api/">the documentation</a> to explore your options!</p>
+
+<p>As a final note, this tool is built in conjunction with the YouTube API.  Since this API is subject to <a href="https://developers.google.com/youtube/v3/getting-started#quota">daily rate quotas</a>, you will likely be limited to only a certain number of video transcript downloads per day.  <em>(this ensures that no one person overwhelms the system)</em></p>
+
+<!--
+- navigate to a link previously found (click or direct Selenium to this url) -- no selenium!
+- ... how to do this?
+-schweettt... use youtube_transcript_api tool as CLI or python import library
+-need to know more about the YT api (calls per hour limit?)  if this gets turned off, go back to selenium.
+-->
+
+<h2 id="search-results">Search Results</h2>
+<p>Another potential YouTube data source which may be of use to you are the search results for a particular query term.  For example, what videos show up if you ask YouTube for “data science projects” and who produces such videos?  You can use the []YouTube Data API to search](https://developers.google.com/youtube/v3/docs/search) for videos that match your specific query parameters for free.  If you’d prefer not to use the API, however, another option is to use Selenium to scrape <code class="highlighter-rouge">youtube.com</code> directly.</p>
+
+<p>Selenium is a powerful Python package used to automate your browser.  Originally designed for testing web pages, Selenium is now highly popular among the data science community for scraping dynamically generated web pages.  To operate Selenium, you will need to install both <a href="https://pypi.org/project/selenium/#installing">the Selenium library</a> as well as a driver for your specific web browser, such as <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">this one</a> for Chrome.  After installation you can now launch Selenium ChromeDriver from a Python program or a Jupyter Notebook by running code like:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">([</span><span class="n">PATH</span> <span class="n">TO</span> <span class="n">YOUR</span> <span class="n">CHROMEDRIVER</span><span class="p">])</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">([</span><span class="n">URL</span><span class="p">])</span>
+</code></pre>
+</div>
+<p>Selenium will launch a browser to the URL your have requested and you can access the page’s HTMl by simply requesting</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>driver.page_source
+</code></pre>
+</div>
+<p>This HTML can then be further processed with BeautifulSoup for faster parsing.  So in the case of YouTube search results, your URL maybe <code class="highlighter-rouge">https://www.youtube.com/results?search_query=data+science+projects</code> and you should be able to parse through to find the names of the top 20 or so videos along with their links, authors, views, etc.</p>
+
+<p>Of course there are more than twenty videos on YouTube about data science projects, but because YouTube only loads more videos as you scroll down the page, you will at first see a truncated list.  You can also use Selenium to perform automated actions with your browser.  For example, to scroll down the page on YouTube just run the following code:</p>
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">driver</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span>
+        <span class="s">"window.scrollTo(0, document.documentElement.scrollHeight);"</span> 
+    <span class="p">)</span>
+</code></pre>
+</div>
+<p>Once you have scrolled down the page, more videos will pop into frame and you will find more titles in the page source.</p>
+
+<p>Selenium can also be used to click on buttons, type into input boxes, and even drag and drop elements.  For more information, see the helpful documentation <a href="https://selenium-python.readthedocs.io/">here</a>.</p>
+
+<p><em> Data of this type could be used in a hybrid regression-NLP project: what should you mention in the title to the most likes? or in an EDA problem…</em></p>
+
+<!--
+- Selenium
+    -brief intro to Selenium: links to download + driver
+- include some code snippets on how to launch selenium to navigate to youtube
+- how to scroll with Selenium + YT scroll bug with link
+- how to grab video title, authors, links
+- mention results may vary depending on browser + version
+-->
 
 <h2 id="conclusion">Conclusion</h2>
 
