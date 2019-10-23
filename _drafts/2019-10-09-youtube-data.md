@@ -2,8 +2,8 @@
 layout: page-fullwidth
 title: "How to Gather Data from YouTube"
 subheadline: "Data"
-meta_teaser: "teaser"
-teaser: "<em>teaser statement</em>"
+meta_teaser: "You can mine YouTube's massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, video transcripts, as well as video search results."
+teaser: "<em>You can mine YouTube's massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, video transcripts, as well as video search results.</em>"
 
 header:
     background-color: "#999999"
@@ -21,7 +21,7 @@ comments: true
 ---
 
 
-Since its 2005 inception, YouTube has entertained, educated, and inspired more than [one billion people](https://biographon.com/youtube-stats/).  Its users now upload 300 hours of video content every minute, and YouTube ranks globally as the [2nd most visited website](https://www.alexa.com/siteinfo/youtube.com).  YouTube clearly dominates as the world's premier source of [cute baby moments](https://www.youtube.com/watch?v=_OBlgSz8sSM), [epic sports fails](https://www.youtube.com/watch?v=vq8G81oOHhY), and [hilarious cat videos](https://www.youtube.com/watch?v=AS7_6Uv_Bn0), but its vast troves of content can also be leverage to strengthen a wide variety of data science projects.  In this post, I share how you can access three types of YouTube data: the videos themselves for use in computer vision tasks, the video transcripts for natural language processing (NLP), and search results for hybrid machine learning approaches.
+Since its 2005 inception, YouTube has entertained, educated, and inspired more than [one billion people](https://biographon.com/youtube-stats/).  It now ranks as the [2nd most visited website](https://www.alexa.com/siteinfo/youtube.com) on the planet, and its users currently upload 300 hours of video content every minute.  YouTube clearly dominates as the world's premier source of [cute baby moments](https://www.youtube.com/watch?v=_OBlgSz8sSM), [epic sports fails](https://www.youtube.com/watch?v=vq8G81oOHhY), and [hilarious cat videos](https://www.youtube.com/watch?v=AS7_6Uv_Bn0), but its vast troves of content can also be leverage to strengthen a wide variety of data science projects.  In this post, I share how you can gain access to three types of YouTube data: the videos themselves for use in computer vision tasks, the video transcripts for natural language processing (NLP), and video search results for hybrid machine learning approaches.
 <center>
 <img src="{{ site.urlimg }}youtube_figures.png" alt="YouTube sees over 30 million users each day" width = "600">
 </center>

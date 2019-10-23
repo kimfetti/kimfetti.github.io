@@ -5,9 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2019-10-09-youtube-data.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/data/youtube-data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/youtube-data/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/youtube-thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/youtube-thumb.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/youtube-thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/youtube-thumb.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,10 +31,10 @@
           <entry key="project.open.time.2" value="6" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="5" />
-          <entry key="project.open.time.5" value="22" />
+          <entry key="project.open.time.5" value="23" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="45" />
+          <entry key="project.opened" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -59,7 +65,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="165" />
-          <entry key="md" value="102794" />
+          <entry key="md" value="103230" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -68,7 +74,7 @@
         <counts>
           <entry key="Bash" value="9" />
           <entry key="HTML" value="165" />
-          <entry key="Markdown" value="102759" />
+          <entry key="Markdown" value="103195" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="26" />
           <entry key="YAML" value="217" />
@@ -82,8 +88,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="96">
-                <caret line="140" column="22" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
+              <first_editor relative-caret-position="336">
+                <caret line="23" column="902" selection-start-line="23" selection-start-column="902" selection-end-line="23" selection-end-column="902" />
               </first_editor>
               <second_editor />
             </state>
@@ -94,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="98">
+              <first_editor relative-caret-position="1200">
                 <caret line="80" column="119" selection-start-line="80" selection-end-line="80" selection-end-column="119" />
               </first_editor>
               <second_editor />
@@ -290,7 +296,7 @@
     <frame x="89" y="75" width="1178" height="717" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31954226" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32482395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -553,21 +559,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
+    <entry file="file://$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="98">
-            <caret line="80" column="119" selection-start-line="80" selection-end-line="80" selection-end-column="119" />
+          <first_editor relative-caret-position="336">
+            <caret line="23" column="902" selection-start-line="23" selection-start-column="902" selection-end-line="23" selection-end-column="902" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md">
+    <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="96">
-            <caret line="140" column="22" selection-start-line="140" selection-start-column="22" selection-end-line="140" selection-end-column="22" />
+          <first_editor relative-caret-position="1200">
+            <caret line="80" column="119" selection-start-line="80" selection-end-line="80" selection-end-column="119" />
           </first_editor>
           <second_editor />
         </state>
