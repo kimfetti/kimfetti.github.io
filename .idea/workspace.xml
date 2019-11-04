@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_drafts/2019-10-09-youtube-data-with-outline.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2019-10-09-youtube-data.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
@@ -9,11 +10,10 @@
       <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/data/youtube-data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/youtube-data/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/youtube-thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/youtube-thumb.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/youtube-thumb.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/youtube-thumb.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,28 +25,28 @@
     <session id="497264545">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="45" />
+          <entry key="project.closed" value="49" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.2" value="6" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="5" />
-          <entry key="project.open.time.5" value="23" />
+          <entry key="project.open.time.5" value="26" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="46" />
+          <entry key="project.opened" value="49" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
           <entry key="gif" value="1" />
-          <entry key="html" value="57" />
+          <entry key="html" value="58" />
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="21" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="96" />
-          <entry key="png" value="27" />
+          <entry key="md" value="98" />
+          <entry key="png" value="28" />
           <entry key="scss" value="31" />
           <entry key="txt" value="5" />
           <entry key="yml" value="27" />
@@ -55,17 +55,17 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="57" />
-          <entry key="Image" value="50" />
-          <entry key="Markdown" value="96" />
+          <entry key="HTML" value="58" />
+          <entry key="Image" value="51" />
+          <entry key="Markdown" value="98" />
           <entry key="PLAIN_TEXT" value="37" />
           <entry key="YAML" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="165" />
-          <entry key="md" value="103230" />
+          <entry key="html" value="166" />
+          <entry key="md" value="108868" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -73,10 +73,10 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="9" />
-          <entry key="HTML" value="165" />
-          <entry key="Markdown" value="103195" />
+          <entry key="HTML" value="166" />
+          <entry key="Markdown" value="108825" />
           <entry key="PLAIN_TEXT" value="50" />
-          <entry key="Python" value="26" />
+          <entry key="Python" value="34" />
           <entry key="YAML" value="217" />
         </counts>
       </usages-collector>
@@ -88,20 +88,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="336">
-                <caret line="23" column="902" selection-start-line="23" selection-start-column="902" selection-end-line="23" selection-end-column="902" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="1200">
-                <caret line="80" column="119" selection-start-line="80" selection-end-line="80" selection-end-column="119" />
+              <first_editor relative-caret-position="153">
+                <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
               </first_editor>
               <second_editor />
             </state>
@@ -196,21 +184,23 @@
         <option value="$PROJECT_DIR$/_data/authors.yml" />
         <option value="$PROJECT_DIR$/pages/pages-root-folder/index.md" />
         <option value="$PROJECT_DIR$/pages/events.md" />
+        <option value="$PROJECT_DIR$/_site/headers/index.html" />
         <option value="$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
-    <option name="y" value="75" />
-    <option name="width" value="1178" />
-    <option name="height" value="717" />
+    <option name="x" value="132" />
+    <option name="y" value="28" />
+    <option name="width" value="1142" />
+    <option name="height" value="807" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -235,11 +225,21 @@
               <item name="_posts" type="462c0819:PsiDirectoryNode" />
               <item name="viz" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_site" type="462c0819:PsiDirectoryNode" />
+              <item name="headers" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -248,14 +248,15 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_posts" />
-      <recent name="$PROJECT_DIR$/_posts/design" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_posts/data" />
       <recent name="$PROJECT_DIR$/_posts/math" />
       <recent name="$PROJECT_DIR$/_drafts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_drafts" />
+      <recent name="$PROJECT_DIR$/_posts" />
+      <recent name="$PROJECT_DIR$/_posts/design" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -293,10 +294,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="89" y="75" width="1178" height="717" extended-state="0" />
+    <frame x="132" y="28" width="1142" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32482395" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32181817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -321,26 +322,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_drafts/2019-08-13-obj-det-chall-old.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="387">
-            <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/pages-root-folder/humans.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/pages-root-folder/robots.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/icon.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -559,21 +540,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md">
+    <entry file="file://$PROJECT_DIR$/_site/images/youtube_figures.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/2019-10-09-youtube-data-with-outline.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="336">
-            <caret line="23" column="902" selection-start-line="23" selection-start-column="902" selection-end-line="23" selection-end-column="902" />
-          </first_editor>
+        <state split_layout="SPLIT">
+          <first_editor />
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_site/headers/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="115" column="14" lean-forward="true" selection-start-line="115" selection-start-column="14" selection-end-line="115" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="1200">
-            <caret line="80" column="119" selection-start-line="80" selection-end-line="80" selection-end-column="119" />
+          <first_editor relative-caret-position="276">
+            <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/data/2019-10-09-youtube-data.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="153">
+            <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>
