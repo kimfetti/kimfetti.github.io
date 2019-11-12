@@ -37,13 +37,13 @@
 	<link rel="author" href="https://plus.google.com/105464329327164540117">
 	
 	
-	<link rel="canonical" href="http://localhost:4000//data/youtube-data/">
+	<link rel="canonical" href="http://localhost:4000//data/web%20scraping/gather-youtube-data/">
 
 
 	<!-- Facebook Open Graph -->
 	<meta property="og:title" content="How to Gather Data from YouTube">
 	<meta property="og:description" content="You can mine YouTube&#39;s massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, the video transcripts, as well as YouTube search results.">
-	<meta property="og:url" content="http://localhost:4000//data/youtube-data/">
+	<meta property="og:url" content="http://localhost:4000//data/web%20scraping/gather-youtube-data/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Kimberly Fessel Blog">
@@ -96,7 +96,7 @@
 	
 
 </head>
-<body id="top-of-page" class="page-fullwidth">
+<body id="top-of-page" class="post">
 	
 	
 <div id="navigation" class="sticky">
@@ -247,119 +247,42 @@
 
 
 
-	
-<div class="row t30">
-	<div class="small-12 columns">
-		<img src="https://kimfetti.github.io/images/youtube.png" width="970" alt="How to Gather Data from YouTube">
-		
-		<p class="text-right caption">
-			<a href="https://flickr.com/photos/arnisto/1715332001/in/photolist-3BzwrF-R6inUo-aqc1Ri-8oHoz1-hcQm7X-dWBzVY-29LWgMB-gdTXM-9hhvio-zr4aM-zr357-r8nhEr-4jeF2Y-8gyi5q-zhqjfS-oXuvM-7zWdYW-EntY3-7dV87f-9gcEjm-4waMSd-dPcqJ1-9tWqkt-73mRjD-6vHHN-9ND6qW-4Ls1n-7rVXe8-8cueSK-8HgEn-9bS1Yk-4VdL9E-69GvS-5pP95S-pAMhgX-6Q79yV-6bPYWj-oXuSG-6eYDxe-9g9FGZ-5KgjW1-4cxBq1-7dnJEz-9gcEy1-dYNpgq-5sRBUe-dYwVBt-5cWCxY-c57o9b-o7ha9s">Photos by Arnold Chao and Brick 101. Cropped and modified by author.</a>
-		</p>
-		
-	</div><!-- /.small-12.columns -->
-</div><!-- /.row -->
-
-
-
-<div class="row t30">
-	<div class="medium-12 columns">
-		<article>
+	<div class="row t30">
+	<div class="medium-8 columns medium-offset-2 end">
+		<article itemscope itemtype="http://schema.org/Article">
 			<header>
-				<p class="subheadline">Data</p>
-				<h1>How to Gather Data from YouTube</h1>
+				
+				<figure>
+					<img src="https://kimfetti.github.io/images/youtube.png" width="970" alt="How to Gather Data from YouTube" itemprop="image">
+
+					
+					<figcaption class="text-right">
+						<a href="https://flickr.com/photos/arnisto/1715332001/in/photolist-3BzwrF-R6inUo-aqc1Ri-8oHoz1-hcQm7X-dWBzVY-29LWgMB-gdTXM-9hhvio-zr4aM-zr357-r8nhEr-4jeF2Y-8gyi5q-zhqjfS-oXuvM-7zWdYW-EntY3-7dV87f-9gcEjm-4waMSd-dPcqJ1-9tWqkt-73mRjD-6vHHN-9ND6qW-4Ls1n-7rVXe8-8cueSK-8HgEn-9bS1Yk-4VdL9E-69GvS-5pP95S-pAMhgX-6Q79yV-6bPYWj-oXuSG-6eYDxe-9g9FGZ-5KgjW1-4cxBq1-7dnJEz-9gcEy1-dYNpgq-5sRBUe-dYwVBt-5cWCxY-c57o9b-o7ha9s">Photos by Arnold Chao and Brick 101. Cropped and modified by author.</a>
+					</figcaption>
+					
+				</figure>
+				
+
+				<div itemprop="name">
+					<p class="subheadline">Data</p>
+					<h1>How to Gather Data from YouTube</h1>
+				</div>
 			</header>
 
+
 			
-			<p class="teaser">
+			<p class="teaser" itemprop="description">
 				<em>You can mine YouTube's massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, the video transcripts, as well as YouTube search results.</em>
 			</p>
 			
 
+			<div itemprop="articleSection">
 			<p>Since its 2005 inception, YouTube has entertained, educated, and inspired more than <a href="https://biographon.com/youtube-stats/">one billion people</a>.  It now ranks as the <a href="https://www.alexa.com/siteinfo/youtube.com">2nd most visited website</a> on the planet, and its users upload 300 hours of video content every minute.  YouTube clearly dominates as the world’s premier source of <a href="https://www.youtube.com/watch?v=_OBlgSz8sSM">cute baby moments</a>, <a href="https://www.youtube.com/watch?v=vq8G81oOHhY">epic sports fails</a>, and <a href="https://www.youtube.com/watch?v=AS7_6Uv_Bn0">hilarious cat videos</a>, but its vast troves of content can also be leverage to strengthen a wide variety of data science projects.  In this post, I share how you can gain access to three types of YouTube data: the videos themselves for use in computer vision tasks, the video transcripts for natural language processing (NLP), and video search results for hybrid machine learning efforts.</p>
-<center>
-<img src="https://kimfetti.github.io/images/youtube_figures.png" alt="YouTube sees over 30 million users each day" width="600" />
-</center>
 
-<h2 id="videos">Videos</h2>
-
-<p>For a recent <a href="https://www.thisismetis.com/blog/a-beginners-guide-to-object-detection">object detection</a> project, I wanted to test out detection on still images as well as short videos.  I processed a few of my own clips, but I also turned to YouTube for additional test videos.  That said, the first data you may want to extract from YouTube are the videos themselves.</p>
-
-<p>I discovered an easy-to-use, Python-based tool for retrieving YouTube videos called <code class="highlighter-rouge">youtube-dl</code>.  After following these <a href="https://ytdl-org.github.io/youtube-dl/download.html">quick installation instructions</a>, downloading a single video is as simple as typing:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>youtube-dl <span class="o">[</span>video URL]
-</code></pre>
-</div>
-<p>into your command line and pressing enter.  Here, <code class="highlighter-rouge">[video URL]</code> should be filled in with the link of your desired video.  This movie will then be transferred from YouTube to your computer and saved in your current working directory.</p>
-
-<p>YouTube typically offers its videos in a few different formats and at various levels of quality.  You can check all possible formats by running:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>youtube-dl -F <span class="o">[</span>video URL]
-</code></pre>
-</div>
-<p>A list of all available video formats will appear, each labeled with a numerical format code.  If you’d like to specify a particular download format, just include this code with your query:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>youtube-dl -f <span class="o">[</span>format code] <span class="o">[</span>video URL]
-</code></pre>
-</div>
-
-<p>Besides single videos, <code class="highlighter-rouge">youtube-dl</code> also allows you to download multiple videos at a time, entire playlists, or clips from live streams.  You can also collect metadata about your videos by including the <code class="highlighter-rouge">--write-info-json</code> flag.  <code class="highlighter-rouge">youtube-dl</code>’s functionality now extends beyond YouTube to capture video content from <a href="https://ytdl-org.github.io/youtube-dl/supportedsites.html">several other platforms</a>, and you can directly pass account credentials along with your requests if needed. For projects requiring larger-scale data collection, you may bypass the command-line interface (CLI) and build calls to <code class="highlighter-rouge">youtube-dl</code> directly into your <a href="https://github.com/ytdl-org/youtube-dl#embedding-youtube-dl">Python pipeline</a>.  Check out <a href="https://github.com/ytdl-org/youtube-dl/blob/master/README.md#readme">the documentation</a> for a full list of additional options for more flexibility.</p>
-
-<h2 id="transcripts">Transcripts</h2>
-<p>YouTube provides another fantastic data stream that often gets overlooked.  Many YouTube videos may be viewed with either manually or automatically generated subtitles, at times with multiple language options.  You can retrieve these subtitles as full transcripts and then analyze them with natural language processing techniques.</p>
-
-<p>The <code class="highlighter-rouge">youtube-transcript-api</code> tool provides an incredibly straightforward way to obtain YouTube transcripts.  This Python API can either be used through your command line or imported as a module into scripts.  After following the <a href="https://pypi.org/project/youtube-transcript-api/">download instructions</a>, retrieve video transcripts from your command line by running:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>youtube_transcript_api <span class="o">[</span>first video ID] <span class="o">[</span>second video ID] ...
-</code></pre>
-</div>
-<p>where underscores now separate each word in the tool’s name.</p>
-
-<p>Notice that instead of passing the full video URL, only the ID is provided.  For example, the informational video for Metis’s Beginner Python and Math for Data Science course lives at <code class="highlighter-rouge">https://www.youtube.com/watch?v=5-yxXzLX2QY</code>.  To download a transcript for this clip, submit <code class="highlighter-rouge">youtube_transcript_api 5-yxXzLX2QY</code> through your command line.  Data from this query appears with the following structure:</p>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="s">'5-yxXzLX2QY'</span><span class="p">:</span> <span class="p">[</span>
-                    <span class="p">{</span><span class="s">'duration'</span><span class="p">:</span> <span class="mf">4.06</span><span class="p">,</span>
-                     <span class="s">'start'</span><span class="p">:</span> <span class="mf">1.25</span><span class="p">,</span>
-                     <span class="s">'text'</span><span class="p">:</span> <span class="s">"I'm excited to talk to you about the"</span><span class="p">},</span>
-                    <span class="p">{</span><span class="s">'duration'</span><span class="p">:</span> <span class="mf">3.99</span><span class="p">,</span>
-                     <span class="s">'start'</span><span class="p">:</span> <span class="mf">3.72</span><span class="p">,</span>
-                     <span class="s">'text'</span><span class="p">:</span> <span class="s">'beginner Python and math for data'</span><span class="p">},</span>
-                    <span class="o">...</span>
-                <span class="p">],</span>
- <span class="o">...</span>
- <span class="p">}</span>
-</code></pre>
-</div>
-<p>The returned details allow for analysis of <em>what</em> was said in the video, <em>when</em> it was said, and <em>how long</em> it was said.  If you’d prefer to only examine the text, you can process the result through a simple Python script <a href="https://github.com/kimfetti/Blog/blob/master/get_text_transcripts.py">like this one</a> for concatenation.</p>
-
-<p><code class="highlighter-rouge">youtube-transcript-api</code> also accepts additional options to specify desired languages and data formats.  Check <a href="https://pypi.org/project/youtube-transcript-api/">the documentation</a> to explore further.  As a final note, this tool operates by making requests to the YouTube API, which limits consumption with a <a href="https://developers.google.com/youtube/v3/getting-started#quota">daily rate quota</a> to prevent users from overwhelming the system.  This means that you will likely be capped at only a certain number of transcript downloads per day when using this tool.</p>
-
-<h2 id="search-results">Search Results</h2>
-<p>Besides videos and transcripts, the search results for relevant YouTube queries may provide useful information for some projects.  You might wish to analyze a mixture of data like the titles, authors, and views for videos pertaining to a specific topic.  You can directly query the <a href="https://developers.google.com/youtube/v3/docs/search">YouTube Data API</a> to look for data matching your specific query parameters for free.  If for some reason you’d prefer not to use the API, however, you may alternatively scrape <code class="highlighter-rouge">youtube.com</code> with Selenium.</p>
-
-<p>Selenium is a powerful framework used to automate browsers.  Originally designed for testing web applications, Selenium now boasts high popularity in the data science community because it can be leveraged to scrape dynamically generated web content.  Selenium offers cross-platform functionality, including support for Python.  You will need to install <a href="https://pypi.org/project/selenium/#installing">the Selenium Python library</a> as well as a webdriver for your specific browser, such as <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">this one</a> for Chrome.  Then, launching Selenium ChromeDriver in Python, for example, boils down to executing code like:</p>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
-<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">([</span><span class="n">PATH</span> <span class="n">TO</span> <span class="n">YOUR</span> <span class="n">CHROMEDRIVER</span><span class="p">])</span>
-<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">([</span><span class="n">URL</span><span class="p">])</span>
-</code></pre>
-</div>
-<p>Selenium will respond by automatically opening a browser window pointed toward your specified URL.  Any dynamic content will populate, and you can access the page’s filled-in HTML by simply examining:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>driver.page_source
-</code></pre>
-</div>
-<p>This HTML may then be parsed with a standard library such as <a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup</a> to retrieve information of interest.</p>
-
-<p>Selenium is also capable of automatically interacting with your browser.  You can write code to click, type, take screenshots, drag and drop, etc. Check out this <a href="https://selenium-python.readthedocs.io/">helpful documentation</a> to learn more about Selenium’s performance options.</p>
-
-<p>YouTube, along with many other sites, returns video search results in an infinite scroll, a form of lazy loading.  This means only about 20 videos will be loaded into your browser when you perform a search query, and consequently, the initial page source you retrieve from YouTube will only contain information on 20 videos.  To populate additional results, you must scroll below your current window.  Fortunately, Selenium webdriver can be programmed to do this for you:</p>
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">driver</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span>
-        <span class="s">"window.scrollTo(0, document.documentElement.scrollHeight);"</span> 
-    <span class="p">)</span>
-</code></pre>
-</div>
-<p>Once Selenium moves further down the page, additional videos will come into view, and you will find more titles by once again checking <code class="highlighter-rouge">driver.page_source</code>.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>YouTube’s enormous content library provides not only perpetual entertainment for the masses but also copious amounts of data for data scientists. The open-source tools <code class="highlighter-rouge">youtube-dl</code> and <code class="highlighter-rouge">youtube-transcript-api</code> greatly simplify the retrieval of YouTube videos and transcripts.  These programs may be run from the command line if you only need a few videos, or you can import them as libraries in Python for large-scale tasks. You can also obtain YouTube search results by directly querying the YouTube Data API or by scraping the site via Selenium for similar information.</p>
-
-<p>Whether your project requires object detection, topic modeling, or regression to predict video popularity, YouTube might provide just the data you need.  Hopefully, following the tips in this post will help your data acquisition phase proceed swiftly and smoothly.</p>
+<p>Please continue to the <a href="https://www.thisismetis.com/blog/how-to-gather-data-from-youtube">Metis blog</a> to read my full post covering the basics of object detection.</p>
 
 
+			</div>
 
 			
 						<div id="page-meta" class="t30">
@@ -370,10 +293,10 @@
 					
 
 				
-				<time class="icon-calendar pr20" datetime="2019-10-09T00:00:00-04:00" itemprop="datePublished"> 2019-10-09</time>
+				<time class="icon-calendar pr20" datetime="2019-11-12T00:00:00-05:00" itemprop="datePublished"> 2019-11-12</time>
 				
 
-				<span class="icon-archive pr20"> DATA</span>
+				<span class="icon-archive pr20"> DATA · WEB SCRAPING</span>
 				<br />
 				<span class="pr20"></span>
 			</p>
@@ -400,7 +323,7 @@
 			    <script type="text/javascript">
 			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 			        var disqus_shortname = 'kimfetti-github-io'; 
-			        var disqus_identifier = '/data/youtube-data/';
+			        var disqus_identifier = '/data/web%20scraping/gather-youtube-data/';
 
 			        /* * * DON'T EDIT BELOW THIS LINE * * */
 			        (function() {
@@ -415,12 +338,15 @@
 
 
 			
-
 		</article>
-	</div><!-- /.medium-12.columns -->
+	</div><!-- /.medium-8.columns -->
+
+
+	
+
+
+	
 </div><!-- /.row -->
-
-
 
 
 	
