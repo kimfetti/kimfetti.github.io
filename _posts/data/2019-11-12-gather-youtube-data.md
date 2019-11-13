@@ -24,7 +24,7 @@ comments: true
 
 Since its 2005 inception, YouTube has entertained, educated, and inspired more than [one billion people](https://biographon.com/youtube-stats/).  It now ranks as the [2nd most visited website](https://www.alexa.com/siteinfo/youtube.com) on the planet, and its users upload 300 hours of video content every minute.  YouTube clearly dominates as the world's premier source of [cute baby moments](https://www.youtube.com/watch?v=_OBlgSz8sSM), [epic sports fails](https://www.youtube.com/watch?v=vq8G81oOHhY), and [hilarious cat videos](https://www.youtube.com/watch?v=AS7_6Uv_Bn0), but its vast troves of content can also be leverage to strengthen a wide variety of data science projects.  In this post, I share how you can gain access to three types of YouTube data: the videos themselves for use in computer vision tasks, the video transcripts for natural language processing (NLP), and video search results for hybrid machine learning efforts.
 
-Please continue to the [Metis blog][1] to read my full post covering the basics of object detection.
+Please continue to the [Metis blog][1] to read my full post covering data collection from YouTube.
 
 
  [1]: https://www.thisismetis.com/blog/how-to-gather-data-from-youtube
