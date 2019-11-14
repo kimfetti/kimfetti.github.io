@@ -13,10 +13,10 @@ widget1:
   image: lego_thumb.jpg
   text: "This post offers several simple ways to improve upon these defaults and help spruce up basic Matplotlib visualizations."
 widget2:
-  title: "A Beginner's Guide to Object Detection"
-  url: 'https://www.thisismetis.com/blog/a-beginners-guide-to-object-detection'
-  image: giraffe-thumb.png
-  text: 'My Metis post covers the basics of object detection: what it is, various approaches to it, the measurements used to judge its results, along with a few important considerations of modern object detection.'
+  title: "5 Significant Object Detection Challenges and Solutions"
+  url: '/algorithms/literature%20reviews/object-detection-challenges/'
+  image: kim_tree_thumb.png
+  text: 'Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications.'
 widget3:
     title: 'Past and Upcoming Events'
     url: '/events'
