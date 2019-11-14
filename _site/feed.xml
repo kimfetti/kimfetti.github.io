@@ -14,7 +14,7 @@
 				<pubDate>Tue, 12 Nov 2019 00:00:00 -0500</pubDate>
 				<description>&lt;p&gt;Since its 2005 inception, YouTube has entertained, educated, and inspired more than &lt;a href=&quot;https://biographon.com/youtube-stats/&quot;&gt;one billion people&lt;/a&gt;.  It now ranks as the &lt;a href=&quot;https://www.alexa.com/siteinfo/youtube.com&quot;&gt;2nd most visited website&lt;/a&gt; on the planet, and its users upload 300 hours of video content every minute.  YouTube clearly dominates as the world’s premier source of &lt;a href=&quot;https://www.youtube.com/watch?v=_OBlgSz8sSM&quot;&gt;cute baby moments&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=vq8G81oOHhY&quot;&gt;epic sports fails&lt;/a&gt;, and &lt;a href=&quot;https://www.youtube.com/watch?v=AS7_6Uv_Bn0&quot;&gt;hilarious cat videos&lt;/a&gt;, but its vast troves of content can also be leverage to strengthen a wide variety of data science projects.  In this post, I share how you can gain access to three types of YouTube data: the videos themselves for use in computer vision tasks, the video transcripts for natural language processing (NLP), and video search results for hybrid machine learning efforts.&lt;/p&gt;
 
-&lt;p&gt;Please continue to the &lt;a href=&quot;https://www.thisismetis.com/blog/how-to-gather-data-from-youtube&quot;&gt;Metis blog&lt;/a&gt; to read my full post covering the basics of object detection.&lt;/p&gt;
+&lt;p&gt;Please continue to the &lt;a href=&quot;https://www.thisismetis.com/blog/how-to-gather-data-from-youtube&quot;&gt;Metis blog&lt;/a&gt; to read my full post covering data collection from YouTube.&lt;/p&gt;
 
 </description>
 				<guid isPermaLink="true">http://localhost:4000//data/web%20scraping/gather-youtube-data/</guid>

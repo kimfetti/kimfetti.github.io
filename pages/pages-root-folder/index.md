@@ -14,9 +14,9 @@ widget1:
   text: "This post offers several simple ways to improve upon these defaults and help spruce up basic Matplotlib visualizations."
 widget2:
   title: "5 Significant Object Detection Challenges and Solutions"
-  url: '/algorithms/literature%20reviews/object-detection-challenges/'
+  url: 'http://kimberlyfessel.com/algorithms/literature%20reviews/object-detection-challenges/'
   image: kim_tree_thumb.png
-  text: 'Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications.'
+  text: "Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications."
 widget3:
     title: 'Past and Upcoming Events'
     url: '/events'
