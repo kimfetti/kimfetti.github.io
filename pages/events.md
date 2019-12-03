@@ -8,12 +8,13 @@ header:
 permalink: "/events/"
 ---
 
-<!-- UPCOMING -->
+<!-- 
+UPCOMING 
 
 <div class="row">
     <div class="small-12 columns">
         <h3>Upcoming</h3><br>
-    </div><!-- /.small-12.columns -->
+    </div>
 </div>
 
 <div class="row">
@@ -34,6 +35,7 @@ permalink: "/events/"
   </div>
 </div>
 
+-->
 
 
 <!-- CONFERENCES -->
@@ -84,6 +86,14 @@ permalink: "/events/"
 <div class="row">
   <div class="large-4 columns">
       <center>
+      <a href="https://www.erdosinstitute.org/invitations-to-industry">
+      <img src="{{ site.urlimg }}OSU_Dec2019.png" alt="OSU December 2019"></a>
+      <h5>2 Dec 2019</h5>
+      <p>Invitations to Industry at OSU</p>
+      </center>
+  </div>
+  <div class="large-4 columns">
+      <center>
       <a href="https://www.meetup.com/Metis-New-York-Data-Science/events/262135459/">
       <img src="{{ site.urlimg }}AMA_July2019.png" alt="AMA June 2019"></a>
       <h5>9 July 19</h5>
@@ -97,9 +107,6 @@ permalink: "/events/"
       <p>Ask Me Anything about Transitioning to Data Science from Academia</p>
       <p><a href="https://www.thisismetis.com/blog/ama-recap-transition-academia-data-science-metis-senior-data-scientist-kimberly-fessel">Recap Blog</a></p>
       </center>
-  </div>
-  <div class="large-4 columns">
-      <img src="http://placehold.it/303x170/ffffff/ffffff&amp;text=text">
   </div>
 </div>
 
