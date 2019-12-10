@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Kimberly Fessel Blog</title>
+	<title>Testing D3</title>
 
     <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/styles_feeling_responsive.css">
 
@@ -30,20 +30,20 @@
 
 
 	<!-- Search Engine Optimization -->
-	<meta name="description" content="Discovering data&#39;s what, why, and how.">
+	<meta name="description" content="Testing D3.">
 	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ">
 	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" >
 	
 	<link rel="author" href="https://plus.google.com/105464329327164540117">
 	
-	<meta name="robots" content="noindex">
-	<link rel="canonical" href="http://localhost:4000//blog/">
+	
+	<link rel="canonical" href="http://localhost:4000//visualizations/test-d3/">
 
 
 	<!-- Facebook Open Graph -->
-	<meta property="og:title" content="Kimberly Fessel Blog">
-	<meta property="og:description" content="Discovering data&#39;s what, why, and how.">
-	<meta property="og:url" content="http://localhost:4000//blog/">
+	<meta property="og:title" content="Testing D3">
+	<meta property="og:description" content="Testing D3.">
+	<meta property="og:url" content="http://localhost:4000//visualizations/test-d3/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Kimberly Fessel Blog">
@@ -56,8 +56,8 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="kimberlyfessel">
 	<meta name="twitter:creator" content="kimberlyfessel">
-	<meta name="twitter:title" content="Kimberly Fessel Blog">
-	<meta name="twitter:description" content="Discovering data&#39;s what, why, and how.">
+	<meta name="twitter:title" content="Testing D3">
+	<meta name="twitter:description" content="Testing D3.">
 	
 	
 
@@ -96,7 +96,7 @@
 	
 
 </head>
-<body id="top-of-page" class="blog-index">
+<body id="top-of-page" class="page-fullwidth">
 	
 	
 <div id="navigation" class="sticky">
@@ -186,7 +186,7 @@
 
             
             
-              <li class="active"><a  href="http://localhost:4000//blog/">Blog</a></li>
+              <li><a  href="http://localhost:4000//blog/">Blog</a></li>
               <li class="divider"></li>
 
             
@@ -230,152 +230,184 @@
 
 	
 
-<div id="masthead">
+<div id="masthead-with-background-color" style="background: #999999;">
 	<div class="row">
-		<div class="small-12 columns">
-			<a id="logo" href="http://localhost:4000//" title="Kimberly Fessel Blog – Discovering data's what why and how">
-				<img src="http://localhost:4000//assets/img/logo.png" alt="Kimberly Fessel Blog – Discovering data's what why and how">
-			</a>
-		</div><!-- /.small-12.columns -->
+		<figure class="small-12 columns">
+			<img src="https://kimfetti.github.io/images//lego_header.jpg" alt="Kimberly Fessel Blog">
+		</figure><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
 
 
 
 
+<div class="masthead-caption">
+	<a href="http://bit.ly/31rt1Zq">Photo by Alice Bartlett. Cropped and resized by author.</a>
+</div>
 
 
 
 
 
 
-	<div class="row">
-	<div class="medium-8 columns t30">
-		
+
+	
+
+
+<div class="row t30">
+	<div class="medium-12 columns">
+		<article>
+			<header>
+				<p class="subheadline">Data Visualization</p>
+				<h1>Testing D3</h1>
+			</header>
+
+			
+			<p class="teaser">
+				<em>Testing D3.</em>
+			</p>
+			
+
+			<!--more-->
+
+<head>
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+</head>
+
+<p>hi there this is a test</p>
+
+<div id="example"></div>
+
+<script>
+var dataset = [10, 20];
+var pencilColor = "#F0C446";
+
+var svg = d3.select("div#example").append("svg")
+  .attr("width",700)
+  .attr("height", 700)
+  .attr("align","center");
+
+var objects = svg.append("g");
+
+var pencils = objects.selectAll("g").data(dataset)
+                .enter()
+                .append("g")
+                .attr("id", function(d, i) { return i; })
+                .attr("transform",function(d, i) {return "translate(" + (i+1)*50 + ",0)";})
+                .on("mouseover", over)
+                .on("mouseout", out);
+
+var rects = pencils.append("rect")
+                   .attr("x", 0)
+                   .attr("y", 50)
+                   .attr("width", 50)
+                   .attr("height", 300)
+                   .attr("fill", pencilColor)
+                   .style("fill-opacity", .7)
+                   .style("stroke-width",".2em")
+                   .style("stroke", pencilColor);
+
+var triangles = pencils.append("path")
+                       .attr('d', function(d,i) { 
+                                var x = 0, y = 50;
+                                return 'M ' + x +' '+ y + ' l 25 -50 l 25 50 z';
+                             })
+                       .attr("fill", pencilColor)
+                       .style("fill-opacity", .7)
+                       .style("stroke-width",".2em")
+                       .style("stroke", pencilColor);
+
+var tips = pencils.append("path")
+                  .attr('d', function(d, i) {
+                            var x = 12.5, y = 25;
+                            return 'M ' + x + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
+                        })
+                  .style("fill-opacity", .7)
+                  .style("stroke-width",".2em")
+                  .style("stroke", "#393731");
+                  
+
+
+// Over function to be called on mouseover
+function over(d, i) {
+    d3.select(this).selectAll("*").attr("transform", "translate(0,50)");
+}
+
+// Out function to be called on mouseout
+function out(d, i) {
+    d3.select(this).selectAll("*").attr("transform", "translate(0,0)");
+}
 
 
 
-  <div class="row">
-    <div class="small-12 columns b60">
-      <p class="subheadline"><span class="subheader">visualizations</span> – Data Visualization</p>
-      <h2><a href="http://localhost:4000//visualizations/test-d3/">Testing D3</a></h2>
-      <p>
-        <a href="http://localhost:4000//visualizations/test-d3/" title="Testing D3"><img src="https://kimfetti.github.io/images/lego_thumb.jpg" class="alignleft" width="150" height="150" alt="Kimberly Fessel Blog"></a>
+svg.style('transform', 'translate(50%, 0%)')
 
-        Testing D3.
+</script>
 
-        <a href="http://localhost:4000//visualizations/test-d3/" title="Read Testing D3"><strong>Read More&nbsp;›</strong></a>
-      </p>
-    </div><!-- /.small-12.columns -->
-  </div><!-- /.row -->
+<p>there is also more to say</p>
 
-  <div class="row">
-    <div class="small-12 columns b60">
-      <p class="subheadline"><span class="subheader">data &middot; web scraping</span> – Data</p>
-      <h2><a href="http://localhost:4000//data/web%20scraping/gather-youtube-data/">How to Gather Data from YouTube</a></h2>
-      <p>
-        <a href="http://localhost:4000//data/web%20scraping/gather-youtube-data/" title="How to Gather Data from YouTube"><img src="https://kimfetti.github.io/images/youtube-thumb.png" class="alignleft" width="150" height="150" alt="Kimberly Fessel Blog"></a>
 
-        You can mine YouTube&#39;s massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, the video transcripts, as well as YouTube search results.
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
 
-        <a href="http://localhost:4000//data/web%20scraping/gather-youtube-data/" title="Read How to Gather Data from YouTube"><strong>Read More&nbsp;›</strong></a>
-      </p>
-    </div><!-- /.small-12.columns -->
-  </div><!-- /.row -->
+				
+				<time class="icon-calendar pr20" datetime="2019-12-10T00:00:00-05:00" itemprop="datePublished"> 2019-12-10</time>
+				
 
-  <div class="row">
-    <div class="small-12 columns b60">
-      <p class="subheadline"><span class="subheader">algorithms &middot; literature reviews</span> – Reviews</p>
-      <h2><a href="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/">5 Significant Object Detection Challenges and Solutions</a></h2>
-      <p>
-        <a href="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/" title="5 Significant Object Detection Challenges and Solutions"><img src="https://kimfetti.github.io/images/kim_tree_thumb.png" class="alignleft" width="150" height="150" alt="Kimberly Fessel Blog"></a>
+				<span class="icon-archive pr20"> VISUALIZATIONS</span>
+				<br />
+				<span class="pr20"></span>
+			</p>
 
-        Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers&#39; efforts to overcome these complications.
+			
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://localhost:4000//data/web%20scraping/gather-youtube-data/">&laquo; How to Gather Data from YouTube</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://localhost:4000//blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"></div><!-- /.small-4.columns -->
+				
+			</div>
+			
+			</div><!--  /.page-meta -->
 
-        <a href="http://localhost:4000//algorithms/literature%20reviews/object-detection-challenges/" title="Read 5 Significant Object Detection Challenges and Solutions"><strong>Read More&nbsp;›</strong></a>
-      </p>
-    </div><!-- /.small-12.columns -->
-  </div><!-- /.row -->
+			
 
-  <div class="row">
-    <div class="small-12 columns b60">
-      <p class="subheadline"><span class="subheader">algorithms &middot; literature reviews</span> – Reviews</p>
-      <h2><a href="http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/">A Beginner's Guide to Object Detection</a></h2>
-      <p>
-        <a href="http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/" title="A Beginner&#39;s Guide to Object Detection"><img src="https://kimfetti.github.io/images/giraffe-thumb.png" class="alignleft" width="150" height="150" alt="Kimberly Fessel Blog"></a>
+			
+						
+				<h3 id="comments" class="t60">Dialogue &amp; Discussion</h3>
+			    <div id="disqus_thread"></div>
+			    <script type="text/javascript">
+			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			        var disqus_shortname = 'kimfetti-github-io'; 
+			        var disqus_identifier = '/visualizations/test-d3/';
 
-        This post covers the basics of object detection: what it is, various approaches to it, the measurements used to judge its results, along with a few important considerations of modern object detection.
-
-        <a href="http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/" title="Read A Beginner&#39;s Guide to Object Detection"><strong>Read More&nbsp;›</strong></a>
-      </p>
-    </div><!-- /.small-12.columns -->
-  </div><!-- /.row -->
-
-  <div class="row">
-    <div class="small-12 columns b60">
-      <p class="subheadline"><span class="subheader">visualizations</span> – Data Visualization</p>
-      <h2><a href="http://localhost:4000//visualizations/matplotlib-improvements/">Simple Ways to Improve Your Matplotlib</a></h2>
-      <p>
-        <a href="http://localhost:4000//visualizations/matplotlib-improvements/" title="Simple Ways to Improve Your Matplotlib"><img src="https://kimfetti.github.io/images/lego_thumb.jpg" class="alignleft" width="150" height="150" alt="Kimberly Fessel Blog"></a>
-
-        Matplotlib&#39;s default properties often yield unappealing plots that can be off-putting to many users.  This post offers several simple ways to improve upon these defaults and help spruce up basic Matplotlib visualizations.
-
-        <a href="http://localhost:4000//visualizations/matplotlib-improvements/" title="Read Simple Ways to Improve Your Matplotlib"><strong>Read More&nbsp;›</strong></a>
-      </p>
-    </div><!-- /.small-12.columns -->
-  </div><!-- /.row -->
-
-  <div class="row">
-    <div class="small-12 columns b60">
-      <p class="subheadline"><span class="subheader">mathematics &middot; visualizations</span> – Analytic Approximations</p>
-      <h2><a href="http://localhost:4000//mathematics/visualizations/planetary-birthday-problem/">Solving the Birthday Problem on Mars</a></h2>
-      <p>
-        <a href="http://localhost:4000//mathematics/visualizations/planetary-birthday-problem/" title="Solving the Birthday Problem on Mars"><img src="https://kimfetti.github.io/images/birthday_planet_thumb.jpg" class="alignleft" width="150" height="150" alt="Kimberly Fessel Blog"></a>
-
-        The birthday problem is a classic probability question with a surprising result.  In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system.
-
-        <a href="http://localhost:4000//mathematics/visualizations/planetary-birthday-problem/" title="Read Solving the Birthday Problem on Mars"><strong>Read More&nbsp;›</strong></a>
-      </p>
-    </div><!-- /.small-12.columns -->
-  </div><!-- /.row -->
+			        /* * * DON'T EDIT BELOW THIS LINE * * */
+			        (function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+			    </script>
+			    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
 
 
 
-<nav id="pagination">
-    
+			
 
-    <a class="radius button small" href="http://localhost:4000//blog/archive/" title="Blog Archive">Blog Archive</a>
-
-    
-  </nav>
-
-
-	</div><!-- /.medium-7.columns -->
-
-
-<!--	<div class="medium-4 columns t30">
-		<aside>
-	<div class="panel radius">
-		<h3>Sidebar</h3>
-		<p>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-			Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-		</p>
-	</div>
-
-  <img class="b30" src="http://dummyimage.com/303x16:9/df4949/e27b3f.png&amp;text=Ugly+Ad+Space" alt="">
-
-
-	<div class="border-dotted radius b30">
-		<img src="http://placekitten.com/271/270" alt="uh, Placekitten">
-		<p class="text-left">
-			This is an advertisment with a crazy cat! <a href="http://placekitten.com/">More cats, please!</a>
-		</p>
-	</div>
-</aside>
-	</div> /.medium-5.columns -->
+		</article>
+	</div><!-- /.medium-12.columns -->
 </div><!-- /.row -->
+
+
+
 
 	
 	    <div id="up-to-top" class="row">
@@ -494,11 +526,6 @@
 <script src="http://localhost:4000//assets/js/javascript.min.js"></script>
 
 
-
-<script>
-    $("#masthead").backstretch("https://kimfetti.github.io/images/nyc_bw.png", {fade: 700});
-    $("#masthead-with-text").backstretch("https://kimfetti.github.io/images/nyc_bw.png", {fade: 700});
-</script>
 
 
 
