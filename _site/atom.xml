@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-12-10T14:05:30-05:00</updated>
+	<updated>2019-12-10T19:04:45-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -46,19 +46,27 @@
 
 &lt;head&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;http://mbostock.github.com/d3/d3.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js&quot;&gt;&lt;/script&gt;
 &lt;/head&gt;
 
 &lt;p&gt;hi there this is a test&lt;/p&gt;
 
-&lt;div id=&quot;example&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;example&quot;&gt;
+&lt;div id=&quot;option&quot;&gt;
+    &lt;input name=&quot;updateButton&quot; type=&quot;button&quot; value=&quot;Paint!&quot; onclick=&quot;movePencil(); addPaint(1,800); addPaint(2,2000)&quot; /&gt;
+    &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;removePaint()&quot; /&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
 
 &lt;script&gt;
-var dataset = [10, 20];
+var dataset = [1, 2];
 var pencilColor = &quot;#F0C446&quot;;
+var paintColor = &quot;#271B77&quot;;
 
 var svg = d3.select(&quot;div#example&quot;).append(&quot;svg&quot;)
   .attr(&quot;width&quot;,700)
-  .attr(&quot;height&quot;, 700)
+  .attr(&quot;height&quot;, 400)
   .attr(&quot;align&quot;,&quot;center&quot;);
 
 var objects = svg.append(&quot;g&quot;);
@@ -67,12 +75,10 @@ var pencils = objects.selectAll(&quot;g&quot;).data(dataset)
                 .enter()
                 .append(&quot;g&quot;)
                 .attr(&quot;id&quot;, function(d, i) { return i; })
-                .attr(&quot;transform&quot;,function(d, i) {return &quot;translate(&quot; + (i+1)*50 + &quot;,0)&quot;;})
-                .on(&quot;mouseover&quot;, over)
-                .on(&quot;mouseout&quot;, out);
+                .attr(&quot;transform&quot;,function(d, i) {return &quot;translate(&quot; + i*50 + &quot;,0)&quot;;});
 
 var rects = pencils.append(&quot;rect&quot;)
-                   .attr(&quot;x&quot;, 0)
+                   .attr(&quot;x&quot;, 50)
                    .attr(&quot;y&quot;, 50)
                    .attr(&quot;width&quot;, 50)
                    .attr(&quot;height&quot;, 300)
@@ -84,35 +90,73 @@ var rects = pencils.append(&quot;rect&quot;)
 var triangles = pencils.append(&quot;path&quot;)
                        .attr('d', function(d,i) { 
                                 var x = 0, y = 50;
-                                return 'M ' + x +' '+ y + ' l 25 -50 l 25 50 z';
+                                return 'M ' + (50+x) +' '+ y + ' l 25 -50 l 25 50 z';
                              })
                        .attr(&quot;fill&quot;, pencilColor)
-                       .style(&quot;fill-opacity&quot;, .7)
+                       .style(&quot;fill-opacity&quot;, .4)
                        .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
                        .style(&quot;stroke&quot;, pencilColor);
 
 var tips = pencils.append(&quot;path&quot;)
                   .attr('d', function(d, i) {
                             var x = 12.5, y = 25;
-                            return 'M ' + x + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
+                            return 'M ' + (50+x) + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
                         })
                   .style(&quot;fill-opacity&quot;, .7)
                   .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
                   .style(&quot;stroke&quot;, &quot;#393731&quot;);
                   
+var paint = pencils.append(&quot;rect&quot;)
+                   .attr(&quot;x&quot;, 50)
+                   .attr(&quot;y&quot;, 300)
+                   .attr(&quot;width&quot;, 50)
+                   .attr(&quot;height&quot;, 50)
+                   .attr(&quot;fill&quot;, paintColor)
+                   .style(&quot;fill-opacity&quot;, 0.9)
+                   .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+                   .style(&quot;stroke&quot;, paintColor);
 
 
-// Over function to be called on mouseover
-function over(d, i) {
-    d3.select(this).selectAll(&quot;*&quot;).attr(&quot;transform&quot;, &quot;translate(0,50)&quot;);
+// Function called on button click
+function movePencil() {
+    d3.select(&quot;g&quot;).selectAll(&quot;*&quot;)
+      .filter(function (d) { return d == 1; })
+      .transition()
+        .duration(750)
+        .attr(&quot;transform&quot;, &quot;translate(0,25)&quot;)
+      .on(&quot;end&quot;,function() { // on end of transition...
+		    d3.select(this)
+		    	.transition() // second transition
+					.delay(750)
+					.attr(&quot;transform&quot;, &quot;translate(0,0)&quot;)
+		});
 }
 
-// Out function to be called on mouseout
-function out(d, i) {
-    d3.select(this).selectAll(&quot;*&quot;).attr(&quot;transform&quot;, &quot;translate(0,0)&quot;);
+function addPaint(pencilNumber, delay) {
+    d3.select(&quot;g&quot;).selectAll(&quot;*&quot;)
+      .filter(function(d) { return d == pencilNumber; })
+      .filter(function(d,i) { return i == 4; })
+      .transition()
+         .delay(delay)
+         .attr(&quot;height&quot;, function(d) {
+                            var height = d3.select(this)
+                               .style('height')
+                               .slice(0, -2)
+                            return Math.min(Math.round(Number(height))+50, 300); } )
+         .attr(&quot;y&quot;, function(d) {
+                            var y = d3.select(this)
+                               .style('y')
+                               .slice(0, -2)
+                            return Math.max(Math.round(Number(y))-50, 50); });
 }
 
-
+function removePaint() {
+    paint
+      .transition()
+      .duration(500)
+        .attr(&quot;y&quot;, 300)
+        .attr(&quot;height&quot;, 50);
+}
 
 svg.style('transform', 'translate(50%, 0%)')
 
