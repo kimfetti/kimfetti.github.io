@@ -5,7 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2019-12-10-test-d3.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/visualizations/test-d3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/test-d3/index.html" afterDir="false" />
     </list>
@@ -62,7 +62,7 @@
         <counts>
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="166" />
-          <entry key="md" value="119446" />
+          <entry key="md" value="119459" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -71,7 +71,7 @@
         <counts>
           <entry key="Bash" value="9" />
           <entry key="HTML" value="166" />
-          <entry key="Markdown" value="119408" />
+          <entry key="Markdown" value="119421" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="34" />
           <entry key="Scratch" value="2" />
@@ -86,8 +86,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-10-test-d3.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="210">
-                <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+              <first_editor relative-caret-position="225">
+                <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               </first_editor>
               <second_editor />
             </state>
@@ -628,8 +628,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-10-test-d3.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="210">
-            <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           </first_editor>
           <second_editor />
         </state>
