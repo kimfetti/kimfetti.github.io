@@ -4,13 +4,14 @@
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2019-12-10-test-d3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2019-12-11-d3-tips.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/viz/emoji_blush.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/data/web scraping/gather-youtube-data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/gather-youtube-data/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/visualizations/test-d3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/test-d3/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +66,7 @@
         <counts>
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="166" />
-          <entry key="md" value="116926" />
+          <entry key="md" value="117443" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -74,7 +75,7 @@
         <counts>
           <entry key="Bash" value="9" />
           <entry key="HTML" value="166" />
-          <entry key="Markdown" value="116888" />
+          <entry key="Markdown" value="117405" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="34" />
           <entry key="Scratch" value="2" />
@@ -89,8 +90,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-10-test-d3.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="533">
-                <caret line="232" column="52" selection-start-line="232" selection-start-column="52" selection-end-line="232" selection-end-column="52" />
+              <first_editor relative-caret-position="560">
+                <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
               </first_editor>
               <second_editor />
             </state>
@@ -100,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/D3/work.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7" />
+            <state relative-caret-position="-232" />
           </provider>
         </entry>
       </file>
@@ -605,14 +606,14 @@
     </entry>
     <entry file="file://$USER_HOME$/Desktop/D3/work.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7" />
+        <state relative-caret-position="-232" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-10-test-d3.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="533">
-            <caret line="232" column="52" selection-start-line="232" selection-start-column="52" selection-end-line="232" selection-end-column="52" />
+          <first_editor relative-caret-position="560">
+            <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
           </first_editor>
           <second_editor />
         </state>
