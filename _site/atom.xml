@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-12-20T12:57:32-05:00</updated>
+	<updated>2019-12-20T15:40:18-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -281,6 +281,8 @@ function sickBlusher() {
       .delay(delay)
       .style(&quot;opacity&quot;, 0)
       .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;)
+      .attr(&quot;width&quot;, 80)
+      .attr(&quot;height&quot;, 80)
       .transition()
       .duration(800)
       .ease(d3.easeLinear)
@@ -303,6 +305,8 @@ function sickGrinner() {
                         .ease(d3.easeLinear)
                         .style(&quot;opacity&quot;, 1)
                         .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;)
+                        .attr(&quot;width&quot;, 80)
+                        .attr(&quot;height&quot;, 80)
                 })
     sickNum++;
 }
@@ -312,9 +316,13 @@ function makeWell() {
     d3.select(&quot;#blushers&quot;)
       .selectAll(&quot;image&quot;)
       .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;)
+      .attr(&quot;width&quot;, 75)
+      .attr(&quot;height&quot;, 75)
     d3.select(&quot;#grinners&quot;)
       .selectAll(&quot;image&quot;)
       .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_grin.png&quot;)
+      .attr(&quot;width&quot;, 70)
+      .attr(&quot;height&quot;, 70)
     sickNum = 1;
 }
 

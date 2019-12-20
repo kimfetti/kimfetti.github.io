@@ -233,7 +233,7 @@
 <div id="masthead-with-background-color" style="background: #999999;">
 	<div class="row">
 		<figure class="small-12 columns">
-			<img src="https://kimfetti.github.io/images//lego_header.jpg" alt="Kimberly Fessel Blog">
+			<img src="https://kimfetti.github.io/images//pencil-header.jpg" alt="Kimberly Fessel Blog">
 		</figure><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
@@ -507,6 +507,8 @@ function sickBlusher() {
       .delay(delay)
       .style("opacity", 0)
       .attr("xlink:href", "https://kimfetti.github.io/images/emoji_sick.png")
+      .attr("width", 80)
+      .attr("height", 80)
       .transition()
       .duration(800)
       .ease(d3.easeLinear)
@@ -529,6 +531,8 @@ function sickGrinner() {
                         .ease(d3.easeLinear)
                         .style("opacity", 1)
                         .attr("xlink:href", "https://kimfetti.github.io/images/emoji_sick.png")
+                        .attr("width", 80)
+                        .attr("height", 80)
                 })
     sickNum++;
 }
@@ -538,9 +542,13 @@ function makeWell() {
     d3.select("#blushers")
       .selectAll("image")
       .attr("xlink:href", "https://kimfetti.github.io/images/emoji_blush.png")
+      .attr("width", 75)
+      .attr("height", 75)
     d3.select("#grinners")
       .selectAll("image")
       .attr("xlink:href", "https://kimfetti.github.io/images/emoji_grin.png")
+      .attr("width", 70)
+      .attr("height", 70)
     sickNum = 1;
 }
 
