@@ -271,29 +271,58 @@
 			<!--more-->
 
 <head>
-<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js"></script>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+
+    <!--Multiple button functions-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js"></script>  
+
+    <style> 
+
+        input {
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        
+        input[name=updateButton] {
+          background-color: #271B77;
+          font-weight: bold;
+        }
+        
+        input[name=resetButton] {
+          background-color: #ADADB0;
+        }
+
+    </style>
 </head>
 
 <p>hi there this is a test</p>
 
-<div id="example">
-<div id="option">
-    <input name="updateButton" type="button" value="Paint!" onclick="movePencil(); addPaint(1,800); addPaint(2,2000)" />
-    <input name="resetButton" type="button" value="Reset" onclick="removePaint()" />
+<div id="paintContainer">
+    <div id="option">
+        <input name="updateButton" type="button" value="Move Pencil" onclick="movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();" />
+        <input name="resetButton" type="button" value="Reset" onclick="removePaint()" />
+    </div>
 </div>
 
+<p>There is more to say</p>
+
+<div id="contraContainer">
 </div>
 
+<!-- Paint and Pencils Example -->
 <script>
 var dataset = [1, 2];
 var pencilColor = "#F0C446";
 var paintColor = "#271B77";
 
-var svg = d3.select("div#example").append("svg")
+var svg = d3.select("div#paintContainer").append("svg")
   .attr("width",700)
   .attr("height", 400)
-  .attr("align","center");
+  .attr("align","center")
+  .style('transform', 'translate(50%, 0%)');
 
 var objects = svg.append("g");
 
@@ -343,7 +372,21 @@ var paint = pencils.append("rect")
                    .style("stroke", paintColor);
 
 
-// Function called on button click
+var text = svg.append("text");
+
+text.attr("x", 225).attr("y", 50).attr("font-size",22);
+
+var paintUnits = 1;
+
+text.append("tspan").text("Paint:");
+var paintText = text.append("tspan")
+                    .attr("dx", 10)
+                    .style("fill", paintColor)
+                    .attr("font-weight", "bold")
+                    .text(paintUnits + " Unit");
+                  
+
+// Functions called on button click
 function movePencil() {
     d3.select("g").selectAll("*")
       .filter(function (d) { return d == 1; })
@@ -368,27 +411,63 @@ function addPaint(pencilNumber, delay) {
                             var height = d3.select(this)
                                .style('height')
                                .slice(0, -2)
-                            return Math.min(Math.round(Number(height))+50, 300); } )
+                            return Math.min( Math.round(Number(height))+50, 300); } )
          .attr("y", function(d) {
                             var y = d3.select(this)
                                .style('y')
                                .slice(0, -2)
-                            return Math.max(Math.round(Number(y))-50, 50); });
+                            return Math.max( Math.round(Number(y))-50, 50); });
 }
 
+
+function incrUnits() {
+    paintUnits++
+    paintText.transition()
+        .delay(2400)
+        .text( Math.min(paintUnits, 6) + " Units");
+}
+
+
+// Function called on reset button click
 function removePaint() {
     paint
       .transition()
       .duration(500)
         .attr("y", 300)
         .attr("height", 50);
+    paintUnits = 1
+    paintText.transition()
+        .delay(250)
+        .text( paintUnits + " Unit");
 }
 
-svg.style('transform', 'translate(50%, 0%)')
 
 </script>
 
-<p>there is also more to say</p>
+<!-- Contra Example -->
+<script>
+var data = [1];
+
+var s = d3.select("div#contraContainer").append("svg")
+  .attr("width",700)
+  .attr("height", 400)
+  .style('transform', 'translate(50%, 5%)');
+  
+
+var circles = s.selectAll("circle").data(data)
+                .enter()
+                .append("circle")
+                .attr("r", 50)
+                .attr("cx", 0)
+                .attr("cy", 0)
+ 
+var myimage = s.append("image")
+    .attr('xlink:href', "emoji_blush.png")
+    .attr('width', 200)
+    .attr('height', 200)
+
+</script>
+
 
 
 			
@@ -415,7 +494,7 @@ svg.style('transform', 'translate(50%, 0%)')
 				
 				<div class="small-2 columns text-center"><a class="radius button small" href="http://localhost:4000//blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
 				
-				<div class="small-5 columns text-right"></div><!-- /.small-4.columns -->
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://localhost:4000//visualizations/d3-tips/">Noteworthy Tips for D3 Beginners &raquo;</a></div><!-- /.small-4.columns -->
 				
 			</div>
 			

@@ -9,21 +9,45 @@
 		<atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Testing D3</title>
-				<link>http://localhost:4000//visualizations/test-d3/</link>
-				<pubDate>Tue, 10 Dec 2019 00:00:00 -0500</pubDate>
+				<title>Noteworthy Tips for D3 Beginners</title>
+				<link>http://localhost:4000//visualizations/d3-tips/</link>
+				<pubDate>Wed, 11 Dec 2019 00:00:00 -0500</pubDate>
 				<description>&lt;!--more--&gt;
 
 &lt;head&gt;
 &lt;script type=&quot;text/javascript&quot; src=&quot;http://mbostock.github.com/d3/d3.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js&quot;&gt;&lt;/script&gt;
+
+&lt;style&gt; 
+input[name=updateButton] {
+  background-color: #271B77;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[name=resetButton] {
+  background-color: #ADADB0;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+&lt;/style&gt;
+
 &lt;/head&gt;
 
-&lt;p&gt;hi there this is a test&lt;/p&gt;
+&lt;p&gt;I recently had some time on my hands so I did what everyone would do… create a D3 visual about a Russian brain teaser.  BUT I really did learn lots… herewego!&lt;/p&gt;
+
+&lt;p&gt;Time for some tips yo!&lt;/p&gt;
 
 &lt;div id=&quot;example&quot;&gt;
 &lt;div id=&quot;option&quot;&gt;
-    &lt;input name=&quot;updateButton&quot; type=&quot;button&quot; value=&quot;Paint!&quot; onclick=&quot;movePencil(); addPaint(1,800); addPaint(2,2000)&quot; /&gt;
+    &lt;input name=&quot;updateButton&quot; type=&quot;button&quot; value=&quot;Move Pencil&quot; onclick=&quot;movePencil(); addPaint(1,800); addPaint(2,2000)&quot; /&gt;
     &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;removePaint()&quot; /&gt;
 &lt;/div&gt;
 
@@ -112,12 +136,12 @@ function addPaint(pencilNumber, delay) {
                             var height = d3.select(this)
                                .style('height')
                                .slice(0, -2)
-                            return Math.min(Math.round(Number(height))+50, 300); } )
+                            return Math.min( Math.round(Number(height))+50, 300); } )
          .attr(&quot;y&quot;, function(d) {
                             var y = d3.select(this)
                                .style('y')
                                .slice(0, -2)
-                            return Math.max(Math.round(Number(y))-50, 50); });
+                            return Math.max( Math.round(Number(y))-50, 50); });
 }
 
 function removePaint() {
@@ -132,7 +156,230 @@ svg.style('transform', 'translate(50%, 0%)')
 
 &lt;/script&gt;
 
-&lt;p&gt;there is also more to say&lt;/p&gt;
+&lt;h1 id=&quot;tips&quot;&gt;Tips&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Draw a triangle fool&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Make your buttons do lots of stuff&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Group everything&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Add D3 to yo markdown&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</description>
+				<guid isPermaLink="true">http://localhost:4000//visualizations/d3-tips/</guid>
+			</item>
+		
+			<item>
+				<title>Testing D3</title>
+				<link>http://localhost:4000//visualizations/test-d3/</link>
+				<pubDate>Tue, 10 Dec 2019 00:00:00 -0500</pubDate>
+				<description>&lt;!--more--&gt;
+
+&lt;head&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;http://mbostock.github.com/d3/d3.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!--Multiple button functions--&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js&quot;&gt;&lt;/script&gt;  
+
+    &lt;style&gt; 
+
+        input {
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        
+        input[name=updateButton] {
+          background-color: #271B77;
+          font-weight: bold;
+        }
+        
+        input[name=resetButton] {
+          background-color: #ADADB0;
+        }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;p&gt;hi there this is a test&lt;/p&gt;
+
+&lt;div id=&quot;paintContainer&quot;&gt;
+    &lt;div id=&quot;option&quot;&gt;
+        &lt;input name=&quot;updateButton&quot; type=&quot;button&quot; value=&quot;Move Pencil&quot; onclick=&quot;movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();&quot; /&gt;
+        &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;removePaint()&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;There is more to say&lt;/p&gt;
+
+&lt;div id=&quot;contraContainer&quot;&gt;
+&lt;/div&gt;
+
+&lt;!-- Paint and Pencils Example --&gt;
+&lt;script&gt;
+var dataset = [1, 2];
+var pencilColor = &quot;#F0C446&quot;;
+var paintColor = &quot;#271B77&quot;;
+
+var svg = d3.select(&quot;div#paintContainer&quot;).append(&quot;svg&quot;)
+  .attr(&quot;width&quot;,700)
+  .attr(&quot;height&quot;, 400)
+  .attr(&quot;align&quot;,&quot;center&quot;)
+  .style('transform', 'translate(50%, 0%)');
+
+var objects = svg.append(&quot;g&quot;);
+
+var pencils = objects.selectAll(&quot;g&quot;).data(dataset)
+                .enter()
+                .append(&quot;g&quot;)
+                .attr(&quot;id&quot;, function(d, i) { return i; })
+                .attr(&quot;transform&quot;,function(d, i) {return &quot;translate(&quot; + i*50 + &quot;,0)&quot;;});
+
+var rects = pencils.append(&quot;rect&quot;)
+                   .attr(&quot;x&quot;, 50)
+                   .attr(&quot;y&quot;, 50)
+                   .attr(&quot;width&quot;, 50)
+                   .attr(&quot;height&quot;, 300)
+                   .attr(&quot;fill&quot;, pencilColor)
+                   .style(&quot;fill-opacity&quot;, .7)
+                   .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+                   .style(&quot;stroke&quot;, pencilColor);
+
+var triangles = pencils.append(&quot;path&quot;)
+                       .attr('d', function(d,i) { 
+                                var x = 0, y = 50;
+                                return 'M ' + (50+x) +' '+ y + ' l 25 -50 l 25 50 z';
+                             })
+                       .attr(&quot;fill&quot;, pencilColor)
+                       .style(&quot;fill-opacity&quot;, .4)
+                       .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+                       .style(&quot;stroke&quot;, pencilColor);
+
+var tips = pencils.append(&quot;path&quot;)
+                  .attr('d', function(d, i) {
+                            var x = 12.5, y = 25;
+                            return 'M ' + (50+x) + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
+                        })
+                  .style(&quot;fill-opacity&quot;, .7)
+                  .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+                  .style(&quot;stroke&quot;, &quot;#393731&quot;);
+                  
+var paint = pencils.append(&quot;rect&quot;)
+                   .attr(&quot;x&quot;, 50)
+                   .attr(&quot;y&quot;, 300)
+                   .attr(&quot;width&quot;, 50)
+                   .attr(&quot;height&quot;, 50)
+                   .attr(&quot;fill&quot;, paintColor)
+                   .style(&quot;fill-opacity&quot;, 0.9)
+                   .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+                   .style(&quot;stroke&quot;, paintColor);
+
+
+var text = svg.append(&quot;text&quot;);
+
+text.attr(&quot;x&quot;, 225).attr(&quot;y&quot;, 50).attr(&quot;font-size&quot;,22);
+
+var paintUnits = 1;
+
+text.append(&quot;tspan&quot;).text(&quot;Paint:&quot;);
+var paintText = text.append(&quot;tspan&quot;)
+                    .attr(&quot;dx&quot;, 10)
+                    .style(&quot;fill&quot;, paintColor)
+                    .attr(&quot;font-weight&quot;, &quot;bold&quot;)
+                    .text(paintUnits + &quot; Unit&quot;);
+                  
+
+// Functions called on button click
+function movePencil() {
+    d3.select(&quot;g&quot;).selectAll(&quot;*&quot;)
+      .filter(function (d) { return d == 1; })
+      .transition()
+        .duration(750)
+        .attr(&quot;transform&quot;, &quot;translate(0,25)&quot;)
+      .on(&quot;end&quot;,function() { // on end of transition...
+		    d3.select(this)
+		    	.transition() // second transition
+					.delay(750)
+					.attr(&quot;transform&quot;, &quot;translate(0,0)&quot;)
+		});
+}
+
+function addPaint(pencilNumber, delay) {
+    d3.select(&quot;g&quot;).selectAll(&quot;*&quot;)
+      .filter(function(d) { return d == pencilNumber; })
+      .filter(function(d,i) { return i == 4; })
+      .transition()
+         .delay(delay)
+         .attr(&quot;height&quot;, function(d) {
+                            var height = d3.select(this)
+                               .style('height')
+                               .slice(0, -2)
+                            return Math.min( Math.round(Number(height))+50, 300); } )
+         .attr(&quot;y&quot;, function(d) {
+                            var y = d3.select(this)
+                               .style('y')
+                               .slice(0, -2)
+                            return Math.max( Math.round(Number(y))-50, 50); });
+}
+
+
+function incrUnits() {
+    paintUnits++
+    paintText.transition()
+        .delay(2400)
+        .text( Math.min(paintUnits, 6) + &quot; Units&quot;);
+}
+
+
+// Function called on reset button click
+function removePaint() {
+    paint
+      .transition()
+      .duration(500)
+        .attr(&quot;y&quot;, 300)
+        .attr(&quot;height&quot;, 50);
+    paintUnits = 1
+    paintText.transition()
+        .delay(250)
+        .text( paintUnits + &quot; Unit&quot;);
+}
+
+
+&lt;/script&gt;
+
+&lt;!-- Contra Example --&gt;
+&lt;script&gt;
+var data = [1];
+
+var s = d3.select(&quot;div#contraContainer&quot;).append(&quot;svg&quot;)
+  .attr(&quot;width&quot;,700)
+  .attr(&quot;height&quot;, 400)
+  .style('transform', 'translate(50%, 5%)');
+  
+
+var circles = s.selectAll(&quot;circle&quot;).data(data)
+                .enter()
+                .append(&quot;circle&quot;)
+                .attr(&quot;r&quot;, 50)
+                .attr(&quot;cx&quot;, 0)
+                .attr(&quot;cy&quot;, 0)
+ 
+var myimage = s.append(&quot;image&quot;)
+    .attr('xlink:href', &quot;emoji_blush.png&quot;)
+    .attr('width', 200)
+    .attr('height', 200)
+
+&lt;/script&gt;
+
 </description>
 				<guid isPermaLink="true">http://localhost:4000//visualizations/test-d3/</guid>
 			</item>
