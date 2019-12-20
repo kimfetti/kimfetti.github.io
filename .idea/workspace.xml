@@ -10,8 +10,12 @@
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/data/web scraping/gather-youtube-data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/gather-youtube-data/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/emoji_sick.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/emoji_sick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/sick.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/emoji_sick.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/emoji_sick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/sick.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,7 +70,7 @@
         <counts>
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="166" />
-          <entry key="md" value="117443" />
+          <entry key="md" value="119289" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -75,7 +79,7 @@
         <counts>
           <entry key="Bash" value="9" />
           <entry key="HTML" value="166" />
-          <entry key="Markdown" value="117405" />
+          <entry key="Markdown" value="119251" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="34" />
           <entry key="Scratch" value="2" />
@@ -90,8 +94,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-10-test-d3.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="560">
-                <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
+              <first_editor relative-caret-position="265">
+                <caret line="283" column="34" selection-start-line="283" selection-start-column="34" selection-end-line="283" selection-end-column="34" />
               </first_editor>
               <second_editor />
             </state>
@@ -612,8 +616,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-10-test-d3.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="560">
-            <caret line="251" column="48" selection-start-line="251" selection-start-column="48" selection-end-line="251" selection-end-column="48" />
+          <first_editor relative-caret-position="265">
+            <caret line="283" column="34" selection-start-line="283" selection-start-column="34" selection-end-line="283" selection-end-column="34" />
           </first_editor>
           <second_editor />
         </state>

@@ -9,6 +9,292 @@
 		<atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Testing D3</title>
+				<link>http://localhost:4000//visualizations/test-d3/</link>
+				<pubDate>Tue, 10 Dec 2019 00:00:00 -0500</pubDate>
+				<description>&lt;!--more--&gt;
+
+&lt;head&gt;
+    &lt;script type=&quot;text/javascript&quot; src=&quot;http://mbostock.github.com/d3/d3.js&quot;&gt;&lt;/script&gt;
+
+    &lt;!--Multiple button functions--&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js&quot;&gt;&lt;/script&gt;  
+
+    &lt;style&gt; 
+
+        input {
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        
+        input[name=updateButton] {
+          background-color: #271B77;
+          font-weight: bold;
+        }
+        
+        input[name=resetButton] {
+          background-color: #ADADB0;
+        }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;p&gt;hi there this is a test&lt;/p&gt;
+
+&lt;div id=&quot;paintContainer&quot;&gt;
+    &lt;div id=&quot;option&quot;&gt;
+        &lt;input name=&quot;updateButton&quot; type=&quot;button&quot; value=&quot;Move Pencil&quot; onclick=&quot;movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();&quot; /&gt;
+        &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;removePaint()&quot; /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;There is more to say&lt;/p&gt;
+
+&lt;div id=&quot;contraContainer&quot;&gt;
+    &lt;div id=&quot;option&quot;&gt;
+        &lt;input name=&quot;updateButton&quot; type=&quot;button&quot; value=&quot;Advance&quot; onclick=&quot;moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();&quot; /&gt;
+        &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;makeWell()&quot; /&gt;
+&lt;/div&gt;
+
+
+&lt;!-- Paint and Pencils Example --&gt;
+&lt;script&gt;
+var dataset = [1, 2];
+var pencilColor = &quot;#F0C446&quot;;
+var paintColor = &quot;#271B77&quot;;
+
+var svg = d3.select(&quot;div#paintContainer&quot;).append(&quot;svg&quot;)
+  .attr(&quot;width&quot;,700)
+  .attr(&quot;height&quot;, 400)
+  .attr(&quot;align&quot;,&quot;center&quot;)
+  .style('transform', 'translate(50%, 0%)');
+
+var objects = svg.append(&quot;g&quot;);
+
+var pencils = objects.selectAll(&quot;g&quot;).data(dataset)
+                .enter()
+                .append(&quot;g&quot;)
+                .attr(&quot;id&quot;, function(d, i) { return i; })
+                .attr(&quot;transform&quot;,function(d, i) {return &quot;translate(&quot; + i*50 + &quot;,0)&quot;;});
+
+var rects = pencils.append(&quot;rect&quot;)
+                   .attr(&quot;x&quot;, 50)
+                   .attr(&quot;y&quot;, 50)
+                   .attr(&quot;width&quot;, 50)
+                   .attr(&quot;height&quot;, 300)
+                   .attr(&quot;fill&quot;, pencilColor)
+                   .style(&quot;fill-opacity&quot;, .7)
+                   .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+                   .style(&quot;stroke&quot;, pencilColor);
+
+var triangles = pencils.append(&quot;path&quot;)
+                       .attr('d', function(d,i) { 
+                                var x = 0, y = 50;
+                                return 'M ' + (50+x) +' '+ y + ' l 25 -50 l 25 50 z';
+                             })
+                       .attr(&quot;fill&quot;, pencilColor)
+                       .style(&quot;fill-opacity&quot;, .4)
+                       .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+                       .style(&quot;stroke&quot;, pencilColor);
+
+var tips = pencils.append(&quot;path&quot;)
+                  .attr('d', function(d, i) {
+                            var x = 12.5, y = 25;
+                            return 'M ' + (50+x) + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
+                        })
+                  .style(&quot;fill-opacity&quot;, .7)
+                  .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+                  .style(&quot;stroke&quot;, &quot;#393731&quot;);
+                  
+var paint = pencils.append(&quot;rect&quot;)
+                   .attr(&quot;x&quot;, 50)
+                   .attr(&quot;y&quot;, 300)
+                   .attr(&quot;width&quot;, 50)
+                   .attr(&quot;height&quot;, 50)
+                   .attr(&quot;fill&quot;, paintColor)
+                   .style(&quot;fill-opacity&quot;, 0.9)
+                   .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+                   .style(&quot;stroke&quot;, paintColor);
+
+
+var text = svg.append(&quot;text&quot;);
+
+text.attr(&quot;x&quot;, 225).attr(&quot;y&quot;, 50).attr(&quot;font-size&quot;,22);
+
+var paintUnits = 1;
+
+text.append(&quot;tspan&quot;).text(&quot;Paint:&quot;);
+var paintText = text.append(&quot;tspan&quot;)
+                    .attr(&quot;dx&quot;, 10)
+                    .style(&quot;fill&quot;, paintColor)
+                    .attr(&quot;font-weight&quot;, &quot;bold&quot;)
+                    .text(paintUnits + &quot; Unit&quot;);
+                  
+
+// Functions called on button click
+function movePencil() {
+    d3.select(&quot;g&quot;).selectAll(&quot;*&quot;)
+      .filter(function (d) { return d == 1; })
+      .transition()
+        .duration(750)
+        .attr(&quot;transform&quot;, &quot;translate(0,25)&quot;)
+      .on(&quot;end&quot;,function() { // on end of transition...
+		    d3.select(this)
+		    	.transition() // second transition
+					.delay(750)
+					.attr(&quot;transform&quot;, &quot;translate(0,0)&quot;)
+		});
+}
+
+function addPaint(pencilNumber, delay) {
+    d3.select(&quot;g&quot;).selectAll(&quot;*&quot;)
+      .filter(function(d) { return d == pencilNumber; })
+      .filter(function(d,i) { return i == 4; })
+      .transition()
+         .delay(delay)
+         .attr(&quot;height&quot;, function(d) {
+                            var height = d3.select(this)
+                               .style('height')
+                               .slice(0, -2)
+                            return Math.min( Math.round(Number(height))+50, 300); } )
+         .attr(&quot;y&quot;, function(d) {
+                            var y = d3.select(this)
+                               .style('y')
+                               .slice(0, -2)
+                            return Math.max( Math.round(Number(y))-50, 50); });
+}
+
+
+function incrUnits() {
+    paintUnits++
+    paintText.transition()
+        .delay(2400)
+        .text( Math.min(paintUnits, 6) + &quot; Units&quot;);
+}
+
+
+// Function called on reset button click
+function removePaint() {
+    paint
+      .transition()
+      .duration(500)
+        .attr(&quot;y&quot;, 300)
+        .attr(&quot;height&quot;, 50);
+    paintUnits = 1
+    paintText.transition()
+        .delay(250)
+        .text( paintUnits + &quot; Unit&quot;);
+}
+
+
+&lt;/script&gt;
+
+
+
+&lt;!-- Contra Example --&gt;
+&lt;script&gt;
+var data = [1, 2, 3, 4, 5];
+
+var s = d3.select(&quot;div#contraContainer&quot;).append(&quot;svg&quot;)
+  .attr(&quot;width&quot;,700)
+  .attr(&quot;height&quot;, 400)
+  .style('transform', 'translate(40%, 5%)');
+  
+var blushGroup = s.append(&quot;g&quot;).attr(&quot;id&quot;, &quot;blushers&quot;);
+  
+var blushers = blushGroup.selectAll(&quot;image&quot;).data(data)
+    .enter()
+    .append(&quot;image&quot;)
+    .attr('xlink:href', &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;)
+    .attr('width', 75)
+    .attr('height', 75)
+    .attr(&quot;x&quot;, function (d, i) { return d*100; })
+    .attr(&quot;y&quot;, 0);
+    
+var grinGroup = s.append(&quot;g&quot;).attr(&quot;id&quot;, &quot;grinners&quot;);
+
+var grinners = grinGroup.selectAll(&quot;image&quot;).data(data)
+    .enter()
+    .append(&quot;image&quot;)
+    .attr('xlink:href', &quot;https://kimfetti.github.io/images/emoji_grin.png&quot;)
+    .attr('width', 70)
+    .attr('height', 70)
+    .attr(&quot;x&quot;, function (d, i) { return d*100; })
+    .attr(&quot;y&quot;, 100);
+
+var sickNum = 1;
+
+function moveBlushers(pos, delay) {
+    if (sickNum == 1) { return; }
+    else {
+    d3.select(&quot;#blushers&quot;)
+      .selectAll(&quot;image&quot;)
+      .transition()
+      .delay(delay)
+      .duration(1000)
+      .attr(&quot;transform&quot;, function(d) { if (pos==&quot;left&quot;) {return &quot;translate(-100,0)&quot;;}
+                                      else if (pos==&quot;center&quot;) {return &quot;translate(0, 0)&quot;;}
+                                     });
+    };                                   
+}
+
+function sickBlusher() {
+    if (sickNum == 1) { delay = 200; }
+    else { delay = 1200; }
+    d3.select(&quot;#blushers&quot;)
+      .selectAll(&quot;image&quot;)
+      .filter( function (d) { return d == sickNum; } )
+      .transition()
+      .delay(delay)
+      .style(&quot;opacity&quot;, 0)
+      .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;)
+      .transition()
+      .duration(800)
+      .ease(d3.easeLinear)
+      .style(&quot;opacity&quot;, 1);
+}
+
+function sickGrinner() {
+    if (sickNum == 1) { delay = 1000; }
+    else { delay = 3000; }
+    d3.select(&quot;#grinners&quot;)
+      .selectAll(&quot;image&quot;)
+      .filter( function (d) { return d == sickNum; } )
+      .transition()
+        .delay(delay)
+        .style(&quot;opacity&quot;, 0)
+      .on(&quot;end&quot;, function() {
+                    d3.select(this)
+                      .transition()
+                        .duration(800)
+                        .ease(d3.easeLinear)
+                        .style(&quot;opacity&quot;, 1)
+                        .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;)
+                })
+    sickNum++;
+}
+
+
+function makeWell() {
+    d3.select(&quot;#blushers&quot;)
+      .selectAll(&quot;image&quot;)
+      .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;)
+    d3.select(&quot;#grinners&quot;)
+      .selectAll(&quot;image&quot;)
+      .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_grin.png&quot;)
+    sickNum = 1;
+}
+
+&lt;/script&gt;
+&lt;/div&gt;
+</description>
+				<guid isPermaLink="true">http://localhost:4000//visualizations/test-d3/</guid>
+			</item>
+		
+			<item>
 				<title>How to Gather Data from YouTube</title>
 				<link>http://localhost:4000//data/web%20scraping/gather-youtube-data/</link>
 				<pubDate>Tue, 12 Nov 2019 00:00:00 -0500</pubDate>
