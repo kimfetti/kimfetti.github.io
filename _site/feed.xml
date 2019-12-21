@@ -9,9 +9,9 @@
 		<atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Testing D3</title>
-				<link>http://localhost:4000//visualizations/test-d3/</link>
-				<pubDate>Tue, 10 Dec 2019 00:00:00 -0500</pubDate>
+				<title>Down and Up: A Puzzle Illustrated with D3</title>
+				<link>http://localhost:4000//visualizations/puzzles/down-and-up/</link>
+				<pubDate>Fri, 20 Dec 2019 00:00:00 -0500</pubDate>
 				<description>&lt;!--more--&gt;
 
 &lt;head&gt;
@@ -208,11 +208,15 @@ var blushGroup = s.append(&quot;g&quot;).attr(&quot;id&quot;, &quot;blushers&quo
 var blushers = blushGroup.selectAll(&quot;image&quot;).data(data)
     .enter()
     .append(&quot;image&quot;)
-    .attr('xlink:href', &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;)
+    .attr('xlink:href', function (d, i) {
+                            if (i == 0) { return &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;; }
+                            else { return &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;; }
+    })
     .attr('width', 75)
     .attr('height', 75)
     .attr(&quot;x&quot;, function (d, i) { return d*100; })
     .attr(&quot;y&quot;, 0);
+
     
 var grinGroup = s.append(&quot;g&quot;).attr(&quot;id&quot;, &quot;grinners&quot;);
 
@@ -299,7 +303,7 @@ function makeWell() {
 &lt;/script&gt;
 &lt;/div&gt;
 </description>
-				<guid isPermaLink="true">http://localhost:4000//visualizations/test-d3/</guid>
+				<guid isPermaLink="true">http://localhost:4000//visualizations/puzzles/down-and-up/</guid>
 			</item>
 		
 			<item>

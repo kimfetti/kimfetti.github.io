@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2019-12-20T15:43:51-05:00</updated>
+	<updated>2019-12-21T09:24:11-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -26,10 +26,10 @@
 
 	
 		<entry>
-			<id>http://localhost:4000//visualizations/test-d3/</id>
-			<title>Testing D3</title>
-			<link href="http://localhost:4000//visualizations/test-d3/" rel="alternate" type="text/html" title="Testing D3" />
-			<updated>2019-12-10T00:00:00-05:00</updated>
+			<id>http://localhost:4000//visualizations/puzzles/down-and-up/</id>
+			<title>Down and Up: A Puzzle Illustrated with D3</title>
+			<link href="http://localhost:4000//visualizations/puzzles/down-and-up/" rel="alternate" type="text/html" title="Down and Up: A Puzzle Illustrated with D3" />
+			<updated>2019-12-20T00:00:00-05:00</updated>
 
 			
 				
@@ -41,8 +41,8 @@
 					
 				</author>
 			
-			<summary>&lt;em&gt;Testing D3.&lt;/em&gt;</summary>
-			<content type="html" xml:base="http://localhost:4000//visualizations/test-d3/">&lt;!--more--&gt;
+			<summary>&lt;em&gt;Math puzzles provide entertainment and joy to some, but many people approach these with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//visualizations/puzzles/down-and-up/">&lt;!--more--&gt;
 
 &lt;head&gt;
     &lt;script type=&quot;text/javascript&quot; src=&quot;http://mbostock.github.com/d3/d3.js&quot;&gt;&lt;/script&gt;
@@ -238,11 +238,15 @@ var blushGroup = s.append(&quot;g&quot;).attr(&quot;id&quot;, &quot;blushers&quo
 var blushers = blushGroup.selectAll(&quot;image&quot;).data(data)
     .enter()
     .append(&quot;image&quot;)
-    .attr('xlink:href', &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;)
+    .attr('xlink:href', function (d, i) {
+                            if (i == 0) { return &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;; }
+                            else { return &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;; }
+    })
     .attr('width', 75)
     .attr('height', 75)
     .attr(&quot;x&quot;, function (d, i) { return d*100; })
     .attr(&quot;y&quot;, 0);
+
     
 var grinGroup = s.append(&quot;g&quot;).attr(&quot;id&quot;, &quot;grinners&quot;);
 
@@ -333,9 +337,11 @@ function makeWell() {
 			
 				<category term="visualizations" />
 			
+				<category term="puzzles" />
+			
 			
 
-			<published>2019-12-10T00:00:00-05:00</published>
+			<published>2019-12-20T00:00:00-05:00</published>
 		</entry>
 	
 		<entry>
