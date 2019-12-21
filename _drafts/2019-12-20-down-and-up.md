@@ -2,8 +2,8 @@
 layout: page-fullwidth
 title: "Down and Up: A Puzzle Illustrated with D3"
 subheadline: "Math Puzzles"
-meta_teaser: "Math puzzles provide entertainment and joy to some, but many people approach these with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!"
-teaser: "<em>Math puzzles provide entertainment and joy to some, but many people approach these with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!</em>"
+meta_teaser: "Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!"
+teaser: "<em>Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!</em>"
 
 
 header:
@@ -273,7 +273,7 @@ function moveBlushers(pos, delay) {
 }
 
 function sickBlusher() {
-    if (sickNum == 1) { delay = 200; }
+    if (sickNum == 1) { return; }
     else { delay = 1200; }
     d3.select("#blushers")
       .selectAll("image")
@@ -282,8 +282,6 @@ function sickBlusher() {
       .delay(delay)
       .style("opacity", 0)
       .attr("xlink:href", "{{ site.urlimg }}emoji_sick.png")
-      .attr("width", 80)
-      .attr("height", 80)
       .transition()
       .duration(800)
       .ease(d3.easeLinear)
@@ -291,8 +289,8 @@ function sickBlusher() {
 }
 
 function sickGrinner() {
-    if (sickNum == 1) { delay = 1000; }
-    else { delay = 3000; }
+    if (sickNum == 1) { delay = 300; }
+    else { delay = 3300; }
     d3.select("#grinners")
       .selectAll("image")
       .filter( function (d) { return d == sickNum; } )
@@ -306,8 +304,8 @@ function sickGrinner() {
                         .ease(d3.easeLinear)
                         .style("opacity", 1)
                         .attr("xlink:href", "{{ site.urlimg }}emoji_sick.png")
-                        .attr("width", 80)
-                        .attr("height", 80)
+                        .attr("width", 75)
+                        .attr("height", 75)
                 })
     sickNum++;
 }
@@ -316,7 +314,10 @@ function sickGrinner() {
 function makeWell() {
     d3.select("#blushers")
       .selectAll("image")
-      .attr("xlink:href", "{{ site.urlimg }}emoji_blush.png")
+      .attr('xlink:href', function (d, i) {
+                              if (i == 0) { return "{{ site.urlimg }}emoji_sick.png"; }
+                              else { return "{{ site.urlimg }}emoji_blush.png"; }
+      })
       .attr("width", 75)
       .attr("height", 75)
     d3.select("#grinners")

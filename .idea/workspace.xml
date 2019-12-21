@@ -3,18 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2019-12-10-test-d3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/2019-12-20-down-and-up.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/data/web scraping/gather-youtube-data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/gather-youtube-data/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/images/pencil-header.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/pencil-header.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/visualizations/test-d3/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/visualizations/puzzles/down-and-up/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/puzzles/down-and-up/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/pencil-header.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/pencil-header.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,7 +64,7 @@
         <counts>
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="166" />
-          <entry key="md" value="120638" />
+          <entry key="md" value="120756" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -79,7 +73,7 @@
         <counts>
           <entry key="Bash" value="9" />
           <entry key="HTML" value="166" />
-          <entry key="Markdown" value="120600" />
+          <entry key="Markdown" value="120718" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="34" />
           <entry key="Scratch" value="2" />
@@ -94,8 +88,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="107">
-                <caret line="239" column="76" selection-start-line="239" selection-start-column="76" selection-end-line="239" selection-end-column="76" />
+              <first_editor relative-caret-position="-107">
+                <caret line="5" column="84" selection-start-line="5" selection-start-column="84" selection-end-line="5" selection-end-column="84" />
               </first_editor>
               <second_editor />
             </state>
@@ -595,8 +589,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="107">
-            <caret line="239" column="76" selection-start-line="239" selection-start-column="76" selection-end-line="239" selection-end-column="76" />
+          <first_editor relative-caret-position="-107">
+            <caret line="5" column="84" selection-start-line="5" selection-start-column="84" selection-end-line="5" selection-end-column="84" />
           </first_editor>
           <second_editor />
         </state>

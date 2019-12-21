@@ -30,7 +30,7 @@
 
 
 	<!-- Search Engine Optimization -->
-	<meta name="description" content="Math puzzles provide entertainment and joy to some, but many people approach these with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!">
+	<meta name="description" content="Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!">
 	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ">
 	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" >
 	
@@ -42,7 +42,7 @@
 
 	<!-- Facebook Open Graph -->
 	<meta property="og:title" content="Down and Up: A Puzzle Illustrated with D3">
-	<meta property="og:description" content="Math puzzles provide entertainment and joy to some, but many people approach these with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!">
+	<meta property="og:description" content="Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!">
 	<meta property="og:url" content="http://localhost:4000//visualizations/puzzles/down-and-up/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
@@ -57,7 +57,7 @@
 	<meta name="twitter:site" content="kimberlyfessel">
 	<meta name="twitter:creator" content="kimberlyfessel">
 	<meta name="twitter:title" content="Down and Up: A Puzzle Illustrated with D3">
-	<meta name="twitter:description" content="Math puzzles provide entertainment and joy to some, but many people approach these with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!">
+	<meta name="twitter:description" content="Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!">
 	
 	
 
@@ -264,7 +264,7 @@
 
 			
 			<p class="teaser">
-				<em>Math puzzles provide entertainment and joy to some, but many people approach these with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!</em>
+				<em>Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!</em>
 			</p>
 			
 
@@ -502,7 +502,7 @@ function moveBlushers(pos, delay) {
 }
 
 function sickBlusher() {
-    if (sickNum == 1) { delay = 200; }
+    if (sickNum == 1) { return; }
     else { delay = 1200; }
     d3.select("#blushers")
       .selectAll("image")
@@ -511,8 +511,6 @@ function sickBlusher() {
       .delay(delay)
       .style("opacity", 0)
       .attr("xlink:href", "https://kimfetti.github.io/images/emoji_sick.png")
-      .attr("width", 80)
-      .attr("height", 80)
       .transition()
       .duration(800)
       .ease(d3.easeLinear)
@@ -520,8 +518,8 @@ function sickBlusher() {
 }
 
 function sickGrinner() {
-    if (sickNum == 1) { delay = 1000; }
-    else { delay = 3000; }
+    if (sickNum == 1) { delay = 300; }
+    else { delay = 3300; }
     d3.select("#grinners")
       .selectAll("image")
       .filter( function (d) { return d == sickNum; } )
@@ -535,8 +533,8 @@ function sickGrinner() {
                         .ease(d3.easeLinear)
                         .style("opacity", 1)
                         .attr("xlink:href", "https://kimfetti.github.io/images/emoji_sick.png")
-                        .attr("width", 80)
-                        .attr("height", 80)
+                        .attr("width", 75)
+                        .attr("height", 75)
                 })
     sickNum++;
 }
@@ -545,7 +543,10 @@ function sickGrinner() {
 function makeWell() {
     d3.select("#blushers")
       .selectAll("image")
-      .attr("xlink:href", "https://kimfetti.github.io/images/emoji_blush.png")
+      .attr('xlink:href', function (d, i) {
+                              if (i == 0) { return "https://kimfetti.github.io/images/emoji_sick.png"; }
+                              else { return "https://kimfetti.github.io/images/emoji_blush.png"; }
+      })
       .attr("width", 75)
       .attr("height", 75)
     d3.select("#grinners")

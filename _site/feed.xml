@@ -246,7 +246,7 @@ function moveBlushers(pos, delay) {
 }
 
 function sickBlusher() {
-    if (sickNum == 1) { delay = 200; }
+    if (sickNum == 1) { return; }
     else { delay = 1200; }
     d3.select(&quot;#blushers&quot;)
       .selectAll(&quot;image&quot;)
@@ -255,8 +255,6 @@ function sickBlusher() {
       .delay(delay)
       .style(&quot;opacity&quot;, 0)
       .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;)
-      .attr(&quot;width&quot;, 80)
-      .attr(&quot;height&quot;, 80)
       .transition()
       .duration(800)
       .ease(d3.easeLinear)
@@ -264,8 +262,8 @@ function sickBlusher() {
 }
 
 function sickGrinner() {
-    if (sickNum == 1) { delay = 1000; }
-    else { delay = 3000; }
+    if (sickNum == 1) { delay = 300; }
+    else { delay = 3300; }
     d3.select(&quot;#grinners&quot;)
       .selectAll(&quot;image&quot;)
       .filter( function (d) { return d == sickNum; } )
@@ -279,8 +277,8 @@ function sickGrinner() {
                         .ease(d3.easeLinear)
                         .style(&quot;opacity&quot;, 1)
                         .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;)
-                        .attr(&quot;width&quot;, 80)
-                        .attr(&quot;height&quot;, 80)
+                        .attr(&quot;width&quot;, 75)
+                        .attr(&quot;height&quot;, 75)
                 })
     sickNum++;
 }
@@ -289,7 +287,10 @@ function sickGrinner() {
 function makeWell() {
     d3.select(&quot;#blushers&quot;)
       .selectAll(&quot;image&quot;)
-      .attr(&quot;xlink:href&quot;, &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;)
+      .attr('xlink:href', function (d, i) {
+                              if (i == 0) { return &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;; }
+                              else { return &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;; }
+      })
       .attr(&quot;width&quot;, 75)
       .attr(&quot;height&quot;, 75)
     d3.select(&quot;#grinners&quot;)
