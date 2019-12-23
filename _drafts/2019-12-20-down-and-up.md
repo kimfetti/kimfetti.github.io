@@ -1,9 +1,9 @@
 ---
 layout: page-fullwidth
-title: "Down and Up: A Puzzle Illustrated with D3"
+title: "Down and Up: A Puzzle Illustrated with D3.js"
 subheadline: "Math Puzzles"
-meta_teaser: "Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!"
-teaser: "<em>Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!</em>"
+meta_teaser: "Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--may be all you need to find a solution!"
+teaser: "<em>Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--may be all you need to find a solution!</em>"
 
 
 header:
@@ -22,11 +22,6 @@ categories:
 show_meta: true
 comments: true
 ---
-<!--more-->
-
-
-
-
 
 <head>
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
@@ -52,11 +47,71 @@ comments: true
         input[name=resetButton] {
           background-color: #ADADB0;
         }
+        
+        #sections {
+        position: relative;
+        display: inline-block;
+        width: 250px;
+        top: 0px;
+        z-index: 90;
+        }
+        
+        .step {
+        margin-bottom: 50px;
+        }
+        
+        .title {
+        font-weight: bold;
+        }
+        
+        #initialPencil {
+        display: inline-block;
+        position: relative;
+        top: 60px;
+        z-index: 1;
+        margin-left: 0;
+        
+        height: 300px;
+        width: 600px;
+        }
 
     </style>
 </head>
 
-hi there this is a test
+<!-- Begin Post -->
+
+
+On a recent vacation my husband and I happened upon an entertainment shop that was well stocked with board games, dice, playing cards, etc.  We quickly found an item that both of us, absolute nerds that we are, deemed an essential purchase: a book by Boris A. Kordemsky called [The Moscow Puzzles: 359 Mathematical Recreations](https://www.amazon.com/Moscow-Puzzles-Mathematical-Recreations-Recreational/dp/0486270785/).  No, we didn't spend our entire vacation solving all 359, but we did bring the book home with us and have continued working through them--often over a glass of wine in the evenings.  
+
+One puzzle in particular recently caught my attention for several reasons.  The problem goes like this:
+
+> Suppose you have two pencils pressed together and held vertically.  One inch of the pencil on the left, measuring from its lower end, is smeared with paint.  The right pencil is held steady while you slide the left pencil down 1 inch, continuing to press the two pencils together.  You then move the left pencil back up and return it to its former position, all while keeping the two pencils touching.  You continue these actions until you have moved the left pencil down and up 5 times each.  Assume the paint does not dry or run out during this process.  <b>How many inches of each pencil are smeared with paint after your tenth and final movement?</b>
+
+Take a minute to solve this problem if you'd like before proceeding--spoilers ahead!
+
+
+## Inital Pass
+
+When I first heard this problem, I immediately jumped to 
+
+
+To begin only the pencil on the left is smeared with one inch of paint; however, the pencil on the right immediately becomes smeared with paint when the two pencils are pressed together.
+
+<img src="{{ site.urlimg }}alpha.png" alt="Adjust matplotlib opacity" width = "800">
+
+<div id='scroller'>
+  <div id='sections'>
+    <section class="step">
+      <div class="title">Initialization</div>
+        To begin only the pencil on the left is smeared with one inch of paint.
+    </section>
+    <section class="step">
+      <!-- another section -->
+    </section>
+  </div>
+  <div id="initialPencil">
+  </div>
+</div>
 
 
 <div id="paintContainer">
@@ -85,6 +140,69 @@ There is more to say
                value="Reset"
                onclick="makeWell()"/>
 </div>
+
+
+<!-- Initial Pencils -->
+<script>
+var dataset = [1, 2];
+var pencilColor = "#F0C446";
+var paintColor = "#271B77";
+
+var svg = d3.select("div#initialPencil").append("svg")
+  .attr("width",300)
+  .attr("height", 300)
+  .attr("align","center")
+  .style('transform', 'translate(50%, 0%)');
+
+var objects = svg.append("g");
+
+var pencils = objects.selectAll("g").data(dataset)
+                .enter()
+                .append("g")
+                .attr("id", function(d, i) { return i; })
+                .attr("transform",function(d, i) {return "translate(" + i*30 + ",0)";});
+
+var rects = pencils.append("rect")
+                   .attr("x", 30)
+                   .attr("y", 30)
+                   .attr("width", 30)
+                   .attr("height", 180)
+                   .attr("fill", pencilColor)
+                   .style("fill-opacity", .7)
+                   .style("stroke-width",".2em")
+                   .style("stroke", pencilColor);
+
+var triangles = pencils.append("path")
+                       .attr('d', function(d,i) { 
+                                var x = 0, y = 30;
+                                return 'M ' + (30+x) +' '+ y + ' l 15 -30 l 15 30 z';
+                             })
+                       .attr("fill", pencilColor)
+                       .style("fill-opacity", .4)
+                       .style("stroke-width",".2em")
+                       .style("stroke", pencilColor);
+
+var tips = pencils.append("path")
+                  .attr('d', function(d, i) {
+                            var x = 7.5, y = 15;
+                            return 'M ' + (30+x) + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
+                        })
+                  .style("fill-opacity", .7)
+                  .style("stroke-width",".2em")
+                  .style("stroke", "#393731");
+                  
+var paintOne = pencils
+                   .append("rect")
+                   .attr("x", 30)
+                   .attr("y", 180)
+                   .attr("width", 30)
+                   .attr("height", 30)
+                   .attr("fill", paintColor)
+                   .style("fill-opacity", 0.9)
+                   .style("stroke-width",".2em")
+                   .style("stroke", paintColor);
+                   
+</script>
 
 
 <!-- Paint and Pencils Example -->
@@ -158,7 +276,7 @@ var paintText = text.append("tspan")
                     .attr("dx", 10)
                     .style("fill", paintColor)
                     .attr("font-weight", "bold")
-                    .text(paintUnits + " Unit");
+                    .text(paintUnits + " Inch");
                   
 
 // Functions called on button click
@@ -199,7 +317,7 @@ function incrUnits() {
     paintUnits++
     paintText.transition()
         .delay(2400)
-        .text( Math.min(paintUnits, 6) + " Units");
+        .text( Math.min(paintUnits, 6) + " Inches");
 }
 
 
@@ -213,7 +331,7 @@ function removePaint() {
     paintUnits = 1
     paintText.transition()
         .delay(250)
-        .text( paintUnits + " Unit");
+        .text( paintUnits + " Inch");
 }
 
 

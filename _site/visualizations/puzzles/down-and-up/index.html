@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Down and Up: A Puzzle Illustrated with D3</title>
+	<title>Down and Up: A Puzzle Illustrated with D3.js</title>
 
     <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/styles_feeling_responsive.css">
 
@@ -30,7 +30,7 @@
 
 
 	<!-- Search Engine Optimization -->
-	<meta name="description" content="Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!">
+	<meta name="description" content="Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--may be all you need to find a solution!">
 	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ">
 	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" >
 	
@@ -41,8 +41,8 @@
 
 
 	<!-- Facebook Open Graph -->
-	<meta property="og:title" content="Down and Up: A Puzzle Illustrated with D3">
-	<meta property="og:description" content="Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!">
+	<meta property="og:title" content="Down and Up: A Puzzle Illustrated with D3.js">
+	<meta property="og:description" content="Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--may be all you need to find a solution!">
 	<meta property="og:url" content="http://localhost:4000//visualizations/puzzles/down-and-up/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
@@ -56,8 +56,8 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="kimberlyfessel">
 	<meta name="twitter:creator" content="kimberlyfessel">
-	<meta name="twitter:title" content="Down and Up: A Puzzle Illustrated with D3">
-	<meta name="twitter:description" content="Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!">
+	<meta name="twitter:title" content="Down and Up: A Puzzle Illustrated with D3.js">
+	<meta name="twitter:description" content="Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--may be all you need to find a solution!">
 	
 	
 
@@ -259,18 +259,16 @@
 		<article>
 			<header>
 				<p class="subheadline">Math Puzzles</p>
-				<h1>Down and Up: A Puzzle Illustrated with D3</h1>
+				<h1>Down and Up: A Puzzle Illustrated with D3.js</h1>
 			</header>
 
 			
 			<p class="teaser">
-				<em>Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--can lead you directly to a solution!</em>
+				<em>Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--may be all you need to find a solution!</em>
 			</p>
 			
 
-			<!--more-->
-
-<head>
+			<head>
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
 
     <!--Multiple button functions-->
@@ -294,11 +292,70 @@
         input[name=resetButton] {
           background-color: #ADADB0;
         }
+        
+        #sections {
+        position: relative;
+        display: inline-block;
+        width: 250px;
+        top: 0px;
+        z-index: 90;
+        }
+        
+        .step {
+        margin-bottom: 50px;
+        }
+        
+        .title {
+        font-weight: bold;
+        }
+        
+        #initialPencil {
+        display: inline-block;
+        position: relative;
+        top: 60px;
+        z-index: 1;
+        margin-left: 0;
+        
+        height: 300px;
+        width: 600px;
+        }
 
     </style>
 </head>
 
-<p>hi there this is a test</p>
+<!-- Begin Post -->
+
+<p>On a recent vacation my husband and I happened upon an entertainment shop that was well stocked with board games, dice, playing cards, etc.  We quickly found an item that both of us, absolute nerds that we are, deemed an essential purchase: a book by Boris A. Kordemsky called <a href="https://www.amazon.com/Moscow-Puzzles-Mathematical-Recreations-Recreational/dp/0486270785/">The Moscow Puzzles: 359 Mathematical Recreations</a>.  No, we didn’t spend our entire vacation solving all 359, but we did bring the book home with us and have continued working through them–often over a glass of wine in the evenings.</p>
+
+<p>One puzzle in particular recently caught my attention for several reasons.  The problem goes like this:</p>
+
+<blockquote>
+  <p>Suppose you have two pencils pressed together and held vertically.  One inch of the pencil on the left, measuring from its lower end, is smeared with paint.  The right pencil is held steady while you slide the left pencil down 1 inch, continuing to press the two pencils together.  You then move the left pencil back up and return it to its former position, all while keeping the two pencils touching.  You continue these actions until you have moved the left pencil down and up 5 times each.  Assume the paint does not dry or run out during this process.  <b>How many inches of each pencil are smeared with paint after your tenth and final movement?</b></p>
+</blockquote>
+
+<p>Take a minute to solve this problem if you’d like before proceeding–spoilers ahead!</p>
+
+<h2 id="inital-pass">Inital Pass</h2>
+
+<p>When I first heard this problem, I immediately jumped to</p>
+
+<p>To begin only the pencil on the left is smeared with one inch of paint; however, the pencil on the right immediately becomes smeared with paint when the two pencils are pressed together.</p>
+
+<p><img src="https://kimfetti.github.io/images/alpha.png" alt="Adjust matplotlib opacity" width="800" /></p>
+
+<div id="scroller">
+  <div id="sections">
+    <section class="step">
+      <div class="title">Initialization</div>
+        To begin only the pencil on the left is smeared with one inch of paint.
+    </section>
+    <section class="step">
+      <!-- another section -->
+    </section>
+  </div>
+  <div id="initialPencil">
+  </div>
+</div>
 
 <div id="paintContainer">
     <div id="option">
@@ -314,6 +371,69 @@
         <input name="updateButton" type="button" value="Advance" onclick="moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();" />
         <input name="resetButton" type="button" value="Reset" onclick="makeWell()" />
 </div>
+
+
+<!-- Initial Pencils -->
+<script>
+var dataset = [1, 2];
+var pencilColor = "#F0C446";
+var paintColor = "#271B77";
+
+var svg = d3.select("div#initialPencil").append("svg")
+  .attr("width",300)
+  .attr("height", 300)
+  .attr("align","center")
+  .style('transform', 'translate(50%, 0%)');
+
+var objects = svg.append("g");
+
+var pencils = objects.selectAll("g").data(dataset)
+                .enter()
+                .append("g")
+                .attr("id", function(d, i) { return i; })
+                .attr("transform",function(d, i) {return "translate(" + i*30 + ",0)";});
+
+var rects = pencils.append("rect")
+                   .attr("x", 30)
+                   .attr("y", 30)
+                   .attr("width", 30)
+                   .attr("height", 180)
+                   .attr("fill", pencilColor)
+                   .style("fill-opacity", .7)
+                   .style("stroke-width",".2em")
+                   .style("stroke", pencilColor);
+
+var triangles = pencils.append("path")
+                       .attr('d', function(d,i) { 
+                                var x = 0, y = 30;
+                                return 'M ' + (30+x) +' '+ y + ' l 15 -30 l 15 30 z';
+                             })
+                       .attr("fill", pencilColor)
+                       .style("fill-opacity", .4)
+                       .style("stroke-width",".2em")
+                       .style("stroke", pencilColor);
+
+var tips = pencils.append("path")
+                  .attr('d', function(d, i) {
+                            var x = 7.5, y = 15;
+                            return 'M ' + (30+x) + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
+                        })
+                  .style("fill-opacity", .7)
+                  .style("stroke-width",".2em")
+                  .style("stroke", "#393731");
+                  
+var paintOne = pencils
+                   .append("rect")
+                   .attr("x", 30)
+                   .attr("y", 180)
+                   .attr("width", 30)
+                   .attr("height", 30)
+                   .attr("fill", paintColor)
+                   .style("fill-opacity", 0.9)
+                   .style("stroke-width",".2em")
+                   .style("stroke", paintColor);
+                   
+</script>
 
 
 <!-- Paint and Pencils Example -->
@@ -387,7 +507,7 @@ var paintText = text.append("tspan")
                     .attr("dx", 10)
                     .style("fill", paintColor)
                     .attr("font-weight", "bold")
-                    .text(paintUnits + " Unit");
+                    .text(paintUnits + " Inch");
                   
 
 // Functions called on button click
@@ -428,7 +548,7 @@ function incrUnits() {
     paintUnits++
     paintText.transition()
         .delay(2400)
-        .text( Math.min(paintUnits, 6) + " Units");
+        .text( Math.min(paintUnits, 6) + " Inches");
 }
 
 
@@ -442,7 +562,7 @@ function removePaint() {
     paintUnits = 1
     paintText.transition()
         .delay(250)
-        .text( paintUnits + " Unit");
+        .text( paintUnits + " Inch");
 }
 
 
