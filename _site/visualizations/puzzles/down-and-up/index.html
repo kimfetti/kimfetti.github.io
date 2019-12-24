@@ -327,7 +327,7 @@
 
 <p>On a recent vacation my husband and I happened upon an entertainment shop that was well stocked with board games, dice, playing cards, etc.  We quickly found an item that both of us, absolute nerds that we are, deemed an essential purchase: a book by Boris A. Kordemsky called <a href="https://www.amazon.com/Moscow-Puzzles-Mathematical-Recreations-Recreational/dp/0486270785/">The Moscow Puzzles: 359 Mathematical Recreations</a>.  No, we didn’t spend our entire vacation solving all 359, but we did bring the book home with us and have continued working through them–often over a glass of wine in the evenings.</p>
 
-<p>One puzzle in particular recently caught my attention for several reasons.  The problem goes like this:</p>
+<p>One puzzle in particular recently caught my attention for several reasons.  I’ll come back to these reasons in a bit, but for now, the problem goes like this:</p>
 
 <blockquote>
   <p>Suppose you have two pencils pressed together and held vertically.  One inch of the pencil on the left, measuring from its lower end, is smeared with paint.  The right pencil is held steady while you slide the left pencil down 1 inch, continuing to press the two pencils together.  You then move the left pencil back up and return it to its former position, all while keeping the two pencils touching.  You continue these actions until you have moved the left pencil down and up 5 times each.  Assume the paint does not dry or run out during this process.  <b>How many inches of each pencil are smeared with paint after your tenth and final movement?</b></p>
@@ -335,27 +335,25 @@
 
 <p>Take a minute to solve this problem if you’d like before proceeding–spoilers ahead!</p>
 
-<h2 id="inital-pass">Inital Pass</h2>
+<h2 id="first-thoughts">First Thoughts</h2>
 
-<p>When I first heard this problem, I immediately jumped to</p>
+<p>When I first heard this problem, my initial reaction is that perhaps the paint is not smeared to the right pencil at all and only one inch of paint appears on the left pencil throughout the process.  Maybe you had this thought as well.  But the second time I read through the problem, I started to visualize what might actually be happening.  As soon as I tried to make a mental picture of this process, the solution became much more clear.  Since my husband was solving this problem with me, I made him this sketch to show him what I was thinking:</p>
+
+<h2 id="problem-setup">Problem Setup</h2>
+
+<p><img style="float: right; padding: 30px;" src="https://kimfetti.github.io/images/pencil_initial.gif" alt="Paint is spread to both pencils immediately" width="450" /></p>
 
 <p>To begin only the pencil on the left is smeared with one inch of paint; however, the pencil on the right immediately becomes smeared with paint when the two pencils are pressed together.</p>
 
-<p><img src="https://kimfetti.github.io/images/alpha.png" alt="Adjust matplotlib opacity" width="800" /></p>
+<p>I’m not done talking yet!!!  Slow your roll…</p>
 
-<div id="scroller">
-  <div id="sections">
-    <section class="step">
-      <div class="title">Initialization</div>
-        To begin only the pencil on the left is smeared with one inch of paint.
-    </section>
-    <section class="step">
-      <!-- another section -->
-    </section>
-  </div>
-  <div id="initialPencil">
-  </div>
-</div>
+<p>llll</p>
+
+<p>kkk</p>
+
+<h2 id="illustrating-the-problem">Illustrating the Problem</h2>
+
+<p>waaaiiittttt…</p>
 
 <div id="paintContainer">
     <div id="option">
@@ -363,6 +361,8 @@
         <input name="resetButton" type="button" value="Reset" onclick="removePaint()" />
     </div>
 </div>
+
+<h2 id="backstory-and-problem-extensions">Backstory and Problem Extensions</h2>
 
 <p>There is more to say</p>
 
@@ -373,67 +373,6 @@
 </div>
 
 
-<!-- Initial Pencils -->
-<script>
-var dataset = [1, 2];
-var pencilColor = "#F0C446";
-var paintColor = "#271B77";
-
-var svg = d3.select("div#initialPencil").append("svg")
-  .attr("width",300)
-  .attr("height", 300)
-  .attr("align","center")
-  .style('transform', 'translate(50%, 0%)');
-
-var objects = svg.append("g");
-
-var pencils = objects.selectAll("g").data(dataset)
-                .enter()
-                .append("g")
-                .attr("id", function(d, i) { return i; })
-                .attr("transform",function(d, i) {return "translate(" + i*30 + ",0)";});
-
-var rects = pencils.append("rect")
-                   .attr("x", 30)
-                   .attr("y", 30)
-                   .attr("width", 30)
-                   .attr("height", 180)
-                   .attr("fill", pencilColor)
-                   .style("fill-opacity", .7)
-                   .style("stroke-width",".2em")
-                   .style("stroke", pencilColor);
-
-var triangles = pencils.append("path")
-                       .attr('d', function(d,i) { 
-                                var x = 0, y = 30;
-                                return 'M ' + (30+x) +' '+ y + ' l 15 -30 l 15 30 z';
-                             })
-                       .attr("fill", pencilColor)
-                       .style("fill-opacity", .4)
-                       .style("stroke-width",".2em")
-                       .style("stroke", pencilColor);
-
-var tips = pencils.append("path")
-                  .attr('d', function(d, i) {
-                            var x = 7.5, y = 15;
-                            return 'M ' + (30+x) + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
-                        })
-                  .style("fill-opacity", .7)
-                  .style("stroke-width",".2em")
-                  .style("stroke", "#393731");
-                  
-var paintOne = pencils
-                   .append("rect")
-                   .attr("x", 30)
-                   .attr("y", 180)
-                   .attr("width", 30)
-                   .attr("height", 30)
-                   .attr("fill", paintColor)
-                   .style("fill-opacity", 0.9)
-                   .style("stroke-width",".2em")
-                   .style("stroke", paintColor);
-                   
-</script>
 
 
 <!-- Paint and Pencils Example -->

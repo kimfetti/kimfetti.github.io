@@ -71,7 +71,7 @@
 
 &lt;p&gt;On a recent vacation my husband and I happened upon an entertainment shop that was well stocked with board games, dice, playing cards, etc.  We quickly found an item that both of us, absolute nerds that we are, deemed an essential purchase: a book by Boris A. Kordemsky called &lt;a href=&quot;https://www.amazon.com/Moscow-Puzzles-Mathematical-Recreations-Recreational/dp/0486270785/&quot;&gt;The Moscow Puzzles: 359 Mathematical Recreations&lt;/a&gt;.  No, we didn’t spend our entire vacation solving all 359, but we did bring the book home with us and have continued working through them–often over a glass of wine in the evenings.&lt;/p&gt;
 
-&lt;p&gt;One puzzle in particular recently caught my attention for several reasons.  The problem goes like this:&lt;/p&gt;
+&lt;p&gt;One puzzle in particular recently caught my attention for several reasons.  I’ll come back to these reasons in a bit, but for now, the problem goes like this:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Suppose you have two pencils pressed together and held vertically.  One inch of the pencil on the left, measuring from its lower end, is smeared with paint.  The right pencil is held steady while you slide the left pencil down 1 inch, continuing to press the two pencils together.  You then move the left pencil back up and return it to its former position, all while keeping the two pencils touching.  You continue these actions until you have moved the left pencil down and up 5 times each.  Assume the paint does not dry or run out during this process.  &lt;b&gt;How many inches of each pencil are smeared with paint after your tenth and final movement?&lt;/b&gt;&lt;/p&gt;
@@ -79,27 +79,25 @@
 
 &lt;p&gt;Take a minute to solve this problem if you’d like before proceeding–spoilers ahead!&lt;/p&gt;
 
-&lt;h2 id=&quot;inital-pass&quot;&gt;Inital Pass&lt;/h2&gt;
+&lt;h2 id=&quot;first-thoughts&quot;&gt;First Thoughts&lt;/h2&gt;
 
-&lt;p&gt;When I first heard this problem, I immediately jumped to&lt;/p&gt;
+&lt;p&gt;When I first heard this problem, my initial reaction is that perhaps the paint is not smeared to the right pencil at all and only one inch of paint appears on the left pencil throughout the process.  Maybe you had this thought as well.  But the second time I read through the problem, I started to visualize what might actually be happening.  As soon as I tried to make a mental picture of this process, the solution became much more clear.  Since my husband was solving this problem with me, I made him this sketch to show him what I was thinking:&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-setup&quot;&gt;Problem Setup&lt;/h2&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: right; padding: 30px;&quot; src=&quot;https://kimfetti.github.io/images/pencil_initial.gif&quot; alt=&quot;Paint is spread to both pencils immediately&quot; width=&quot;450&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To begin only the pencil on the left is smeared with one inch of paint; however, the pencil on the right immediately becomes smeared with paint when the two pencils are pressed together.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/alpha.png&quot; alt=&quot;Adjust matplotlib opacity&quot; width=&quot;800&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;I’m not done talking yet!!!  Slow your roll…&lt;/p&gt;
 
-&lt;div id=&quot;scroller&quot;&gt;
-  &lt;div id=&quot;sections&quot;&gt;
-    &lt;section class=&quot;step&quot;&gt;
-      &lt;div class=&quot;title&quot;&gt;Initialization&lt;/div&gt;
-        To begin only the pencil on the left is smeared with one inch of paint.
-    &lt;/section&gt;
-    &lt;section class=&quot;step&quot;&gt;
-      &lt;!-- another section --&gt;
-    &lt;/section&gt;
-  &lt;/div&gt;
-  &lt;div id=&quot;initialPencil&quot;&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;llll&lt;/p&gt;
+
+&lt;p&gt;kkk&lt;/p&gt;
+
+&lt;h2 id=&quot;illustrating-the-problem&quot;&gt;Illustrating the Problem&lt;/h2&gt;
+
+&lt;p&gt;waaaiiittttt…&lt;/p&gt;
 
 &lt;div id=&quot;paintContainer&quot;&gt;
     &lt;div id=&quot;option&quot;&gt;
@@ -107,6 +105,8 @@
         &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;removePaint()&quot; /&gt;
     &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;h2 id=&quot;backstory-and-problem-extensions&quot;&gt;Backstory and Problem Extensions&lt;/h2&gt;
 
 &lt;p&gt;There is more to say&lt;/p&gt;
 
@@ -117,67 +117,6 @@
 &lt;/div&gt;
 
 
-&lt;!-- Initial Pencils --&gt;
-&lt;script&gt;
-var dataset = [1, 2];
-var pencilColor = &quot;#F0C446&quot;;
-var paintColor = &quot;#271B77&quot;;
-
-var svg = d3.select(&quot;div#initialPencil&quot;).append(&quot;svg&quot;)
-  .attr(&quot;width&quot;,300)
-  .attr(&quot;height&quot;, 300)
-  .attr(&quot;align&quot;,&quot;center&quot;)
-  .style('transform', 'translate(50%, 0%)');
-
-var objects = svg.append(&quot;g&quot;);
-
-var pencils = objects.selectAll(&quot;g&quot;).data(dataset)
-                .enter()
-                .append(&quot;g&quot;)
-                .attr(&quot;id&quot;, function(d, i) { return i; })
-                .attr(&quot;transform&quot;,function(d, i) {return &quot;translate(&quot; + i*30 + &quot;,0)&quot;;});
-
-var rects = pencils.append(&quot;rect&quot;)
-                   .attr(&quot;x&quot;, 30)
-                   .attr(&quot;y&quot;, 30)
-                   .attr(&quot;width&quot;, 30)
-                   .attr(&quot;height&quot;, 180)
-                   .attr(&quot;fill&quot;, pencilColor)
-                   .style(&quot;fill-opacity&quot;, .7)
-                   .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
-                   .style(&quot;stroke&quot;, pencilColor);
-
-var triangles = pencils.append(&quot;path&quot;)
-                       .attr('d', function(d,i) { 
-                                var x = 0, y = 30;
-                                return 'M ' + (30+x) +' '+ y + ' l 15 -30 l 15 30 z';
-                             })
-                       .attr(&quot;fill&quot;, pencilColor)
-                       .style(&quot;fill-opacity&quot;, .4)
-                       .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
-                       .style(&quot;stroke&quot;, pencilColor);
-
-var tips = pencils.append(&quot;path&quot;)
-                  .attr('d', function(d, i) {
-                            var x = 7.5, y = 15;
-                            return 'M ' + (30+x) + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
-                        })
-                  .style(&quot;fill-opacity&quot;, .7)
-                  .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
-                  .style(&quot;stroke&quot;, &quot;#393731&quot;);
-                  
-var paintOne = pencils
-                   .append(&quot;rect&quot;)
-                   .attr(&quot;x&quot;, 30)
-                   .attr(&quot;y&quot;, 180)
-                   .attr(&quot;width&quot;, 30)
-                   .attr(&quot;height&quot;, 30)
-                   .attr(&quot;fill&quot;, paintColor)
-                   .style(&quot;fill-opacity&quot;, 0.9)
-                   .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
-                   .style(&quot;stroke&quot;, paintColor);
-                   
-&lt;/script&gt;
 
 
 &lt;!-- Paint and Pencils Example --&gt;
