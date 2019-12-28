@@ -2,8 +2,8 @@
 layout: page-fullwidth
 title: "Down and Up: A Puzzle Illustrated with D3.js"
 subheadline: "Math Puzzles"
-meta_teaser: "Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--may be all you need to find a solution!"
-teaser: "<em>Math puzzles elicit amusement and joy in some, but many others approach with absolute dread.  Such trepidation is often unnecessary, however, because a simple visual--like the ones illustrated in this post--may be all you need to find a solution!</em>"
+meta_teaser: "Math puzzles elicit amusement for some people, but many others approach with trepidation and dread.  Such worry may be unnecessary, however, because a simple visual--like the ones illustrated in this post--could be all you need to find a solution!"
+teaser: "<em>Math puzzles elicit amusement for some people, but many others approach with trepidation and dread.  Such worry may be unnecessary, however, because a simple visual--like the ones illustrated in this post--could be all you need to find a solution!</em>"
 
 
 header:
@@ -83,7 +83,7 @@ comments: true
 
 On a recent vacation my husband and I happened upon an entertainment shop that was well stocked with board games, dice, playing cards, etc.  We quickly found an item that both of us, absolute nerds that we are, deemed an essential purchase: a book by Boris A. Kordemsky called [The Moscow Puzzles: 359 Mathematical Recreations](https://www.amazon.com/Moscow-Puzzles-Mathematical-Recreations-Recreational/dp/0486270785/).  No, we didn't spend our entire vacation solving all 359, but we did bring the book home with us and have continued working through them--often over a glass of wine in the evenings.  
 
-One puzzle in particular recently caught my attention for several reasons.  I'll come back to these reasons in a bit, but for now, the problem goes like this:
+One puzzle in particular recently caught my attention for several reasons.  I'll come back to those reasons in a bit, but for now, the problem goes like this:
 
 > Suppose you have two pencils pressed together and held vertically.  One inch of the pencil on the left, measuring from its lower end, is smeared with paint.  The right pencil is held steady while you slide the left pencil down 1 inch, continuing to press the two pencils together.  You then move the left pencil back up and return it to its former position, all while keeping the two pencils touching.  You continue these actions until you have moved the left pencil down and up 5 times each.  Assume the paint does not dry or run out during this process.  <b>How many inches of each pencil are smeared with paint after your tenth and final movement?</b>
 
@@ -93,6 +93,8 @@ Take a minute to solve this problem if you'd like before proceeding--spoilers ah
 ## First Thoughts
 
 When I first heard this problem, my initial reaction is that perhaps the paint is not smeared to the right pencil at all and only one inch of paint appears on the left pencil throughout the process.  Maybe you had this thought as well.  But the second time I read through the problem, I started to visualize what might actually be happening.  As soon as I tried to make a mental picture of this process, the solution became much more clear.  Since my husband was solving this problem with me, I made him this sketch to show him what I was thinking:
+
+<img style="float: right; padding: 30px;"  src="{{ site.urlimg }}pencil_sketch.pdf" alt="Paint is spread to both pencils immediately" width = "450">
 
 
 ## Problem Setup
