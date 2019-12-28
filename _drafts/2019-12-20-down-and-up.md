@@ -94,7 +94,7 @@ Take a minute to solve this problem if you'd like before proceeding--spoilers ah
 
 When I first heard this problem, my initial reaction is that perhaps the paint is not smeared to the right pencil at all and only one inch of paint appears on the left pencil throughout the process.  Maybe you had this thought as well.  But the second time I read through the problem, I started to visualize what might actually be happening.  As soon as I tried to make a mental picture of this process, the solution became much more clear.  Since my husband was solving this problem with me, I made him this sketch to show him what I was thinking:
 
-<img style="float: right; padding: 30px;"  src="{{ site.urlimg }}pencil_sketch.pdf" alt="Paint is spread to both pencils immediately" width = "450">
+<img src="{{ site.urlimg }}pencil_sketch.png" alt="Initial ideas as a sketch" width = "450">
 
 
 ## Problem Setup
