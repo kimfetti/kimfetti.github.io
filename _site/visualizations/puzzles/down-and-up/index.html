@@ -1,0 +1,864 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Down and Up: A Puzzle Illustrated with D3.js</title>
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/styles_feeling_responsive.css">
+
+  
+
+	<script type="text/javascript" async
+			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+	</script>
+
+    <script src="http://localhost:4000//assets/js/modernizr.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		WebFont.load({
+			google: {
+				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+			}
+		});
+	</script>
+
+	<noscript>
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+	</noscript>
+
+
+	<!-- Search Engine Optimization -->
+	<meta name="description" content="Math puzzles elicit amusement for some people, but many others approach with trepidation and dread.  Such worry may be unnecessary, however, because a simple visual--like the ones illustrated in this post--could be all you need to find a solution!">
+	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ">
+	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" >
+	
+	<link rel="author" href="https://plus.google.com/105464329327164540117">
+	
+	
+	<link rel="canonical" href="http://localhost:4000//visualizations/puzzles/down-and-up/">
+
+
+	<!-- Facebook Open Graph -->
+	<meta property="og:title" content="Down and Up: A Puzzle Illustrated with D3.js">
+	<meta property="og:description" content="Math puzzles elicit amusement for some people, but many others approach with trepidation and dread.  Such worry may be unnecessary, however, because a simple visual--like the ones illustrated in this post--could be all you need to find a solution!">
+	<meta property="og:url" content="http://localhost:4000//visualizations/puzzles/down-and-up/">
+	<meta property="og:locale" content="en_EN">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Kimberly Fessel Blog">
+	
+	<meta property="article:author" content="https://www.facebook.com/">
+
+
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="kimberlyfessel">
+	<meta name="twitter:creator" content="kimberlyfessel">
+	<meta name="twitter:title" content="Down and Up: A Puzzle Illustrated with D3.js">
+	<meta name="twitter:description" content="Math puzzles elicit amusement for some people, but many others approach with trepidation and dread.  Such worry may be unnecessary, however, because a simple visual--like the ones illustrated in this post--could be all you need to find a solution!">
+	
+	
+
+	<link type="text/plain" rel="author" href="http://localhost:4000//humans.txt">
+
+	
+
+	
+
+	<link rel="icon" sizes="32x32" href="http://localhost:4000//assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://localhost:4000//assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://localhost:4000//assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000//assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000//assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000//assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000//assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000//assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000//assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://localhost:4000//assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://localhost:4000//assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+	
+
+</head>
+<body id="top-of-page" class="page-fullwidth">
+	
+	
+<div id="navigation" class="sticky">
+  <nav class="top-bar" role="navigation" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+      <h1 class="show-for-small-only"><a href="http://localhost:4000/" class="icon-tree"> Kimberly Fessel Blog</a></h1>
+    </li>
+       <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Nav</span></a></li>
+    </ul>
+    <section class="top-bar-section">
+
+      <ul class="right">
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a  href="http://localhost:4000//info/">About</a></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+            
+            
+              <li class="divider"></li>
+              <li><a  href="http://localhost:4000//contact/">Contact</a></li>
+
+            
+            
+          
+        
+        
+      </ul>
+
+      <ul class="left">
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a  href="http://localhost:4000//">Home</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a  href="http://localhost:4000//blog/">Blog</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+
+            
+            
+              <li><a  href="http://localhost:4000//events/">Events</a></li>
+              <li class="divider"></li>
+
+            
+            
+          
+        
+
+              
+
+          
+          
+        
+
+              
+
+          
+          
+        
+        
+      </ul>
+    </section>
+  </nav>
+</div><!-- /#navigation -->
+
+	
+
+	
+
+<div id="masthead-with-background-color" style="background: #999999;">
+	<div class="row">
+		<figure class="small-12 columns">
+			<img src="https://kimfetti.github.io/images//pencil-header.png" alt="Kimberly Fessel Blog">
+		</figure><!-- /.small-12.columns -->
+	</div><!-- /.row -->
+</div><!-- /#masthead -->
+
+
+
+
+<div class="masthead-caption">
+	<a href="https://flickr.com/photos/walimai/25229699484/in/photolist-ErsNEG-2gWfWJp-2h2dTYD-21e7kYh-2hMuoCA-7Jhrwt-2hJD2CU-2evZDJr-2g8Rf7k-2hatveD-2hD18ss-2hdjvm1-22h15Xm-2eXYJLx-28tkg66-C89Nd-2fc34SK-2hTcErb-PFZPhK-6Y9nMP-8M2wEz-2eFmLoj-8FH3DA-yPZMyU-2hx2fnv-ZbcBFY-2hDgx14-28RNTi6-2d3nad7-acNrjv-66MwUt-8MffnB-8ADcj3-QVTA6Z-8L4iJJ-2gfnsnF-8WH13a-8N95S2-26ow8US-TATXBW-8JHvtW-2hvZXQe-8xKHNy-8YQE61-2ezu7Yc-9NmEw7-2gb7m62-8Li514-2htc6uz-2bAKBtq">Photo by Walimai.photo. Cropped and resized by author.</a>
+</div>
+
+
+
+
+
+
+
+	
+
+
+<div class="row t30">
+	<div class="medium-12 columns">
+		<article>
+			<header>
+				<p class="subheadline">Math Puzzles</p>
+				<h1>Down and Up: A Puzzle Illustrated with D3.js</h1>
+			</header>
+
+			
+			<p class="teaser">
+				<em>Math puzzles elicit amusement for some people, but many others approach with trepidation and dread.  Such worry may be unnecessary, however, because a simple visual--like the ones illustrated in this post--could be all you need to find a solution!</em>
+			</p>
+			
+
+			<head>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+
+    <!--Multiple button functions-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js"></script>  
+
+    <style> 
+
+        input {
+          border: none;
+          color: white;
+          padding: 16px 32px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        
+        input[name=paintButton] {
+          background-color: #271B77;
+          font-weight: bold;
+        }
+
+        input[name=danceButton] {
+          background-color: #6BA450;
+          font-weight: bold;
+        }
+        
+        input[name=resetButton] {
+          background-color: #ADADB0;
+        }
+        
+        #sections {
+        position: relative;
+        display: inline-block;
+        width: 250px;
+        top: 0px;
+        z-index: 90;
+        }
+        
+        .step {
+        margin-bottom: 50px;
+        }
+        
+        .title {
+        font-weight: bold;
+        }
+        
+        #initialPencil {
+        display: inline-block;
+        position: relative;
+        top: 60px;
+        z-index: 1;
+        margin-left: 0;
+        
+        height: 300px;
+        width: 600px;
+        }
+
+    </style>
+</head>
+
+<!-- Begin Post -->
+
+<p>On a recent vacation my husband and I happened upon an entertainment shop that was well stocked with board games, dice, playing cards, etc.  We quickly found an item that both of us, absolute nerds that we are, deemed an essential purchase: a book by Boris A. Kordemsky called <a href="https://www.amazon.com/Moscow-Puzzles-Mathematical-Recreations-Recreational/dp/0486270785/">The Moscow Puzzles: 359 Mathematical Recreations</a>.  No, we didn’t spend our entire vacation solving all 359, but we did bring the book home with us and have continued working through them–often over a glass of wine in the evenings.</p>
+
+<p>One puzzle in particular recently caught my attention for several reasons.  I’ll come back to those reasons in a bit, but for now, this problem called “Down and Up” goes like this:</p>
+
+<blockquote>
+  <p>Suppose you have two pencils pressed together and held vertically.  One inch of the pencil on the left, measuring from its lower end, is smeared with paint.  The right pencil is held steady while you slide the left pencil down 1 inch, continuing to press the two pencils together.  You then move the left pencil back up and return it to its former position, all while keeping the two pencils touching.  You continue these actions until you have moved the left pencil down and up 5 times each.  Assume the paint does not dry or run out during this process.  <b>How many inches of each pencil are smeared with paint after your tenth and final movement?</b></p>
+</blockquote>
+
+<p>Take a minute to solve this problem if you’d like before proceeding–spoilers ahead!</p>
+
+<h2 id="first-thoughts">First Thoughts</h2>
+
+<p>When I first heard this problem, my initial reaction is that perhaps the paint is not smeared to the right pencil at all and only one inch of paint appears on the left pencil throughout the process.  Maybe you had this thought as well.  But the second time I read through the problem, I started to visualize what might actually be happening.  As soon as I tried to make a mental picture of this process, the solution became much more clear.  Since my husband was solving this problem with me, I made him this sketch to show him what I was thinking:</p>
+
+<center>
+<img src="https://kimfetti.github.io/images/pencil_sketch.png" alt="Initial ideas as a sketch" width="550" />
+</center>
+<p><br /></p>
+
+<p>If you haven’t figured out the solution from this crude drawing, no worries because we will dive much deeper.  But just from this simple sketch I was able to clearly visualize the situation, come up with a solution, and communicate my thought process to someone else.  Let’s now dive in a bit more methodically, but let me stress that sometimes a simple sketch is all you need!</p>
+
+<p><img style="float: right; padding: 30px;" src="https://kimfetti.github.io/images/pencil_initial.gif" alt="Paint is spread to both pencils immediately" width="500" /></p>
+
+<h2 id="problem-setup">Problem Setup</h2>
+
+<p>From the problem directions, we know that only the left pencil is smeared with paint to begin with.  But recall that the left pencil is pressed against the right; this means the pencil on the right immediately becomes smeared with paint when the two pencils are pressed together.  At this point both pencils are smeared with one inch of paint, and this is before any of the five up-down movements occur.</p>
+
+<p><br />
+<br /></p>
+
+<h2 id="solving-and-illustrating-the-full-problem">Solving and Illustrating the Full Problem</h2>
+
+<p>After this initial step the problem gets a little more complicated as the left pencil moves up and down, but again returning to a visual interpretation of the problem helps immensely.  Both pencils are currently smeared with one inch of paint.  The left pencil moves down one inch, but both pencils are still pressed together.  Can you visualize what happens when the left pencil moves down?  Indeed, a clean portion of the left pencil makes contact with the bottom of the right pencil and so one more inch of paint is transfered to the left pencil.</p>
+
+<p>Let’s take stock of the current situation.  The left pencil is one inch lower than the right.  One inch of the right pencil is smeared with paint, but now two inches of the left pencil has been painted.  Now let’s think about the next step of the problem.  The left pencil is now moved back upward to return to its original position.  Okay so at the end of this movement, the two pencils are realigned, but what happens to the paint?  Two inches of the left pencil are covered in paint, and as the pencils realign, paint is now transferred to the right pencil once again.  By the end of the first down-and-up cycle, paint is smeared across the bottom two inches of both pencils.</p>
+
+<p>The remaining rounds of down-up movements proceed similarly, with paint transferring first to the left pencil then to the right.  Finally after five rounds of movements, both pencils boast a total of six inches of paint: one initial inch plus five more inches, one for each of the down-up cycles.</p>
+
+<p>This problem strongly hinges upon being able to translate the problem statement into an explanatory visual.  To make this solution even more clear, I decided to illustrate this problem using D3.js.  Both pencils start with one inch of paint as described in the problem setup, but use the “Move Pencil” button to convince yourself of the provided solution.</p>
+
+<p><em>Note: these pencils have been drawn to be 6 fictitious inches long, so after the fifth movement the pencils reach an equilibrium of being completely covered with paint, but hit the “Reset” button at any time to start over.</em></p>
+
+<p><br /></p>
+
+<div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
+    <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
+        <input name="paintButton" type="button" value="Move Pencil" onclick="movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();" />
+        <br />
+        <input name="resetButton" type="button" value="Reset" style="margin-top: 15px;" onclick="removePaint()" />
+    </div>
+</div>
+
+<h2 id="backstory-and-problem-extensions">Backstory and Problem Extensions</h2>
+
+<p>Earlier I mentioned that there were several reasons why this problem caught my eye.  The first reason is exactly as we have been discussing.  I was amazed at how tricky the problem sounded initially versus how simple it became as soon as I created an appropriate mental image of the situation.</p>
+
+<p>The second reason that this problem piqued my interest is its history.  As explained in Kordemsky’s book, Leonid Mikhailovich Rybakov, a Soviet mathematician who lived in the early 20th Century, created this “Down and Up” problem.  I’m often fascinated by math problems that transcend geography and time period because such problems help us feel more connected with the past and with others around the globe.</p>
+
+<p>The final reasons I was so particularly drawn to this problem is that Rybakov first thought up this problem when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in the answer section.  From <em>The Moscow Puzzles</em> book:</p>
+
+<blockquote>
+  <p>Looking at his boots, Leonid Mikhailovich noticed that their entire lengths were muddied where they usually rub each other while he walks.<br />
+“How puzzling,” he thought, “I didn’t walk in any deep mud, yet my boots are muddied up to the knees.” <br />
+Now you understand the origin of the puzzle.</p>
+</blockquote>
+
+<p>Just as the paint smeared the entire length of both pencils, Rybakov’s boots were covered from tip to top because mud had transferred from one boot to the other as he walked.</p>
+
+<p>I continued to think about how this concept might apply in other situations and came up with one amusing but slightly unpleasant example.  Consider two lines of contra dancers in which the first dancer in the first line is unfortunately feeling ill.  If this dancer’s sickness is communicable, she will, of course, pass along her malady to her dance partner who is positioned across from her.  Sometimes in contra dancing, participants are instructed to exchange dance partners by shifting the lines laterally.  Unfortunately, the newly infected dancer will pass the disease back across the line and eventually the entire group of dancers will suffer.  Try out the widget below to see this application in action.</p>
+
+<p><br /></p>
+
+<div style="width: 100%; padding-bottom: 15px" id="contraContainer">
+    <div style="float: left; width: 10%; height: 400; padding-left: 10%;">
+        <input name="danceButton" type="button" value="Dance!" onclick="moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();" />
+        <br />
+        <input name="resetButton" type="button" value="Reset" style="margin-top: 15px;" onclick="makeWell()" />
+    </div>
+</div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>I hope you have enjoyed this discussion on one my of new favorite math puzzles along with these illustrative D3 visuals.  Making a mental image of the situation involving a math puzzle is not always easy, but I hope you have seen how invaluable it can be when solving problems like these–especially if you are a visual learning like myself.  I also hope you have enjoyed learning a little about the backstory behind this puzzle.  Some of the world’s best math puzzles were created long ago, so I think it is important to look to the past when attempting to sharpen our minds.  Finally, I hope you liked my application of the contra dancers.  Taking a problem like this and thinking through other applications can sometimes really help you understand what these problems are all about and can really help you cement these concepts in your brain.  It also helps make these kind of tasks more enjoyable by thinking about how they relate to your own life.  What other applications of this problem can you think of?</p>
+
+<!-- Paint and Pencils Example -->
+<script>
+var dataset = [1, 2];
+var pencilColor = "#F0C446";
+var paintColor = "#271B77";
+
+var svg = d3.select("div#pencilContainer").append("svg")
+  .attr("width",600)
+  .attr("height", 400)
+ .style('transform', 'translate(40%, 0%)');
+
+var objects = svg.append("g");
+
+var pencils = objects.selectAll("g").data(dataset)
+                .enter()
+                .append("g")
+                .attr("id", function(d, i) { return i; })
+                .attr("transform",function(d, i) {return "translate(" + i*50 + ",0)";});
+
+var rects = pencils.append("rect")
+                   .attr("x", 50)
+                   .attr("y", 50)
+                   .attr("width", 50)
+                   .attr("height", 300)
+                   .attr("fill", pencilColor)
+                   .style("fill-opacity", .7)
+                   .style("stroke-width",".2em")
+                   .style("stroke", pencilColor);
+
+var triangles = pencils.append("path")
+                       .attr('d', function(d,i) { 
+                                var x = 0, y = 50;
+                                return 'M ' + (50+x) +' '+ y + ' l 25 -50 l 25 50 z';
+                             })
+                       .attr("fill", pencilColor)
+                       .style("fill-opacity", .4)
+                       .style("stroke-width",".2em")
+                       .style("stroke", pencilColor);
+
+var tips = pencils.append("path")
+                  .attr('d', function(d, i) {
+                            var x = 12.5, y = 25;
+                            return 'M ' + (50+x) + ' ' + y + ' l ' + x + ' ' + -y + ' l ' + x + ' ' + y + ' z';
+                        })
+                  .style("fill-opacity", .7)
+                  .style("stroke-width",".2em")
+                  .style("stroke", "#393731");
+                  
+var paint = pencils.append("rect")
+                   .attr("x", 50)
+                   .attr("y", 300)
+                   .attr("width", 50)
+                   .attr("height", 50)
+                   .attr("fill", paintColor)
+                   .style("fill-opacity", 0.9)
+                   .style("stroke-width",".2em")
+                   .style("stroke", paintColor);
+
+
+var text = svg.append("text");
+
+text.attr("x", 225).attr("y", 50).attr("font-size",22);
+
+var paintUnits = 1;
+
+text.append("tspan").text("Paint:");
+var paintText = text.append("tspan")
+                    .attr("dx", 10)
+                    .style("fill", paintColor)
+                    .attr("font-weight", "bold")
+                    .text(paintUnits + " Inch");
+                  
+
+// Functions called on button click
+function movePencil() {
+    d3.select("g").selectAll("*")
+      .filter(function (d) { return d == 1; })
+      .transition()
+        .duration(750)
+        .attr("transform", "translate(0,25)")
+      .on("end",function() { // on end of transition...
+		    d3.select(this)
+		    	.transition() // second transition
+					.delay(750)
+					.attr("transform", "translate(0,0)")
+		});
+}
+
+function addPaint(pencilNumber, delay) {
+    d3.select("g").selectAll("*")
+      .filter(function(d) { return d == pencilNumber; })
+      .filter(function(d,i) { return i == 4; })
+      .transition()
+         .delay(delay)
+         .attr("height", function(d) {
+                            var height = d3.select(this)
+                               .style('height')
+                               .slice(0, -2)
+                            return Math.min( Math.round(Number(height))+50, 300); } )
+         .attr("y", function(d) {
+                            var y = d3.select(this)
+                               .style('y')
+                               .slice(0, -2)
+                            return Math.max( Math.round(Number(y))-50, 50); });
+}
+
+
+function incrUnits() {
+    paintUnits++
+    paintText.transition()
+        .delay(2400)
+        .text( Math.min(paintUnits, 6) + " Inches");
+}
+
+
+// Function called on reset button click
+function removePaint() {
+    paint
+      .transition()
+      .duration(500)
+        .attr("y", 300)
+        .attr("height", 50);
+    paintUnits = 1
+    paintText.transition()
+        .delay(250)
+        .text( paintUnits + " Inch");
+}
+
+
+</script>
+
+<!-- Contra Example -->
+<script>
+var data = [1, 2, 3, 4, 5];
+
+var s = d3.select("div#contraContainer").append("svg")
+  .attr("width",700)
+  .attr("height", 200)
+  .style('transform', 'translate(25%, 0%)');
+  
+var blushGroup = s.append("g").attr("id", "blushers");
+  
+var blushers = blushGroup.selectAll("image").data(data)
+    .enter()
+    .append("image")
+    .attr('xlink:href', function (d, i) {
+                            if (i == 0) { return "https://kimfetti.github.io/images/emoji_sick.png"; }
+                            else { return "https://kimfetti.github.io/images/emoji_blush.png"; }
+    })
+    .attr('width', 75)
+    .attr('height', 75)
+    .attr("x", function (d, i) { return d*100; })
+    .attr("y", 0);
+
+    
+var grinGroup = s.append("g").attr("id", "grinners");
+
+var grinners = grinGroup.selectAll("image").data(data)
+    .enter()
+    .append("image")
+    .attr('xlink:href', "https://kimfetti.github.io/images/emoji_grin.png")
+    .attr('width', 70)
+    .attr('height', 70)
+    .attr("x", function (d, i) { return d*100; })
+    .attr("y", 100);
+
+var sickNum = 1;
+
+function moveBlushers(pos, delay) {
+    if (sickNum == 1) { return; }
+    else {
+    d3.select("#blushers")
+      .selectAll("image")
+      .transition()
+      .delay(delay)
+      .duration(1000)
+      .attr("transform", function(d) { if (pos=="left") {return "translate(-100,0)";}
+                                      else if (pos=="center") {return "translate(0, 0)";}
+                                     });
+    };                                   
+}
+
+function sickBlusher() {
+    if (sickNum == 1) { return; }
+    else { delay = 1200; }
+    d3.select("#blushers")
+      .selectAll("image")
+      .filter( function (d) { return d == sickNum; } )
+      .transition()
+      .delay(delay)
+      .style("opacity", 0)
+      .attr("xlink:href", "https://kimfetti.github.io/images/emoji_sick.png")
+      .transition()
+      .duration(800)
+      .ease(d3.easeLinear)
+      .style("opacity", 1);
+}
+
+function sickGrinner() {
+    if (sickNum == 1) { delay = 300; }
+    else { delay = 3300; }
+    d3.select("#grinners")
+      .selectAll("image")
+      .filter( function (d) { return d == sickNum; } )
+      .transition()
+        .delay(delay)
+        .style("opacity", 0)
+      .on("end", function() {
+                    d3.select(this)
+                      .transition()
+                        .duration(800)
+                        .ease(d3.easeLinear)
+                        .style("opacity", 1)
+                        .attr("xlink:href", "https://kimfetti.github.io/images/emoji_sick.png")
+                        .attr("width", 75)
+                        .attr("height", 75)
+                })
+    sickNum++;
+}
+
+
+function makeWell() {
+    d3.select("#blushers")
+      .selectAll("image")
+      .attr('xlink:href', function (d, i) {
+                              if (i == 0) { return "https://kimfetti.github.io/images/emoji_sick.png"; }
+                              else { return "https://kimfetti.github.io/images/emoji_blush.png"; }
+      })
+      .attr("width", 75)
+      .attr("height", 75)
+    d3.select("#grinners")
+      .selectAll("image")
+      .attr("xlink:href", "https://kimfetti.github.io/images/emoji_grin.png")
+      .attr("width", 70)
+      .attr("height", 70)
+    sickNum = 1;
+}
+
+</script>
+
+
+
+			
+						<div id="page-meta" class="t30">
+				<p>
+					<!-- Look the author details up from the site config. -->
+					
+					<!-- Output author details if some exist. -->
+					
+
+				
+				<time class="icon-calendar pr20" datetime="2019-12-20T00:00:00-05:00" itemprop="datePublished"> 2019-12-20</time>
+				
+
+				<span class="icon-archive pr20"> VISUALIZATIONS · PUZZLES</span>
+				<br />
+				<span class="pr20"></span>
+			</p>
+
+			
+			<div id="post-nav" class="row">
+				
+				<div class="small-5 columns"><a class="button small radius prev" href="http://localhost:4000//data/web%20scraping/gather-youtube-data/">&laquo; How to Gather Data from YouTube</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-2 columns text-center"><a class="radius button small" href="http://localhost:4000//blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
+				
+				<div class="small-5 columns text-right"></div><!-- /.small-4.columns -->
+				
+			</div>
+			
+			</div><!--  /.page-meta -->
+
+			
+
+			
+						
+				<h3 id="comments" class="t60">Dialogue &amp; Discussion</h3>
+			    <div id="disqus_thread"></div>
+			    <script type="text/javascript">
+			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			        var disqus_shortname = 'kimfetti-github-io'; 
+			        var disqus_identifier = '/visualizations/puzzles/down-and-up/';
+
+			        /* * * DON'T EDIT BELOW THIS LINE * * */
+			        (function() {
+			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			        })();
+			    </script>
+			    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			
+
+
+
+			
+
+		</article>
+	</div><!-- /.medium-12.columns -->
+</div><!-- /.row -->
+
+
+
+
+	
+	    <div id="up-to-top" class="row">
+      <div class="small-12 columns" style="text-align: right;">
+        <a class="iconfont" href="#top-of-page">&#xf108;</a>
+      </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <footer id="footer-content" class="bg-grau">
+      <div id="footer">
+        <div class="row">
+          <div class="medium-6 large-5 columns">
+            <h5 class="shadow-black">About This Site</h5>
+
+            <p class="shadow-black">
+              Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!
+              <a href="http://localhost:4000//info/">More ›</a>
+            </p>
+          </div><!-- /.large-6.columns -->
+
+
+          <div class="small-6 medium-3 large-3 large-offset-1 columns">
+            
+              
+                <h5 class="shadow-black">Extras</h5>
+              
+            
+              
+            
+              
+            
+              
+            
+
+              <ul class="no-bullet shadow-black">
+              
+                
+                  <li >
+                    <a href="http://localhost:4000/"  title=""></a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://localhost:4000//info/"  title="Learn more about Kimberly">About</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="http://localhost:4000//contact/"  title="Contact Kimberly">Contact</a>
+                  </li>
+              
+                
+                  <li >
+                    <a href="https://www.thisismetis.com" target="_blank"  title="Learn more about Metis">This is Metis</a>
+                  </li>
+              
+              </ul>
+          </div><!-- /.large-4.columns -->
+
+
+          <div class="small-6 medium-3 large-3 columns">
+            
+              
+                <h5 class="shadow-black">Thank You</h5>
+              
+            
+              
+            
+
+            <ul class="no-bullet shadow-black">
+            
+              
+                <li >
+                  <a href="http://localhost:4000/"  title=""></a>
+                </li>
+            
+              
+                <li class="network-entypo" >
+                  <a href="http://www.connellypartners.com/who-we-are/" target="_blank"  title="Photoshoot @ CP">Photoshoot @ CP</a>
+                </li>
+            
+            </ul>
+          </div><!-- /.large-3.columns -->
+        </div><!-- /.row -->
+
+      </div><!-- /#footer -->
+
+
+      <div id="subfooter">
+        <nav class="row">
+          <section id="subfooter-left" class="small-12 medium-6 columns credits">
+            <p>Template with &hearts; by <a href="http://phlow.de/">Phlow</a> with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a>.</p>
+          </section>
+
+          <section id="subfooter-right" class="small-12 medium-6 columns">
+            <ul class="inline-list social-icons">
+            
+              <li><a href="https://www.linkedin.com/in/kimberlyfessel/" target="_blank" class="icon-linkedin" title="Professional profile"></a></li>
+            
+              <li><a href="http://github.com/kimfetti" target="_blank" class="icon-github" title="Code and more"></a></li>
+            
+              <li><a href="http://twitter.com/kimberlyfessel" target="_blank" class="icon-twitter" title="Social on Twitter"></a></li>
+            
+            </ul>
+          </section>
+        </nav>
+      </div><!-- /#subfooter -->
+    </footer>
+
+	
+
+	
+
+
+<script src="http://localhost:4000//assets/js/javascript.min.js"></script>
+
+
+
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-131656438-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
+

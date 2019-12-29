@@ -39,8 +39,13 @@ comments: true
           cursor: pointer;
         }
         
-        input[name=updateButton] {
+        input[name=paintButton] {
           background-color: #271B77;
+          font-weight: bold;
+        }
+
+        input[name=danceButton] {
+          background-color: #6BA450;
           font-weight: bold;
         }
         
@@ -83,7 +88,7 @@ comments: true
 
 On a recent vacation my husband and I happened upon an entertainment shop that was well stocked with board games, dice, playing cards, etc.  We quickly found an item that both of us, absolute nerds that we are, deemed an essential purchase: a book by Boris A. Kordemsky called [The Moscow Puzzles: 359 Mathematical Recreations](https://www.amazon.com/Moscow-Puzzles-Mathematical-Recreations-Recreational/dp/0486270785/).  No, we didn't spend our entire vacation solving all 359, but we did bring the book home with us and have continued working through them--often over a glass of wine in the evenings.  
 
-One puzzle in particular recently caught my attention for several reasons.  I'll come back to those reasons in a bit, but for now, the problem goes like this:
+One puzzle in particular recently caught my attention for several reasons.  I'll come back to those reasons in a bit, but for now, this problem called "Down and Up" goes like this:
 
 > Suppose you have two pencils pressed together and held vertically.  One inch of the pencil on the left, measuring from its lower end, is smeared with paint.  The right pencil is held steady while you slide the left pencil down 1 inch, continuing to press the two pencils together.  You then move the left pencil back up and return it to its former position, all while keeping the two pencils touching.  You continue these actions until you have moved the left pencil down and up 5 times each.  Assume the paint does not dry or run out during this process.  <b>How many inches of each pencil are smeared with paint after your tenth and final movement?</b>
 
@@ -94,60 +99,90 @@ Take a minute to solve this problem if you'd like before proceeding--spoilers ah
 
 When I first heard this problem, my initial reaction is that perhaps the paint is not smeared to the right pencil at all and only one inch of paint appears on the left pencil throughout the process.  Maybe you had this thought as well.  But the second time I read through the problem, I started to visualize what might actually be happening.  As soon as I tried to make a mental picture of this process, the solution became much more clear.  Since my husband was solving this problem with me, I made him this sketch to show him what I was thinking:
 
-<img src="{{ site.urlimg }}pencil_sketch.png" alt="Initial ideas as a sketch" width = "450">
+<center>
+<img src="{{ site.urlimg }}pencil_sketch.png" alt="Initial ideas as a sketch" width = "550">
+</center>
+<br>
 
+If you haven't figured out the solution from this crude drawing, no worries because we will dive much deeper.  But just from this simple sketch I was able to clearly visualize the situation, come up with a solution, and communicate my thought process to someone else.  Let's now dive in a bit more methodically, but let me stress that sometimes a simple sketch is all you need!
+
+<img style="float: right; padding: 30px;"  src="{{ site.urlimg }}pencil_initial.gif" alt="Paint is spread to both pencils immediately" width = "500">
 
 ## Problem Setup
 
-<img style="float: right; padding: 30px;"  src="{{ site.urlimg }}pencil_initial.gif" alt="Paint is spread to both pencils immediately" width = "450">
+From the problem directions, we know that only the left pencil is smeared with paint to begin with.  But recall that the left pencil is pressed against the right; this means the pencil on the right immediately becomes smeared with paint when the two pencils are pressed together.  At this point both pencils are smeared with one inch of paint, and this is before any of the five up-down movements occur.  
 
-To begin only the pencil on the left is smeared with one inch of paint; however, the pencil on the right immediately becomes smeared with paint when the two pencils are pressed together.
-
-
-I'm not done talking yet!!!  Slow your roll...
+<br>
+<br>
 
 
-llll
+## Solving and Illustrating the Full Problem
 
+After this initial step the problem gets a little more complicated as the left pencil moves up and down, but again returning to a visual interpretation of the problem helps immensely.  Both pencils are currently smeared with one inch of paint.  The left pencil moves down one inch, but both pencils are still pressed together.  Can you visualize what happens when the left pencil moves down?  Indeed, a clean portion of the left pencil makes contact with the bottom of the right pencil and so one more inch of paint is transfered to the left pencil.
 
+Let's take stock of the current situation.  The left pencil is one inch lower than the right.  One inch of the right pencil is smeared with paint, but now two inches of the left pencil has been painted.  Now let's think about the next step of the problem.  The left pencil is now moved back upward to return to its original position.  Okay so at the end of this movement, the two pencils are realigned, but what happens to the paint?  Two inches of the left pencil are covered in paint, and as the pencils realign, paint is now transferred to the right pencil once again.  By the end of the first down-and-up cycle, paint is smeared across the bottom two inches of both pencils.
 
-kkk
+The remaining rounds of down-up movements proceed similarly, with paint transferring first to the left pencil then to the right.  Finally after five rounds of movements, both pencils boast a total of six inches of paint: one initial inch plus five more inches, one for each of the down-up cycles.
 
-## Illustrating the Problem
+This problem strongly hinges upon being able to translate the problem statement into an explanatory visual.  To make this solution even more clear, I decided to illustrate this problem using D3.js.  Both pencils start with one inch of paint as described in the problem setup, but use the "Move Pencil" button to convince yourself of the provided solution.  
 
+<em>Note: these pencils have been drawn to be 6 fictitious inches long, so after the fifth movement the pencils reach an equilibrium of being completely covered with paint, but hit the "Reset" button at any time to start over.</em>
 
-waaaiiittttt...
+<br>
 
-<div id="paintContainer">
-    <div id="option">
-        <input name="updateButton" 
+<div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
+    <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
+        <input name="paintButton" 
                type="button" 
                value="Move Pencil" 
                onclick="movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();"/>
+        <br>
         <input name="resetButton" 
                type="button" 
                value="Reset" 
+               style="margin-top: 15px;"
                onclick="removePaint()"/>
     </div>
 </div>
 
 
-
 ## Backstory and Problem Extensions
 
-There is more to say
+Earlier I mentioned that there were several reasons why this problem caught my eye.  The first reason is exactly as we have been discussing.  I was amazed at how tricky the problem sounded initially versus how simple it became as soon as I created an appropriate mental image of the situation.
 
-<div id="contraContainer">
-    <div id="option">
-        <input name="updateButton" 
+The second reason that this problem piqued my interest is its history.  As explained in Kordemsky's book, Leonid Mikhailovich Rybakov, a Soviet mathematician who lived in the early 20th Century, created this "Down and Up" problem.  I'm often fascinated by math problems that transcend geography and time period because such problems help us feel more connected with the past and with others around the globe.
+
+The final reasons I was so particularly drawn to this problem is that Rybakov first thought up this problem when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in the answer section.  From <em>The Moscow Puzzles</em> book:
+
+> Looking at his boots, Leonid Mikhailovich noticed that their entire lengths were muddied where they usually rub each other while he walks.  
+"How puzzling," he thought, "I didn't walk in any deep mud, yet my boots are muddied up to the knees." <br>
+Now you understand the origin of the puzzle.
+
+Just as the paint smeared the entire length of both pencils, Rybakov's boots were covered from tip to top because mud had transferred from one boot to the other as he walked.  
+
+I continued to think about how this concept might apply in other situations and came up with one amusing but slightly unpleasant example.  Consider two lines of contra dancers in which the first dancer in the first line is unfortunately feeling ill.  If this dancer's sickness is communicable, she will, of course, pass along her malady to her dance partner who is positioned across from her.  Sometimes in contra dancing, participants are instructed to exchange dance partners by shifting the lines laterally.  Unfortunately, the newly infected dancer will pass the disease back across the line and eventually the entire group of dancers will suffer.  Try out the widget below to see this application in action.
+
+<br>
+
+<div style="width: 100%; padding-bottom: 15px" id="contraContainer">
+    <div style="float: left; width: 10%; height: 400; padding-left: 10%;">
+        <input name="danceButton" 
                type="button" 
-               value="Advance" 
+               value="Dance!" 
                onclick="moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();"/>
+        <br>
         <input name="resetButton" 
                type="button" 
                value="Reset"
+               style="margin-top: 15px;"
                onclick="makeWell()"/>
+    </div>
 </div>
+
+
+## Conclusion
+
+I hope you have enjoyed this discussion on one my of new favorite math puzzles along with these illustrative D3 visuals.  Making a mental image of the situation involving a math puzzle is not always easy, but I hope you have seen how invaluable it can be when solving problems like these--especially if you are a visual learning like myself.  I also hope you have enjoyed learning a little about the backstory behind this puzzle.  Some of the world's best math puzzles were created long ago, so I think it is important to look to the past when attempting to sharpen our minds.  Finally, I hope you liked my application of the contra dancers.  Taking a problem like this and thinking through other applications can sometimes really help you understand what these problems are all about and can really help you cement these concepts in your brain.  It also helps make these kind of tasks more enjoyable by thinking about how they relate to your own life.  What other applications of this problem can you think of?
 
 
 
@@ -158,11 +193,10 @@ var dataset = [1, 2];
 var pencilColor = "#F0C446";
 var paintColor = "#271B77";
 
-var svg = d3.select("div#paintContainer").append("svg")
-  .attr("width",700)
+var svg = d3.select("div#pencilContainer").append("svg")
+  .attr("width",600)
   .attr("height", 400)
-  .attr("align","center")
-  .style('transform', 'translate(50%, 0%)');
+ .style('transform', 'translate(40%, 0%)');
 
 var objects = svg.append("g");
 
@@ -292,8 +326,8 @@ var data = [1, 2, 3, 4, 5];
 
 var s = d3.select("div#contraContainer").append("svg")
   .attr("width",700)
-  .attr("height", 400)
-  .style('transform', 'translate(40%, 5%)');
+  .attr("height", 200)
+  .style('transform', 'translate(25%, 0%)');
   
 var blushGroup = s.append("g").attr("id", "blushers");
   
