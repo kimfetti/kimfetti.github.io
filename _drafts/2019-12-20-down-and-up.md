@@ -97,7 +97,7 @@ Take a minute to solve this problem before proceeding if you'd like--spoilers ah
 
 ## First Thoughts
 
-When I first heard this problem, I initially thought that perhaps the paint is not smeared to the right pencil at all and perhaps only one inch of paint appears on the left pencil throughout the entire process.  Did you also expect this?  The <em>second</em> time I read through the problem I started to visualize what might actually be happening.  The solution became much more clear as soon as I tried to make a mental picture of the process.  Since my husband was solving the problem with me, I made him this sketch to share what I was thinking:
+When I first heard this problem, I initially thought that perhaps the paint is not smeared to the right pencil at all and perhaps only one inch of paint appears on the left pencil throughout the entire process.  (Did you also expect this?)  But the <em>second</em> time I read through the problem I started to visualize what might actually be happening.  The solution became much more clear as soon as I tried to make a mental picture of the process.  Since my husband was solving the problem with me, I made him this sketch to share what I was thinking:
 
 <center>
 <img src="{{ site.urlimg }}pencil_sketch.png" alt="Initial ideas as a sketch" width = "550">
@@ -111,23 +111,26 @@ I managed to distinctly envision the situation, arrive at a solution, and commun
 
 ## Problem Setup
 
-From the problem directions, we know that initially only the left pencil is smeared with paint.  Recall though that the left pencil presses directly against the right.  This means paint immediately transfers to the right pencil as they are squeezed together.  So both pencils are smeared with one inch of paint even before any of the five up-down movements occur.  
+From the problem directions, we know that initially only the left pencil is smeared with paint.  Recall though that the left pencil presses directly against the right.  This means paint immediately transfers to the right pencil as they are squeezed together.  So both pencils are smeared with one inch of paint even before any of the five down-up movements occur.  
 
+<br>
 <br>
 <br>
 
 
 ## Solving and Illustrating the Full Problem
 
-After this initial step the problem gets a little more complicated as the left pencil moves up and down, but again returning to a visual interpretation of the problem helps immensely.  Both pencils are currently smeared with one inch of paint.  The left pencil moves down one inch, but both pencils are still pressed together.  Can you visualize what happens when the left pencil moves down?  Indeed, a clean portion of the left pencil makes contact with the bottom of the right pencil and so one more inch of paint is transfered to the left pencil.
+The problem gets a little more complicated as the left pencil moves up and down, but returning to a visual interpretation once again helps immensely.  Feel free to reread the problem statement at any point regain your bearings.  
 
-Let's take stock of the current situation.  The left pencil is one inch lower than the right.  One inch of the right pencil is smeared with paint, but now two inches of the left pencil has been painted.  Now let's think about the next step of the problem.  The left pencil is now moved back upward to return to its original position.  Okay so at the end of this movement, the two pencils are realigned, but what happens to the paint?  Two inches of the left pencil are covered in paint, and as the pencils realign, paint is now transferred to the right pencil once again.  By the end of the first down-and-up cycle, paint is smeared across the bottom two inches of both pencils.
+Both pencils are currently smeared with one inch of paint.  Now the left pencil moves down one inch, but both pencils still press together.  Can you envision what happens when the left pencil moves down?  Yes!  A clean portion of the left pencil makes contact with the bottom of the right pencil; therefore, another inch of paint transfers over to the left pencil.
 
-The remaining rounds of down-up movements proceed similarly, with paint transferring first to the left pencil then to the right.  Finally after five rounds of movements, both pencils boast a total of six inches of paint: one initial inch plus five more inches, one for each of the down-up cycles.
+Let's take stock of the current situation.  The left pencil lingers one inch lower than the right.  One inch of the right pencil is smeared with paint, but now paint covers <em>two inches</em> of the left pencil.  The left pencil moves back up in the next step of the problem, coming back to its original position.  The two pencils realign, but what happens to the paint?  Since the left pencil continually makes contact with the right, paint smears over to the right pencil, and paint coats two inches of both pencils at the end of the first down-and-up cycle. 
 
-This problem strongly hinges upon being able to translate the problem statement into an explanatory visual.  To make this solution even more clear, I decided to illustrate this problem using D3.js.  Both pencils start with one inch of paint as described in the problem setup, but use the "Move Pencil" button to convince yourself of the provided solution.  
+The remaining down-up cycles proceed similarly, with paint transferring first to the left pencil and then to the right.  <b>Finally after five rounds of movements, both pencils are smeared with a total of six inches of paint: an initial inch plus five more inches, one for each of the down-up cycles.</b>
 
-<em>Note: these pencils have been drawn to be 6 fictitious inches long, so after the fifth movement the pencils reach an equilibrium of being completely covered with paint, but hit the "Reset" button at any time to start over.</em>
+This problem ultimately hinges on the ability to translate the problem statement into an explanatory visual.  To further contextualize this solution, I created an interactive visual with D3.js.  Below both pencils start with one inch of paint as described in the problem setup. Use the "Move Pencil" button to convince yourself of the answer I provided.  
+
+<em>Note: these pencils are six fictitious inches long.  After the fifth movement, the pencils reach equilibrium in that paint completely covers them. Hit the "Reset" button at any time to start over.</em>
 
 <br>
 
@@ -149,11 +152,11 @@ This problem strongly hinges upon being able to translate the problem statement 
 
 ## Backstory and Problem Extensions
 
-Earlier I mentioned that there were several reasons why this problem caught my eye.  The first reason is exactly as we have been discussing.  I was amazed at how tricky the problem sounded initially versus how simple it became as soon as I created an appropriate mental image of the situation.
+Earlier I mentioned this problem caught my eye for several reasons.  The first reason is exactly what we have been discussing.  I marveled at how tricky the problem sounds initially as opposed how simple it becomes as soon as you construct an appropriate mental image of the situation.
 
-The second reason that this problem piqued my interest is its history.  As explained in Kordemsky's book, Leonid Mikhailovich Rybakov, a Soviet mathematician who lived in the early 20th Century, created this "Down and Up" problem.  I'm often fascinated by math problems that transcend geography and time period because such problems help us feel more connected with the past and with others around the globe.
+The second reason this puzzle piqued my interest is its history.  As explained in Kordemsky's book, Leonid Mikhailovich Rybakov, a Soviet mathematician who lived in the early 20th Century, created this "Down and Up" problem.  I deeply appreciate math problems that pervade through many time periods and geographies.  Solving such puzzles allows me to feel more connected to the past and to other mathematicians around the globe. 
 
-The final reasons I was so particularly drawn to this problem is that Rybakov first thought up this problem when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in the answer section.  From <em>The Moscow Puzzles</em> book:
+Finally, this problem sparked my curiousity because Rybakov first thought it up when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in his "Answers" section.  From <em>The Moscow Puzzles</em> book:
 
 > Looking at his boots, Leonid Mikhailovich noticed that their entire lengths were muddied where they usually rub each other while he walks.  
 "How puzzling," he thought, "I didn't walk in any deep mud, yet my boots are muddied up to the knees." <br>
@@ -161,7 +164,7 @@ Now you understand the origin of the puzzle.
 
 Just as the paint smeared the entire length of both pencils, Rybakov's boots were covered from tip to top because mud had transferred from one boot to the other as he walked.  
 
-I continued to think about how this concept might apply in other situations and came up with one amusing but slightly unpleasant example.  Consider two lines of contra dancers in which the first dancer in the first line is unfortunately feeling ill.  If this dancer's sickness is communicable, she will, of course, pass along her malady to her dance partner who is positioned across from her.  Sometimes in contra dancing, participants are instructed to exchange dance partners by shifting the lines laterally.  Unfortunately, the newly infected dancer will pass the disease back across the line and eventually the entire group of dancers will suffer.  Try out the widget below to see this application in action.
+I continued to think about how this concept might apply to other situations, and I came up with one amusing but slightly unpleasant example.  Consider two lines of contra dancers in which the first dancer in the first line unfortunately feels unwell.  If this dancer's sickness is highly communicable, she will, of course, pass along her malady to her dance partner who is positioned across from her.  Sometimes in contra dancing participants exchange dance partners by shifting the two lines laterally.  Regrettably, when this happens the newly infected dancer will pass the disease back across the line, and eventually the entire group of dancers become ill.  Try out my widget below to see this application in action.
 
 <br>
 
@@ -183,9 +186,11 @@ I continued to think about how this concept might apply in other situations and 
 
 ## Conclusion
 
-I hope you have enjoyed this discussion on one my of new favorite math puzzles along with these illustrative D3 visuals.  Making a mental image of the situation involving a math puzzle is not always easy, but I hope you have seen how invaluable it can be when solving problems like these--especially if you are a visual learning like myself.  I also hope you have enjoyed learning a little about the backstory behind this puzzle.  Some of the world's best math puzzles were created long ago, so I think it is important to look to the past when attempting to sharpen our minds.  Finally, I hope you liked my application of the contra dancers.  Taking a problem like this and thinking through other applications can sometimes really help you understand what these problems are all about and can really help you cement these concepts in your brain.  It also helps make these kind of tasks more enjoyable by thinking about how they relate to your own life.  What other applications of this problem can you think of?
+I hope you have enjoyed this discussion on one of my new favorite math puzzles along with these illustrative D3 visuals.  Making a mental image of a math puzzle is not always easy, but it can be invaluable when solving problems like these--especially if you are a visual learner like myself.  
 
+I also hope you have enjoyed learning a little about the backstory behind this puzzle.  Some of the world's best math puzzles were created long ago, so I believe looking to the past when attempting to sharpen our minds benefits us greatly.  Furthermore, expanding a kind of problem to new applications, like I did with the contra dancers, helps solidify core concepts and builds intuition for future brainteasers.  It also makes math problems more enjoyable because you can relate them to your own life.  Can you think of any other "Down and Up" scenarios?
 
+[Check out my D3 code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb) |
 
 
 <!-- Paint and Pencils Example -->
