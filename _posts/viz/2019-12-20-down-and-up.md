@@ -57,6 +57,7 @@ comments: true
         
     </style>
     
+    
 </head>
 
 
@@ -124,49 +125,6 @@ This problem ultimately hinges on the ability to translate the problem statement
                onclick="removePaint()"/>
     </div>
 </div>
-
-
-## Backstory and Problem Extensions
-
-Earlier I mentioned this problem caught my eye for several reasons.  The first reason is exactly what we have been discussing.  I marveled at how tricky the problem sounds initially as opposed to how simple it becomes as soon as you construct an appropriate mental image of the situation.
-
-The second reason this puzzle piqued my interest is its history.  As explained in Kordemsky's book, Leonid Mikhailovich Rybakov, a Soviet mathematician who lived in the early 20th Century, created this "Down and Up" problem.  I deeply appreciate math problems that pervade through many time periods and geographies.  Solving such puzzles allows me to feel more connected to the past and to other mathematicians around the globe. 
-
-Finally, this problem sparked my curiousity because Rybakov first thought it up when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in his "Answers" section.  From <em>The Moscow Puzzles</em> book:
-
-> Looking at his boots, Leonid Mikhailovich noticed that their entire lengths were muddied where they usually rub each other while he walks.  
-"How puzzling," he thought, "I didn't walk in any deep mud, yet my boots are muddied up to the knees." <br>
-Now you understand the origin of the puzzle.
-
-Just as the paint smeared the entire length of both pencils, Rybakov's boots were covered from tip to top because mud had transferred from one boot to the other as he walked.  
-
-I continued to think about how this concept might apply to other situations, and I came up with one amusing but slightly unpleasant example.  Consider two lines of contra dancers in which the first dancer in the first line unfortunately feels unwell.  If this dancer's sickness is highly communicable, she will, of course, pass along her malady to her dance partner who is positioned across from her.  Sometimes in contra dancing participants exchange dance partners by shifting the two lines laterally.  Regrettably, when this happens the newly infected dancer will pass the disease back across the line, and eventually the entire group of dancers become ill.  Try out my widget below to see this application in action.
-
-<br>
-
-<div style="width: 100%; padding-bottom: 15px" id="contraContainer">
-    <div style="float: left; width: 10%; height: 400; padding-left: 10%;">
-        <input name="danceButton" 
-               type="button" 
-               value="Dance!" 
-               onclick="moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();"/>
-        <br>
-        <input name="resetButton" 
-               type="button" 
-               value="Reset"
-               onclick="makeWell()"/>
-    </div>
-</div>
-
-
-## Conclusion
-
-I hope you have enjoyed this discussion on one of my new favorite math puzzles along with these illustrative D3 visuals.  Making a mental image of a math puzzle is not always easy, but it can be invaluable when solving problems like these--especially if you are a visual learner like myself.  The next time you feel stuck on an interview question, check to see if sketching or imagining the physical setup of the problem helps.  For me it often does.
-
-I also hope you have enjoyed learning a little about the backstory behind this puzzle.  Some of the world's best math puzzles were created long ago, so I believe looking to the past when attempting to sharpen our minds benefits us greatly.  Furthermore, expanding this kind of problem to new applications, like I did with the contra dancers, helps solidify core concepts and builds intuition for future brainteasers.  It also makes math problems more enjoyable because you relate them to your own life.  So now it's your turn -- can you think of any other "Down and Up" scenarios?
-
-Check out my D3 code on GitHub! || [Pencils and Paint](https://github.com/kimfetti/Blog/blob/master/pencil_paint.html) || [Contra Dancers](https://github.com/kimfetti/Blog/blob/master/contra.html)
-
 
 <!-- Paint and Pencils Script -->
 
@@ -318,6 +276,37 @@ Check out my D3 code on GitHub! || [Pencils and Paint](https://github.com/kimfet
 </script>
 
 
+## Backstory and Problem Extensions
+
+Earlier I mentioned this problem caught my eye for several reasons.  The first reason is exactly what we have been discussing.  I marveled at how tricky the problem sounds initially as opposed to how simple it becomes as soon as you construct an appropriate mental image of the situation.
+
+The second reason this puzzle piqued my interest is its history.  As explained in Kordemsky's book, Leonid Mikhailovich Rybakov, a Soviet mathematician who lived in the early 20th Century, created this "Down and Up" problem.  I deeply appreciate math problems that pervade through many time periods and geographies.  Solving such puzzles allows me to feel more connected to the past and to other mathematicians around the globe. 
+
+Finally, this problem sparked my curiousity because Rybakov first thought it up when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in his "Answers" section.  From <em>The Moscow Puzzles</em> book:
+
+> Looking at his boots, Leonid Mikhailovich noticed that their entire lengths were muddied where they usually rub each other while he walks.  
+"How puzzling," he thought, "I didn't walk in any deep mud, yet my boots are muddied up to the knees." <br>
+Now you understand the origin of the puzzle.
+
+Just as the paint smeared the entire length of both pencils, Rybakov's boots were covered from tip to top because mud had transferred from one boot to the other as he walked.  
+
+I continued to think about how this concept might apply to other situations, and I came up with one amusing but slightly unpleasant example.  Consider two lines of contra dancers in which the first dancer in the first line unfortunately feels unwell.  If this dancer's sickness is highly communicable, she will, of course, pass along her malady to her dance partner who is positioned across from her.  Sometimes in contra dancing participants exchange dance partners by shifting the two lines laterally.  Regrettably, when this happens the newly infected dancer will pass the disease back across the line, and eventually the entire group of dancers become ill.  Try out my widget below to see this application in action.
+
+<br>
+
+<div style="width: 100%; padding-bottom: 15px" id="contraContainer">
+    <div style="float: left; width: 10%; height: 400; padding-left: 10%;">
+        <input name="danceButton" 
+               type="button" 
+               value="Dance!" 
+               onclick="moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();"/>
+        <br>
+        <input name="resetButton" 
+               type="button" 
+               value="Reset"
+               onclick="makeWell()"/>
+    </div>
+</div>
 
 <!-- Contra Dancers Script -->
 
@@ -470,3 +459,12 @@ Check out my D3 code on GitHub! || [Pencils and Paint](https://github.com/kimfet
     }
 
 </script>
+
+
+## Conclusion
+
+I hope you have enjoyed this discussion on one of my new favorite math puzzles along with these illustrative D3 visuals.  Making a mental image of a math puzzle is not always easy, but it can be invaluable when solving problems like these--especially if you are a visual learner like myself.  The next time you feel stuck on an interview question, check to see if sketching or imagining the physical setup of the problem helps.  For me it often does.
+
+I also hope you have enjoyed learning a little about the backstory behind this puzzle.  Some of the world's best math puzzles were created long ago, so I believe looking to the past when attempting to sharpen our minds benefits us greatly.  Furthermore, expanding this kind of problem to new applications, like I did with the contra dancers, helps solidify core concepts and builds intuition for future brainteasers.  It also makes math problems more enjoyable because you relate them to your own life.  So now it's your turn -- can you think of any other "Down and Up" scenarios?
+
+Check out my D3 code on GitHub! || [Pencils and Paint](https://github.com/kimfetti/Blog/blob/master/pencil_paint.html) || [Contra Dancers](https://github.com/kimfetti/Blog/blob/master/contra.html)
