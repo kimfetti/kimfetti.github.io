@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: "Solving the Birthday Problem on Mars"
-subheadline: "Analytic Approximations"
+subheadline: "Math Puzzles"
 meta_teaser: "The birthday problem is a classic probability question with a surprising result.  In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system."
 teaser: "<em>The birthday problem is a classic probability question with a surprising result.  In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system.</em>"
 

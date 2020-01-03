@@ -8,31 +8,20 @@ layout: frontpage
 header:
   image_fullwidth: header5.png
 widget1:
-  title: "Simple Ways to Improve Your Matplotlib"
-  url: '/visualizations/matplotlib-improvements/'
-  image: lego_thumb.jpg
-  text: "This post offers several simple ways to improve upon these defaults and help spruce up basic Matplotlib visualizations."
-widget2:
   title: "5 Significant Object Detection Challenges and Solutions"
   url: 'http://kimberlyfessel.com/algorithms/literature%20reviews/object-detection-challenges/'
   image: kim_tree_thumb.png
   text: "Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications."
+widget2:
+  title: "Solving the Birthday Problem on Mars"
+  url: '/mathematics/visualizations/planetary-birthday-problem/'
+  image: birthday_planet_thumb.jpg
+  text: "The birthday problem is a classic probability question with a surprising result.  In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system."
 widget3:
     title: 'Past and Upcoming Events'
     url: '/events'
     image: calendar-thumb.jpg
     text: "Check out Kimberly's past and upcoming events along with links to conference materials and meeting recaps."
-
-# widget2:
-#  title: 'One Day at Bootcamp'
-#  url: 'https://www.meetup.com/Metis-New-York-Data-Science/events/257900190/'
-#  image: birthday_planet_thumb.jpg
-#  text: 'Kimberly will be instructing Metis NYC's “One Day at Bootcamp” on January 26th to give participants a chance to see what the experience is really like!  Attendees will receive free, interactive training in Python, focusing on Pandas and SciKit Learn.'
-# widget3:
-#  title: "Download Theme"
-#  url: 'https://github.com/Phlow/feeling-responsive'
-#  image: widget-github-303x182.jpg
-#  text: '<em>Feeling Responsive</em> is free and licensed under a MIT License. Make it your own and start building. Grab the <a href="https://github.com/Phlow/feeling-responsive/tree/bare-bones-version">Bare-Bones-Version</a> for a fresh start or learn how to use it with the <a href="https://github.com/Phlow/feeling-responsive/tree/gh-pages">education-version</a> with sample posts and images. Then tell me via Twitter <a href="http://twitter.com/phlow">@phlow</a>.'
 
 # Use the call for action to show a button on the frontpage
 #
