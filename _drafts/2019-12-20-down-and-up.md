@@ -112,6 +112,9 @@ This problem ultimately hinges on the ability to translate the problem statement
 
 <br>
 
+<iframe width="560" height="315" src="https://github.com/kimfetti/Blog/blob/master/pencil_paint.html" frameborder="0" allowfullscreen></iframe>
+
+<!--
 <div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
     <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
         <input name="paintButton" 
@@ -125,6 +128,7 @@ This problem ultimately hinges on the ability to translate the problem statement
                onclick="removePaint()"/>
     </div>
 </div>
+-->
 
 <!-- Paint and Pencils Script -->
 

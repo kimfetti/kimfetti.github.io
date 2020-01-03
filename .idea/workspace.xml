@@ -19,7 +19,7 @@
     <session id="497264545">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="63" />
+          <entry key="project.closed" value="64" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="6" />
           <entry key="project.open.time.2" value="7" />
@@ -66,7 +66,7 @@
         <counts>
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="166" />
-          <entry key="md" value="138286" />
+          <entry key="md" value="138309" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -75,7 +75,7 @@
         <counts>
           <entry key="Bash" value="9" />
           <entry key="HTML" value="166" />
-          <entry key="Markdown" value="138248" />
+          <entry key="Markdown" value="138271" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="34" />
           <entry key="Scratch" value="2" />
@@ -102,8 +102,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="635">
-                <caret line="460" column="9" selection-start-line="460" selection-start-column="9" selection-end-line="460" selection-end-column="9" />
+              <first_editor relative-caret-position="197">
+                <caret line="114" column="100" selection-start-line="114" selection-start-column="100" selection-end-line="114" selection-end-column="100" />
               </first_editor>
               <second_editor />
             </state>
@@ -286,7 +286,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -615,8 +615,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="635">
-            <caret line="460" column="9" selection-start-line="460" selection-start-column="9" selection-end-line="460" selection-end-column="9" />
+          <first_editor relative-caret-position="197">
+            <caret line="114" column="100" selection-start-line="114" selection-start-column="100" selection-end-line="114" selection-end-column="100" />
           </first_editor>
           <second_editor />
         </state>
