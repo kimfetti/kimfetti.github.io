@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-04T17:55:54-05:00</updated>
+	<updated>2020-01-04T17:59:36-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -237,8 +237,10 @@ function addPaint(pencilNumber, delay) {
       .transition()
         .delay(delay)
         .attr(&quot;height&quot;, function(d) {
-            return Math.min( 1000, 300);
-         })
+            var height = d3.select(this)
+                .node().getBoundingClientRect().height
+            return Math.min( Math.round(Number(height))+50, 300); 
+        })
         .attr(&quot;y&quot;, 50);
 }
 

@@ -207,8 +207,10 @@ function addPaint(pencilNumber, delay) {
       .transition()
         .delay(delay)
         .attr(&quot;height&quot;, function(d) {
-            return Math.min( 1000, 300);
-         })
+            var height = d3.select(this)
+                .node().getBoundingClientRect().height
+            return Math.min( Math.round(Number(height))+50, 300); 
+        })
         .attr(&quot;y&quot;, 50);
 }
 
