@@ -235,6 +235,12 @@ function addPaint(pencilNumber, delay) {
         });
 }
 
+function incrUnits() {
+    paintUnits++
+    paintText.transition()
+      .delay(2400)
+      .text( Math.min(paintUnits, 6) + " Inches");
+}
 
 </script>
 
