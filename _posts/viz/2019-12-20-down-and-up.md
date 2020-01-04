@@ -21,6 +21,8 @@ categories:
     - puzzles
 show_meta: true
 comments: true
+jsarr: 
+    - pencil.js
 ---
 
 <head>
