@@ -47,6 +47,11 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
 	</noscript>
 
+ 	{% if page.jsarr %}
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js"></script>
+ 	{% endif %}
+
 
 	<!-- Search Engine Optimization -->
 	<meta name="description" content="{{ description }}">
