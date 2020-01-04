@@ -208,7 +208,17 @@ var paintText = text.append("tspan")
     .text(paintUnits + " Inch");
 
 function movePencil() {
-    d3.select("tspan").text('nope')
+    d3.select("g").selectAll("*")
+      .filter(function (d) { return d == 1; })
+      .transition()
+        .duration(750)
+        .attr("transform", "translate(0,25)")
+      .on("end",function() {  
+          d3.select(this)
+            .transition()     
+              .delay(750)
+              .attr("transform", "translate(0,0)")
+      });
 }
 
 </script>
