@@ -222,29 +222,15 @@ function movePencil() {
 }
 
 function addPaint(pencilNumber, delay) {
-    console.log('hiya');
-}
-
-function incrUnits() {
-    paintUnits++
-    paintText.transition()
-      .delay(2400)
-      .text( Math.min(paintUnits, 6) + " Inches");
-}
-
-
-function removePaint() {
-    paint
+    d3.select("g").selectAll("*")
+      .filter(function(d) { return d == pencilNumber; })
+      .filter(function(d,i) { return i == 4; })
       .transition()
-      .duration(500)
-        .attr("y", 300)
-        .attr("height", 50);
-
-    paintUnits = 1
-    paintText.transition()
-      .delay(250)
-      .text( paintUnits + " Inch");
+        .delay(delay)
+        .attr("height", 200)
+        .attr("y", 100);
 }
+
 
 </script>
 
