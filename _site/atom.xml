@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-04T17:21:12-05:00</updated>
+	<updated>2020-01-04T17:25:20-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -140,16 +140,35 @@
 &lt;/div&gt;
 
 &lt;script&gt;
-var svgContainer = d3.select(&quot;div#pencilContainer&quot;).append(&quot;svg&quot;)
-                                    .attr(&quot;width&quot;, 200)
-                                    .attr(&quot;height&quot;, 200);
+var pencilColor = &quot;#F0C446&quot;;
+var paintColor = &quot;#271B77&quot;;
 
+var pencilData = [1, 2];
 
-var rectangle = svgContainer.append(&quot;rect&quot;)
-                            .attr(&quot;x&quot;, 10)
-                            .attr(&quot;y&quot;, 10)
-                            .attr(&quot;width&quot;, 50)
-                           .attr(&quot;height&quot;, 100);
+var svg = d3.select(&quot;div#pencilContainer&quot;).append(&quot;svg&quot;)
+    .attr(&quot;width&quot;,600)
+    .attr(&quot;height&quot;, 400)
+    .style('transform', 'translate(40%, 0%)');
+
+var objects = svg.append(&quot;g&quot;);
+
+var pencils = objects.selectAll(&quot;g&quot;)
+  .data(pencilData)
+  .enter()
+  .append(&quot;g&quot;)
+    .attr(&quot;id&quot;, function(d, i) { return i; })
+    .attr(&quot;transform&quot;, function(d, i) {return &quot;translate(&quot; + i*50 + &quot;,0)&quot;; });
+
+var rects = pencils.append(&quot;rect&quot;)
+    .attr(&quot;x&quot;, 50)
+    .attr(&quot;y&quot;, 50)
+    .attr(&quot;width&quot;, 50)
+    .attr(&quot;height&quot;, 300)
+    .attr(&quot;fill&quot;, pencilColor)
+    .style(&quot;fill-opacity&quot;, .7)
+    .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+    .style(&quot;stroke&quot;, pencilColor);
+
 &lt;/script&gt;
 
 &lt;h2 id=&quot;backstory-and-problem-extensions&quot;&gt;Backstory and Problem Extensions&lt;/h2&gt;

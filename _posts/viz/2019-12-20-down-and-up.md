@@ -133,16 +133,35 @@ This problem ultimately hinges on the ability to translate the problem statement
 </div>
 
 <script>
-var svgContainer = d3.select("div#pencilContainer").append("svg")
-                                    .attr("width", 200)
-                                    .attr("height", 200);
+var pencilColor = "#F0C446";
+var paintColor = "#271B77";
 
+var pencilData = [1, 2];
 
-var rectangle = svgContainer.append("rect")
-                            .attr("x", 10)
-                            .attr("y", 10)
-                            .attr("width", 50)
-                           .attr("height", 100);
+var svg = d3.select("div#pencilContainer").append("svg")
+    .attr("width",600)
+    .attr("height", 400)
+    .style('transform', 'translate(40%, 0%)');
+
+var objects = svg.append("g");
+
+var pencils = objects.selectAll("g")
+  .data(pencilData)
+  .enter()
+  .append("g")
+    .attr("id", function(d, i) { return i; })
+    .attr("transform", function(d, i) {return "translate(" + i*50 + ",0)"; });
+
+var rects = pencils.append("rect")
+    .attr("x", 50)
+    .attr("y", 50)
+    .attr("width", 50)
+    .attr("height", 300)
+    .attr("fill", pencilColor)
+    .style("fill-opacity", .7)
+    .style("stroke-width",".2em")
+    .style("stroke", pencilColor);
+
 </script>
 
 ## Backstory and Problem Extensions
