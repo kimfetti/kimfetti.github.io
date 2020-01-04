@@ -221,6 +221,46 @@ function movePencil() {
       });
 }
 
+function addPaint(pencilNumber, delay) {
+    d3.select("g").selectAll("*")
+      .filter(function(d) { return d == pencilNumber; })
+      .filter(function(d,i) { return i == 4; })
+      .transition()
+        .delay(delay)
+        .attr("height", function(d) {
+            var height = d3.select(this)
+                .style('height')
+                .slice(0, -2)
+                return Math.min( Math.round(Number(height))+50, 300); 
+        })
+        .attr("y", function(d) {
+            var y = d3.select(this)
+                .style('y')
+                .slice(0, -2)
+                return Math.max( Math.round(Number(y))-50, 50);  
+        });
+}
+
+function incrUnits() {
+    paintUnits++
+    paintText.transition()
+      .delay(2400)
+      .text( Math.min(paintUnits, 6) + " Inches");
+}
+
+function removePaint() {
+    paint
+      .transition()
+      .duration(500)
+        .attr("y", 300)
+        .attr("height", 50);
+
+    paintUnits = 1
+    paintText.transition()
+      .delay(250)
+      .text( paintUnits + " Inch");
+}
+
 </script>
 
 ## Backstory and Problem Extensions
