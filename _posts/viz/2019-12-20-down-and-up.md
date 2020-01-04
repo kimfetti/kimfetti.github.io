@@ -228,9 +228,7 @@ function addPaint(pencilNumber, delay) {
       .transition()
         .delay(delay)
         .attr("height", function(d) {
-            console.log(d3.select(this)
-                .node().getBBox().height)
-            return Math.min(1000, 300); 
+            return Math.min(paintUnits*50 + 50, 300); 
         })
         .attr("y", 50);
 }
