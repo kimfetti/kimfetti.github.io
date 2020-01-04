@@ -230,7 +230,9 @@ function addPaint(pencilNumber, delay) {
         .attr("height", function(d) {
             return Math.min(paintUnits*50 + 50, 300); 
         })
-        .attr("y", 50);
+        .attr("y", function(d) {
+            return Math.max(300 - 50*paintUnits, 50);
+        });
 }
 
 
