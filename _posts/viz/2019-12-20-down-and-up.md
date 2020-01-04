@@ -208,7 +208,7 @@ var paintText = text.append("tspan")
     .text(paintUnits + " Inch");
 
 function movePencil() {
-    console.log('hiya')
+    d3.select("tspan").text('nope')
 }
 
 </script>

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-04T17:34:20-05:00</updated>
+	<updated>2020-01-04T17:37:03-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -217,7 +217,7 @@ var paintText = text.append(&quot;tspan&quot;)
     .text(paintUnits + &quot; Inch&quot;);
 
 function movePencil() {
-    console.log('hiya')
+    d3.select(&quot;tspan&quot;).text('nope')
 }
 
 &lt;/script&gt;
