@@ -99,8 +99,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="305">
-                <caret line="223" column="17" lean-forward="true" selection-start-line="223" selection-start-column="17" selection-end-line="223" selection-end-column="17" />
+              <first_editor relative-caret-position="725">
+                <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
               </first_editor>
               <second_editor />
             </state>
@@ -632,8 +632,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="305">
-            <caret line="223" column="17" lean-forward="true" selection-start-line="223" selection-start-column="17" selection-end-line="223" selection-end-column="17" />
+          <first_editor relative-caret-position="725">
+            <caret line="242" lean-forward="true" selection-start-line="242" selection-end-line="242" />
           </first_editor>
           <second_editor />
         </state>

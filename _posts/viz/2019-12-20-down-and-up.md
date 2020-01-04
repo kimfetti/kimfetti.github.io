@@ -241,26 +241,6 @@ function addPaint(pencilNumber, delay) {
         });
 }
 
-function incrUnits() {
-    paintUnits++
-    paintText.transition()
-      .delay(2400)
-      .text( Math.min(paintUnits, 6) + " Inches");
-}
-
-function removePaint() {
-    paint
-      .transition()
-      .duration(500)
-        .attr("y", 300)
-        .attr("height", 50);
-
-    paintUnits = 1
-    paintText.transition()
-      .delay(250)
-      .text( paintUnits + " Inch");
-}
-
 </script>
 
 ## Backstory and Problem Extensions

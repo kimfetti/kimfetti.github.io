@@ -220,26 +220,6 @@ function addPaint(pencilNumber, delay) {
         });
 }
 
-function incrUnits() {
-    paintUnits++
-    paintText.transition()
-      .delay(2400)
-      .text( Math.min(paintUnits, 6) + &quot; Inches&quot;);
-}
-
-function removePaint() {
-    paint
-      .transition()
-      .duration(500)
-        .attr(&quot;y&quot;, 300)
-        .attr(&quot;height&quot;, 50);
-
-    paintUnits = 1
-    paintText.transition()
-      .delay(250)
-      .text( paintUnits + &quot; Inch&quot;);
-}
-
 &lt;/script&gt;
 
 &lt;h2 id=&quot;backstory-and-problem-extensions&quot;&gt;Backstory and Problem Extensions&lt;/h2&gt;

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-04T17:41:15-05:00</updated>
+	<updated>2020-01-04T17:43:25-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -248,26 +248,6 @@ function addPaint(pencilNumber, delay) {
                 .slice(0, -2)
                 return Math.max( Math.round(Number(y))-50, 50);  
         });
-}
-
-function incrUnits() {
-    paintUnits++
-    paintText.transition()
-      .delay(2400)
-      .text( Math.min(paintUnits, 6) + &quot; Inches&quot;);
-}
-
-function removePaint() {
-    paint
-      .transition()
-      .duration(500)
-        .attr(&quot;y&quot;, 300)
-        .attr(&quot;height&quot;, 50);
-
-    paintUnits = 1
-    paintText.transition()
-      .delay(250)
-      .text( paintUnits + &quot; Inch&quot;);
 }
 
 &lt;/script&gt;
