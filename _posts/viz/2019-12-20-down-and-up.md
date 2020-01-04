@@ -228,9 +228,9 @@ function addPaint(pencilNumber, delay) {
       .transition()
         .delay(delay)
         .attr("height", function(d) {
-            var height = d3.select(this)
-                .node().getBoundingClientRect().height
-            return Math.min( Math.round(Number(height))+50, 300); 
+            console.log(d3.select(this)
+                .node().getBBox().height)
+            return Math.min(1000, 300); 
         })
         .attr("y", 50);
 }
