@@ -45,3 +45,12 @@ format: page-fullwidth
 </div><!-- /.row -->
 
 
+<!-- Stuff for jsarr tag  -->
+
+{% for js in page.jsarr %}
+  <script type="text/javascript">
+	 {% include {{ js }} %}
+  </script>
+{% endfor %}
+
+<!-- End Stuff for jsarr tag  -->

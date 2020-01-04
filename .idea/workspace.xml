@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/pencil.js" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/D3/pencil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/page-fullwidth.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/page-fullwidth.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/documentation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/documentation/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/events/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/events/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/visualizations/puzzles/down-and-up/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/puzzles/down-and-up/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +43,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="2" />
           <entry key="css" value="1" />
           <entry key="gif" value="1" />
-          <entry key="html" value="68" />
+          <entry key="html" value="69" />
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="23" />
           <entry key="js" value="3" />
@@ -47,7 +59,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="68" />
+          <entry key="HTML" value="69" />
           <entry key="Image" value="55" />
           <entry key="JavaScript" value="3" />
           <entry key="Markdown" value="119" />
@@ -60,9 +72,9 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="2019-11-12-gather-youtube-data" value="7" />
-          <entry key="html" value="166" />
-          <entry key="js" value="8" />
-          <entry key="md" value="138412" />
+          <entry key="html" value="168" />
+          <entry key="js" value="36" />
+          <entry key="md" value="138416" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -70,9 +82,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Bash" value="9" />
-          <entry key="HTML" value="166" />
-          <entry key="JavaScript" value="8" />
-          <entry key="Markdown" value="138374" />
+          <entry key="HTML" value="168" />
+          <entry key="JavaScript" value="36" />
+          <entry key="Markdown" value="138378" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="34" />
           <entry key="Scratch" value="2" />
@@ -99,8 +111,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="360">
-                <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+              <first_editor relative-caret-position="575">
+                <caret line="307" lean-forward="true" selection-start-line="307" selection-end-line="307" />
               </first_editor>
               <second_editor />
             </state>
@@ -108,10 +120,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/pencil.js">
+        <entry file="file://$PROJECT_DIR$/_layouts/page-fullwidth.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+            <state relative-caret-position="374">
+              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/D3/pencil.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -174,7 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_sass/_07_layout.scss" />
         <option value="$PROJECT_DIR$/blog/archive_template.html" />
         <option value="$PROJECT_DIR$/_layouts/blog.html" />
         <option value="$PROJECT_DIR$/pages/contact.md" />
@@ -194,7 +214,6 @@
         <option value="$PROJECT_DIR$/_posts/reviews/2019-07-15-object-detection-challenges.md" />
         <option value="$PROJECT_DIR$/_posts/2019-07-15-object-detection-challenges.md" />
         <option value="$PROJECT_DIR$/_drafts/2019-07-15-object-detection-challenges.md" />
-        <option value="$PROJECT_DIR$/_layouts/page-fullwidth.html" />
         <option value="$PROJECT_DIR$/_posts/viz/2019-08-05-matplotlib-updates.md" />
         <option value="$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md" />
         <option value="$PROJECT_DIR$/_posts/reviews/2019-08-20-object-detection-challenges.md" />
@@ -224,6 +243,8 @@
         <option value="$PROJECT_DIR$/pages/pages-root-folder/index.md" />
         <option value="$PROJECT_DIR$/code/pencil.js" />
         <option value="$PROJECT_DIR$/_includes/pencil.js" />
+        <option value="$PROJECT_DIR$/_includes/D3/pencil.js" />
+        <option value="$PROJECT_DIR$/_layouts/page-fullwidth.html" />
         <option value="$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md" />
       </list>
     </option>
@@ -251,6 +272,17 @@
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
+              <item name="D3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_layouts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -301,17 +333,18 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_includes/D3" />
+      <recent name="$PROJECT_DIR$/_posts/viz" />
+      <recent name="$PROJECT_DIR$/_posts/data" />
+      <recent name="$PROJECT_DIR$/_posts/math" />
+      <recent name="$PROJECT_DIR$/_drafts" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_posts/viz" />
       <recent name="$PROJECT_DIR$/_posts" />
       <recent name="$PROJECT_DIR$/_drafts" />
       <recent name="$PROJECT_DIR$/_posts/design" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_posts/viz" />
-      <recent name="$PROJECT_DIR$/_posts/data" />
-      <recent name="$PROJECT_DIR$/_posts/math" />
-      <recent name="$PROJECT_DIR$/_drafts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -578,9 +611,6 @@
     <entry file="file://$PROJECT_DIR$/_sass/_07_layout.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/page-fullwidth.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -611,6 +641,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/code/pencil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -621,25 +658,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/pencil.js">
+    <entry file="file://$PROJECT_DIR$/_includes/D3/pencil.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" column="32" lean-forward="true" selection-start-line="81" selection-start-column="32" selection-end-line="81" selection-end-column="32" />
+        <state relative-caret-position="330">
+          <caret line="22" column="78" selection-start-line="22" selection-start-column="78" selection-end-line="22" selection-end-column="78" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/pencil.js">
+    <entry file="file://$PROJECT_DIR$/_layouts/page-fullwidth.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+        <state relative-caret-position="374">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="360">
-            <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
+          <first_editor relative-caret-position="575">
+            <caret line="307" lean-forward="true" selection-start-line="307" selection-end-line="307" />
           </first_editor>
           <second_editor />
         </state>
