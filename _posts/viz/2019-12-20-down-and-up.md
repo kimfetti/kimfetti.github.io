@@ -29,8 +29,6 @@ comments: true
 
     <!--Multiple button functions-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js"></script>  
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
     <style> 
@@ -116,10 +114,199 @@ This problem ultimately hinges on the ability to translate the problem statement
 <br>
 
 
+<div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
+    <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
+        <input name="paintButton" 
+               type="button" 
+               value="Move Pencil" 
+               onclick="movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();"/>
+        <br>
+        <input name="resetButton" 
+               type="button" 
+               value="Reset" 
+               onclick="removePaint()"/>
+    </div>
+</div>
+
+
+
+
+## Backstory and Problem Extensions
+
+Earlier I mentioned this problem caught my eye for several reasons.  The first reason is exactly what we have been discussing.  I marveled at how tricky the problem sounds initially as opposed to how simple it becomes as soon as you construct an appropriate mental image of the situation.
+
+The second reason this puzzle piqued my interest is its history.  As explained in Kordemsky's book, Leonid Mikhailovich Rybakov, a Soviet mathematician who lived in the early 20th Century, created this "Down and Up" problem.  I deeply appreciate math problems that pervade through many time periods and geographies.  Solving such puzzles allows me to feel more connected to the past and to other mathematicians around the globe. 
+
+Finally, this problem sparked my curiousity because Rybakov first thought it up when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in his "Answers" section.  From <em>The Moscow Puzzles</em> book:
+
+> Looking at his boots, Leonid Mikhailovich noticed that their entire lengths were muddied where they usually rub each other while he walks.  
+"How puzzling," he thought, "I didn't walk in any deep mud, yet my boots are muddied up to the knees." <br>
+Now you understand the origin of the puzzle.
+
+Just as the paint smeared the entire length of both pencils, Rybakov's boots were covered from tip to top because mud had transferred from one boot to the other as he walked.  
+
+I continued to think about how this concept might apply to other situations, and I came up with one amusing but slightly unpleasant example.  Consider two lines of contra dancers in which the first dancer in the first line unfortunately feels unwell.  If this dancer's sickness is highly communicable, she will, of course, pass along her malady to her dance partner who is positioned across from her.  Sometimes in contra dancing participants exchange dance partners by shifting the two lines laterally.  Regrettably, when this happens the newly infected dancer will pass the disease back across the line, and eventually the entire group of dancers become ill.  Try out my widget below to see this application in action.
+
+<br>
+
+<div style="width: 100%; padding-bottom: 15px" id="contraContainer">
+    <div style="float: left; width: 10%; height: 400; padding-left: 10%;">
+        <input name="danceButton" 
+               type="button" 
+               value="Dance!" 
+               onclick="moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();"/>
+        <br>
+        <input name="resetButton" 
+               type="button" 
+               value="Reset"
+               onclick="makeWell()"/>
+    </div>
+</div>
+
+<!-- Contra Dancers Script -->
+
+<script>
+
+    var blushEmoji = "{{ site.urlimg }}emoji_blush.png";
+    var grinEmoji = "{{ site.urlimg }}emoji_grin.png";
+    var sickEmoji = "{{ site.urlimg }}emoji_sick.png";
+
+    var contraData = [1, 2, 3, 4, 5];
+
+    var canvas = d3.select("div#contraContainer").append("svg")
+        .attr("width",700)
+        .attr("height", 200)
+        .style('transform', 'translate(25%, 0%)');
+  
+    var blushGroup = canvas.append("g")
+        .attr("id", "blushers");
+  
+    var blushers = blushGroup.selectAll("image")
+      .data(contraData)
+      .enter()
+      .append("image")
+        .attr('xlink:href', function (d, i) {
+            if (i == 0) { 
+              return sickEmoji; 
+            }
+            else { 
+              return blushEmoji; 
+            }
+        })
+        .attr("x", function (d, i) { return d*100; })
+        .attr("y", 0)
+        .attr('width', 75)
+        .attr('height', 75);
+
+    var grinGroup = canvas.append("g")
+        .attr("id", "grinners");
+
+    var grinners = grinGroup.selectAll("image")
+      .data(contraData)
+      .enter()
+      .append("image")
+        .attr('xlink:href', grinEmoji)
+        .attr("x", function (d, i) { return d*100; })
+        .attr("y", 100)
+        .attr('width', 70)
+        .attr('height', 70);
+
+    var sickNum = 1;
+
+    function moveBlushers(pos, delay) {
+        if (sickNum == 1) { return; }
+        else {
+          d3.select("#blushers")
+            .selectAll("image")
+            .transition()
+            .delay(delay)
+            .duration(1000)
+              .attr("transform", function(d) { 
+                  if (pos=="left") { return "translate(-100, 0)"; }
+                  else if (pos=="center") { return "translate(0, 0)"; }
+              });
+        };                                   
+    }
+
+    function sickBlusher() {
+        {
+            if (sickNum == 1) { return; }
+            else { delay = 1200; }
+        }
+        d3.select("#blushers")
+          .selectAll("image")
+          .filter( function (d) { return d == sickNum; })
+          
+          .transition()
+          .delay(delay)
+            .style("opacity", 0)
+            .attr("xlink:href", sickEmoji)
+            
+          .transition()
+          .duration(800)
+            .ease(d3.easeLinear)
+            .style("opacity", 1);
+    }
+
+    function sickGrinner() {
+        {
+            if (sickNum == 1) { delay = 300; }
+            else { delay = 3300; }
+        }
+        d3.select("#grinners")
+          .selectAll("image")
+          .filter( function (d) { return d == sickNum; })
+          .transition()
+          .delay(delay)
+            .style("opacity", 0)
+            .on("end", function() {  
+                d3.select(this)
+                  .transition()     
+                  .duration(800)
+                    .ease(d3.easeLinear)
+                    .style("opacity", 1)
+                    .attr("xlink:href", sickEmoji)
+                    .attr("width", 75)
+                    .attr("height", 75)
+            })
+            
+        sickNum++;
+    }
+
+    function makeWell() {
+    
+        d3.select("#blushers")
+          .selectAll("image")
+            .attr('xlink:href', function (d, i) {
+                if (i == 0) { return sickEmoji; }
+                else { return blushEmoji; }
+            })
+            .attr("width", 75)
+            .attr("height", 75)
+            
+        d3.select("#grinners")
+          .selectAll("image")
+            .attr("xlink:href", grinEmoji)
+            .attr("width", 70)
+            .attr("height", 70)
+    
+        sickNum = 1;
+    }
+</script>
+
+
+## Conclusion
+
+I hope you have enjoyed this discussion on one of my new favorite math puzzles along with these illustrative D3 visuals.  Making a mental image of a math puzzle is not always easy, but it can be invaluable when solving problems like these--especially if you are a visual learner like myself.  The next time you feel stuck on an interview question, check to see if sketching or imagining the physical setup of the problem helps.  For me it often does.
+
+I also hope you have enjoyed learning a little about the backstory behind this puzzle.  Some of the world's best math puzzles were created long ago, so I believe looking to the past when attempting to sharpen our minds benefits us greatly.  Furthermore, expanding this kind of problem to new applications, like I did with the contra dancers, helps solidify core concepts and builds intuition for future brainteasers.  It also makes math problems more enjoyable because you relate them to your own life.  So now it's your turn -- can you think of any other "Down and Up" scenarios?
+
+Check out my D3 code on GitHub! || [Pencils and Paint](https://github.com/kimfetti/Blog/blob/master/pencil_paint.html) || [Contra Dancers](https://github.com/kimfetti/Blog/blob/master/contra.html)
+
+
 <!-- Paint and Pencils Script -->
 
-
-<script>$(function(){
+<script>
 
     var pencilColor = "#F0C446";
     var paintColor = "#271B77";
@@ -263,215 +450,5 @@ This problem ultimately hinges on the ability to translate the problem statement
           .delay(250)
           .text( paintUnits + " Inch");
     }
-;});
+
 </script>
-
-
-<div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
-    <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
-        <input name="paintButton" 
-               type="button" 
-               value="Move Pencil" 
-               onclick="movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();"/>
-        <br>
-        <input name="resetButton" 
-               type="button" 
-               value="Reset" 
-               onclick="removePaint()"/>
-    </div>
-</div>
-
-
-
-
-## Backstory and Problem Extensions
-
-Earlier I mentioned this problem caught my eye for several reasons.  The first reason is exactly what we have been discussing.  I marveled at how tricky the problem sounds initially as opposed to how simple it becomes as soon as you construct an appropriate mental image of the situation.
-
-The second reason this puzzle piqued my interest is its history.  As explained in Kordemsky's book, Leonid Mikhailovich Rybakov, a Soviet mathematician who lived in the early 20th Century, created this "Down and Up" problem.  I deeply appreciate math problems that pervade through many time periods and geographies.  Solving such puzzles allows me to feel more connected to the past and to other mathematicians around the globe. 
-
-Finally, this problem sparked my curiousity because Rybakov first thought it up when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in his "Answers" section.  From <em>The Moscow Puzzles</em> book:
-
-> Looking at his boots, Leonid Mikhailovich noticed that their entire lengths were muddied where they usually rub each other while he walks.  
-"How puzzling," he thought, "I didn't walk in any deep mud, yet my boots are muddied up to the knees." <br>
-Now you understand the origin of the puzzle.
-
-Just as the paint smeared the entire length of both pencils, Rybakov's boots were covered from tip to top because mud had transferred from one boot to the other as he walked.  
-
-I continued to think about how this concept might apply to other situations, and I came up with one amusing but slightly unpleasant example.  Consider two lines of contra dancers in which the first dancer in the first line unfortunately feels unwell.  If this dancer's sickness is highly communicable, she will, of course, pass along her malady to her dance partner who is positioned across from her.  Sometimes in contra dancing participants exchange dance partners by shifting the two lines laterally.  Regrettably, when this happens the newly infected dancer will pass the disease back across the line, and eventually the entire group of dancers become ill.  Try out my widget below to see this application in action.
-
-<br>
-
-<div style="width: 100%; padding-bottom: 15px" id="contraContainer">
-    <div style="float: left; width: 10%; height: 400; padding-left: 10%;">
-        <input name="danceButton" 
-               type="button" 
-               value="Dance!" 
-               onclick="moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();"/>
-        <br>
-        <input name="resetButton" 
-               type="button" 
-               value="Reset"
-               onclick="makeWell()"/>
-    </div>
-</div>
-
-<!-- Contra Dancers Script -->
-
-<script>
-
-    var blushEmoji = "{{ site.urlimg }}emoji_blush.png"
-    var grinEmoji = "{{ site.urlimg }}emoji_grin.png"
-    var sickEmoji = "{{ site.urlimg }}emoji_sick.png"
-
-    // Dummy data for contra dancers
-    var contraData = [1, 2, 3, 4, 5];
-
-    // Make D3 canvas
-    var canvas = d3.select("div#contraContainer").append("svg")
-        .attr("width",700)
-        .attr("height", 200)
-        .style('transform', 'translate(25%, 0%)');
-  
-    // Build top row of dancers
-    var blushGroup = canvas.append("g")
-        .attr("id", "blushers");
-  
-    var blushers = blushGroup.selectAll("image")
-      .data(contraData)
-      .enter()
-      .append("image")
-        // Fill row with blush emoji except first sick dancer
-        .attr('xlink:href', function (d, i) {
-            if (i == 0) { 
-              return sickEmoji; 
-            }
-            else { 
-              return blushEmoji; 
-            }
-        })
-        .attr("x", function (d, i) { return d*100; })
-        .attr("y", 0)
-        .attr('width', 75)
-        .attr('height', 75);
-
-    // Build bottom row of dancers
-    var grinGroup = canvas.append("g")
-        .attr("id", "grinners");
-
-    var grinners = grinGroup.selectAll("image")
-      .data(contraData)
-      .enter()
-      .append("image")
-        // Fill row with grin emoji
-        .attr('xlink:href', grinEmoji)
-        .attr("x", function (d, i) { return d*100; })
-        .attr("y", 100)
-        .attr('width', 70)
-        .attr('height', 70);
-
-    // Initialize position of illness spread
-    var sickNum = 1;
-
-    // Functions called when danceButton clicked
-    function moveBlushers(pos, delay) {
-        // Inputs control direction of movement and transition delay
-        // Do not move dancers if illness has not spread
-        if (sickNum == 1) { return; }
-        else {
-          d3.select("#blushers")
-            .selectAll("image")
-            .transition()
-            .delay(delay)
-            .duration(1000)
-              .attr("transform", function(d) { 
-                  if (pos=="left") { return "translate(-100, 0)"; }
-                  else if (pos=="center") { return "translate(0, 0)"; }
-              });
-        };                                   
-    }
-
-    function sickBlusher() {
-        // Convert top row to sick emoji
-        // Do not convert if illness has not spread
-        {
-            if (sickNum == 1) { return; }
-            else { delay = 1200; }
-        }
-        d3.select("#blushers")
-          .selectAll("image")
-          .filter( function (d) { return d == sickNum; })
-          
-          // Switch image to sick emoji
-          .transition()
-          .delay(delay)
-            .style("opacity", 0)
-            .attr("xlink:href", sickEmoji)
-            
-          // Blink new image to draw attention
-          .transition()
-          .duration(800)
-            .ease(d3.easeLinear)
-            .style("opacity", 1);
-    }
-
-    function sickGrinner() {
-        // Convert bottom row to sick emoji
-        {
-            if (sickNum == 1) { delay = 300; }
-            else { delay = 3300; }
-        }
-        d3.select("#grinners")
-          .selectAll("image")
-          .filter( function (d) { return d == sickNum; })
-          .transition()
-          .delay(delay)
-            .style("opacity", 0)
-            .on("end", function() {  // After clearing out current image
-                d3.select(this)
-                  .transition()      // Fade sick emoji in
-                  .duration(800)
-                    .ease(d3.easeLinear)
-                    .style("opacity", 1)
-                    .attr("xlink:href", sickEmoji)
-                    .attr("width", 75)
-                    .attr("height", 75)
-            })
-            
-        // Spread illness to next position
-        sickNum++;
-    }
-
-    // Function called when resetButton clicked
-    function makeWell() {
-    
-        // Reset top row to blush emoji except first sick emoji
-        d3.select("#blushers")
-          .selectAll("image")
-            .attr('xlink:href', function (d, i) {
-                if (i == 0) { return sickEmoji; }
-                else { return blushEmoji; }
-            })
-            .attr("width", 75)
-            .attr("height", 75)
-         
-        // Reset bottom row to grin emoji    
-        d3.select("#grinners")
-          .selectAll("image")
-            .attr("xlink:href", grinEmoji)
-            .attr("width", 70)
-            .attr("height", 70)
-    
-        // Reset illness spread    
-        sickNum = 1;
-    }
-</script>
-
-
-## Conclusion
-
-I hope you have enjoyed this discussion on one of my new favorite math puzzles along with these illustrative D3 visuals.  Making a mental image of a math puzzle is not always easy, but it can be invaluable when solving problems like these--especially if you are a visual learner like myself.  The next time you feel stuck on an interview question, check to see if sketching or imagining the physical setup of the problem helps.  For me it often does.
-
-I also hope you have enjoyed learning a little about the backstory behind this puzzle.  Some of the world's best math puzzles were created long ago, so I believe looking to the past when attempting to sharpen our minds benefits us greatly.  Furthermore, expanding this kind of problem to new applications, like I did with the contra dancers, helps solidify core concepts and builds intuition for future brainteasers.  It also makes math problems more enjoyable because you relate them to your own life.  So now it's your turn -- can you think of any other "Down and Up" scenarios?
-
-Check out my D3 code on GitHub! || [Pencils and Paint](https://github.com/kimfetti/Blog/blob/master/pencil_paint.html) || [Contra Dancers](https://github.com/kimfetti/Blog/blob/master/contra.html)
