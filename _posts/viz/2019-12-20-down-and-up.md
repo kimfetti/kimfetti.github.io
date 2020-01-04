@@ -191,6 +191,25 @@ var paint = pencils.append("rect")
     .style("stroke-width",".2em")
     .style("stroke", paintColor);
 
+var paintUnits = 1;
+
+var text = svg.append("text");
+
+text
+  .attr("x", 225)
+  .attr("y", 50)
+  .attr("font-size",22);
+
+text.append("tspan")
+  .text("Paint:");
+
+var paintText = text.append("tspan")
+    .attr("dx", 10)
+    .style("fill", paintColor)
+    .attr("font-weight", "bold")
+    .text(paintUnits + " Inch");
+
+
 </script>
 
 ## Backstory and Problem Extensions

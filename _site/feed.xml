@@ -168,6 +168,25 @@ var paint = pencils.append(&quot;rect&quot;)
     .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
     .style(&quot;stroke&quot;, paintColor);
 
+var paintUnits = 1;
+
+var text = svg.append(&quot;text&quot;);
+
+text
+  .attr(&quot;x&quot;, 225)
+  .attr(&quot;y&quot;, 50)
+  .attr(&quot;font-size&quot;,22);
+
+text.append(&quot;tspan&quot;)
+  .text(&quot;Paint:&quot;);
+
+var paintText = text.append(&quot;tspan&quot;)
+    .attr(&quot;dx&quot;, 10)
+    .style(&quot;fill&quot;, paintColor)
+    .attr(&quot;font-weight&quot;, &quot;bold&quot;)
+    .text(paintUnits + &quot; Inch&quot;);
+
+
 &lt;/script&gt;
 
 &lt;h2 id=&quot;backstory-and-problem-extensions&quot;&gt;Backstory and Problem Extensions&lt;/h2&gt;
