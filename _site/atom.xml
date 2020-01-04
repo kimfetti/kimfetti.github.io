@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-04T17:16:26-05:00</updated>
+	<updated>2020-01-04T17:21:12-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -132,15 +132,25 @@
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div style=&quot;width: 100%; padding-bottom: 15px&quot; id=&quot;pencilContainer&quot;&gt;
-&lt;svg width=&quot;50&quot; height=&quot;50&quot;&gt;
-&lt;circle cx=&quot;25&quot; cy=&quot;25&quot; r=&quot;25&quot; fill=&quot;purple&quot; /&gt;
-&lt;/svg&gt;
     &lt;div style=&quot;float: left; width: 10%; height: 400; padding-left: 15%;&quot;&gt;
         &lt;input name=&quot;paintButton&quot; type=&quot;button&quot; value=&quot;Move Pencil&quot; onclick=&quot;movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();&quot; /&gt;
         &lt;br /&gt;
         &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;removePaint()&quot; /&gt;
     &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;script&gt;
+var svgContainer = d3.select(&quot;div#pencilContainer&quot;).append(&quot;svg&quot;)
+                                    .attr(&quot;width&quot;, 200)
+                                    .attr(&quot;height&quot;, 200);
+
+
+var rectangle = svgContainer.append(&quot;rect&quot;)
+                            .attr(&quot;x&quot;, 10)
+                            .attr(&quot;y&quot;, 10)
+                            .attr(&quot;width&quot;, 50)
+                           .attr(&quot;height&quot;, 100);
+&lt;/script&gt;
 
 &lt;h2 id=&quot;backstory-and-problem-extensions&quot;&gt;Backstory and Problem Extensions&lt;/h2&gt;
 

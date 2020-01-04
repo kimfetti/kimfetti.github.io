@@ -119,9 +119,6 @@ This problem ultimately hinges on the ability to translate the problem statement
 
 
 <div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
-<svg width="50" height="50">
-<circle cx="25" cy="25" r="25" fill="purple" />
-</svg>
     <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
         <input name="paintButton" 
                type="button" 
@@ -135,7 +132,18 @@ This problem ultimately hinges on the ability to translate the problem statement
     </div>
 </div>
 
+<script>
+var svgContainer = d3.select("div#pencilContainer").append("svg")
+                                    .attr("width", 200)
+                                    .attr("height", 200);
 
+
+var rectangle = svgContainer.append("rect")
+                            .attr("x", 10)
+                            .attr("y", 10)
+                            .attr("width", 50)
+                           .attr("height", 100);
+</script>
 
 ## Backstory and Problem Extensions
 
