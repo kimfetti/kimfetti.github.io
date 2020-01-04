@@ -18,8 +18,6 @@
 
     &lt;!--Multiple button functions--&gt;
     &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js&quot;&gt;&lt;/script&gt;  
-    
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;&gt;&lt;/script&gt;
 
 
     &lt;style&gt; 

@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/code/pencil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
@@ -40,7 +38,7 @@
           <entry key="html" value="68" />
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="23" />
-          <entry key="js" value="2" />
+          <entry key="js" value="3" />
           <entry key="list-posts" value="1" />
           <entry key="md" value="119" />
           <entry key="png" value="30" />
@@ -55,7 +53,7 @@
           <entry key="CSS" value="1" />
           <entry key="HTML" value="68" />
           <entry key="Image" value="55" />
-          <entry key="JavaScript" value="2" />
+          <entry key="JavaScript" value="3" />
           <entry key="Markdown" value="119" />
           <entry key="PLAIN_TEXT" value="41" />
           <entry key="Scratch" value="2" />
@@ -67,7 +65,7 @@
         <counts>
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="166" />
-          <entry key="js" value="7" />
+          <entry key="js" value="8" />
           <entry key="md" value="138387" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
@@ -77,7 +75,7 @@
         <counts>
           <entry key="Bash" value="9" />
           <entry key="HTML" value="166" />
-          <entry key="JavaScript" value="7" />
+          <entry key="JavaScript" value="8" />
           <entry key="Markdown" value="138349" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="34" />
@@ -105,12 +103,17 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="437">
-                <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+              <first_editor relative-caret-position="163">
+                <caret line="360" column="18" selection-start-line="360" selection-start-column="18" selection-end-line="360" selection-end-column="18" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/pencil.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -171,7 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/info_template.md" />
         <option value="$PROJECT_DIR$/_sass/_07_layout.scss" />
         <option value="$PROJECT_DIR$/blog/archive_template.html" />
         <option value="$PROJECT_DIR$/_layouts/blog.html" />
@@ -222,6 +224,7 @@
         <option value="$PROJECT_DIR$/pages/pages-root-folder/index.md" />
         <option value="$PROJECT_DIR$/code/pencil.js" />
         <option value="$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md" />
+        <option value="$PROJECT_DIR$/_includes/pencil.js" />
       </list>
     </option>
   </component>
@@ -243,6 +246,11 @@
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_includes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -369,9 +377,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/mediaelement_js/DO NOT CHANGE THESE FILES. USE -src- FOLDER.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/_data/services.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -620,11 +625,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/pencil.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="437">
-            <caret line="30" column="83" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+          <first_editor relative-caret-position="163">
+            <caret line="360" column="18" selection-start-line="360" selection-start-column="18" selection-end-line="360" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>
