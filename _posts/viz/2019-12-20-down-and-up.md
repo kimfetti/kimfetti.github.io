@@ -29,6 +29,9 @@ comments: true
 
     <!--Multiple button functions-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js"></script>  
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 
     <style> 
 
@@ -112,27 +115,11 @@ This problem ultimately hinges on the ability to translate the problem statement
 
 <br>
 
-<iframe width="560" height="315" src="https://github.com/kimfetti/Blog/blob/master/pencil_paint.html" frameborder="0" allowfullscreen></iframe>
-
-<!--
-<div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
-    <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
-        <input name="paintButton" 
-               type="button" 
-               value="Move Pencil" 
-               onclick="movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();"/>
-        <br>
-        <input name="resetButton" 
-               type="button" 
-               value="Reset" 
-               onclick="removePaint()"/>
-    </div>
-</div>
--->
 
 <!-- Paint and Pencils Script -->
 
-<script>
+
+<script>$(function(){
 
     var pencilColor = "#F0C446";
     var paintColor = "#271B77";
@@ -276,8 +263,25 @@ This problem ultimately hinges on the ability to translate the problem statement
           .delay(250)
           .text( paintUnits + " Inch");
     }
-
+;});
 </script>
+
+
+<div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
+    <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
+        <input name="paintButton" 
+               type="button" 
+               value="Move Pencil" 
+               onclick="movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();"/>
+        <br>
+        <input name="resetButton" 
+               type="button" 
+               value="Reset" 
+               onclick="removePaint()"/>
+    </div>
+</div>
+
+
 
 
 ## Backstory and Problem Extensions
@@ -461,7 +465,6 @@ I continued to think about how this concept might apply to other situations, and
         // Reset illness spread    
         sickNum = 1;
     }
-
 </script>
 
 
