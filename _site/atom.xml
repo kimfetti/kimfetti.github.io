@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-04T17:25:20-05:00</updated>
+	<updated>2020-01-04T17:28:10-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -168,6 +168,35 @@ var rects = pencils.append(&quot;rect&quot;)
     .style(&quot;fill-opacity&quot;, .7)
     .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
     .style(&quot;stroke&quot;, pencilColor);
+
+var triangles = pencils.append(&quot;path&quot;)
+    .attr('d', function(d, i) {
+        var x = 0, y = 50;
+        return 'M ' + (50+x) + ' ' + y + ' l ' + y/2 + ' ' + -y + ' l ' + y/2 + ' ' + y + ' z';
+     })
+    .attr(&quot;fill&quot;, pencilColor)
+    .style(&quot;fill-opacity&quot;, .4)
+    .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+    .style(&quot;stroke&quot;, pencilColor);
+
+var tips = pencils.append(&quot;path&quot;)
+    .attr('d', function(d, i) {
+        var x = 12.5, y = 25;
+        return 'M ' + (50+x) + ' ' + y + ' l ' + y/2 + ' ' + -y + ' l ' + y/2 + ' ' + y + ' z';
+    })
+    .style(&quot;fill-opacity&quot;, .7)
+    .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+    .style(&quot;stroke&quot;, &quot;#393731&quot;);
+
+var paint = pencils.append(&quot;rect&quot;)
+    .attr(&quot;x&quot;, 50)
+    .attr(&quot;y&quot;, 300)
+    .attr(&quot;width&quot;, 50)
+    .attr(&quot;height&quot;, 50)
+    .attr(&quot;fill&quot;, paintColor)
+    .style(&quot;fill-opacity&quot;, 0.9)
+    .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
+    .style(&quot;stroke&quot;, paintColor);
 
 &lt;/script&gt;
 

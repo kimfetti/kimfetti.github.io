@@ -162,6 +162,35 @@ var rects = pencils.append("rect")
     .style("stroke-width",".2em")
     .style("stroke", pencilColor);
 
+var triangles = pencils.append("path")
+    .attr('d', function(d, i) {
+        var x = 0, y = 50;
+        return 'M ' + (50+x) + ' ' + y + ' l ' + y/2 + ' ' + -y + ' l ' + y/2 + ' ' + y + ' z';
+     })
+    .attr("fill", pencilColor)
+    .style("fill-opacity", .4)
+    .style("stroke-width",".2em")
+    .style("stroke", pencilColor);
+
+var tips = pencils.append("path")
+    .attr('d', function(d, i) {
+        var x = 12.5, y = 25;
+        return 'M ' + (50+x) + ' ' + y + ' l ' + y/2 + ' ' + -y + ' l ' + y/2 + ' ' + y + ' z';
+    })
+    .style("fill-opacity", .7)
+    .style("stroke-width",".2em")
+    .style("stroke", "#393731");
+
+var paint = pencils.append("rect")
+    .attr("x", 50)
+    .attr("y", 300)
+    .attr("width", 50)
+    .attr("height", 50)
+    .attr("fill", paintColor)
+    .style("fill-opacity", 0.9)
+    .style("stroke-width",".2em")
+    .style("stroke", paintColor);
+
 </script>
 
 ## Backstory and Problem Extensions
