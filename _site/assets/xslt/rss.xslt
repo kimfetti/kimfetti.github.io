@@ -33,6 +33,8 @@
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
 	</noscript>
 
+ 	
+
 
 	<!-- Search Engine Optimization -->
 	<meta name="description" content="Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!">
