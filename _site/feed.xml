@@ -206,8 +206,10 @@ function addPaint(pencilNumber, delay) {
       .filter(function(d,i) { return i == 4; })
       .transition()
         .delay(delay)
-        .attr(&quot;height&quot;, 200)
-        .attr(&quot;y&quot;, 100);
+        .attr(&quot;height&quot;, function(d) {
+            return Math.min( 1000, 300);
+         })
+        .attr(&quot;y&quot;, 50);
 }
 
 

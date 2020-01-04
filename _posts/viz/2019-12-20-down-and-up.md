@@ -227,8 +227,10 @@ function addPaint(pencilNumber, delay) {
       .filter(function(d,i) { return i == 4; })
       .transition()
         .delay(delay)
-        .attr("height", 200)
-        .attr("y", 100);
+        .attr("height", function(d) {
+            return Math.min( 1000, 300);
+         })
+        .attr("y", 50);
 }
 
 
