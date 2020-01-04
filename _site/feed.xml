@@ -186,6 +186,19 @@ var paintText = text.append(&quot;tspan&quot;)
     .attr(&quot;font-weight&quot;, &quot;bold&quot;)
     .text(paintUnits + &quot; Inch&quot;);
 
+function movePencil() {
+    d3.select(&quot;g&quot;).selectAll(&quot;*&quot;)
+      .filter(function (d) { return d == 1; })
+      .transition()
+        .duration(750)
+        .attr(&quot;transform&quot;, &quot;translate(0,25)&quot;)
+      .on(&quot;end&quot;,function() {  // after moving pencil down
+          d3.select(this)
+            .transition()     // move pencil back up
+              .delay(750)
+              .attr(&quot;transform&quot;, &quot;translate(0,0)&quot;)
+      });
+}
 
 &lt;/script&gt;
 

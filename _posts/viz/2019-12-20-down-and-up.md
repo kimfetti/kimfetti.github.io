@@ -21,9 +21,7 @@ categories:
     - puzzles
 show_meta: true
 comments: true
-jsarr: 
-    - D3/pencil.js
-    - D3/contra.js
+
 ---
 
 <head>
@@ -209,6 +207,19 @@ var paintText = text.append("tspan")
     .attr("font-weight", "bold")
     .text(paintUnits + " Inch");
 
+function movePencil() {
+    d3.select("g").selectAll("*")
+      .filter(function (d) { return d == 1; })
+      .transition()
+        .duration(750)
+        .attr("transform", "translate(0,25)")
+      .on("end",function() {  // after moving pencil down
+          d3.select(this)
+            .transition()     // move pencil back up
+              .delay(750)
+              .attr("transform", "translate(0,0)")
+      });
+}
 
 </script>
 
