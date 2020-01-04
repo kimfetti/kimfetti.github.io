@@ -119,6 +119,9 @@ This problem ultimately hinges on the ability to translate the problem statement
 
 
 <div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
+<svg width="50" height="50">
+<circle cx="25" cy="25" r="25" fill="purple" />
+</svg>
     <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
         <input name="paintButton" 
                type="button" 
