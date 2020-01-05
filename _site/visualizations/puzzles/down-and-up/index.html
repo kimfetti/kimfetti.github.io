@@ -587,7 +587,7 @@ function moveBlushers(pos, delay) {
 
 function sickBlusher() {
     {
-        if (sickNum == 1) { sickNum++;  return; }
+        if (sickNum == 1) { return; }
         else { delay = 1200; }
     }
     d3.select("#blushers")
@@ -603,6 +603,29 @@ function sickBlusher() {
       .duration(800)
         .ease(d3.easeLinear)
         .style("opacity", 1);
+}
+
+function sickGrinner() {
+    {
+        if (sickNum == 1) { delay = 300; }
+        else { delay = 3300; }
+    }
+    d3.select("#grinners")
+      .selectAll("image")
+      .filter( function (d) { return d == sickNum; })
+      .transition()
+      .delay(delay)
+        .style("opacity", 0)
+        .on("end", function() {  
+            d3.select(this)
+              .transition()      
+              .duration(800)
+                .ease(d3.easeLinear)
+                .style("opacity", 1)
+                .attr("xlink:href", sickEmoji)
+                .attr("width", 75)
+                .attr("height", 75)
+        });
     sickNum++;
 }
 
