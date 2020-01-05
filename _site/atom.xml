@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-05T16:59:26-05:00</updated>
+	<updated>2020-01-05T17:00:32-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -399,6 +399,26 @@ function sickGrinner() {
                 .attr(&quot;height&quot;, 75)
         });
     sickNum++;
+}
+
+function makeWell() {
+
+    d3.select(&quot;#blushers&quot;)
+      .selectAll(&quot;image&quot;)
+        .attr('xlink:href', function (d, i) {
+            if (i == 0) { return sickEmoji; }
+            else { return blushEmoji; }
+        })
+        .attr(&quot;width&quot;, 75)
+        .attr(&quot;height&quot;, 75)
+
+    d3.select(&quot;#grinners&quot;)
+      .selectAll(&quot;image&quot;)
+        .attr(&quot;xlink:href&quot;, grinEmoji)
+        .attr(&quot;width&quot;, 70)
+        .attr(&quot;height&quot;, 70)
+
+    sickNum = 1;
 }
 
 &lt;/script&gt;

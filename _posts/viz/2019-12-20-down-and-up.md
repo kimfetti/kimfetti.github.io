@@ -397,6 +397,26 @@ function sickGrinner() {
     sickNum++;
 }
 
+function makeWell() {
+
+    d3.select("#blushers")
+      .selectAll("image")
+        .attr('xlink:href', function (d, i) {
+            if (i == 0) { return sickEmoji; }
+            else { return blushEmoji; }
+        })
+        .attr("width", 75)
+        .attr("height", 75)
+
+    d3.select("#grinners")
+      .selectAll("image")
+        .attr("xlink:href", grinEmoji)
+        .attr("width", 70)
+        .attr("height", 70)
+
+    sickNum = 1;
+}
+
 </script>
 
 ## Conclusion
