@@ -338,6 +338,22 @@ var grinners = grinGroup.selectAll("image")
 
 var sickNum = 1;
 
+function moveBlushers(pos, delay) {
+    if (sickNum == 1) { sickNum++; return; }
+    else {
+      d3.select("#blushers")
+        .selectAll("image")
+        .transition()
+        .delay(delay)
+        .duration(1000)
+          .attr("transform", function(d) {
+              if (pos=="left") { return "translate(-100, 0)"; }
+              else if (pos=="center") { return "translate(0, 0)"; }
+          });
+    };
+    sickNum++;
+}
+
 </script>
 
 ## Conclusion

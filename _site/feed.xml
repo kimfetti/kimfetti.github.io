@@ -312,6 +312,22 @@ var grinners = grinGroup.selectAll(&quot;image&quot;)
 
 var sickNum = 1;
 
+function moveBlushers(pos, delay) {
+    if (sickNum == 1) { sickNum++; return; }
+    else {
+      d3.select(&quot;#blushers&quot;)
+        .selectAll(&quot;image&quot;)
+        .transition()
+        .delay(delay)
+        .duration(1000)
+          .attr(&quot;transform&quot;, function(d) {
+              if (pos==&quot;left&quot;) { return &quot;translate(-100, 0)&quot;; }
+              else if (pos==&quot;center&quot;) { return &quot;translate(0, 0)&quot;; }
+          });
+    };
+    sickNum++;
+}
+
 &lt;/script&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
