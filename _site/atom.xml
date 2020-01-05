@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-05T16:51:24-05:00</updated>
+	<updated>2020-01-05T16:52:53-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -326,6 +326,21 @@ var blushers = blushGroup.selectAll(&quot;image&quot;)
     .attr(&quot;y&quot;, 0)
     .attr('width', 75)
     .attr('height', 75);
+    
+var grinGroup = canvas.append(&quot;g&quot;)
+    .attr(&quot;id&quot;, &quot;grinners&quot;);
+
+var grinners = grinGroup.selectAll(&quot;image&quot;)
+  .data(contraData)
+  .enter()
+  .append(&quot;image&quot;)
+    .attr('xlink:href', grinEmoji)
+    .attr(&quot;x&quot;, function (d, i) { return d*100; })
+    .attr(&quot;y&quot;, 100)
+    .attr('width', 70)
+    .attr('height', 70);
+
+var sickNum = 1;
 
 &lt;/script&gt;
 

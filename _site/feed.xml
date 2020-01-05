@@ -296,6 +296,21 @@ var blushers = blushGroup.selectAll(&quot;image&quot;)
     .attr(&quot;y&quot;, 0)
     .attr('width', 75)
     .attr('height', 75);
+    
+var grinGroup = canvas.append(&quot;g&quot;)
+    .attr(&quot;id&quot;, &quot;grinners&quot;);
+
+var grinners = grinGroup.selectAll(&quot;image&quot;)
+  .data(contraData)
+  .enter()
+  .append(&quot;image&quot;)
+    .attr('xlink:href', grinEmoji)
+    .attr(&quot;x&quot;, function (d, i) { return d*100; })
+    .attr(&quot;y&quot;, 100)
+    .attr('width', 70)
+    .attr('height', 70);
+
+var sickNum = 1;
 
 &lt;/script&gt;
 
