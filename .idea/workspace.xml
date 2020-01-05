@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/D3/contra.js" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/D3/contra.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/visualizations/puzzles/down-and-up/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/puzzles/down-and-up/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +67,8 @@
         <counts>
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
-          <entry key="js" value="47" />
-          <entry key="md" value="138898" />
+          <entry key="js" value="51" />
+          <entry key="md" value="139129" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -75,8 +77,8 @@
         <counts>
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
-          <entry key="JavaScript" value="47" />
-          <entry key="Markdown" value="138860" />
+          <entry key="JavaScript" value="51" />
+          <entry key="Markdown" value="139091" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="34" />
           <entry key="Scratch" value="2" />
@@ -103,8 +105,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="415">
-                <caret line="238" column="31" lean-forward="true" selection-start-line="238" selection-start-column="31" selection-end-line="238" selection-end-column="31" />
+              <first_editor relative-caret-position="121">
+                <caret line="283" column="34" selection-start-line="283" selection-start-column="34" selection-end-line="283" selection-end-column="34" />
               </first_editor>
               <second_editor />
             </state>
@@ -123,8 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/D3/contra.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="930">
-              <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+            <state relative-caret-position="525">
+              <caret line="35" column="24" selection-start-line="16" selection-end-line="35" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -606,13 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/D3/contra.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/fonts/iconfont.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -627,11 +622,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/D3/contra.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="24" selection-start-line="16" selection-end-line="35" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="415">
-            <caret line="238" column="31" lean-forward="true" selection-start-line="238" selection-start-column="31" selection-end-line="238" selection-end-column="31" />
+          <first_editor relative-caret-position="121">
+            <caret line="283" column="34" selection-start-line="283" selection-start-column="34" selection-end-line="283" selection-end-column="34" />
           </first_editor>
           <second_editor />
         </state>

@@ -215,7 +215,7 @@ function addPaint(pencilNumber, delay) {
 }
 
 function incrUnits() {
-    paintUnits = paintUnits + 1
+    paintUnits++;
     paintText.transition()
       .delay(2400)
       .text( Math.min(paintUnits, 6) + &quot; Inches&quot;);
@@ -250,6 +250,34 @@ Now you understand the origin of the puzzle.&lt;/p&gt;
         &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;makeWell()&quot; /&gt;
     &lt;/div&gt;
 &lt;/div&gt;
+
+&lt;script&gt;
+
+var blushEmoji = &quot;https://kimfetti.github.io/images/emoji_blush.png&quot;;
+var grinEmoji = &quot;https://kimfetti.github.io/images/emoji_grin.png&quot;;
+var sickEmoji = &quot;https://kimfetti.github.io/images/emoji_sick.png&quot;;
+
+var contraData = [1, 2, 3, 4, 5];
+
+var canvas = d3.select(&quot;div#contraContainer&quot;).append(&quot;svg&quot;)
+    .attr(&quot;width&quot;,700)
+    .attr(&quot;height&quot;, 200)
+    .style('transform', 'translate(25%, 0%)');
+
+var blushGroup = canvas.append(&quot;g&quot;)
+    .attr(&quot;id&quot;, &quot;blushers&quot;);
+
+var blushers = blushGroup.selectAll(&quot;image&quot;)
+  .data(contraData)
+  .enter()
+  .append(&quot;image&quot;)
+    .attr('xlink:href', blushEmoji)
+    .attr(&quot;x&quot;, function (d, i) { return d*100; })
+    .attr(&quot;y&quot;, 0)
+    .attr('width', 75)
+    .attr('height', 75);
+
+&lt;/script&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 

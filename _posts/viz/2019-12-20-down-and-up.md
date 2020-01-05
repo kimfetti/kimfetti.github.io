@@ -236,7 +236,7 @@ function addPaint(pencilNumber, delay) {
 }
 
 function incrUnits() {
-    paintUnits = paintUnits + 1
+    paintUnits++;
     paintText.transition()
       .delay(2400)
       .text( Math.min(paintUnits, 6) + " Inches");
@@ -276,6 +276,34 @@ I continued to think about how this concept might apply to other situations, and
     </div>
 </div>
 
+
+<script>
+
+var blushEmoji = "{{ site.urlimg }}emoji_blush.png";
+var grinEmoji = "{{ site.urlimg }}emoji_grin.png";
+var sickEmoji = "{{ site.urlimg }}emoji_sick.png";
+
+var contraData = [1, 2, 3, 4, 5];
+
+var canvas = d3.select("div#contraContainer").append("svg")
+    .attr("width",700)
+    .attr("height", 200)
+    .style('transform', 'translate(25%, 0%)');
+
+var blushGroup = canvas.append("g")
+    .attr("id", "blushers");
+
+var blushers = blushGroup.selectAll("image")
+  .data(contraData)
+  .enter()
+  .append("image")
+    .attr('xlink:href', blushEmoji)
+    .attr("x", function (d, i) { return d*100; })
+    .attr("y", 0)
+    .attr('width', 75)
+    .attr('height', 75);
+
+</script>
 
 ## Conclusion
 
