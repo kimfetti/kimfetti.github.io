@@ -473,7 +473,7 @@ function addPaint(pencilNumber, delay) {
 }
 
 function incrUnits() {
-    paintUnits++
+    paintUnits = paintUnits + 1
     paintText.transition()
       .delay(2400)
       .text( Math.min(paintUnits, 6) + " Inches");

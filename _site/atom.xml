@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-04T18:23:24-05:00</updated>
+	<updated>2020-01-05T16:32:09-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -245,7 +245,7 @@ function addPaint(pencilNumber, delay) {
 }
 
 function incrUnits() {
-    paintUnits++
+    paintUnits = paintUnits + 1
     paintText.transition()
       .delay(2400)
       .text( Math.min(paintUnits, 6) + &quot; Inches&quot;);
