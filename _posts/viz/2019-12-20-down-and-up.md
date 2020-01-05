@@ -339,7 +339,7 @@ var grinners = grinGroup.selectAll("image")
 var sickNum = 1;
 
 function moveBlushers(pos, delay) {
-    if (sickNum == 1) { sickNum++; return; }
+    if (sickNum == 1) { return; }
     else {
       d3.select("#blushers")
         .selectAll("image")
@@ -351,6 +351,26 @@ function moveBlushers(pos, delay) {
               else if (pos=="center") { return "translate(0, 0)"; }
           });
     };
+}
+
+function sickBlusher() {
+    {
+        if (sickNum == 1) { sickNum++;  return; }
+        else { delay = 1200; }
+    }
+    d3.select("#blushers")
+      .selectAll("image")
+      .filter( function (d) { return d == sickNum; })
+
+      .transition()
+      .delay(delay)
+        .style("opacity", 0)
+        .attr("xlink:href", sickEmoji)
+
+      .transition()
+      .duration(800)
+        .ease(d3.easeLinear)
+        .style("opacity", 1);
     sickNum++;
 }
 

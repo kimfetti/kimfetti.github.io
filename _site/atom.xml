@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-05T16:55:18-05:00</updated>
+	<updated>2020-01-05T16:56:50-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -343,7 +343,7 @@ var grinners = grinGroup.selectAll(&quot;image&quot;)
 var sickNum = 1;
 
 function moveBlushers(pos, delay) {
-    if (sickNum == 1) { sickNum++; return; }
+    if (sickNum == 1) { return; }
     else {
       d3.select(&quot;#blushers&quot;)
         .selectAll(&quot;image&quot;)
@@ -355,6 +355,26 @@ function moveBlushers(pos, delay) {
               else if (pos==&quot;center&quot;) { return &quot;translate(0, 0)&quot;; }
           });
     };
+}
+
+function sickBlusher() {
+    {
+        if (sickNum == 1) { sickNum++;  return; }
+        else { delay = 1200; }
+    }
+    d3.select(&quot;#blushers&quot;)
+      .selectAll(&quot;image&quot;)
+      .filter( function (d) { return d == sickNum; })
+
+      .transition()
+      .delay(delay)
+        .style(&quot;opacity&quot;, 0)
+        .attr(&quot;xlink:href&quot;, sickEmoji)
+
+      .transition()
+      .duration(800)
+        .ease(d3.easeLinear)
+        .style(&quot;opacity&quot;, 1);
     sickNum++;
 }
 
