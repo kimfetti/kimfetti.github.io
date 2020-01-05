@@ -479,6 +479,19 @@ function incrUnits() {
       .text( Math.min(paintUnits, 6) + " Inches");
 }
 
+function removePaint() {
+    paint
+      .transition()
+      .duration(500)
+        .attr("y", 300)
+        .attr("height", 50);
+
+    paintUnits = 1;
+    paintText.transition()
+      .delay(250)
+      .text( paintUnits + " Inch");
+}
+
 </script>
 
 <h2 id="backstory-and-problem-extensions">Backstory and Problem Extensions</h2>
@@ -529,7 +542,14 @@ var blushers = blushGroup.selectAll("image")
   .data(contraData)
   .enter()
   .append("image")
-    .attr('xlink:href', blushEmoji)
+    .attr('xlink:href', function (d, i) {
+        if (i == 0) {
+          return sickEmoji;
+        }
+        else {
+          return blushEmoji;
+        }
+    })
     .attr("x", function (d, i) { return d*100; })
     .attr("y", 0)
     .attr('width', 75)
