@@ -62,7 +62,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
           <entry key="js" value="51" />
-          <entry key="md" value="139177" />
+          <entry key="md" value="139179" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
         </counts>
@@ -72,7 +72,7 @@
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
           <entry key="JavaScript" value="51" />
-          <entry key="Markdown" value="139139" />
+          <entry key="Markdown" value="139141" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="34" />
           <entry key="Scratch" value="2" />
@@ -99,8 +99,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="560">
-                <caret line="415" lean-forward="true" selection-start-line="415" selection-end-line="415" />
+              <first_editor relative-caret-position="545">
+                <caret line="414" column="28" selection-start-line="414" selection-start-column="28" selection-end-line="414" selection-end-column="28" />
               </first_editor>
               <second_editor />
             </state>
@@ -626,8 +626,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2019-12-20-down-and-up.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="560">
-            <caret line="415" lean-forward="true" selection-start-line="415" selection-end-line="415" />
+          <first_editor relative-caret-position="545">
+            <caret line="414" column="28" selection-start-line="414" selection-start-column="28" selection-end-line="414" selection-end-column="28" />
           </first_editor>
           <second_editor />
         </state>
