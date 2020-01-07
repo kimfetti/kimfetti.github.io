@@ -26,11 +26,12 @@ comments: true
 
 <head>
 
-    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
 
     <!--Multiple button functions-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.3.0/d3.js"></script>  
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
 
     <style> 
@@ -136,9 +137,12 @@ var paintColor = "#271B77";
 
 var pencilData = [1, 2];
 
+var width = $("div#pencilContainer").width();
+var height = 400;
+
 var svg = d3.select("div#pencilContainer").append("svg")
-    .attr("width",600)
-    .attr("height", 400)
+    .attr("width", width*.6)
+    .attr("height", height)
     .style('transform', 'translate(40%, 0%)');
 
 var objects = svg.append("g");
@@ -263,7 +267,7 @@ Earlier I mentioned this problem caught my eye for several reasons.  The first r
 
 The second reason this puzzle piqued my interest is its history.  As explained in Kordemsky's book, Leonid Mikhailovich Rybakov, a Soviet mathematician who lived in the early 20th Century, created this "Down and Up" problem.  I deeply appreciate math problems that pervade through many time periods and geographies.  Solving such puzzles allows me to feel more connected to the past and to other mathematicians around the globe. 
 
-Finally, this problem sparked my curiousity because Rybakov first thought it up when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in his "Answers" section.  From <em>The Moscow Puzzles</em> book:
+Finally, this problem sparked my curiosity because Rybakov first thought it up when returning home from a successful duck hunt.  Kordemsky encourages readers to contemplate why this could be the case but goes on to explain in his "Answers" section.  From <em>The Moscow Puzzles</em> book:
 
 > Looking at his boots, Leonid Mikhailovich noticed that their entire lengths were muddied where they usually rub each other while he walks.  
 "How puzzling," he thought, "I didn't walk in any deep mud, yet my boots are muddied up to the knees." <br>
@@ -298,9 +302,12 @@ var sickEmoji = "{{ site.urlimg }}emoji_sick.png";
 
 var contraData = [1, 2, 3, 4, 5];
 
+var w = $("div#contraContainer").width();
+var h = 200;
+
 var canvas = d3.select("div#contraContainer").append("svg")
-    .attr("width",700)
-    .attr("height", 200)
+    .attr("width", w*.75)
+    .attr("height", h)
     .style('transform', 'translate(25%, 0%)');
 
 var blushGroup = canvas.append("g")
@@ -320,8 +327,8 @@ var blushers = blushGroup.selectAll("image")
     })
     .attr("x", function (d, i) { return d*100; })
     .attr("y", 0)
-    .attr('width', 75)
-    .attr('height', 75);
+    .attr('width', w/13)
+    .attr('height', w/13);
     
 var grinGroup = canvas.append("g")
     .attr("id", "grinners");
@@ -333,8 +340,8 @@ var grinners = grinGroup.selectAll("image")
     .attr('xlink:href', grinEmoji)
     .attr("x", function (d, i) { return d*100; })
     .attr("y", 100)
-    .attr('width', 70)
-    .attr('height', 70);
+    .attr('width', w/14)
+    .attr('height', w/14);
 
 var sickNum = 1;
 
@@ -391,8 +398,8 @@ function sickGrinner() {
                 .ease(d3.easeLinear)
                 .style("opacity", 1)
                 .attr("xlink:href", sickEmoji)
-                .attr("width", 75)
-                .attr("height", 75)
+                .attr("width", w/13)
+                .attr("height", w/13)
         });
     sickNum++;
 }
