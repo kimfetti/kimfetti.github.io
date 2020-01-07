@@ -39,7 +39,7 @@ comments: true
         input {
           border: none;
           color: white;
-          padding: 16px 32px;
+          padding: 8px 16px;
           margin: 4px 2px;
           cursor: pointer;
         }
@@ -118,7 +118,7 @@ This problem ultimately hinges on the ability to translate the problem statement
 
 
 <div style="width: 100%; padding-bottom: 15px" id="pencilContainer">
-    <div style="float: left; width: 10%; height: 400; padding-left: 15%;">
+    <div style="float: left; width: 10%; height: 400; padding-left: 5%;">
         <input name="paintButton" 
                type="button" 
                value="Move Pencil" 
@@ -143,7 +143,7 @@ var height = 400;
 var svg = d3.select("div#pencilContainer").append("svg")
     .attr("width", width*.6)
     .attr("height", height)
-    .style('transform', 'translate(40%, 0%)');
+    .style('transform', 'translate(30%, 0%)');
 
 var objects = svg.append("g");
 
@@ -280,7 +280,7 @@ I continued to think about how this concept might apply to other situations, and
 <br>
 
 <div style="width: 100%; padding-bottom: 15px" id="contraContainer">
-    <div style="float: left; width: 10%; height: 400; padding-left: 10%;">
+    <div style="float: left; width: 10%; height: 400; padding-left: 5%;">
         <input name="danceButton" 
                type="button" 
                value="Dance!" 
@@ -308,7 +308,7 @@ var h = 200;
 var canvas = d3.select("div#contraContainer").append("svg")
     .attr("width", w*.75)
     .attr("height", h)
-    .style('transform', 'translate(25%, 0%)');
+    .style('transform', 'translate(20%, 0%)');
 
 var blushGroup = canvas.append("g")
     .attr("id", "blushers");
@@ -325,7 +325,7 @@ var blushers = blushGroup.selectAll("image")
           return blushEmoji;
         }
     })
-    .attr("x", function (d, i) { return d*100; })
+    .attr("x", function (d, i) { return w/75+d*(w/10); })
     .attr("y", 0)
     .attr('width', w/13)
     .attr('height', w/13);
@@ -338,7 +338,7 @@ var grinners = grinGroup.selectAll("image")
   .enter()
   .append("image")
     .attr('xlink:href', grinEmoji)
-    .attr("x", function (d, i) { return d*100; })
+    .attr("x", function (d, i) { return w/75+d*(w/10); })
     .attr("y", 100)
     .attr('width', w/14)
     .attr('height', w/14);

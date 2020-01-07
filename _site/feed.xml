@@ -27,7 +27,7 @@
         input {
           border: none;
           color: white;
-          padding: 16px 32px;
+          padding: 8px 16px;
           margin: 4px 2px;
           cursor: pointer;
         }
@@ -103,7 +103,7 @@
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div style=&quot;width: 100%; padding-bottom: 15px&quot; id=&quot;pencilContainer&quot;&gt;
-    &lt;div style=&quot;float: left; width: 10%; height: 400; padding-left: 15%;&quot;&gt;
+    &lt;div style=&quot;float: left; width: 10%; height: 400; padding-left: 5%;&quot;&gt;
         &lt;input name=&quot;paintButton&quot; type=&quot;button&quot; value=&quot;Move Pencil&quot; onclick=&quot;movePencil(); addPaint(1,800); addPaint(2,2000); incrUnits();&quot; /&gt;
         &lt;br /&gt;
         &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;removePaint()&quot; /&gt;
@@ -122,7 +122,7 @@ var height = 400;
 var svg = d3.select(&quot;div#pencilContainer&quot;).append(&quot;svg&quot;)
     .attr(&quot;width&quot;, width*.6)
     .attr(&quot;height&quot;, height)
-    .style('transform', 'translate(40%, 0%)');
+    .style('transform', 'translate(30%, 0%)');
 
 var objects = svg.append(&quot;g&quot;);
 
@@ -261,7 +261,7 @@ Now you understand the origin of the puzzle.&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;div style=&quot;width: 100%; padding-bottom: 15px&quot; id=&quot;contraContainer&quot;&gt;
-    &lt;div style=&quot;float: left; width: 10%; height: 400; padding-left: 10%;&quot;&gt;
+    &lt;div style=&quot;float: left; width: 10%; height: 400; padding-left: 5%;&quot;&gt;
         &lt;input name=&quot;danceButton&quot; type=&quot;button&quot; value=&quot;Dance!&quot; onclick=&quot;moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();&quot; /&gt;
         &lt;br /&gt;
         &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;makeWell()&quot; /&gt;
@@ -282,7 +282,7 @@ var h = 200;
 var canvas = d3.select(&quot;div#contraContainer&quot;).append(&quot;svg&quot;)
     .attr(&quot;width&quot;, w*.75)
     .attr(&quot;height&quot;, h)
-    .style('transform', 'translate(25%, 0%)');
+    .style('transform', 'translate(20%, 0%)');
 
 var blushGroup = canvas.append(&quot;g&quot;)
     .attr(&quot;id&quot;, &quot;blushers&quot;);
@@ -299,7 +299,7 @@ var blushers = blushGroup.selectAll(&quot;image&quot;)
           return blushEmoji;
         }
     })
-    .attr(&quot;x&quot;, function (d, i) { return d*100; })
+    .attr(&quot;x&quot;, function (d, i) { return w/75+d*(w/10); })
     .attr(&quot;y&quot;, 0)
     .attr('width', w/13)
     .attr('height', w/13);
@@ -312,7 +312,7 @@ var grinners = grinGroup.selectAll(&quot;image&quot;)
   .enter()
   .append(&quot;image&quot;)
     .attr('xlink:href', grinEmoji)
-    .attr(&quot;x&quot;, function (d, i) { return d*100; })
+    .attr(&quot;x&quot;, function (d, i) { return w/75+d*(w/10); })
     .attr(&quot;y&quot;, 100)
     .attr('width', w/14)
     .attr('height', w/14);
