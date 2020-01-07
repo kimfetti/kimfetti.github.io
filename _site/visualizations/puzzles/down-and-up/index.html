@@ -380,7 +380,7 @@ var height = 400;
 var svg = d3.select("div#pencilContainer").append("svg")
     .attr("width", width*.6)
     .attr("height", height)
-    .style('transform', 'translate(35%, 0%)');
+    .style('transform', 'translate(40%, 0%)');
 
 var objects = svg.append("g");
 
@@ -540,7 +540,7 @@ var h = 200;
 var canvas = d3.select("div#contraContainer").append("svg")
     .attr("width", w*.75)
     .attr("height", h)
-    .style('transform', 'translate(25%, 0%)');
+    .style('transform', 'translate(30%, 0%)');
 
 var blushGroup = canvas.append("g")
     .attr("id", "blushers");
@@ -644,14 +644,14 @@ function makeWell() {
             if (i == 0) { return sickEmoji; }
             else { return blushEmoji; }
         })
-        .attr("width", 75)
-        .attr("height", 75);
+        .attr("width", w/13)
+        .attr("height", w/13);
 
     d3.select("#grinners")
       .selectAll("image")
         .attr("xlink:href", grinEmoji)
-        .attr("width", 70)
-        .attr("height", 70);
+        .attr("width", w/14)
+        .attr("height", w/14);
 
     sickNum = 1;
 }
