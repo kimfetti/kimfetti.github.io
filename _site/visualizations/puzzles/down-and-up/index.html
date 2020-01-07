@@ -380,7 +380,7 @@ var height = 400;
 var svg = d3.select("div#pencilContainer").append("svg")
     .attr("width", width*.6)
     .attr("height", height)
-    .style('transform', 'translate(30%, 0%)');
+    .style('transform', 'translate(35%, 0%)');
 
 var objects = svg.append("g");
 
@@ -540,7 +540,7 @@ var h = 200;
 var canvas = d3.select("div#contraContainer").append("svg")
     .attr("width", w*.75)
     .attr("height", h)
-    .style('transform', 'translate(20%, 0%)');
+    .style('transform', 'translate(25%, 0%)');
 
 var blushGroup = canvas.append("g")
     .attr("id", "blushers");
@@ -586,7 +586,7 @@ function moveBlushers(pos, delay) {
         .delay(delay)
         .duration(1000)
           .attr("transform", function(d) {
-              if (pos=="left") { return "translate(-100, 0)"; }
+              if (pos=="left") { return "translate(" + -w/10 +", 0)"; }
               else if (pos=="center") { return "translate(0, 0)"; }
           });
     };

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-01-07T13:41:50-05:00</updated>
+	<updated>2020-01-07T13:54:02-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -152,7 +152,7 @@ var height = 400;
 var svg = d3.select(&quot;div#pencilContainer&quot;).append(&quot;svg&quot;)
     .attr(&quot;width&quot;, width*.6)
     .attr(&quot;height&quot;, height)
-    .style('transform', 'translate(30%, 0%)');
+    .style('transform', 'translate(35%, 0%)');
 
 var objects = svg.append(&quot;g&quot;);
 
@@ -312,7 +312,7 @@ var h = 200;
 var canvas = d3.select(&quot;div#contraContainer&quot;).append(&quot;svg&quot;)
     .attr(&quot;width&quot;, w*.75)
     .attr(&quot;height&quot;, h)
-    .style('transform', 'translate(20%, 0%)');
+    .style('transform', 'translate(25%, 0%)');
 
 var blushGroup = canvas.append(&quot;g&quot;)
     .attr(&quot;id&quot;, &quot;blushers&quot;);
@@ -358,7 +358,7 @@ function moveBlushers(pos, delay) {
         .delay(delay)
         .duration(1000)
           .attr(&quot;transform&quot;, function(d) {
-              if (pos==&quot;left&quot;) { return &quot;translate(-100, 0)&quot;; }
+              if (pos==&quot;left&quot;) { return &quot;translate(&quot; + -w/10 +&quot;, 0)&quot;; }
               else if (pos==&quot;center&quot;) { return &quot;translate(0, 0)&quot;; }
           });
     };
