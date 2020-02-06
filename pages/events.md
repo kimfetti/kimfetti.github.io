@@ -8,9 +8,7 @@ header:
 permalink: "/events/"
 ---
 
-<!-- 
-UPCOMING 
--->
+<!-- UPCOMING -->
 
 <div class="row">
     <div class="small-12 columns">
