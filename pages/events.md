@@ -23,7 +23,7 @@ permalink: "/events/"
       <h5>PyCon 2020</h5>
       <br>
       <a href="https://us.pycon.org/2020/schedule/presentation/72/">
-      <img src="{{ site.urlimg }}PyCon_April2020.png" alt="PyCon 2020"></a>
+      <img src="{{ site.urlimg }}PyCon_Apr2020.png" alt="PyCon 2020"></a>
       <h5>15 Apr 2020</h5>
       <p>It's Officially Legal <br>so Let's Scrape the Web</p>
       </center>
@@ -33,7 +33,7 @@ permalink: "/events/"
       <h5>ODSC East 2020</h5>
       <br>
       <a href="https://odsc.com/speakers/level-up-fancy-nlp-with-straightforward-tools/">
-      <img src="{{ site.urlimg }}ODSC_April2020.png" alt="ODSC East April 2020"></a>
+      <img src="{{ site.urlimg }}ODSC_Apr2020.png" alt="ODSC East April 2020"></a>
       <h5>16-17 Apr 2020</h5>
       <p>Level Up: <br> Fancy NLP with Straightforward Tools</p>
       </center>
