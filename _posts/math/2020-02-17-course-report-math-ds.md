@@ -9,9 +9,9 @@ header:
     background-color: "#999999"
     image: logo.png
 image:
-    thumb: CourseReport_Feb2020.png
-    homepage: CourseReport_Thumb.png
-    title: CourseReport_Thumb.png
+    thumb: CourseReport_Thumb.png
+    homepage: CourseReport_Feb2020.png
+    title: CourseReport_Feb2020.png
     caption: "Photo by CP. Image constructed by Course Report."
     caption_url: "https://www.coursereport.com/"
 categories:
