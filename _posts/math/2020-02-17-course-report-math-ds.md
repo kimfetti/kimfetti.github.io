@@ -10,8 +10,8 @@ header:
     image: logo.png
 image:
     thumb: CourseReport_Feb2020.png
-    homepage: CourseReport_thumb.png
-    title: CourseReport_thumb.png
+    homepage: CourseReport_Thumb.png
+    title: CourseReport_Thumb.png
     caption: "Photo by CP. Image constructed by Course Report."
     caption_url: "https://www.coursereport.com/"
 categories:
