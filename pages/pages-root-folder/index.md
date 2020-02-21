@@ -8,15 +8,15 @@ layout: frontpage
 header:
   image_fullwidth: header5.png
 widget1:
-  title: "5 Significant Object Detection Challenges and Solutions"
-  url: 'http://kimberlyfessel.com/algorithms/literature%20reviews/object-detection-challenges/'
-  image: kim_tree_thumb.png
-  text: "Object detection problems pose several unique obstacles beyond what is required for image classification.  Five such challenges are reviewed in this post along with researchers' efforts to overcome these complications."
-widget2:
   title: "Solving the Birthday Problem on Mars"
   url: '/mathematics/visualizations/planetary-birthday-problem/'
   image: birthday_planet_thumb.jpg
   text: "The birthday problem is a classic probability question with a surprising result.  In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system."
+widget2:
+  title: "How to Gather Data from YouTube"
+  url: 'http://kimberlyfessel.com/data/web%20scraping/gather-youtube-data/'
+  image: youtube-thumb.png
+  text: "You can mine YouTube's massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, the video transcripts, as well as YouTube search results."
 widget3:
     title: 'Past and Upcoming Events'
     url: '/events'

@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-02-06T18:59:01-05:00</updated>
+	<updated>2020-02-21T15:28:44-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -24,6 +24,39 @@
 
 	<generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator>
 
+	
+		<entry>
+			<id>http://localhost:4000//math/course-report-math-ds/</id>
+			<title>Math for Data Science: An Interview with Course Report</title>
+			<link href="http://localhost:4000//math/course-report-math-ds/" rel="alternate" type="text/html" title="Math for Data Science: An Interview with Course Report" />
+			<updated>2020-02-17T00:00:00-05:00</updated>
+
+			
+				
+				<author>
+					
+						<name>KFessel</name>
+					
+					
+					
+				</author>
+			
+			<summary>&lt;em&gt;Math skills are critical for a successful career in data science. Find out why in this interview with Course Report.&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//math/course-report-math-ds/">&lt;!--more--&gt;
+
+&lt;p&gt;I recently sat down with &lt;a href=&quot;https://www.coursereport.com/&quot;&gt;Course Report&lt;/a&gt; to discuss the math needed to become a data scientist.  Blending coding skills with mathematics lies at the heart of data science, so understanding fundamental math concepts is critical for a successful career within the field.  Linear algebra, calculus, probability, and statistics are the four math disciplines that fuel the bulk of data science.  In this interview, I discuss the role each topic plays in data science; I also work through an example problem from all four subjects.&lt;/p&gt;
+
+&lt;p&gt;Please continue to the &lt;a href=&quot;https://www.coursereport.com/blog/math-for-data-science-with-metis&quot;&gt;Course Report blog&lt;/a&gt; for the full write-up and a link to the interview recording.&lt;/p&gt;
+
+</content>
+
+			
+				<category term="math" />
+			
+			
+
+			<published>2020-02-17T00:00:00-05:00</published>
+		</entry>
 	
 		<entry>
 			<id>http://localhost:4000//visualizations/puzzles/down-and-up/</id>
