@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-02-21T15:28:44-05:00</updated>
+	<updated>2020-02-25T10:10:50-05:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -26,9 +26,44 @@
 
 	
 		<entry>
-			<id>http://localhost:4000//math/course-report-math-ds/</id>
+			<id>http://localhost:4000//nlp/spacy-for-the-win/</id>
+			<title>Level Up: spaCy NLP for the Win</title>
+			<link href="http://localhost:4000//nlp/spacy-for-the-win/" rel="alternate" type="text/html" title="Level Up: spaCy NLP for the Win" />
+			<updated>2020-02-21T00:00:00-05:00</updated>
+
+			
+				
+				<author>
+					
+						<name>KFessel</name>
+					
+					
+					
+				</author>
+			
+			<summary>&lt;em&gt;spaCy provides an easy-to-use framework for getting started with NLP.  This post covers the basics of spaCy and highlights its functionality on a small corpus of restaurant reviews..&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//nlp/spacy-for-the-win/">&lt;!--more--&gt;
+
+&lt;p&gt;Natural language processing (NLP) is a branch of artificial intelligence in which computers extract information from written or spoken human language.  This field has experienced a massive rise in popularity over the years, not only among academic communities but also in industry settings. Because unstructured text makes up so much of the data we collect today (e.g. emails, text messages, and even this blog post), many practitioners regularly use NLP at the workplace and require straightforward tools to reliably parse through substantial amounts of documents.  The open-source library spaCy meets these exact demands by processing text quickly and accurately, all within a simplified framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://explosion.ai/blog/introducing-spacy&quot;&gt;Released in 2015&lt;/a&gt;, spaCy was initially created to help small businesses better leverage NLP.  Its practical design offers users a streamlined approach for accomplishing necessary NLP tasks, and it assumes a more pragmatic stance toward NLP than traditional libraries like NLTK, which were developed with a more research-focused, exploratory intention.  spaCy can be quite flexible, however, as it allows more experienced users the option of customizing just about any of its tools.  spaCy is considered a Python package, but the “Cy” in spaCy indicates that Cython powers many of the underlining computations.  This makes spaCy incredibly fast, even for more complicated processes.  I will illustrate a selection of spaCy’s core functionality in this post and will end by implementing these techniques on sample restaurant reviews.&lt;/p&gt;
+
+&lt;p&gt;Please continue to the &lt;a href=&quot;https://opendatascience.com/level-up-spacy-nlp-for-the-win/&quot;&gt;ODSC blog&lt;/a&gt; to read my full post covering this introduction to spaCy.&lt;/p&gt;
+
+</content>
+
+			
+				<category term="nlp" />
+			
+			
+
+			<published>2020-02-21T00:00:00-05:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://localhost:4000//mathematics/course-report-math-ds/</id>
 			<title>Math for Data Science: An Interview with Course Report</title>
-			<link href="http://localhost:4000//math/course-report-math-ds/" rel="alternate" type="text/html" title="Math for Data Science: An Interview with Course Report" />
+			<link href="http://localhost:4000//mathematics/course-report-math-ds/" rel="alternate" type="text/html" title="Math for Data Science: An Interview with Course Report" />
 			<updated>2020-02-17T00:00:00-05:00</updated>
 
 			
@@ -42,7 +77,7 @@
 				</author>
 			
 			<summary>&lt;em&gt;Math skills are critical for a successful career in data science. Find out why in this interview with Course Report.&lt;/em&gt;</summary>
-			<content type="html" xml:base="http://localhost:4000//math/course-report-math-ds/">&lt;!--more--&gt;
+			<content type="html" xml:base="http://localhost:4000//mathematics/course-report-math-ds/">&lt;!--more--&gt;
 
 &lt;p&gt;I recently sat down with &lt;a href=&quot;https://www.coursereport.com/&quot;&gt;Course Report&lt;/a&gt; to discuss the math needed to become a data scientist.  Blending coding skills with mathematics lies at the heart of data science, so understanding fundamental math concepts is critical for a successful career within the field.  Linear algebra, calculus, probability, and statistics are the four math disciplines that fuel the bulk of data science.  In this interview, I discuss the role each topic plays in data science; I also work through an example problem from all four subjects.&lt;/p&gt;
 
@@ -51,7 +86,7 @@
 </content>
 
 			
-				<category term="math" />
+				<category term="mathematics" />
 			
 			
 

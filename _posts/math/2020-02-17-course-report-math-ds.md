@@ -15,7 +15,7 @@ image:
     caption: "Photo by CP. Image constructed by Course Report."
     caption_url: "https://www.coursereport.com/"
 categories:
-    - math
+    - mathematics
 show_meta: true
 comments: true
 ---

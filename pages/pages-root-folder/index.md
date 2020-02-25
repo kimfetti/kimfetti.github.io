@@ -8,10 +8,10 @@ layout: frontpage
 header:
   image_fullwidth: header5.png
 widget1:
-  title: "Solving the Birthday Problem on Mars"
-  url: '/mathematics/visualizations/planetary-birthday-problem/'
-  image: birthday_planet_thumb.jpg
-  text: "The birthday problem is a classic probability question with a surprising result.  In this post, we will solve this puzzler and extend the result by considering the answer for every planet in our solar system."
+  title: "Math for Data Science: An Interview with Course Report"
+  url: '/mathematics/course-report-math-ds/'
+  image: CourseReport_Thumb.png
+  text: "Math skills are critical for a successful career in data science. Find out why in this interview with Course Report."
 widget2:
   title: "How to Gather Data from YouTube"
   url: 'http://kimberlyfessel.com/data/web%20scraping/gather-youtube-data/'

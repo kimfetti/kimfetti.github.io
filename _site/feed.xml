@@ -9,8 +9,24 @@
 		<atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>Level Up: spaCy NLP for the Win</title>
+				<link>http://localhost:4000//nlp/spacy-for-the-win/</link>
+				<pubDate>Fri, 21 Feb 2020 00:00:00 -0500</pubDate>
+				<description>&lt;!--more--&gt;
+
+&lt;p&gt;Natural language processing (NLP) is a branch of artificial intelligence in which computers extract information from written or spoken human language.  This field has experienced a massive rise in popularity over the years, not only among academic communities but also in industry settings. Because unstructured text makes up so much of the data we collect today (e.g. emails, text messages, and even this blog post), many practitioners regularly use NLP at the workplace and require straightforward tools to reliably parse through substantial amounts of documents.  The open-source library spaCy meets these exact demands by processing text quickly and accurately, all within a simplified framework.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://explosion.ai/blog/introducing-spacy&quot;&gt;Released in 2015&lt;/a&gt;, spaCy was initially created to help small businesses better leverage NLP.  Its practical design offers users a streamlined approach for accomplishing necessary NLP tasks, and it assumes a more pragmatic stance toward NLP than traditional libraries like NLTK, which were developed with a more research-focused, exploratory intention.  spaCy can be quite flexible, however, as it allows more experienced users the option of customizing just about any of its tools.  spaCy is considered a Python package, but the “Cy” in spaCy indicates that Cython powers many of the underlining computations.  This makes spaCy incredibly fast, even for more complicated processes.  I will illustrate a selection of spaCy’s core functionality in this post and will end by implementing these techniques on sample restaurant reviews.&lt;/p&gt;
+
+&lt;p&gt;Please continue to the &lt;a href=&quot;https://opendatascience.com/level-up-spacy-nlp-for-the-win/&quot;&gt;ODSC blog&lt;/a&gt; to read my full post covering this introduction to spaCy.&lt;/p&gt;
+
+</description>
+				<guid isPermaLink="true">http://localhost:4000//nlp/spacy-for-the-win/</guid>
+			</item>
+		
+			<item>
 				<title>Math for Data Science: An Interview with Course Report</title>
-				<link>http://localhost:4000//math/course-report-math-ds/</link>
+				<link>http://localhost:4000//mathematics/course-report-math-ds/</link>
 				<pubDate>Mon, 17 Feb 2020 00:00:00 -0500</pubDate>
 				<description>&lt;!--more--&gt;
 
@@ -19,7 +35,7 @@
 &lt;p&gt;Please continue to the &lt;a href=&quot;https://www.coursereport.com/blog/math-for-data-science-with-metis&quot;&gt;Course Report blog&lt;/a&gt; for the full write-up and a link to the interview recording.&lt;/p&gt;
 
 </description>
-				<guid isPermaLink="true">http://localhost:4000//math/course-report-math-ds/</guid>
+				<guid isPermaLink="true">http://localhost:4000//mathematics/course-report-math-ds/</guid>
 			</item>
 		
 			<item>
