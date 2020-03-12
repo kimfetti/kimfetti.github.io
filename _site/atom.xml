@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-02-25T10:10:50-05:00</updated>
+	<updated>2020-03-12T12:44:06-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -81,8 +81,16 @@
 
 &lt;p&gt;I recently sat down with &lt;a href=&quot;https://www.coursereport.com/&quot;&gt;Course Report&lt;/a&gt; to discuss the math needed to become a data scientist.  Blending coding skills with mathematics lies at the heart of data science, so understanding fundamental math concepts is critical for a successful career within the field.  Linear algebra, calculus, probability, and statistics are the four math disciplines that fuel the bulk of data science.  In this interview, I discuss the role each topic plays in data science; I also work through an example problem from all four subjects.&lt;/p&gt;
 
-&lt;p&gt;Please continue to the &lt;a href=&quot;https://www.coursereport.com/blog/math-for-data-science-with-metis&quot;&gt;Course Report blog&lt;/a&gt; for the full write-up and a link to the interview recording.&lt;/p&gt;
+&lt;p&gt;Please continue to the &lt;a href=&quot;https://www.coursereport.com/blog/math-for-data-science-with-metis&quot;&gt;Course Report blog&lt;/a&gt; for a write-up of the interview.&lt;/p&gt;
 
+&lt;!--
+image:
+    thumb: CourseReport_Thumb.png
+    homepage: CourseReport_Feb2020.png
+    title: CourseReport_Feb2020.png
+    caption: &quot;Photo by CP. Image constructed by Course Report.&quot;
+    caption_url: &quot;https://www.coursereport.com/&quot;
+--&gt;
 </content>
 
 			
