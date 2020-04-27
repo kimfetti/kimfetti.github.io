@@ -8,14 +8,13 @@ header:
 permalink: "/events/"
 ---
 
-<!-- UPCOMING -->
+<!-- UPCOMING  -->
 
 <div class="row">
     <div class="small-12 columns">
         <h3>Upcoming</h3><br>
     </div>
 </div>
-
 
 <div class="row">
    <div class="large-4 columns">
@@ -24,25 +23,19 @@ permalink: "/events/"
       <br>
       <a href="https://us.pycon.org/2020/schedule/presentation/72/">
       <img src="{{ site.urlimg }}PyCon_Apr2020.png" alt="PyCon 2020"></a>
-      <h5>15 Apr 2020</h5>
+      <h5>April 2020</h5>
       <p>It's Officially Legal <br>so Let's Scrape the Web</p>
       </center>
   </div>
+  
   <div class="large-4 columns">
-      <center>
-      <h5>ODSC East 2020</h5>
-      <br>
-      <a href="https://odsc.com/speakers/level-up-fancy-nlp-with-straightforward-tools/">
-      <img src="{{ site.urlimg }}ODSC_Apr2020.png" alt="ODSC East April 2020"></a>
-      <h5>16-17 Apr 2020</h5>
-      <p>Level Up: <br> Fancy NLP with Straightforward Tools</p>
-      </center>
+      <img src="http://placehold.it/303x170/fdfdfd/fdfdfd&amp;text=text">
   </div>
+
   <div class="large-4 columns">
       <img src="http://placehold.it/303x170/fdfdfd/fdfdfd&amp;text=text">
   </div>
 </div>
-
 
 
 <!-- CONFERENCES -->
@@ -53,7 +46,19 @@ permalink: "/events/"
     </div><!-- /.small-12.columns -->
 </div>
 
+
 <div class="row">
+  <div class="large-4 columns">
+      <center>
+      <h5>ODSC East 2020</h5>
+      <br>
+      <a href="https://odsc.com/speakers/level-up-fancy-nlp-with-straightforward-tools/">
+      <img src="{{ site.urlimg }}ODSC_Apr2020.png" alt="ODSC East April 2020"></a>
+      <h5>17 Apr 2020</h5>
+      <p>Fancy NLP with Straightforward Tools</p>
+      <p><a href="https://github.com/kimfetti/Conferences/blob/master/ODSC_East_2020/ODSC_East_2020_KFessel_Deck.pdf">Presentation Slides</a></p>
+      </center>
+  </div>
   <div class="large-4 columns">
       <center>
       <h5>Demystifying Data Science 2019</h5>
@@ -75,14 +80,11 @@ permalink: "/events/"
       <p><a href="http://bit.ly/odscNyc19_dataviz">Colab Notebook</a></p>
       </center>
   </div>
-  <div class="large-4 columns">
-      <img src="http://placehold.it/303x170/fdfdfd/fdfdfd&amp;text=text">
-  </div>
 </div>
 
 
 
-<!-- MEETUPS -->
+<!-- TALKS and MEETUPS -->
 
 <div class="row">
     <div class="small-12 columns">

@@ -18,7 +18,9 @@ video:
     contentURL: "https://www.youtube.com/watch?v=a5jqDSiJdxk"
     thumbnailUrl: "http://img.youtube.com/vi/a5jqDSiJdxk/maxresdefault.jpg"
 page:
-    background-color: "#FFFFFF"
+    background-color: "#000000"
+image:
+    thumb: CourseReport_Thumb.png
 
 ---
 <!--more-->

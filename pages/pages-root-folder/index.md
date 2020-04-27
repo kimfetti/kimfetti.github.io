@@ -13,15 +13,25 @@ widget1:
   image: CourseReport_Thumb.png
   text: "Math skills are critical for a successful career in data science. Find out why in this interview with Course Report."
 widget2:
-  title: "How to Gather Data from YouTube"
-  url: 'http://kimberlyfessel.com/data/web%20scraping/gather-youtube-data/'
-  image: youtube-thumb.png
-  text: "You can mine YouTube's massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, the video transcripts, as well as YouTube search results."
+  title: "5 Significant Object Detection Challenges and Solutions"
+  url: '/visualizations/puzzles/down-and-up/'
+  image: kim_tree_thumb.png
+  text: "Object detection problems pose several unique obstacles beyond what is required for image classification." 
 widget3:
     title: 'Past and Upcoming Events'
     url: '/events'
     image: calendar-thumb.jpg
     text: "Check out Kimberly's past and upcoming events along with links to conference materials and meeting recaps."
+
+
+# widget2:
+#   title: "How to Gather Data from YouTube"
+#   url: 'http://kimberlyfessel.com/data/web%20scraping/gather-youtube-data/'
+#   image: youtube-thumb.png
+#   text: "You can mine YouTube's massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, the video transcripts, as well as YouTube search results."
+
+## A simple visual--like the ones illustrated in this post--could be all you need to find a solution to your next interview math puzzle."
+
 
 # Use the call for action to show a button on the frontpage
 #
