@@ -40,6 +40,10 @@ Content for &quot;abstract&quot; including
   &lt;li&gt;Include approximation via Pareto principle?  (Or save for final takeaways?)&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;video width=&quot;480&quot; height=&quot;320&quot; controls=&quot;controls&quot;&gt;
+  &lt;source src=&quot;https://kimfetti.github.io/images/gini_animation.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+&lt;/video&gt;
+
 &lt;p&gt;&lt;img style=&quot;float: right; padding: 30px;&quot; src=&quot;https://kimfetti.github.io/images/gini_animation.mp4&quot; alt=&quot;The Gini coefficient increases as the inequity gap widens.&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;gini-in-python&quot;&gt;Gini in Python&lt;/h2&gt;
