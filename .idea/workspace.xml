@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2020-05-02-gini-eda.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/mathematics/eda/gini-eda/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/eda/gini-eda/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +35,7 @@
         <counts>
           <entry key="2019-11-12-gather-youtube-data" value="2" />
           <entry key="css" value="2" />
-          <entry key="gif" value="1" />
+          <entry key="gif" value="2" />
           <entry key="html" value="72" />
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="25" />
@@ -51,7 +54,7 @@
         <counts>
           <entry key="CSS" value="2" />
           <entry key="HTML" value="72" />
-          <entry key="Image" value="72" />
+          <entry key="Image" value="73" />
           <entry key="JavaScript" value="4" />
           <entry key="Markdown" value="164" />
           <entry key="PLAIN_TEXT" value="49" />
@@ -66,7 +69,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
           <entry key="js" value="51" />
-          <entry key="md" value="144230" />
+          <entry key="md" value="144374" />
           <entry key="py" value="20" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
@@ -77,7 +80,7 @@
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
           <entry key="JavaScript" value="51" />
-          <entry key="Markdown" value="144192" />
+          <entry key="Markdown" value="144336" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="54" />
           <entry key="Scratch" value="2" />
@@ -92,8 +95,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="328">
-                <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+              <first_editor relative-caret-position="365">
+                <caret line="48" column="101" selection-start-line="48" selection-start-column="101" selection-end-line="48" selection-end-column="101" />
               </first_editor>
               <second_editor />
             </state>
@@ -274,6 +277,11 @@
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -385,7 +393,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/code/pencil.js" />
     <entry file="file://$PROJECT_DIR$/images/icon.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -665,11 +672,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/gini_animation.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="328">
-            <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <first_editor relative-caret-position="365">
+            <caret line="48" column="101" selection-start-line="48" selection-start-column="101" selection-end-line="48" selection-end-column="101" />
           </first_editor>
           <second_editor />
         </state>

@@ -33,18 +33,23 @@ Content for &quot;abstract&quot; including
 
 &lt;p&gt;One such measurement, &lt;a href=&quot;https://en.wikipedia.org/wiki/Gini_coefficient&quot;&gt;the Gini coefficient&lt;/a&gt; also known as the Gini index or Gini ratio, was published in 1912 by Italian statistician and sociologist Corrado Gini.  The historical use of this unitless measure of statistical dispersion has historically been for quantification of income or wealth distribution; in fact, despite being developed over 100 years ago, &lt;a href=&quot;https://www.bbc.com/news/blogs-magazine-monitor-31847943&quot;&gt;the United Nations still uses the Gini coefficient in their annual ranking of nations&lt;/a&gt; to understand wealth inequities. But the Gini coefficient can be used much more broadly to understand the dispersion of very diverse datasets.  After a more in depth exploration of the formula behind the Gini coefficient, let’s take a look at a few use cases that do not involve international economies thus demonstrating that the Gini coefficient can be added to your EDA process to strengthen your analyses.&lt;/p&gt;
 
+&lt;p&gt;&lt;img style=&quot;float: right; padding: 30px;&quot; src=&quot;https://kimfetti.github.io/images/gini_animation.gif&quot; alt=&quot;The Gini coefficient increases as the inequity gap widens.&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
 &lt;h2 id=&quot;defining-gini&quot;&gt;Defining Gini&lt;/h2&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: right; padding: 30px;&quot; src=&quot;https://kimfetti.github.io/images/gini_explanation.png&quot; alt=&quot;The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;Typical definition involving Lorenz curve&lt;/li&gt;
   &lt;li&gt;Main idea: Area shrinks as curve pulls away from straight line&lt;/li&gt;
   &lt;li&gt;Include approximation via Pareto principle?  (Or save for final takeaways?)&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;!--
 &lt;video width=&quot;480&quot; height=&quot;320&quot; controls=&quot;controls&quot;&gt;
-  &lt;source src=&quot;https://kimfetti.github.io/images/gini_animation.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;https://kimfetti.github.io/images/gini_animation.mp4&quot; type=&quot;video/mp4&quot;&gt;
 &lt;/video&gt;
-
-&lt;p&gt;&lt;img style=&quot;float: right; padding: 30px;&quot; src=&quot;https://kimfetti.github.io/images/gini_animation.mp4&quot; alt=&quot;The Gini coefficient increases as the inequity gap widens.&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+--&gt;
 
 &lt;h2 id=&quot;gini-in-python&quot;&gt;Gini in Python&lt;/h2&gt;
 
