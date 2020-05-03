@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-05-02T12:49:43-04:00</updated>
+	<updated>2020-05-02T12:53:24-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -67,7 +67,7 @@ Content for &quot;abstract&quot; including
 
 &lt;h2 id=&quot;defining-gini&quot;&gt;Defining Gini&lt;/h2&gt;
 
-&lt;p&gt;&lt;img style=&quot;float: right; padding: 30px;&quot; src=&quot;https://kimfetti.github.io/images/gini_explanation.png&quot; alt=&quot;The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img style=&quot;float: left; padding: 30px;&quot; src=&quot;https://kimfetti.github.io/images/gini_explanation.png&quot; alt=&quot;The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Typical definition involving Lorenz curve&lt;/li&gt;

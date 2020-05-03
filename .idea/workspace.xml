@@ -69,7 +69,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
           <entry key="js" value="51" />
-          <entry key="md" value="144374" />
+          <entry key="md" value="144378" />
           <entry key="py" value="20" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
@@ -80,7 +80,7 @@
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
           <entry key="JavaScript" value="51" />
-          <entry key="Markdown" value="144336" />
+          <entry key="Markdown" value="144340" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="54" />
           <entry key="Scratch" value="2" />
@@ -95,8 +95,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="365">
-                <caret line="48" column="101" selection-start-line="48" selection-start-column="101" selection-end-line="48" selection-end-column="101" />
+              <first_editor relative-caret-position="502">
+                <caret line="53" column="77" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
               </first_editor>
               <second_editor />
             </state>
@@ -678,8 +678,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="365">
-            <caret line="48" column="101" selection-start-line="48" selection-start-column="101" selection-end-line="48" selection-end-column="101" />
+          <first_editor relative-caret-position="502">
+            <caret line="53" column="77" selection-start-line="53" selection-start-column="77" selection-end-line="53" selection-end-column="77" />
           </first_editor>
           <second_editor />
         </state>
