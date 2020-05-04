@@ -20,7 +20,8 @@ video:
 page:
     background-color: "#000000"
 image:
-    thumb: coursereport_thumb.png
+    thumb: coursereport_thumb_img.png
+    homepage: CourseReport_Feb2020.png
 
 ---
 <!--more-->

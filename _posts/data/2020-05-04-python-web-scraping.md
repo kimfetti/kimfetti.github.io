@@ -22,6 +22,7 @@ page:
     background-color: "#000000"
 image:
     thumb: pycon2020_thumb.png
+    homepage: PyCon_Apr2020.png
 
 ---
 <!--more-->
