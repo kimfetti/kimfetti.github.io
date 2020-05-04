@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Measuring Statistical Dispersion with the Gini Coefficient</title>
+	<title>Let&#39;s Scrape the Web: PyCon 2020 Video Tutorial</title>
 
     <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/styles_feeling_responsive.css">
 
@@ -32,20 +32,20 @@
 
 
 	<!-- Search Engine Optimization -->
-	<meta name="description" content="A blog post about Gini!">
+	<meta name="description" content="Developing web scraping skills allows you to save time and to broaden your access to data.  This tutorial covers web scraping with Python from the basics of HTML to the full scraping pipeline.">
 	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ">
 	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" >
 	
 	<link rel="author" href="https://plus.google.com/105464329327164540117">
 	
 	
-	<link rel="canonical" href="http://localhost:4000//mathematics/eda/gini-eda/">
+	<link rel="canonical" href="http://localhost:4000//data/web%20scraping/python-web-scraping/">
 
 
 	<!-- Facebook Open Graph -->
-	<meta property="og:title" content="Measuring Statistical Dispersion with the Gini Coefficient">
-	<meta property="og:description" content="A blog post about Gini!">
-	<meta property="og:url" content="http://localhost:4000//mathematics/eda/gini-eda/">
+	<meta property="og:title" content="Let&#39;s Scrape the Web: PyCon 2020 Video Tutorial">
+	<meta property="og:description" content="Developing web scraping skills allows you to save time and to broaden your access to data.  This tutorial covers web scraping with Python from the basics of HTML to the full scraping pipeline.">
+	<meta property="og:url" content="http://localhost:4000//data/web%20scraping/python-web-scraping/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Kimberly Fessel Blog">
@@ -58,8 +58,8 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="kimberlyfessel">
 	<meta name="twitter:creator" content="kimberlyfessel">
-	<meta name="twitter:title" content="Measuring Statistical Dispersion with the Gini Coefficient">
-	<meta name="twitter:description" content="A blog post about Gini!">
+	<meta name="twitter:title" content="Let&#39;s Scrape the Web: PyCon 2020 Video Tutorial">
+	<meta name="twitter:description" content="Developing web scraping skills allows you to save time and to broaden your access to data.  This tutorial covers web scraping with Python from the basics of HTML to the full scraping pipeline.">
 	
 	
 
@@ -98,7 +98,7 @@
 	
 
 </head>
-<body id="top-of-page" class="page-fullwidth">
+<body id="top-of-page" class="video">
 	
 	
 <div id="navigation" class="sticky">
@@ -235,7 +235,7 @@
 <div id="masthead-with-background-color" style="background: #999999;">
 	<div class="row">
 		<figure class="small-12 columns">
-			<img src="https://kimfetti.github.io/images//birthday_planet_header.jpg" alt="Kimberly Fessel Blog">
+			<img src="https://kimfetti.github.io/images//logo.png" alt="Kimberly Fessel Blog">
 		</figure><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
@@ -243,117 +243,45 @@
 
 
 
-<div class="masthead-caption">
-	<a href="https://www.nasa.gov/index.html">Voyager Montage by NASA. Public Domain. Credit: NASA.</a>
-</div>
 
 
 
 
 
 
+	<div class="row">
+	<div class="small-12 columns">
+		<article itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+			<div class="flex-video">
+				<iframe width='622' height='350' src='//www.youtube.com/embed/RUQWPJ1T6Zc' frameborder='0' allowfullscreen></iframe>
+			</div>
 
-	
+			<div class="row">
+				<div class="medium-offset-2 medium-8 end columns">
+					<header>
+						<p class="subheadline t30">Web Scraping</p>
+						<h1 itemprop="name">Let's Scrape the Web: PyCon 2020 Video Tutorial</h1>
+					</header>
 
+					<meta itemprop="thumbnailUrl" content="http://img.youtube.com/vi/RUQWPJ1T6Zc/maxresdefault.jpg" />
+					<meta itemprop="contentURL" content="https://www.youtube.com/watch?v=RUQWPJ1T6Zc" />
+					<meta itemprop="embedURL" content="https://www.youtube.com/watch?v=RUQWPJ1T6Zc" />
 
-<div class="row t30">
-	<div class="medium-12 columns">
-		<article>
-			<header>
-				<p class="subheadline">Exploratory Data Analysis</p>
-				<h1>Measuring Statistical Dispersion with the Gini Coefficient</h1>
-			</header>
+					
+					<p class="teaser" itemprop="description">
+						<em>Developing web scraping skills allows you to save time and to broaden your access to data.  This tutorial covers web scraping with Python from the basics of HTML to the full scraping pipeline.</em>
+					</p>
+					
 
-			
-			<p class="teaser">
-				<em>A blog post about Gini!</em>
-			</p>
-			
+					<!--more-->
 
-			<!--more-->
+<p>Web scraping empowers you to write computer programs to collect data from websites automatically and recent legal rulings support your right to do so.  This tutorial covers the breadth and depth of web scraping: from HTML basics through pipeline methods to compile entire datasets.  My video provides step-by-step instructions on utilizing Python libraries like <code class="highlighter-rouge">requests</code> and <code class="highlighter-rouge">BeautifulSoup</code> as well as links to supplementary tutorial resources in the form of Google Colab or Jupyter notebooks.</p>
 
-<!--
-Content for "abstract" including
-- What is statistical dispersion?
-- Metric developed by Gini
-- UN uses it for ranking countries: wealth vs. income inequality
-- I suggest expanding its use to be part of your EDA (measures overall statistical dispersion, yo!)
--->
-
-<p>If you work with data long enough, you are bound to discover that calculating the average of a set of values rarely tells you the full story.  As a simple example, each of the following groups of people have the same <strong>average pay</strong> of $100:</p>
-<ul>
-  <li>100 people who make $100 each</li>
-  <li>50 people who make $150 each and 50 people who make $50</li>
-  <li>1 person who makes $10,000 and 99 people who make nothing</li>
-</ul>
-
-<p>The primary difference is the way money is distributed among each of the 100 people.  The spread of money in this case is called <a href="https://en.wikipedia.org/wiki/Statistical_dispersion">statistical dispersion</a>.  Perhaps the most popular measurement of dispersion is standard deviation or variance.  Standard deviation roughly measures the distance between individual dataset values and the overall group mean. Standard deviation retains the same units as the quantity being measured, since we start with dollars in the previous example, standard deviation will also be reported in dollars.  But other unitless metrics can also be used to understand statistical dispersion.</p>
-
-<p>One such measurement, <a href="https://en.wikipedia.org/wiki/Gini_coefficient">the Gini coefficient</a> also known as the Gini index or Gini ratio, was published in 1912 by Italian statistician and sociologist Corrado Gini.  The historical use of this unitless measure of statistical dispersion has historically been for quantification of income or wealth distribution; in fact, despite being developed over 100 years ago, <a href="https://www.bbc.com/news/blogs-magazine-monitor-31847943">the United Nations still uses the Gini coefficient in their annual ranking of nations</a> to understand wealth inequities. But the Gini coefficient can be used much more broadly to understand the dispersion of very diverse datasets.  After a more in depth exploration of the formula behind the Gini coefficient, let’s take a look at a few use cases that do not involve international economies thus demonstrating that the Gini coefficient can be added to your EDA process to strengthen your analyses.</p>
-
-<p><img style="float: right; padding: 30px;" src="https://kimfetti.github.io/images/gini_animation.gif" alt="The Gini coefficient increases as the inequity gap widens." width="400" /></p>
-
-<h2 id="defining-gini">Defining Gini</h2>
-
-<p><img style="float: left; padding: 30px;" src="https://kimfetti.github.io/images/gini_explanation.png" alt="The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)" width="400" /></p>
-
-<ul>
-  <li>Typical definition involving Lorenz curve</li>
-  <li>Main idea: Area shrinks as curve pulls away from straight line</li>
-  <li>Include approximation via Pareto principle?  (Or save for final takeaways?)</li>
-</ul>
-
-<!--
-<video width="480" height="320" controls="controls">
-  <source src="https://kimfetti.github.io/images/gini_animation.mp4" type="video/mp4">
-</video>
--->
-
-<h2 id="gini-in-python">Gini in Python</h2>
-
-<ul>
-  <li>Libraries available</li>
-  <li>Mathy definitions</li>
-</ul>
-
-<h2 id="case-1-baby-names">Case #1: Baby Names</h2>
-
-<ul>
-  <li>Dataset</li>
-  <li>Top names are all males which leads to theory of different statistical dispersion</li>
-  <li>Measure Gini across time</li>
-</ul>
-
-<h2 id="case-2-healthcare-prices">Case #2: Healthcare Prices</h2>
-
-<ul>
-  <li>Different procedures have different distributions – need regulation or more transparency?</li>
-</ul>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<ul>
-  <li>Recap of findings</li>
-  <li>Pros and Cons of Gini</li>
-  <li>Metric is lossy: exmaples of two distributions that have the same Gini values</li>
-  <li>As with any metric, next step is WHY?  (Gini for nation’s inequality can miss aging population, government assistance, etc.) 
-Domain knowledge is critical!</li>
-</ul>
-
-<table>
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb">Check out this code on GitHub!</a></td>
-      <td> </td>
-      <td><a href="https://public.tableau.com/profile/kimberly.fessel#!/vizhome/PlanetaryBirthdayProblem/Planets-50">Check out this viz on Tableau!</a></td>
-    </tr>
-  </tbody>
-</table>
+<p>Check out the supplementary materials via Google Colab (<a href="https://bit.ly/pycon2020_scrapingbasics">Scraping Basics</a> and <a href="https://bit.ly/pycon2020_scrapingwiki">Scraping Wikipedia</a>) or on <a href="https://github.com/kimfetti/Conferences/tree/master/PyCon_2020">GitHub</a>.</p>
 
 
-
-			
-						<div id="page-meta" class="t30">
+					
+								<div id="page-meta" class="t30">
 				<p>
 					<!-- Look the author details up from the site config. -->
 					
@@ -361,10 +289,10 @@ Domain knowledge is critical!</li>
 					
 
 				
-				<time class="icon-calendar pr20" datetime="2020-05-02T00:00:00-04:00" itemprop="datePublished"> 2020-05-02</time>
+				<time class="icon-calendar pr20" datetime="2020-05-04T00:00:00-04:00" itemprop="datePublished"> 2020-05-04</time>
 				
 
-				<span class="icon-archive pr20"> MATHEMATICS · EDA</span>
+				<span class="icon-archive pr20"> DATA · WEB SCRAPING</span>
 				<br />
 				<span class="pr20"></span>
 			</p>
@@ -382,41 +310,13 @@ Domain knowledge is critical!</li>
 			
 			</div><!--  /.page-meta -->
 
-			
-
-			
-						
-				<h3 id="comments" class="t60">Dialogue &amp; Discussion</h3>
-			    <div id="disqus_thread"></div>
-			    <script type="text/javascript">
-			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-			        var disqus_shortname = 'kimfetti-github-io'; 
-			        var disqus_identifier = '/mathematics/eda/gini-eda/';
-
-			        /* * * DON'T EDIT BELOW THIS LINE * * */
-			        (function() {
-			            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			        })();
-			    </script>
-			    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-			
-
-
-
-			
-
-			<!-- Stuff for jsarr tag  -->
-
-			
-
-			<!-- End Stuff for jsarr tag  -->
-
+					
+				</div><!-- /.medium-8.columns -->
+			</div><!-- /.row -->
 		</article>
-	</div><!-- /.medium-12.columns -->
-</div><!-- /.row -->
 
+	</div><!-- /.small-12.columns -->
+</div><!-- /.row -->
 
 
 	

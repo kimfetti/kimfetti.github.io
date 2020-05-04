@@ -20,7 +20,7 @@ video:
 page:
     background-color: "#000000"
 image:
-    thumb: CourseReport_Thumb.png
+    thumb: coursereport_thumb.png
 
 ---
 <!--more-->
