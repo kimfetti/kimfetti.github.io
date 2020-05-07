@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Level Up: spaCy NLP for the Win</title>
+	<title>Measuring Statistical Dispersion with the Gini Coefficient</title>
 
     <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/styles_feeling_responsive.css">
 
@@ -32,24 +32,24 @@
 
 
 	<!-- Search Engine Optimization -->
-	<meta name="description" content="spaCy provides an easy-to-use framework for getting started with NLP.  This post covers the basics of spaCy and highlights its functionality on a small corpus of restaurant reviews..">
+	<meta name="description" content="A blog post about Gini!">
 	<meta name="google-site-verification" content="Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ">
 	<meta name="msvalidate.01" content="0FB4C028ABCF07C908C54386ABD2D97F" >
 	
 	<link rel="author" href="https://plus.google.com/105464329327164540117">
 	
 	
-	<link rel="canonical" href="http://localhost:4000//nlp/spacy-for-the-win/">
+	<link rel="canonical" href="http://localhost:4000//mathematics/eda/gini-eda/">
 
 
 	<!-- Facebook Open Graph -->
-	<meta property="og:title" content="Level Up: spaCy NLP for the Win">
-	<meta property="og:description" content="spaCy provides an easy-to-use framework for getting started with NLP.  This post covers the basics of spaCy and highlights its functionality on a small corpus of restaurant reviews..">
-	<meta property="og:url" content="http://localhost:4000//nlp/spacy-for-the-win/">
+	<meta property="og:title" content="Measuring Statistical Dispersion with the Gini Coefficient">
+	<meta property="og:description" content="A blog post about Gini!">
+	<meta property="og:url" content="http://localhost:4000//mathematics/eda/gini-eda/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="Kimberly Fessel Blog">
-	<meta property="og:image" content="https://kimfetti.github.io/images/letters-header.jpg">
+	
 	<meta property="article:author" content="https://www.facebook.com/">
 
 
@@ -58,9 +58,9 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:site" content="kimberlyfessel">
 	<meta name="twitter:creator" content="kimberlyfessel">
-	<meta name="twitter:title" content="Level Up: spaCy NLP for the Win">
-	<meta name="twitter:description" content="spaCy provides an easy-to-use framework for getting started with NLP.  This post covers the basics of spaCy and highlights its functionality on a small corpus of restaurant reviews..">
-	<meta name="twitter:image" content="https://kimfetti.github.io/images/letters-header.jpg">
+	<meta name="twitter:title" content="Measuring Statistical Dispersion with the Gini Coefficient">
+	<meta name="twitter:description" content="A blog post about Gini!">
+	
 	
 
 	<link type="text/plain" rel="author" href="http://localhost:4000//humans.txt">
@@ -98,7 +98,7 @@
 	
 
 </head>
-<body id="top-of-page" class="post">
+<body id="top-of-page" class="page-fullwidth">
 	
 	
 <div id="navigation" class="sticky">
@@ -235,7 +235,7 @@
 <div id="masthead-with-background-color" style="background: #999999;">
 	<div class="row">
 		<figure class="small-12 columns">
-			<img src="https://kimfetti.github.io/images//logo.png" alt="Kimberly Fessel Blog">
+			<img src="https://kimfetti.github.io/images//birthday_planet_header.jpg" alt="Kimberly Fessel Blog">
 		</figure><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
@@ -243,52 +243,132 @@
 
 
 
+<div class="masthead-caption">
+	<a href="https://www.nasa.gov/index.html">Voyager Montage by NASA. Public Domain. Credit: NASA.</a>
+</div>
 
 
 
 
 
 
-	<div class="row t30">
-	<div class="medium-8 columns medium-offset-2 end">
-		<article itemscope itemtype="http://schema.org/Article">
+
+	
+
+
+<div class="row t30">
+	<div class="medium-12 columns">
+		<article>
 			<header>
-				
-				<figure>
-					<img src="https://kimfetti.github.io/images/letters-header.jpg" width="970" alt="Level Up: spaCy NLP for the Win" itemprop="image">
-
-					
-					<figcaption class="text-right">
-						<a href="https://unsplash.com/photos/BVyNlchWqzs">Photo by Amador Loureiro on Upsplash.</a>
-					</figcaption>
-					
-				</figure>
-				
-
-				<div itemprop="name">
-					<p class="subheadline">NLP</p>
-					<h1>Level Up: spaCy NLP for the Win</h1>
-				</div>
+				<p class="subheadline">Exploratory Data Analysis</p>
+				<h1>Measuring Statistical Dispersion with the Gini Coefficient</h1>
 			</header>
 
-
 			
-			<p class="teaser" itemprop="description">
-				<em>spaCy provides an easy-to-use framework for getting started with NLP.  This post covers the basics of spaCy and highlights its functionality on a small corpus of restaurant reviews..</em>
+			<p class="teaser">
+				<em>A blog post about Gini!</em>
 			</p>
 			
 
-			<div itemprop="articleSection">
 			<!--more-->
 
-<p>Natural language processing (NLP) is a branch of artificial intelligence in which computers extract information from written or spoken human language.  This field has experienced a massive rise in popularity over the years, not only among academic communities but also in industry settings. Because unstructured text makes up so much of the data we collect today (e.g. emails, text messages, and even this blog post), many practitioners regularly use NLP at the workplace and require straightforward tools to reliably parse through substantial amounts of documents.  The open-source library spaCy meets these exact demands by processing text quickly and accurately, all within a simplified framework.</p>
+<!--
+Content for "abstract" including
+- What is statistical dispersion?
+- Metric developed by Gini
+- UN uses it for ranking countries: wealth vs. income inequality
+- I suggest expanding its use to be part of your EDA (measures overall statistical dispersion, yo!)
+-->
 
-<p><a href="https://explosion.ai/blog/introducing-spacy">Released in 2015</a>, spaCy was initially created to help small businesses better leverage NLP.  Its practical design offers users a streamlined approach for accomplishing necessary NLP tasks, and it assumes a more pragmatic stance toward NLP than traditional libraries like NLTK, which were developed with a more research-focused, exploratory intention.  spaCy can be quite flexible, however, as it allows more experienced users the option of customizing just about any of its tools.  spaCy is considered a Python package, but the “Cy” in spaCy indicates that Cython powers many of the underlining computations.  This makes spaCy incredibly fast, even for more complicated processes.  I will illustrate a selection of spaCy’s core functionality in this post and will end by implementing these techniques on sample restaurant reviews.</p>
+<p>If you work with data long enough, you are bound to discover that calculating the average of a set of values rarely tells you the full story.  As a simple example, each of the following groups of people have the same <strong>average pay</strong> of $100:</p>
+<ul>
+  <li>100 people who make $100 each</li>
+  <li>50 people who make $150 each and 50 people who make $50</li>
+  <li>1 person who makes $10,000 and 99 people who make nothing</li>
+</ul>
 
-<p>Please continue to the <a href="https://opendatascience.com/level-up-spacy-nlp-for-the-win/">ODSC blog</a> to read my full post covering this introduction to spaCy.</p>
+<p>The primary difference is the way money is distributed among each of the 100 people.  The spread of money in this case is called <a href="https://en.wikipedia.org/wiki/Statistical_dispersion">statistical dispersion</a>.  Perhaps the most popular measurement of dispersion is standard deviation or variance.  Standard deviation roughly measures the distance between individual dataset values and the overall group mean. Standard deviation retains the same units as the quantity being measured, since we start with dollars in the previous example, standard deviation will also be reported in dollars.  But other unitless metrics can also be used to understand statistical dispersion.</p>
 
+<p>One such measurement, <a href="https://en.wikipedia.org/wiki/Gini_coefficient">the Gini coefficient</a> also known as the Gini index or Gini ratio, was published in 1912 by Italian statistician and sociologist Corrado Gini.  The historical use of this unitless measure of statistical dispersion has aimed at income or wealth distributions; in fact, despite being developed over 100 years ago, <a href="https://www.bbc.com/news/blogs-magazine-monitor-31847943">the United Nations still uses the Gini coefficient in their annual ranking of nations</a> to understand wealth inequities. But the Gini coefficient can be used much more broadly to understand the dispersion of very diverse datasets.  After a more in depth exploration of the formula behind the Gini coefficient, let’s take a look at a few use cases that do not involve international economies thus demonstrating that the Gini coefficient can be added to your EDA process to strengthen your analyses.</p>
 
-			</div>
+<!--
+- Typical definition involving Lorenz curve
+- Main idea: Area shrinks as curve pulls away from straight line
+- Include approximation via Pareto principle?  (Or save for final takeaways?)
+-->
+
+<p><img style="float: right; padding: 30px;" src="https://kimfetti.github.io/images/gini_explanation.png" alt="The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)" width="400" /></p>
+
+<h2 id="defining-gini">Defining Gini</h2>
+
+<p>To understand the Gini coefficient, let’s first discuss the Lorenz curve, a graph developed by Max Lorenz for visualizing income or wealth distribution.  The premise of the curve goes like this: take the incomes of a population and sort them from smallest to greatest.  Then visualize these incomes as a line plot where the x-values represent the percentage of people seen thus far and the y-values represent the cumulative proportion of wealth accumulated by this percentage of people.  For example, if the poorest 30% of the population holds 10% of a population’s wealth, the curve should pass through the scaled \(x,y\) coordinates (0.3, 0.1).  And note that if wealth were distributed evenly among all members of a population, the Lorenz curve would be a straight, 45-degree line where \(x=y\) (30% of the people have 30% of the wealth, etc.)</p>
+
+<p>The Gini coefficient measures how much a population’s data deviates from perfectly even distribution. Assuming positive data values <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, the Gini coefficient ranges from zero to one, where</p>
+
+<ul>
+  <li>zero represents perfect equality (everyone has an equal amount) and</li>
+  <li>one represents near perfect inequality (one person has all the money).</li>
+</ul>
+
+<p>For these and all situations in between, the Gini coefficient is thus calculated as the area enclosed between the Lorenz curve and the line of perfect equality, marked as \(A\) in the figure above, divided by the total triangular area, \(A + B\).</p>
+
+<p>Returning to the examples discussed at the beginning of this post, each situation results in an average pay of $100 per person, but the Gini coefficient varies greatly for each scenario.</p>
+
+<p><img src="https://kimfetti.github.io/images/gini_compare.png" alt="Gini coefficient increases with wealth inequity." width="1200" /></p>
+
+<p>more text here</p>
+
+<p><img src="https://kimfetti.github.io/images/gini_animation.gif" alt="The Gini coefficient increases as the inequity gap widens." width="400" /></p>
+
+<h2 id="gini-in-python">Gini in Python</h2>
+
+<ul>
+  <li>Libraries available</li>
+  <li>Mathy definitions</li>
+</ul>
+
+<h2 id="case-1-baby-names">Case #1: Baby Names</h2>
+
+<ul>
+  <li>Dataset</li>
+  <li>Top names are all males which leads to theory of different statistical dispersion</li>
+  <li>Measure Gini across time</li>
+</ul>
+
+<h2 id="case-2-healthcare-prices">Case #2: Healthcare Prices</h2>
+
+<ul>
+  <li>Different procedures have different distributions – need regulation or more transparency?</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<ul>
+  <li>Recap of findings</li>
+  <li>Pros and Cons of Gini</li>
+  <li>Metric is lossy: exmaples of two distributions that have the same Gini values</li>
+  <li>As with any metric, next step is WHY?  (Gini for nation’s inequality can miss aging population, government assistance, etc.) 
+Domain knowledge is critical!</li>
+</ul>
+
+<table>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb">Check out this code on GitHub!</a></td>
+      <td> </td>
+      <td><a href="https://public.tableau.com/profile/kimberly.fessel#!/vizhome/PlanetaryBirthdayProblem/Planets-50">Check out this viz on Tableau!</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>The Gini coefficient is strictly non-negative, \(G \geq 0\) as long as the mean of the data is assumed positive.  Gini can theoretically be greater than one if some data values are negative.  In the context of wealth, this can occur if some people contribute to the population’s wealth negatively such as in the form of debts owed. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
 
 			
 						<div id="page-meta" class="t30">
@@ -299,10 +379,10 @@
 					
 
 				
-				<time class="icon-calendar pr20" datetime="2020-02-21T00:00:00-05:00" itemprop="datePublished"> 2020-02-21</time>
+				<time class="icon-calendar pr20" datetime="2020-05-02T00:00:00-04:00" itemprop="datePublished"> 2020-05-02</time>
 				
 
-				<span class="icon-archive pr20"> NLP</span>
+				<span class="icon-archive pr20"> MATHEMATICS · EDA</span>
 				<br />
 				<span class="pr20"></span>
 			</p>
@@ -310,11 +390,11 @@
 			
 			<div id="post-nav" class="row">
 				
-				<div class="small-5 columns"><a class="button small radius prev" href="http://localhost:4000//mathematics/course-report-math-ds/">&laquo; Math for Data Science: An Interview with Course Report</a></div><!-- /.small-4.columns -->
+				<div class="small-5 columns"><a class="button small radius prev" href="http://localhost:4000//nlp/spacy-for-the-win/">&laquo; Level Up: spaCy NLP for the Win</a></div><!-- /.small-4.columns -->
 				
 				<div class="small-2 columns text-center"><a class="radius button small" href="http://localhost:4000//blog/archive/" title="Blog Archive">Archive</a></div><!-- /.small-4.columns -->
 				
-				<div class="small-5 columns text-right"><a class="button small radius next" href="http://localhost:4000//mathematics/eda/gini-eda/">Measuring Statistical Dispersion with the Gini Coefficient &raquo;</a></div><!-- /.small-4.columns -->
+				<div class="small-5 columns text-right"><a class="button small radius next" href="http://localhost:4000//data/web%20scraping/python-web-scraping/">Let's Scrape the Web: PyCon 2020 Video Tutorial &raquo;</a></div><!-- /.small-4.columns -->
 				
 			</div>
 			
@@ -329,7 +409,7 @@
 			    <script type="text/javascript">
 			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
 			        var disqus_shortname = 'kimfetti-github-io'; 
-			        var disqus_identifier = '/nlp/spacy-for-the-win/';
+			        var disqus_identifier = '/mathematics/eda/gini-eda/';
 
 			        /* * * DON'T EDIT BELOW THIS LINE * * */
 			        (function() {
@@ -344,15 +424,17 @@
 
 
 			
+
+			<!-- Stuff for jsarr tag  -->
+
+			
+
+			<!-- End Stuff for jsarr tag  -->
+
 		</article>
-	</div><!-- /.medium-8.columns -->
-
-
-	
-
-
-	
+	</div><!-- /.medium-12.columns -->
 </div><!-- /.row -->
+
 
 
 	

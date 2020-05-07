@@ -14,7 +14,7 @@ widget1:
   text: "Math skills are critical for a successful career in data science. Find out why in this interview with Course Report."
 widget2:
   title: "5 Significant Object Detection Challenges and Solutions"
-  url: '/visualizations/puzzles/down-and-up/'
+  url: '/algorithms/literature%20reviews/object-detection-challenges/'
   image: kim_tree_thumb.png
   text: "Object detection problems pose several unique obstacles beyond what is required for image classification." 
 widget3:

@@ -23,6 +23,112 @@
 			</item>
 		
 			<item>
+				<title>Measuring Statistical Dispersion with the Gini Coefficient</title>
+				<link>http://localhost:4000//mathematics/eda/gini-eda/</link>
+				<pubDate>Sat, 02 May 2020 00:00:00 -0400</pubDate>
+				<description>&lt;!--more--&gt;
+
+&lt;!--
+Content for &quot;abstract&quot; including
+- What is statistical dispersion?
+- Metric developed by Gini
+- UN uses it for ranking countries: wealth vs. income inequality
+- I suggest expanding its use to be part of your EDA (measures overall statistical dispersion, yo!)
+--&gt;
+
+&lt;p&gt;If you work with data long enough, you are bound to discover that calculating the average of a set of values rarely tells you the full story.  As a simple example, each of the following groups of people have the same &lt;strong&gt;average pay&lt;/strong&gt; of $100:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;100 people who make $100 each&lt;/li&gt;
+  &lt;li&gt;50 people who make $150 each and 50 people who make $50&lt;/li&gt;
+  &lt;li&gt;1 person who makes $10,000 and 99 people who make nothing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The primary difference is the way money is distributed among each of the 100 people.  The spread of money in this case is called &lt;a href=&quot;https://en.wikipedia.org/wiki/Statistical_dispersion&quot;&gt;statistical dispersion&lt;/a&gt;.  Perhaps the most popular measurement of dispersion is standard deviation or variance.  Standard deviation roughly measures the distance between individual dataset values and the overall group mean. Standard deviation retains the same units as the quantity being measured, since we start with dollars in the previous example, standard deviation will also be reported in dollars.  But other unitless metrics can also be used to understand statistical dispersion.&lt;/p&gt;
+
+&lt;p&gt;One such measurement, &lt;a href=&quot;https://en.wikipedia.org/wiki/Gini_coefficient&quot;&gt;the Gini coefficient&lt;/a&gt; also known as the Gini index or Gini ratio, was published in 1912 by Italian statistician and sociologist Corrado Gini.  The historical use of this unitless measure of statistical dispersion has aimed at income or wealth distributions; in fact, despite being developed over 100 years ago, &lt;a href=&quot;https://www.bbc.com/news/blogs-magazine-monitor-31847943&quot;&gt;the United Nations still uses the Gini coefficient in their annual ranking of nations&lt;/a&gt; to understand wealth inequities. But the Gini coefficient can be used much more broadly to understand the dispersion of very diverse datasets.  After a more in depth exploration of the formula behind the Gini coefficient, let’s take a look at a few use cases that do not involve international economies thus demonstrating that the Gini coefficient can be added to your EDA process to strengthen your analyses.&lt;/p&gt;
+
+&lt;!--
+- Typical definition involving Lorenz curve
+- Main idea: Area shrinks as curve pulls away from straight line
+- Include approximation via Pareto principle?  (Or save for final takeaways?)
+--&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: right; padding: 30px;&quot; src=&quot;https://kimfetti.github.io/images/gini_explanation.png&quot; alt=&quot;The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;defining-gini&quot;&gt;Defining Gini&lt;/h2&gt;
+
+&lt;p&gt;To understand the Gini coefficient, let’s first discuss the Lorenz curve, a graph developed by Max Lorenz for visualizing income or wealth distribution.  The premise of the curve goes like this: take the incomes of a population and sort them from smallest to greatest.  Then visualize these incomes as a line plot where the x-values represent the percentage of people seen thus far and the y-values represent the cumulative proportion of wealth accumulated by this percentage of people.  For example, if the poorest 30% of the population holds 10% of a population’s wealth, the curve should pass through the scaled \(x,y\) coordinates (0.3, 0.1).  And note that if wealth were distributed evenly among all members of a population, the Lorenz curve would be a straight, 45-degree line where \(x=y\) (30% of the people have 30% of the wealth, etc.)&lt;/p&gt;
+
+&lt;p&gt;The Gini coefficient measures how much a population’s data deviates from perfectly even distribution. Assuming positive data values &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, the Gini coefficient ranges from zero to one, where&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;zero represents perfect equality (everyone has an equal amount) and&lt;/li&gt;
+  &lt;li&gt;one represents near perfect inequality (one person has all the money).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For these and all situations in between, the Gini coefficient is thus calculated as the area enclosed between the Lorenz curve and the line of perfect equality, marked as \(A\) in the figure above, divided by the total triangular area, \(A + B\).&lt;/p&gt;
+
+&lt;p&gt;Returning to the examples discussed at the beginning of this post, each situation results in an average pay of $100 per person, but the Gini coefficient varies greatly for each scenario.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/gini_compare.png&quot; alt=&quot;Gini coefficient increases with wealth inequity.&quot; width=&quot;1200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;more text here&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/gini_animation.gif&quot; alt=&quot;The Gini coefficient increases as the inequity gap widens.&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;gini-in-python&quot;&gt;Gini in Python&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Libraries available&lt;/li&gt;
+  &lt;li&gt;Mathy definitions&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;case-1-baby-names&quot;&gt;Case #1: Baby Names&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Dataset&lt;/li&gt;
+  &lt;li&gt;Top names are all males which leads to theory of different statistical dispersion&lt;/li&gt;
+  &lt;li&gt;Measure Gini across time&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;case-2-healthcare-prices&quot;&gt;Case #2: Healthcare Prices&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Different procedures have different distributions – need regulation or more transparency?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Recap of findings&lt;/li&gt;
+  &lt;li&gt;Pros and Cons of Gini&lt;/li&gt;
+  &lt;li&gt;Metric is lossy: exmaples of two distributions that have the same Gini values&lt;/li&gt;
+  &lt;li&gt;As with any metric, next step is WHY?  (Gini for nation’s inequality can miss aging population, government assistance, etc.) 
+Domain knowledge is critical!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb&quot;&gt;Check out this code on GitHub!&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://public.tableau.com/profile/kimberly.fessel#!/vizhome/PlanetaryBirthdayProblem/Planets-50&quot;&gt;Check out this viz on Tableau!&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;The Gini coefficient is strictly non-negative, \(G \geq 0\) as long as the mean of the data is assumed positive.  Gini can theoretically be greater than one if some data values are negative.  In the context of wealth, this can occur if some people contribute to the population’s wealth negatively such as in the form of debts owed. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+				<guid isPermaLink="true">http://localhost:4000//mathematics/eda/gini-eda/</guid>
+			</item>
+		
+			<item>
 				<title>Level Up: spaCy NLP for the Win</title>
 				<link>http://localhost:4000//nlp/spacy-for-the-win/</link>
 				<pubDate>Fri, 21 Feb 2020 00:00:00 -0500</pubDate>
