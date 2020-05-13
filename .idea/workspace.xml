@@ -2,18 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/kimberlyfessel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/kimberlyfessel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2020-05-02-gini-eda.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/mathematics/eda/gini-eda/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/eda/gini-eda/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/pages-root-folder/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pages-root-folder/index.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,16 +22,16 @@
     <session id="497264545">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="80" />
+          <entry key="project.closed" value="84" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="6" />
           <entry key="project.open.time.2" value="7" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="10" />
-          <entry key="project.open.time.5" value="47" />
-          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.5" value="49" />
+          <entry key="project.open.time.6" value="5" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="81" />
+          <entry key="project.opened" value="84" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -42,31 +39,31 @@
           <entry key="2019-11-12-gather-youtube-data" value="2" />
           <entry key="css" value="2" />
           <entry key="gif" value="2" />
-          <entry key="html" value="72" />
+          <entry key="html" value="73" />
           <entry key="jpeg" value="1" />
           <entry key="jpg" value="25" />
           <entry key="js" value="4" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="176" />
+          <entry key="md" value="177" />
           <entry key="png" value="45" />
           <entry key="py" value="1" />
           <entry key="scss" value="42" />
           <entry key="txt" value="6" />
-          <entry key="xml" value="1" />
+          <entry key="xml" value="2" />
           <entry key="yml" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="72" />
+          <entry key="HTML" value="73" />
           <entry key="Image" value="73" />
           <entry key="JavaScript" value="4" />
-          <entry key="Markdown" value="176" />
+          <entry key="Markdown" value="177" />
           <entry key="PLAIN_TEXT" value="49" />
           <entry key="Python" value="1" />
           <entry key="Scratch" value="2" />
-          <entry key="XML" value="1" />
+          <entry key="XML" value="2" />
           <entry key="YAML" value="27" />
         </counts>
       </usages-collector>
@@ -75,7 +72,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
           <entry key="js" value="51" />
-          <entry key="md" value="148655" />
+          <entry key="md" value="151610" />
           <entry key="py" value="20" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
@@ -86,7 +83,7 @@
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
           <entry key="JavaScript" value="51" />
-          <entry key="Markdown" value="148617" />
+          <entry key="Markdown" value="151572" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="54" />
           <entry key="Scratch" value="2" />
@@ -97,28 +94,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="371">
-                <caret line="63" selection-start-line="63" selection-end-line="63" />
+              <first_editor relative-caret-position="340">
+                <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pages/pages-root-folder/index.md">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_drafts/feeling_responsive/2014-09-13-grid.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="260">
-                <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="54">
+                <caret line="41" selection-start-line="41" selection-end-line="48" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog/archive.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/pages-root-folder/index.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="645">
+                <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages/pages-root-folder/feed.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -240,8 +259,8 @@
         <option value="$PROJECT_DIR$/pages/events.md" />
         <option value="$PROJECT_DIR$/_posts/data/2020-05-04-python-web-scraping.md" />
         <option value="$PROJECT_DIR$/_posts/math/2020-02-17-course-report-math-ds.md" />
-        <option value="$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md" />
         <option value="$PROJECT_DIR$/pages/pages-root-folder/index.md" />
+        <option value="$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md" />
       </list>
     </option>
   </component>
@@ -256,6 +275,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -267,6 +287,12 @@
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="_drafts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="_drafts" type="462c0819:PsiDirectoryNode" />
+              <item name="feeling_responsive" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -306,6 +332,11 @@
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -327,7 +358,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -390,7 +420,7 @@
     <frame x="41" y="23" width="1300" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27662957" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28855327" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -418,14 +448,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_includes/_navigation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1342" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/styles_feeling_responsive.scss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/atom.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -567,14 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_drafts/feeling_responsive/2014-09-13-grid.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/feeling_responsive/2014-09-14-video.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -668,11 +682,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
+    <entry file="file://$PROJECT_DIR$/blog/archive.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/pages-root-folder/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="371">
-            <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <first_editor relative-caret-position="645">
+            <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/pages-root-folder/feed.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="60">
+            <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
           </first_editor>
           <second_editor />
         </state>
@@ -688,21 +718,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/reviews/2019-09-10-object-detection-challenges.md">
+    <entry file="file://$PROJECT_DIR$/_drafts/feeling_responsive/2014-09-13-grid.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="60">
-            <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <first_editor relative-caret-position="54">
+            <caret line="41" selection-start-line="41" selection-end-line="48" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/pages-root-folder/index.md">
+    <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="260">
-            <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+          <first_editor relative-caret-position="340">
+            <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
           </first_editor>
           <second_editor />
         </state>

@@ -280,16 +280,18 @@ Content for "abstract" including
 - I suggest expanding its use to be part of your EDA (measures overall statistical dispersion, yo!)
 -->
 
-<p>If you work with data long enough, you are bound to discover that calculating the average of a set of values rarely tells you the full story.  As a simple example, each of the following groups of people have the same <strong>average pay</strong> of $100:</p>
+<p>If you work with data long enough, you are bound to discover that calculating the average of a set of values rarely tells you the full data story.  As a simple example, each of the following groups of people have the same <strong>average pay</strong> of $100:</p>
 <ul>
   <li>100 people who make $100 each</li>
   <li>50 people who make $150 each and 50 people who make $50</li>
   <li>1 person who makes $10,000 and 99 people who make nothing</li>
 </ul>
 
-<p>The primary difference is the way money is distributed among each of the 100 people.  The spread of money in this case is called <a href="https://en.wikipedia.org/wiki/Statistical_dispersion">statistical dispersion</a>.  Perhaps the most popular measurement of dispersion is standard deviation or variance.  Standard deviation roughly measures the distance between individual dataset values and the overall group mean. Standard deviation retains the same units as the quantity being measured, since we start with dollars in the previous example, standard deviation will also be reported in dollars.  But other unitless metrics can also be used to understand statistical dispersion.</p>
+<p>The primary difference is the way money is distributed among each of the 100 people.  Here, the spread of money  <a href="https://en.wikipedia.org/wiki/Statistical_dispersion">statistical dispersion</a>.  Perhaps the most popular measurement of dispersion is standard deviation or variance.  Standard deviation roughly measures the distance between individual dataset values and the overall group mean. Standard deviation retains the same units as the quantity being measured, since we start with dollars in the previous example, standard deviation will also be reported in dollars.  But other unitless metrics can also be used to understand statistical dispersion.</p>
 
 <p>One such measurement, <a href="https://en.wikipedia.org/wiki/Gini_coefficient">the Gini coefficient</a> also known as the Gini index or Gini ratio, was published in 1912 by Italian statistician and sociologist Corrado Gini.  The historical use of this unitless measure of statistical dispersion has aimed at income or wealth distributions; in fact, despite being developed over 100 years ago, <a href="https://www.bbc.com/news/blogs-magazine-monitor-31847943">the United Nations still uses the Gini coefficient in their annual ranking of nations</a> to understand wealth inequities. But the Gini coefficient can be used much more broadly to understand the dispersion of very diverse datasets.  After a more in depth exploration of the formula behind the Gini coefficient, let’s take a look at a few use cases that do not involve international economies thus demonstrating that the Gini coefficient can be added to your EDA process to strengthen your analyses.</p>
+
+<p><span style="color:blue">Add something on a set where the standard deviation doesn’t cut it either</span></p>
 
 <!--
 - Typical definition involving Lorenz curve
@@ -297,11 +299,20 @@ Content for "abstract" including
 - Include approximation via Pareto principle?  (Or save for final takeaways?)
 -->
 
-<p><img style="float: right; padding: 30px;" src="https://kimfetti.github.io/images/gini_explanation.png" alt="The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)" width="400" /></p>
-
 <h2 id="defining-gini">Defining Gini</h2>
 
-<p>To understand the Gini coefficient, let’s first discuss the Lorenz curve, a graph developed by Max Lorenz for visualizing income or wealth distribution.  The premise of the curve goes like this: take the incomes of a population and sort them from smallest to greatest.  Then visualize these incomes as a line plot where the x-values represent the percentage of people seen thus far and the y-values represent the cumulative proportion of wealth accumulated by this percentage of people.  For example, if the poorest 30% of the population holds 10% of a population’s wealth, the curve should pass through the scaled \(x,y\) coordinates (0.3, 0.1).  And note that if wealth were distributed evenly among all members of a population, the Lorenz curve would be a straight, 45-degree line where \(x=y\) (30% of the people have 30% of the wealth, etc.)</p>
+<p>To understand the Gini coefficient, let’s first discuss the Lorenz curve, a graph developed by Max Lorenz for visualizing income or wealth distribution.  The premise of the curve goes like this: take the incomes of a population and sort them from smallest to greatest.  Then visualize these incomes in a line plot where the \(x\)-values represent the percentage of people seen thus far and the \(y\)-values represent the cumulative proportion of wealth accumulated by this percentage of people.  For example, if the poorest 30% of the population holds 10% of a population’s wealth, the curve should pass through the scaled \(x,y\) coordinates (0.3, 0.1).  And note that if wealth were distributed evenly among all members of a population, the Lorenz curve would be a straight, 45-degree line where \(x=y\), where 30% of the people have 30% of the wealth, etc.</p>
+
+<div class="row">
+  <div class="large-6 columns">
+      <img src="https://kimfetti.github.io/images/gini_explanation.png" alt="The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)" width="380" />
+  </div>
+  <div class="large-6 columns">
+      <img src="https://kimfetti.github.io/images/gini_animation.gif" alt="The Gini coefficient increases as the inequity gap widens." width="380" />
+  </div>
+</div>
+
+<p><br /></p>
 
 <p>The Gini coefficient measures how much a population’s data deviates from perfectly even distribution. Assuming positive data values <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, the Gini coefficient ranges from zero to one, where</p>
 
@@ -310,22 +321,25 @@ Content for "abstract" including
   <li>one represents near perfect inequality (one person has all the money).</li>
 </ul>
 
-<p>For these and all situations in between, the Gini coefficient is thus calculated as the area enclosed between the Lorenz curve and the line of perfect equality, marked as \(A\) in the figure above, divided by the total triangular area, \(A + B\).</p>
+<p>For all situations in between, the Gini coefficient is thus calculated as the area enclosed between the Lorenz curve and the line of perfect equality, marked as \(A\) in the figure above, divided by the total triangular area, \(A + B\).</p>
 
-<p>Returning to the examples discussed at the beginning of this post, each situation results in an average pay of $100 per person, but the Gini coefficient varies greatly for each scenario.</p>
+<p>Returning to the examples discussed at the beginning of this post, each situation results in an average pay of $100 per person, but the Gini coefficient varies greatly for each scenario because Gini measures statistical dispersion.  Calculation of the Gini coefficient may prove useful for any problem or dataset where dispersion plays an important role. <span style="color:blue">(out at as a quote?)</span></p>
 
 <p><img src="https://kimfetti.github.io/images/gini_compare.png" alt="Gini coefficient increases with wealth inequity." width="1200" /></p>
 
-<p>more text here</p>
-
-<p><img src="https://kimfetti.github.io/images/gini_animation.gif" alt="The Gini coefficient increases as the inequity gap widens." width="400" /></p>
-
 <h2 id="gini-in-python">Gini in Python</h2>
 
-<ul>
-  <li>Libraries available</li>
-  <li>Mathy definitions</li>
-</ul>
+<p>To calculate the Gini coefficient in Python, one option is to integrate the area between the two curves numerically, using <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html">quadrature</a> from the <code class="highlighter-rouge">scipy</code> library for example.  Numerical integration may prove too slow or too complicated for applications at scale, however, so more straightforward implementations often begin from an alternative, <a href="https://en.wikipedia.org/wiki/Gini_coefficient#Definition">equivalent definition of the Gini coefficient</a>:</p>
+<blockquote>
+  <p>The Gini coefficient \(G\) is also defined as half of the data’s <a href="https://en.wikipedia.org/wiki/Mean_absolute_difference#Relative_mean_absolute_difference">relative mean absolute difference</a>, which is a normalized form of the average absolute difference among all the pairs of observations in the dataset. 
+\[ G = \frac{\sum\limits_i \sum\limits_j |x_i - x_j|}{2\sum\limits_i\sum\limits_j x_j}\]</p>
+</blockquote>
+
+<p>As long as the data contains only positive, non-zero values, it is <a href="https://www.statsdirect.com/help/default.htm#nonparametric_methods/gini.htm">not necessary to compute all possible pairs</a>.  The calculation simplifies further by placing all values in ascending order and assigning an index \(i\), which ranges from 1 for the smallest value up to the size of the dataset \(n\) for the largest value.  The resulting formula for Gini
+\[G = \frac{\sum\limits_i (2i - n - 1)x_i}{n\sum\limits_i x_i} \]
+is equivalent and even speedier to compute with Python.</p>
+
+<p>For the case studies that follow, I will be using a vectorized, <code class="highlighter-rouge">numpy</code> implementation of this calculation that was developed in Python by <a href="https://github.com/oliviaguest/gini/blob/master/gini.py">Olivia Guest</a>.</p>
 
 <h2 id="case-1-baby-names">Case #1: Baby Names</h2>
 
@@ -334,6 +348,8 @@ Content for "abstract" including
   <li>Top names are all males which leads to theory of different statistical dispersion</li>
   <li>Measure Gini across time</li>
 </ul>
+
+<p>So far we have talked about Gini coefficient as it may be applied to monetary situations… but it can be used for much more!</p>
 
 <h2 id="case-2-healthcare-prices">Case #2: Healthcare Prices</h2>
 
@@ -346,6 +362,7 @@ Content for "abstract" including
 <ul>
   <li>Recap of findings</li>
   <li>Pros and Cons of Gini</li>
+  <li>Why not standard dev?</li>
   <li>Metric is lossy: exmaples of two distributions that have the same Gini values</li>
   <li>As with any metric, next step is WHY?  (Gini for nation’s inequality can miss aging population, government assistance, etc.) 
 Domain knowledge is critical!</li>
@@ -364,7 +381,7 @@ Domain knowledge is critical!</li>
 <div class="footnotes">
   <ol>
     <li id="fn:1">
-      <p>The Gini coefficient is strictly non-negative, \(G \geq 0\) as long as the mean of the data is assumed positive.  Gini can theoretically be greater than one if some data values are negative.  In the context of wealth, this can occur if some people contribute to the population’s wealth negatively such as in the form of debts owed. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+      <p>The Gini coefficient is strictly non-negative, \(G \geq 0\), as long as the mean of the data is assumed positive.  Gini can theoretically be greater than one if some data values are negative, which occurs in the context of wealth if some people contribute to the population’s wealth negatively in the form of debts owed. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
     </li>
   </ol>
 </div>
