@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/kimberlyfessel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/kimberlyfessel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/2020-05-02-gini-eda.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/mathematics/eda/gini-eda/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/eda/gini-eda/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,16 +26,16 @@
     <session id="497264545">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="86" />
+          <entry key="project.closed" value="88" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="6" />
           <entry key="project.open.time.2" value="7" />
           <entry key="project.open.time.3" value="3" />
           <entry key="project.open.time.4" value="10" />
-          <entry key="project.open.time.5" value="50" />
-          <entry key="project.open.time.6" value="7" />
+          <entry key="project.open.time.5" value="51" />
+          <entry key="project.open.time.6" value="8" />
           <entry key="project.open.time.7" value="2" />
-          <entry key="project.opened" value="87" />
+          <entry key="project.opened" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -41,13 +48,13 @@
           <entry key="jpg" value="25" />
           <entry key="js" value="4" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="182" />
+          <entry key="md" value="189" />
           <entry key="png" value="46" />
           <entry key="py" value="1" />
           <entry key="scss" value="42" />
           <entry key="txt" value="6" />
           <entry key="xml" value="2" />
-          <entry key="yml" value="27" />
+          <entry key="yml" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -56,12 +63,12 @@
           <entry key="HTML" value="73" />
           <entry key="Image" value="74" />
           <entry key="JavaScript" value="4" />
-          <entry key="Markdown" value="182" />
+          <entry key="Markdown" value="189" />
           <entry key="PLAIN_TEXT" value="49" />
           <entry key="Python" value="1" />
           <entry key="Scratch" value="2" />
           <entry key="XML" value="2" />
-          <entry key="YAML" value="27" />
+          <entry key="YAML" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -69,7 +76,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
           <entry key="js" value="51" />
-          <entry key="md" value="167832" />
+          <entry key="md" value="170693" />
           <entry key="py" value="20" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
@@ -80,7 +87,7 @@
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
           <entry key="JavaScript" value="51" />
-          <entry key="Markdown" value="167794" />
+          <entry key="Markdown" value="170655" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="54" />
           <entry key="Scratch" value="2" />
@@ -95,44 +102,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="592">
-                <caret line="234" column="74" lean-forward="true" selection-start-line="234" selection-start-column="74" selection-end-line="234" selection-end-column="74" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="-3216">
-                <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/viz/2020-01-05-down-and-up.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="-4540">
-                <caret line="94" selection-start-line="94" selection-end-line="94" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="269">
-                <caret line="62" selection-start-line="62" selection-end-line="106" selection-end-column="9" />
+              <first_editor relative-caret-position="314">
+                <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
               </first_editor>
               <second_editor />
             </state>
@@ -240,8 +211,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="41" />
-    <option name="y" value="23" />
+    <option name="x" value="9" />
+    <option name="y" value="25" />
     <option name="width" value="1300" />
     <option name="height" value="807" />
   </component>
@@ -250,6 +221,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,33 +247,6 @@
             </path>
             <path>
               <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="_posts" type="462c0819:PsiDirectoryNode" />
-              <item name="viz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kimfetti.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="pages-root-folder" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kimfetti.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
             </path>
             <path>
@@ -313,7 +258,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,10 +317,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="23" width="1300" height="807" extended-state="0" />
+    <frame x="9" y="25" width="1300" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22972973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22846153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -404,9 +348,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/img/apple-touch-icon-precomposed.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/apple-touch-icon-180x180-precomposed.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -644,11 +585,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="3525">
+            <caret line="235" column="51" selection-start-line="235" selection-start-column="51" selection-end-line="235" selection-end-column="51" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="269">
-            <caret line="62" selection-start-line="62" selection-end-line="106" selection-end-column="9" />
+          <first_editor relative-caret-position="15">
+            <caret line="17" selection-start-line="17" selection-end-line="19" selection-end-column="20" />
           </first_editor>
           <second_editor />
         </state>
@@ -656,19 +610,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_drafts/2020-03-09-benfords-significant-digits.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
+        <state split_layout="SECOND">
           <first_editor relative-caret-position="465">
             <caret line="31" column="66" selection-start-line="31" selection-start-column="66" selection-end-line="31" selection-end-column="66" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/viz/2019-08-12-matplotlib-improvements.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="-3216">
-            <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
           </first_editor>
           <second_editor />
         </state>
@@ -677,8 +621,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/viz/2020-01-05-down-and-up.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="-4540">
-            <caret line="94" selection-start-line="94" selection-end-line="94" />
+          <first_editor relative-caret-position="393">
+            <caret line="260" selection-start-line="260" selection-end-line="260" />
           </first_editor>
           <second_editor />
         </state>
@@ -687,8 +631,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="592">
-            <caret line="234" column="74" lean-forward="true" selection-start-line="234" selection-start-column="74" selection-end-line="234" selection-end-column="74" />
+          <first_editor relative-caret-position="314">
+            <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
           </first_editor>
           <second_editor />
         </state>
