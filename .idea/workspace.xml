@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/kimberlyfessel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/kimberlyfessel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2020-05-02-gini-eda.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
@@ -11,10 +10,11 @@
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/gini_health.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/gini_health.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/gini_health.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/gini_health.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +76,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
           <entry key="js" value="51" />
-          <entry key="md" value="170693" />
+          <entry key="md" value="174071" />
           <entry key="py" value="20" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
@@ -87,7 +87,7 @@
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
           <entry key="JavaScript" value="51" />
-          <entry key="Markdown" value="170655" />
+          <entry key="Markdown" value="174033" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="54" />
           <entry key="Scratch" value="2" />
@@ -102,8 +102,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="314">
-                <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
+              <first_editor relative-caret-position="241">
+                <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
               </first_editor>
               <second_editor />
             </state>
@@ -114,8 +114,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Header</find>
-      <find>REtina</find>
       <find>overbrace</find>
       <find>aim</find>
       <find>1</find>
@@ -144,6 +142,8 @@
       <find>[</find>
       <find>^2</find>
       <find>blue</find>
+      <find>exhibit</find>
+      <find>less</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/_sass</dir>
@@ -631,8 +631,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="314">
-            <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="120" selection-end-column="14" />
+          <first_editor relative-caret-position="241">
+            <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
           </first_editor>
           <second_editor />
         </state>
