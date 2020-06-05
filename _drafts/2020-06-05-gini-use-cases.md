@@ -1,7 +1,7 @@
 ---
 layout: page-fullwidth
 title: "Measuring Statistical Dispersion with the Gini Coefficient"
-subheadline: "Exploratory Data Analysis"
+subheadline: "Math Applications"
 meta_teaser: "The Gini coefficient is a good general-purpose measure of statistical dispersion.  Long since popular in the field of economics, it can be leveraged much more broadly to explore data from nearly any discipline. This post includes a thorough mathematical explanation of the Gini coefficient as well as a few non-standard use cases."
 teaser: "<em>The Gini coefficient is a good general-purpose measure of statistical dispersion.  Long since popular in the field of economics, it can be leveraged much more broadly to explore data from nearly any discipline. This post includes a thorough mathematical explanation of the Gini coefficient as well as a few non-standard use cases.</em>"
 
@@ -17,7 +17,7 @@ image:
     caption_url: https://unsplash.com/photos/EpbIXGCrtK0
 categories:
     - mathematics
-    - eda
+    - applications
 show_meta: true
 comments: true
 ---
@@ -209,10 +209,10 @@ The Gini coefficient continues to provide insight over 100 years after its incep
 
 [Certain limitations][14] apply to the Gini coefficient despite its many benefits.  Like other summary statistics, Gini condense information thereby losing granularity from the original dataset.  Various different distributions map to the same Gini coefficient, which makes it many-to-one.  The Gini coefficient is also be quite sensitive to outliers in that a singular extreme datapoint (large or small) can increase Gini dramatically.  On the other hand, economists have also criticized the Gini coefficient for being [undersensitive to wealth changes in upper and lower echelons][3].  Researchers have go on to introduce several additional metrics to study different aspects of income inequality, such as the [Palma ratio][16], which explicitly captures financial fluctuations in the richest 10% and the poorest 40% of a population.
 
-No matter which metric you choose to understand statistical dispersion, building data intuition certainly goes beyond simple estimates of the mean or median.  The Gini coefficient, long since popular in the field of economics, provides excellent insight about the spread of data regardless of your chosen subject area. As demonstrated in this post, Gini could be tracked over time, calculated for specific segments of your data, or used to detect processes requiring better price standardization.  Its applications are limitless, and it might just be the missing piece of your EDA toolkit!
+No matter which metric you choose to understand statistical dispersion, building data intuition certainly goes beyond simple estimates of the mean or median.  The Gini coefficient, long since popular in the field of economics, provides excellent insight about the spread of data regardless of your chosen subject area. As demonstrated in this post, Gini could be tracked over time, calculated for specific segments of your data, or used to detect processes requiring better price standardization.  Its applications are limitless, and it might just be the missing piece of your EDA toolkit.
 
 
-[Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb) 
+[Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/gini_coefficient.ipynb) 
 
  [1]: https://en.wikipedia.org/wiki/Statistical_dispersion
  [2]: https://en.wikipedia.org/wiki/Gini_coefficient
