@@ -2,8 +2,8 @@
 layout: page-fullwidth
 title: "Measuring Statistical Dispersion with the Gini Coefficient"
 subheadline: "Exploratory Data Analysis"
-meta_teaser: "A blog post about Gini!"
-teaser: "<em>A blog post about Gini!</em>"
+meta_teaser: "The Gini coefficient is a good general-purpose measure of statistical dispersion.  Long since popular in the field of economics, it can be leveraged much more broadly to explore data from nearly any discipline. This post includes a thorough mathematical explanation of the Gini coefficient as well as a few non-standard use cases."
+teaser: "<em>The Gini coefficient is a good general-purpose measure of statistical dispersion.  Long since popular in the field of economics, it can be leveraged much more broadly to explore data from nearly any discipline. This post includes a thorough mathematical explanation of the Gini coefficient as well as a few non-standard use cases.</em>"
 
 header:
     image: gini_header.png
@@ -30,6 +30,7 @@ Content for "abstract" including
 - UN uses it for ranking countries: wealth vs. income inequality
 - I suggest expanding its use to be part of your EDA (measures overall statistical dispersion, yo!)
 -->
+<hr>
 
 If you work with data long enough, you are bound to discover that a dataset's mean rarely--if ever--tells you the full data story.  As a simple example, each of the following groups of people have the same **average pay** of $100:
 - 100 people who make $100 each
@@ -204,18 +205,11 @@ So what about billing regulation?  Do we need more safeguards in place to be sur
 
 ## Conclusion
 
-<div style="color:blue">
-- Recap of findings <br>
-- Metric is lossy: exmaples of two distributions that have the same Gini values?<br>
-- As with any metric, next step is WHY?  (Gini for nation's inequality can miss aging population, government assistance, etc.) 
-Domain knowledge is critical!<br>
-</div>
-<br>
-The Gini coefficient continues to supply insight over 100 years after its inception.  As a good, general-purpose measure of statistical dispersion, its use should not merely be confined to economic description but can be used much more broadly to explore and understand data from nearly any discipline.  The most popular metric for understanding data spread today is undoubtly standard deviation; however, there are [several key differences][13] between standard deviation and the Gini coefficient, which means you will need to consider your desired use before choosing between these summary statistics.  Firstly, standard deviation retains the units of the data it is applied to --  taking the standard deviation US incomes yields a value in dollars; whereas, the Gini coefficient is scale invariant. Secondly, standard deviation is also unbounded meaning it can take on any non-negative value, but Gini is capped between zero and one.  Because of Gini's scale invariance and strict bounds, comparing statistical dispersion between two dissimilar data sources becomes much easier.  One final difference is how Gini and standard deviation judge statistical dispersion.  For a given dataset, Gini reaches its maximum value if one datapoint is positive and all other points are zero.  Standard deviation reaches its maximum if half the values are at the extreme maximum while the other half of the values are at the extreme minimum.
+The Gini coefficient continues to provide insight over 100 years after its inception.  As a good general-purpose measure of statistical dispersion, Gini can be used broadly to explore and understand data from nearly any discipline.  Currently, the most popular metric for understanding data spread is likely standard deviation; however, there are [several key differences][13] between standard deviation and the Gini coefficient.  Firstly, standard deviation retains the scale of your data -- you report the standard deviation of US incomes in dollars while you might give the standard deviation of temperatures in degrees Celcius. The Gini coefficient, however, has no measurement unit, so-called scale invariance. Secondly, standard deviation is unbounded in that it can may be any non-negative value, while Gini typically ranges between zero and one.  Gini's scale invariance and strict bounds makes comparing statistical dispersion between two dissimilar data sources much easier.  Finally, standard deviation and the Gini coefficient judge statistical dispersion through different lenses.  Gini reaches its maximum value for a nonnegative dataset if if contains one positive and zeros for all remaining values.  Standard deviation reaches its maximum if half the data live at the extreme maximum and the other half register at the extreme minimum.
 
-Despite the many benefits of incorporating the Gini coefficient into your EDA process, [limitations also exist][14] and should be recognized.  Gini is many-to-one in that many different data distributions result in the same coefficient value.  In this way, Gini loses information from the original dataset, but it is a summary statistic after all so this information loss is to be expected.  The Gini coefficient can also be quite sensitive to outliers, a singular extreme datapoint at either end of the spectrum may increase Gini dramatically.  On the other hand, the Gini coefficient has [also been criticized in the realm of economics for being undersensitive to changes in the upper and lower echelons of wealth][3].  Economist have even gone so far as introducing separate metrics, such as the Palma ratio, to explicitly capture changes in wealth of the richest 10% and the poorest 40% of a population.
+[Certain limitations][14] apply to the Gini coefficient despite its many benefits.  Like other summary statistics, Gini condense information thereby losing granularity from the original dataset.  Various different distributions map to the same Gini coefficient, which makes it many-to-one.  The Gini coefficient is also be quite sensitive to outliers in that a singular extreme datapoint (large or small) can increase Gini dramatically.  On the other hand, economists have also criticized the Gini coefficient for being [undersensitive to wealth changes in upper and lower echelons][3].  Researchers have go on to introduce several additional metrics to study different aspects of income inequality, such as the [Palma ratio][16], which explicitly captures financial fluctuations in the richest 10% and the poorest 40% of a population.
 
-No matter which metric for statistical dispersion you choose, building data intuition certainly goes beyond simply looking at the mean or median.  The Gini coefficient, long since popular in the field of economics, might just be the missing piece of your EDA toolkit. Gini can be tracked over time, calculated on segments of data, and may even provide you with a critical piece of information in order to understand not just the what by the why behind your data.
+No matter which metric you choose to understand statistical dispersion, building data intuition certainly goes beyond simple estimates of the mean or median.  The Gini coefficient, long since popular in the field of economics, provides excellent insight about the spread of data regardless of your chosen subject area. As demonstrated in this post, Gini could be tracked over time, calculated for specific segments of your data, or used to detect processes requiring better price standardization.  Its applications are limitless, and it might just be the missing piece of your EDA toolkit!
 
 
 [Check out this code on GitHub!](https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb) 
@@ -235,5 +229,6 @@ No matter which metric for statistical dispersion you choose, building data intu
  [13]: https://stats.stackexchange.com/questions/210829/difference-is-summary-statistics-gini-coefficient-and-standard-deviation/211595
  [14]: https://www.scientificamerican.com/article/ask-gini/
  [15]: https://repository.upenn.edu/gse_grad_pubs/6/
+ [16]: https://en.wikipedia.org/wiki/Income_inequality_metrics#Palma_ratio
  
  

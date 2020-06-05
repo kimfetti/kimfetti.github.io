@@ -23,6 +23,211 @@
 			</item>
 		
 			<item>
+				<title>Measuring Statistical Dispersion with the Gini Coefficient</title>
+				<link>http://localhost:4000//mathematics/eda/gini-eda/</link>
+				<pubDate>Sat, 02 May 2020 00:00:00 -0400</pubDate>
+				<description>&lt;!--more--&gt;
+
+&lt;!--
+Content for &quot;abstract&quot; including
+- What is statistical dispersion?
+- Metric developed by Gini
+- UN uses it for ranking countries: wealth vs. income inequality
+- I suggest expanding its use to be part of your EDA (measures overall statistical dispersion, yo!)
+--&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;If you work with data long enough, you are bound to discover that a dataset’s mean rarely–if ever–tells you the full data story.  As a simple example, each of the following groups of people have the same &lt;strong&gt;average pay&lt;/strong&gt; of $100:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;100 people who make $100 each&lt;/li&gt;
+  &lt;li&gt;50 people who make $150 each and 50 people who make $50&lt;/li&gt;
+  &lt;li&gt;1 person who makes $10,000 and 99 people who make nothing&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The primary difference, of course, is the way that money is distributed among each of the 100 people.  The spread of money in this case represents &lt;a href=&quot;https://en.wikipedia.org/wiki/Statistical_dispersion&quot;&gt;statistical dispersion&lt;/a&gt;.  Perhaps the most popular measurement of statistical dispersion is standard deviation or variance; however, you can leverage other metrics, such as the Gini coefficient, to obtain a new perspective on your data’s spread.&lt;/p&gt;
+
+&lt;!--  Standard deviation roughly measures the distance between individual dataset values and the overall group mean. Standard deviation retains the same units as the quantity being measured, since we start with dollars in the previous example, standard deviation will also be reported in dollars.  But other unitless metrics can also be used to understand statistical dispersion.  --&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gini_coefficient&quot;&gt;The Gini coefficient&lt;/a&gt;, also known as the Gini index or the Gini ratio, was introduced in 1912 by Italian statistician and sociologist Corrado Gini.  Analysts have historically used this value to study income or wealth distributions; in fact, despite being developed over 100 years ago, &lt;a href=&quot;https://www.bbc.com/news/blogs-magazine-monitor-31847943&quot;&gt;the United Nations still uses the Gini coefficient&lt;/a&gt; in their annual ranking of nations to understand monetary inequities. But the Gini coefficient may be utilized much more broadly! After a more thorough mathematical explanation, let’s apply the Gini coefficient to a few non-standard use cases that do not involving international economies.&lt;/p&gt;
+
+&lt;!-- thus demonstrating that the Gini coefficient can be added to your EDA process to strengthen your analyses. --&gt;
+
+&lt;!--
+- Typical definition involving Lorenz curve
+- Main idea: Area shrinks as curve pulls away from straight line
+- Include approximation via Pareto principle?  (Or save for final takeaways?)
+--&gt;
+
+&lt;h2 id=&quot;defining-gini&quot;&gt;Defining Gini&lt;/h2&gt;
+
+&lt;p&gt;The first step in understanding the Gini coefficient requires a discussion on the Lorenz curve, a graph developed by Max Lorenz for visualizing income or wealth distribution.  To trace out the Lorenz curve, begin by taking the incomes of a population and sorting them from smallest to largest.  Then build a line plot where the \(x\)-values represent the percentage of people seen thus far and the \(y\)-values represent the cumulative proportion of wealth attributed to this percentage of people.  For example, if the poorest 30% of the population holds 10% of a population’s wealth, the curve should pass through the scaled \(x,y\) coordinates (0.3, 0.1).  Note also that if wealth was distributed evenly among all members of a population, the Lorenz curve would follow a straight line, \(x=y\).  See the figure below for an illustration of a hypothetical Lorenz curve along with the line of equality.&lt;/p&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;
+      &lt;img src=&quot;https://kimfetti.github.io/images/gini_explanation.png&quot; alt=&quot;The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)&quot; width=&quot;350&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;
+      &lt;img src=&quot;https://kimfetti.github.io/images/gini_animation.gif&quot; alt=&quot;The Gini coefficient increases as the inequity gap widens.&quot; width=&quot;350&quot; /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The Gini coefficient measures how much a population’s Lorenz curve from perfect equality or how much a set of data diverges from an even distribution.  The Gini coefficient typically ranges from zero to one&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, where&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;zero represents perfect equality &lt;em&gt;(everyone has an equal amount)&lt;/em&gt; and&lt;/li&gt;
+  &lt;li&gt;one represents near perfect inequality &lt;em&gt;(one person has all the money)&lt;/em&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For all situations in between, the Gini coefficient \(G\) equals
+\[G = \frac{A}{A + B}\]
+where \(A\) signifies the region enclosed between the line of perfect equality and the Lorenz curve, as indicated in the figure above, while \(A + B\) represents the total triangular area.&lt;/p&gt;
+
+&lt;p&gt;Each of the three situations discussed in the introduction produce an average of $100 per person, but the Gini coefficient varies greatly for each scenario since Gini measures statistical dispersion.  As seen in the figure below, calculation of the Gini coefficient may prove valuable for any problem or dataset where dispersion plays an important role.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/gini_compare.png&quot; alt=&quot;Gini coefficient increases with wealth inequity.&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;gini-in-python&quot;&gt;Gini in Python&lt;/h2&gt;
+
+&lt;p&gt;To calculate a dataset’s Gini coefficient with Python, you have the option of quantifying the shaded area \(A\) with something like &lt;code class=&quot;highlighter-rouge&quot;&gt;scipy&lt;/code&gt;’s &lt;a href=&quot;https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html&quot;&gt;quadrature&lt;/a&gt; routine.  If this style of numerical integration proves slow or too complicated for applications at scale, other implementations often begin from an alternative, &lt;a href=&quot;https://en.wikipedia.org/wiki/Gini_coefficient#Definition&quot;&gt;equivalent definition of the Gini coefficient&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;The Gini coefficient may also be expressed as half of the data’s &lt;a href=&quot;https://en.wikipedia.org/wiki/Mean_absolute_difference#Relative_mean_absolute_difference&quot;&gt;relative mean absolute difference&lt;/a&gt;, a normalized form of the average absolute difference among all pairs of observations in the dataset. 
+\[ G = \frac{\sum\limits_i \sum\limits_j |x_i - x_j|}{2\sum\limits_i\sum\limits_j x_j}\]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The calculation simplifies further if the data consists of only positive values as it becomes &lt;a href=&quot;https://www.statsdirect.com/help/default.htm#nonparametric_methods/gini.htm&quot;&gt;unnecessary to evaluate all possible pairs&lt;/a&gt;.  Sorting the datapoints in ascending order and assigning a positional index \(i\) yields
+\[G = \frac{\sum\limits_i (2i - n - 1)x_i}{n\sum\limits_i x_i}, \]
+which is even speedier to compute.&lt;/p&gt;
+
+&lt;p&gt;The best Python implementation of the Gini coefficient that I’ve found comes from &lt;a href=&quot;https://github.com/oliviaguest/gini/blob/master/gini.py&quot;&gt;Olivia Guest&lt;/a&gt;. I will subsequently leverage her vectorized &lt;code class=&quot;highlighter-rouge&quot;&gt;numpy&lt;/code&gt; function to calculate Gini in the case studies that follow.&lt;/p&gt;
+
+&lt;h2 id=&quot;case-1-baby-names&quot;&gt;Case #1: Baby Names&lt;/h2&gt;
+
+&lt;p&gt;So far we have mostly addressed the Gini coefficient in the context of its original field of economics.  This metric generalizes, however, to provide insight whenever statistical dispersion plays a critical role.  I will now illustrate two atypical applications to demonstrate that use of the Gini coefficient could help improve the workflow of exploratory data analysis procedures.&lt;/p&gt;
+
+&lt;p&gt;The Social Security Administration of the United States (SSA) &lt;a href=&quot;https://www.ssa.gov/oact/babynames/limits.html&quot;&gt;hosts public records&lt;/a&gt; on the names given to US babies for research purposes.  Aggregating these data for children born since 1950, I discovered that 18 out of the top 20 most popular names more commonly associate with male children.  So where are the females?&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/popular_names.png&quot; alt=&quot;Most popular names given to US babies since 1950&quot; width=&quot;500&quot; /&gt;
+&lt;/center&gt;
+
+&lt;p&gt;Slighly &lt;a href=&quot;https://www.npr.org/sections/health-shots/2015/03/30/396384911/why-are-more-baby-boys-born-than-girls&quot;&gt;more male births are born each year&lt;/a&gt; and certainly more male babies have been registered with the SSA (53% male vs 47% female); nonetheless, I was still surprised to see such a large proportion of male names in my quick popularity chart. Digging into the data further, I found that even though fewer females appear in the data, there have been consistently more unique female names each year.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/unique_names.png&quot; alt=&quot;Number of unique names for male and female babies since 1950&quot; width=&quot;700&quot; /&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Statistical dispersion appears to play a significant role in these data.  To put it back in financial terms, some male names like the ones on my top 20 list are just extremely “wealthy.” (The most popular name, Michael, accounts for over 3% of all male children born since 1950.)   These ultra-popular masculine names likely pass down from generation to generation.  Females babies, on the other hand, are distributed more widely across a variety of names, so more names share in the “wealth” of female children.  We can verify this theory by returning to the Gini coefficient.&lt;/p&gt;
+
+&lt;p&gt;Consider how female children disperse across each name.  Some names in the dataset account for only 5 babies&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; since 1950, while “Jennifer” represents nearly 1.5 million individuals.  Tallying up all females born with each name since 1950 and sorting from least to most popular, we find the Gini coefficient to be 0.96 for female names, implying a huge disparity between the most popular and the most unique names.&lt;/p&gt;
+
+&lt;!--
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/gini_females.png&quot; alt=&quot;Gini coefficient for the popularity of female names &quot; width = &quot;700&quot;&gt;
+&lt;/center&gt; 
+&lt;br&gt;
+--&gt;
+
+&lt;p&gt;The difference between male and female Gini coefficients may appear insignificant, but consider an alternative viewpoint.  Instead of aggregating across time, calculate a yearly Gini coefficient for each gender.  Plotting both the female and male Gini coefficients for each year since 1950 demonstrates a clear and persistent pattern where the male coefficient presents consistently higher.&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;  Thus male names experience more statistical dispersion than female monikers.   Also of note, the Gini values for both genders have ticked downward since the 1990s indicating a trending preference toward more diverse naming conventions.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/gini_names.png&quot; alt=&quot;The male Gini coefficient tracks consistently higher throughout time&quot; width=&quot;700&quot; /&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In a final look at this dataset, let’s examine popularity trends for individual names over time.  We can utilize Gini to study this topic by grouping the female data by name and calculating the Gini coefficient as it pertains to yearly frequencies; that is, for any given name, sort each year of the dataset by that name’s least to most popular year in order to compute Gini.  Names with lower Gini coefficients demonstrate similar levels of popularity throughout the entire time span, while higher coefficients imply uneven popularity levels.  The figure below compares popularity trends for the names “Scarlett” and “Miriam.”  Both names represent about 60,000 female babies in the dataset; however, the sharp increase in babies named “Scarlett” since the turn of the millennium generates a large Gini coefficient while “Miriam” sees a low Gini value since the name has consistently been given to approximately 1,000 babies each year since 1950.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/scarlett_vs_miriam.png&quot; alt=&quot;The popularity of female names Miriam and Scarlett over time with Gini coeffients&quot; width=&quot;900&quot; /&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;case-2-healthcare-prices&quot;&gt;Case #2: Healthcare Prices&lt;/h2&gt;
+
+&lt;p&gt;Now consider &lt;a href=&quot;https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Inpatient2017&quot;&gt;this 2017 healthcare pricing dataset&lt;/a&gt; hosted by the Centers for Medicare and Medicaid Services, a federal agency of the United States.  These data, aggregated as procedural averages for individual hospitals, include the charges and eventual payments for over 500 separate inpatient procedures/diagnostic groups for Medicare patients.  To determine which, if any, procedures require better billing standardization, I applied Gini coefficient calculations.  The underlying basis for my analysis boils down to this: the higher the Gini coefficient, the greater the disparity in what different hospitals charge for a given procedure.  Procedures with large Gini values could necessitate regulation or transparent cost details.&lt;/p&gt;
+
+&lt;p&gt;The diagnosis related group (DRG) with the highest Gini coefficient in this dataset&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; is labeled as, “Alcohol/Drug Abuse or Dependency w Rehabilitation Therapy.”  This finding perhaps elicits little surprise given that rehabilitation therapies vary widely both in terms of treatment length and illness severity.  In fact, all diagnoses with the top Gini coefficients may vary in severity, such as coagulation disorders and psychoses.  Procedural charges that show the most uniformity among hospital charges, on the other hand, mostly describe one-time cardiac events such as value replacement, percutaneous surgeries, or observation for chest pain.&lt;/p&gt;
+
+&lt;center&gt;
+&lt;table width=&quot;800&quot;&gt;
+  &lt;caption&gt;Gini coefficients among average hospital charges per diagnosis related group (DRG)&lt;/caption&gt;
+  &lt;colgroup&gt;
+    &lt;col span=&quot;1&quot; style=&quot;width: 50%;&quot; /&gt;
+    &lt;col span=&quot;1&quot; style=&quot;width: 50%;&quot; /&gt;
+  &lt;/colgroup&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;&lt;center&gt;Highest Gini&lt;/center&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;center&gt;Lowest Gini&lt;/center&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alcohol/Drug Abuse or Dependence w Rehabilitation Therapy&lt;/td&gt;
+      &lt;td&gt;Aortic and Heart Assist Procedures except Pulsation Balloon w MCC&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Coagulation Disorders&lt;/td&gt;
+      &lt;td&gt;Angina Pectoris&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alcohol/Drug Abuse or Dependence, Left AMA&lt;/td&gt;
+      &lt;td&gt;Cardiac Valve &amp;amp; Oth Maj Cardiothoracic Proc w/o Card Cath w/o CC/MCC&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Psychoses&lt;/td&gt;
+      &lt;td&gt;Heart Transplant or Implant of Heart Assist System w MCC&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Other Respiratory System Diagnoses w MCC&lt;/td&gt;
+      &lt;td&gt;Perc Cardiovasc Proc w/o Coronary Artery Stent w/o MCC&lt;/td&gt;
+    &lt;/tr&gt;
+   &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/center&gt;
+
+&lt;p&gt;So what about billing regulation?  Do we need more safeguards in place to be sure hospitals are charging similar amounts for similar procedures?  Well, more cost transparency certainly doesn’t hurt, especially for treatments that range in duration or intensity, but let’s go back to the dataset.  In addition to the information about the amounts hospitals charge, the dataset also lists &lt;a href=&quot;https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Downloads/Inpatient_Outpatient_FAQ.pdf&quot;&gt;the total payments that the hospitals actually received&lt;/a&gt;.  Applying the same type of Gini analysis to the payments received yields much lower Gini values.  In fact, the Gini coefficient is lower for the average payments received than the hospital charges, for &lt;em&gt;every single procedure&lt;/em&gt;.  This curious insight signals that the contracts in for Medicare payments already do quite a lot to moderate and regularize procedural costs.&lt;sup id=&quot;fnref:5&quot;&gt;&lt;a href=&quot;#fn:5&quot; class=&quot;footnote&quot;&gt;5&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/gini_health.png&quot; alt=&quot;Comparison of Gini coeffients for total payments vs hospital charges&quot; width=&quot;600&quot; /&gt;
+&lt;/center&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;The Gini coefficient continues to provide insight over 100 years after its inception.  As a good general-purpose measure of statistical dispersion, Gini can be used broadly to explore and understand data from nearly any discipline.  Currently, the most popular metric for understanding data spread is likely standard deviation; however, there are &lt;a href=&quot;https://stats.stackexchange.com/questions/210829/difference-is-summary-statistics-gini-coefficient-and-standard-deviation/211595&quot;&gt;several key differences&lt;/a&gt; between standard deviation and the Gini coefficient.  Firstly, standard deviation retains the scale of your data – you report the standard deviation of US incomes in dollars while you might give the standard deviation of temperatures in degrees Celcius. The Gini coefficient, however, has no measurement unit, so-called scale invariance. Secondly, standard deviation is unbounded in that it can may be any non-negative value, while Gini typically ranges between zero and one.  Gini’s scale invariance and strict bounds makes comparing statistical dispersion between two dissimilar data sources much easier.  Finally, standard deviation and the Gini coefficient judge statistical dispersion through different lenses.  Gini reaches its maximum value for a nonnegative dataset if if contains one positive and zeros for all remaining values.  Standard deviation reaches its maximum if half the data live at the extreme maximum and the other half register at the extreme minimum.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.scientificamerican.com/article/ask-gini/&quot;&gt;Certain limitations&lt;/a&gt; apply to the Gini coefficient despite its many benefits.  Like other summary statistics, Gini condense information thereby losing granularity from the original dataset.  Various different distributions map to the same Gini coefficient, which makes it many-to-one.  The Gini coefficient is also be quite sensitive to outliers in that a singular extreme datapoint (large or small) can increase Gini dramatically.  On the other hand, economists have also criticized the Gini coefficient for being &lt;a href=&quot;https://www.bbc.com/news/blogs-magazine-monitor-31847943&quot;&gt;undersensitive to wealth changes in upper and lower echelons&lt;/a&gt;.  Researchers have go on to introduce several additional metrics to study different aspects of income inequality, such as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Income_inequality_metrics#Palma_ratio&quot;&gt;Palma ratio&lt;/a&gt;, which explicitly captures financial fluctuations in the richest 10% and the poorest 40% of a population.&lt;/p&gt;
+
+&lt;p&gt;No matter which metric you choose to understand statistical dispersion, building data intuition certainly goes beyond simple estimates of the mean or median.  The Gini coefficient, long since popular in the field of economics, provides excellent insight about the spread of data regardless of your chosen subject area. As demonstrated in this post, Gini could be tracked over time, calculated for specific segments of your data, or used to detect processes requiring better price standardization.  Its applications are limitless, and it might just be the missing piece of your EDA toolkit!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kimfetti/Blog/blob/master/planetary_birthday_problem.ipynb&quot;&gt;Check out this code on GitHub!&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;The Gini coefficient is strictly non-negative, \(G \geq 0\), as long as the mean of the data is assumed positive.  Gini can theoretically be greater than one if some data values are negative, which occurs in the context of wealth if some people contribute to the population’s wealth negatively in the form of debts owed. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;The Social Security Administration does not include names that are given to fewer than 5 babies per gender per state due to privacy reasons; therefore, five children for one given female name since 1950 signifies the absolute minimum allowed.  Male names exhibit a very similar Lorenz curve but with slightly more skew, registering a Gini coefficient of 0.97. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;The Gini values displayed in the yearly figure are less than the aggregate because popular name tend to stay popular year after year thus bolstering naming inequity and increasing the Gini coefficient. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;Some diagnosis related groups (DRGs) in this dataset occur at as few as one hospital for the entire year.  I have filtered the dataset down to procedures that are documented by at least 50 hospitals to avoid high variance issues. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:5&quot;&gt;
+      &lt;p&gt;The payments hospitals receive are strictly less than the amounts they charge, but decreasing a dataset’s mean while holding its standard deviation fixed &lt;a href=&quot;https://repository.upenn.edu/gse_grad_pubs/6/&quot;&gt;actually &lt;em&gt;increases&lt;/em&gt; the Gini coefficient&lt;/a&gt;.  Here we observe just the opposite effect so statistical dispersion must be lessened for the payments received. &lt;a href=&quot;#fnref:5&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+				<guid isPermaLink="true">http://localhost:4000//mathematics/eda/gini-eda/</guid>
+			</item>
+		
+			<item>
 				<title>Level Up: spaCy NLP for the Win</title>
 				<link>http://localhost:4000//nlp/spacy-for-the-win/</link>
 				<pubDate>Fri, 21 Feb 2020 00:00:00 -0500</pubDate>

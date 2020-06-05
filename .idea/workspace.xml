@@ -10,11 +10,10 @@
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/gini_health.png" beforeDir="false" afterPath="$PROJECT_DIR$/_site/images/gini_health.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/gini_health.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/gini_health.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +75,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
           <entry key="js" value="51" />
-          <entry key="md" value="174071" />
+          <entry key="md" value="175920" />
           <entry key="py" value="20" />
           <entry key="scss" value="50" />
           <entry key="yml" value="217" />
@@ -87,7 +86,7 @@
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
           <entry key="JavaScript" value="51" />
-          <entry key="Markdown" value="174033" />
+          <entry key="Markdown" value="175882" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="54" />
           <entry key="Scratch" value="2" />
@@ -102,8 +101,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="241">
-                <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
+              <first_editor relative-caret-position="339">
+                <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
               </first_editor>
               <second_editor />
             </state>
@@ -114,8 +113,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>overbrace</find>
-      <find>aim</find>
       <find>1</find>
       <find>[1]</find>
       <find>[2]</find>
@@ -144,6 +141,8 @@
       <find>blue</find>
       <find>exhibit</find>
       <find>less</find>
+      <find>I</find>
+      <find>I</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/_sass</dir>
@@ -332,7 +331,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3296" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32880434" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -631,8 +630,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2020-05-02-gini-eda.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="241">
-            <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
+          <first_editor relative-caret-position="339">
+            <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
           </first_editor>
           <second_editor />
         </state>
