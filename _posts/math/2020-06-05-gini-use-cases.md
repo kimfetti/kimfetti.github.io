@@ -31,7 +31,7 @@ If you work with data long enough, you are bound to discover that a dataset's me
 
 The primary difference, of course, is the way that money is distributed among the people, also known as the [statistical dispersion][1].  Perhaps the most popular measurement of statistical dispersion is standard deviation or variance; however, you can leverage other metrics, such as the Gini coefficient, to obtain a new perspective.
 
-[The Gini coefficient][2], also known as the Gini index or the Gini ratio, was introduced in 1912 by Italian statistician and sociologist Corrado Gini.  Analysts have historically used this value to study income or wealth distributions; in fact, despite being developed over 100 years ago, [the United Nations still uses the Gini coefficient][3] to understand monetary inequities in their annual ranking of nations. But the Gini coefficient may be utilized much more broadly! After a more thorough mathematical explanation, let's apply the Gini coefficient to a few non-standard use cases that do not involve international economies.
+[The Gini coefficient][2], also known as the Gini index or the Gini ratio, was introduced in 1912 by Italian statistician and sociologist Corrado Gini.  Analysts have historically used this value to study income or wealth distributions; in fact, despite being developed over 100 years ago, [the United Nations still uses the Gini coefficient][3] to understand monetary inequities in their annual ranking of nations. But the Gini coefficient may be utilized much more broadly! After a more thorough mathematical explanation, let's apply the Gini coefficient to a few non-standard use cases that do not involve international economies: baby names and healthcare pricing.
 
 
 ## Defining Gini
@@ -43,7 +43,7 @@ The first step in understanding the Gini coefficient requires a discussion about
       <img src="{{ site.urlimg }}gini_explanation.png" alt="The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)" width = "350">
   </div>
   <div class="large-6 columns">
-      <img src="{{ site.urlimg }}gini_animation.gif" alt="The Gini coefficient increases as the inequity gap widens." width = "350">
+      <img src="{{ site.urlimg }}gini_animation.gif" alt="The Gini coefficient increases as the inequality gap widens." width = "350">
   </div>
 </div>
 
@@ -62,7 +62,7 @@ where \\(A\\) signifies the region enclosed between the line of perfect equality
 
 Each of the three situations discussed in the introduction produce an average of $100 per person. The Gini coefficient, however, varies greatly for each scenario as seen in the figure below.
 
-<img src="{{ site.urlimg }}gini_compare.png" alt="Gini coefficient increases with wealth inequity." width = "1000">
+<img src="{{ site.urlimg }}gini_compare.png" alt="Gini coefficient increases with wealth inequality." width = "1000">
 
 
 
@@ -105,7 +105,7 @@ Consider how female children disperse across each name.  Some names in the datas
 
 Male names exhibit a very similar Lorenz curve but with a little more skew, registering a Gini coefficient of 0.97. The difference between male and female coefficients appears insignificant, but consider an alternative viewpoint.  Instead of aggregating across time, calculate a yearly Gini coefficient for each gender.  Plotting both the female and male Gini coefficients for each year since 1950 demonstrates a clear and persistent pattern where the male coefficient presents consistently higher.[^3]  Thus male names experience more statistical dispersion than female monikers.   Also of note, the Gini values for both genders have ticked downward since the 1990s, indicating a trending preference toward more diverse naming conventions. 
 
-[^3]: The Gini values displayed in the yearly figure are less than the aggregate because popular names tend to stay popular year after year thus bolstering naming inequity and increasing the Gini coefficient.
+[^3]: The Gini values displayed in the yearly figure are less than the aggregate because popular names tend to stay popular year after year thus bolstering naming inequality and increasing the Gini coefficient.
 
 <center>
 <img src="{{ site.urlimg }}gini_names.png" alt="The male Gini coefficient tracks consistently higher throughout time" width = "700">
