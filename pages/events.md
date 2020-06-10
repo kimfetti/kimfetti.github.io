@@ -95,7 +95,7 @@ permalink: "/events/"
 
 <div class="row">
     <div class="small-12 columns">
-        <h3>Talks and Meetups</h3><br>
+        <h3>Talks, Podcasts, and Meetups</h3><br>
     </div><!-- /.small-12.columns -->
 </div>
 
