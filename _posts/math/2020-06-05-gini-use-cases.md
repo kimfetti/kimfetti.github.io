@@ -5,16 +5,20 @@ subheadline: "Math Applications"
 meta_teaser: "The Gini coefficient is a good general-purpose measure of statistical dispersion.  Long since popular in the field of economics, this metric can be leveraged much more broadly to explore data from nearly any discipline. The following post includes a thorough mathematical explanation of the Gini coefficient as well as a few non-standard use cases."
 teaser: "<em>The Gini coefficient is a good general-purpose measure of statistical dispersion.  Long since popular in the field of economics, this metric can be leveraged much more broadly to explore data from nearly any discipline. The following post includes a thorough mathematical explanation of the Gini coefficient as well as a few non-standard use cases.</em>"
 
+
 header:
-    image: gini_header.png
     background-color: "#999999"
-    caption: "Photo by Janko Ferlič on Unsplash.  Cropped and modified by author."
-    caption_url: https://unsplash.com/photos/EpbIXGCrtK0
+    image: logo.png
 image:
     thumb: gini_thumb.png
     homepage: gini_header.png
     caption: "Photo by Janko Ferlič on Unsplash.  Cropped and modified by author."
     caption_url: https://unsplash.com/photos/EpbIXGCrtK0
+iframe: "<iframe width='622' height='350' src='//www.youtube.com/embed/nFbAnwIYle4' frameborder='0' allowfullscreen></iframe>"
+video:
+    embedURL: "https://www.youtube.com/embed/nFbAnwIYle4"
+    contentURL: "https://www.youtube.com/watch?v=nFbAnwIYle4"
+    thumbnailUrl: "http://img.youtube.com/vi/nFbAnwIYle4/maxresdefault.jpg"
 categories:
     - mathematics
     - applications
