@@ -26,6 +26,10 @@ show_meta: true
 comments: true
 ---
 
+<center>
+<iframe width='900' height='550' src='//www.youtube.com/embed/nFbAnwIYle4' frameborder='0' allowfullscreen></iframe>
+</center>
+
 <hr>
 
 If you work with data long enough, you are bound to discover that a dataset's mean rarely--if ever--tells you the full data story.  As a simple example, each of the following groups of people have the same **average pay** of $100:

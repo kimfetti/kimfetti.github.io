@@ -235,17 +235,13 @@
 <div id="masthead-with-background-color" style="background: #999999;">
 	<div class="row">
 		<figure class="small-12 columns">
-			<img src="https://kimfetti.github.io/images//gini_header.png" alt="Kimberly Fessel Blog">
+			<img src="https://kimfetti.github.io/images//logo.png" alt="Kimberly Fessel Blog">
 		</figure><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
 
 
 
-
-<div class="masthead-caption">
-	<a href="https://unsplash.com/photos/EpbIXGCrtK0">Photo by Janko Ferlič on Unsplash.  Cropped and modified by author.</a>
-</div>
 
 
 
@@ -270,7 +266,11 @@
 			</p>
 			
 
-			<hr />
+			<center>
+<iframe width="900" height="550" src="//www.youtube.com/embed/nFbAnwIYle4" frameborder="0" allowfullscreen=""></iframe>
+</center>
+
+<hr />
 
 <p>If you work with data long enough, you are bound to discover that a dataset’s mean rarely–if ever–tells you the full data story.  As a simple example, each of the following groups of people have the same <strong>average pay</strong> of $100:</p>
 <ul>
@@ -281,7 +281,7 @@
 
 <p>The primary difference, of course, is the way that money is distributed among the people, also known as the <a href="https://en.wikipedia.org/wiki/Statistical_dispersion">statistical dispersion</a>.  Perhaps the most popular measurement of statistical dispersion is standard deviation or variance; however, you can leverage other metrics, such as the Gini coefficient, to obtain a new perspective.</p>
 
-<p><a href="https://en.wikipedia.org/wiki/Gini_coefficient">The Gini coefficient</a>, also known as the Gini index or the Gini ratio, was introduced in 1912 by Italian statistician and sociologist Corrado Gini.  Analysts have historically used this value to study income or wealth distributions; in fact, despite being developed over 100 years ago, <a href="https://www.bbc.com/news/blogs-magazine-monitor-31847943">the United Nations still uses the Gini coefficient</a> to understand monetary inequities in their annual ranking of nations. But the Gini coefficient may be utilized much more broadly! After a more thorough mathematical explanation, let’s apply the Gini coefficient to a few non-standard use cases that do not involve international economies.</p>
+<p><a href="https://en.wikipedia.org/wiki/Gini_coefficient">The Gini coefficient</a>, also known as the Gini index or the Gini ratio, was introduced in 1912 by Italian statistician and sociologist Corrado Gini.  Analysts have historically used this value to study income or wealth distributions; in fact, despite being developed over 100 years ago, <a href="https://www.bbc.com/news/blogs-magazine-monitor-31847943">the United Nations still uses the Gini coefficient</a> to understand monetary inequities in their annual ranking of nations. But the Gini coefficient may be utilized much more broadly! After a more thorough mathematical explanation, let’s apply the Gini coefficient to a few non-standard use cases that do not involve international economies: baby names and healthcare pricing.</p>
 
 <h2 id="defining-gini">Defining Gini</h2>
 
@@ -292,7 +292,7 @@
       <img src="https://kimfetti.github.io/images/gini_explanation.png" alt="The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)" width="350" />
   </div>
   <div class="large-6 columns">
-      <img src="https://kimfetti.github.io/images/gini_animation.gif" alt="The Gini coefficient increases as the inequity gap widens." width="350" />
+      <img src="https://kimfetti.github.io/images/gini_animation.gif" alt="The Gini coefficient increases as the inequality gap widens." width="350" />
   </div>
 </div>
 
@@ -311,7 +311,7 @@ where \(A\) signifies the region enclosed between the line of perfect equality a
 
 <p>Each of the three situations discussed in the introduction produce an average of $100 per person. The Gini coefficient, however, varies greatly for each scenario as seen in the figure below.</p>
 
-<p><img src="https://kimfetti.github.io/images/gini_compare.png" alt="Gini coefficient increases with wealth inequity." width="1000" /></p>
+<p><img src="https://kimfetti.github.io/images/gini_compare.png" alt="Gini coefficient increases with wealth inequality." width="1000" /></p>
 
 <h2 id="gini-in-python">Gini in Python</h2>
 
@@ -433,7 +433,7 @@ which is even speedier to compute.</p>
       <p>The Social Security Administration does not include names that are given to fewer than 5 babies per gender per state due to privacy reasons; therefore, five children for one given female name since 1950 signifies the absolute minimum allowed. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:3">
-      <p>The Gini values displayed in the yearly figure are less than the aggregate because popular names tend to stay popular year after year thus bolstering naming inequity and increasing the Gini coefficient. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+      <p>The Gini values displayed in the yearly figure are less than the aggregate because popular names tend to stay popular year after year thus bolstering naming inequality and increasing the Gini coefficient. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
     </li>
     <li id="fn:4">
       <p>Some diagnosis related groups (DRGs) occur at as few as one hospital for the entire year.  I have filtered the dataset down to procedures that are documented by at least 50 hospitals to avoid high variance issues. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>

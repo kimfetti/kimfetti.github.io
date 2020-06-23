@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-06-05T18:40:45-04:00</updated>
+	<updated>2020-06-23T16:37:11-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -42,7 +42,11 @@
 				</author>
 			
 			<summary>&lt;em&gt;The Gini coefficient is a good general-purpose measure of statistical dispersion.  Long since popular in the field of economics, this metric can be leveraged much more broadly to explore data from nearly any discipline. The following post includes a thorough mathematical explanation of the Gini coefficient as well as a few non-standard use cases.&lt;/em&gt;</summary>
-			<content type="html" xml:base="http://localhost:4000//mathematics/applications/gini-use-cases/">&lt;hr /&gt;
+			<content type="html" xml:base="http://localhost:4000//mathematics/applications/gini-use-cases/">&lt;center&gt;
+&lt;iframe width=&quot;900&quot; height=&quot;550&quot; src=&quot;//www.youtube.com/embed/nFbAnwIYle4&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;/center&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;If you work with data long enough, you are bound to discover that a dataset’s mean rarely–if ever–tells you the full data story.  As a simple example, each of the following groups of people have the same &lt;strong&gt;average pay&lt;/strong&gt; of $100:&lt;/p&gt;
 &lt;ul&gt;
@@ -53,7 +57,7 @@
 
 &lt;p&gt;The primary difference, of course, is the way that money is distributed among the people, also known as the &lt;a href=&quot;https://en.wikipedia.org/wiki/Statistical_dispersion&quot;&gt;statistical dispersion&lt;/a&gt;.  Perhaps the most popular measurement of statistical dispersion is standard deviation or variance; however, you can leverage other metrics, such as the Gini coefficient, to obtain a new perspective.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gini_coefficient&quot;&gt;The Gini coefficient&lt;/a&gt;, also known as the Gini index or the Gini ratio, was introduced in 1912 by Italian statistician and sociologist Corrado Gini.  Analysts have historically used this value to study income or wealth distributions; in fact, despite being developed over 100 years ago, &lt;a href=&quot;https://www.bbc.com/news/blogs-magazine-monitor-31847943&quot;&gt;the United Nations still uses the Gini coefficient&lt;/a&gt; to understand monetary inequities in their annual ranking of nations. But the Gini coefficient may be utilized much more broadly! After a more thorough mathematical explanation, let’s apply the Gini coefficient to a few non-standard use cases that do not involve international economies.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Gini_coefficient&quot;&gt;The Gini coefficient&lt;/a&gt;, also known as the Gini index or the Gini ratio, was introduced in 1912 by Italian statistician and sociologist Corrado Gini.  Analysts have historically used this value to study income or wealth distributions; in fact, despite being developed over 100 years ago, &lt;a href=&quot;https://www.bbc.com/news/blogs-magazine-monitor-31847943&quot;&gt;the United Nations still uses the Gini coefficient&lt;/a&gt; to understand monetary inequities in their annual ranking of nations. But the Gini coefficient may be utilized much more broadly! After a more thorough mathematical explanation, let’s apply the Gini coefficient to a few non-standard use cases that do not involve international economies: baby names and healthcare pricing.&lt;/p&gt;
 
 &lt;h2 id=&quot;defining-gini&quot;&gt;Defining Gini&lt;/h2&gt;
 
@@ -64,7 +68,7 @@
       &lt;img src=&quot;https://kimfetti.github.io/images/gini_explanation.png&quot; alt=&quot;The areas surrounding the Lorenz curve define the Gini coefficient: A/(A+B)&quot; width=&quot;350&quot; /&gt;
   &lt;/div&gt;
   &lt;div class=&quot;large-6 columns&quot;&gt;
-      &lt;img src=&quot;https://kimfetti.github.io/images/gini_animation.gif&quot; alt=&quot;The Gini coefficient increases as the inequity gap widens.&quot; width=&quot;350&quot; /&gt;
+      &lt;img src=&quot;https://kimfetti.github.io/images/gini_animation.gif&quot; alt=&quot;The Gini coefficient increases as the inequality gap widens.&quot; width=&quot;350&quot; /&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -83,7 +87,7 @@ where \(A\) signifies the region enclosed between the line of perfect equality a
 
 &lt;p&gt;Each of the three situations discussed in the introduction produce an average of $100 per person. The Gini coefficient, however, varies greatly for each scenario as seen in the figure below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/gini_compare.png&quot; alt=&quot;Gini coefficient increases with wealth inequity.&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/gini_compare.png&quot; alt=&quot;Gini coefficient increases with wealth inequality.&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;gini-in-python&quot;&gt;Gini in Python&lt;/h2&gt;
 
@@ -205,7 +209,7 @@ which is even speedier to compute.&lt;/p&gt;
       &lt;p&gt;The Social Security Administration does not include names that are given to fewer than 5 babies per gender per state due to privacy reasons; therefore, five children for one given female name since 1950 signifies the absolute minimum allowed. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;The Gini values displayed in the yearly figure are less than the aggregate because popular names tend to stay popular year after year thus bolstering naming inequity and increasing the Gini coefficient. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;The Gini values displayed in the yearly figure are less than the aggregate because popular names tend to stay popular year after year thus bolstering naming inequality and increasing the Gini coefficient. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
     &lt;li id=&quot;fn:4&quot;&gt;
       &lt;p&gt;Some diagnosis related groups (DRGs) occur at as few as one hospital for the entire year.  I have filtered the dataset down to procedures that are documented by at least 50 hospitals to avoid high variance issues. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
