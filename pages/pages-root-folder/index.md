@@ -8,15 +8,15 @@ layout: frontpage
 header:
   image_fullwidth: header5.png
 widget1:
-  title: "Web Scraping in Python: Real Python Podcast""
-  url: '/mathematics/course-report-math-ds/'
-  image: coursereport_thumb_img.png
-  text: "Math skills are critical for a successful career in data science. Find out why in this interview with Course Report."
+  title: "Web Scraping in Python: Real Python Podcast"
+  url: 'data/web%20scraping/realpython-podcast-web-scraping/'
+  image: RPP_June2020_thumb.png
+  text: "Do you want to get started with web scraping using Python? Find out more in this Real Python podcast."
 widget2:
-  title: "5 Significant Object Detection Challenges and Solutions"
-  url: '/algorithms/literature%20reviews/object-detection-challenges/'
-  image: kim_tree_thumb.png
-  text: "Object detection problems pose several unique obstacles beyond what is required for image classification." 
+  title: "Level Up: spaCy NLP for the Win"
+  url: '/nlp/spacy-for-the-win/'
+  image: letters-thumb.png
+  text: "spaCy provides an easy-to-use framework for getting started with NLP.  This post covers the basics of spaCy and highlights its functionality on a small corpus of restaurant reviews." 
 widget3:
     title: 'Past and Upcoming Events'
     url: '/events'
