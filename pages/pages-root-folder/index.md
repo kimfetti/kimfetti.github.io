@@ -8,7 +8,7 @@ layout: frontpage
 header:
   image_fullwidth: header5.png
 widget1:
-  title: "Math for Data Science: An Interview with Course Report"
+  title: "Web Scraping in Python: Real Python Podcast""
   url: '/mathematics/course-report-math-ds/'
   image: coursereport_thumb_img.png
   text: "Math skills are critical for a successful career in data science. Find out why in this interview with Course Report."
