@@ -9,7 +9,7 @@ header:
   image_fullwidth: header5.png
 widget1:
   title: "Web Scraping in Python: Real Python Podcast"
-  url: '/web%20scraping/realpython-podcast-web-scraping/'
+  url: '/data/web%20scraping/realpython-podcast-web-scraping/'
   image: RPP_June2020_thumb.png
   text: "Do you want to get started with web scraping using Python? Find out more in this Real Python podcast."
 widget2:
