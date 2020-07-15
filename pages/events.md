@@ -32,6 +32,17 @@ permalink: "/events/"
 <div class="row">
    <div class="large-4 columns">
       <center>
+      <h5>PyOhio 2020</h5>
+      <br>
+      <a href="https://www.pyohio.org/2020/events/talks/great-scott-delorean-for-datetime-manipulation-in-python">
+      <img src="{{ site.urlimg }}PyOhio_July2020.png" alt="PyOhio 2020"></a>
+      <h5>July 2020</h5>
+      <p>Great Scott! Delorean for<br>Datetime Manipulation in Python</p>
+      </center>
+   </div>
+
+   <div class="large-4 columns">
+      <center>
       <h5>PyCon 2020</h5>
       <br>
       <a href="https://us.pycon.org/2020/schedule/presentation/72/">
@@ -53,6 +64,12 @@ permalink: "/events/"
       <p><a href="https://github.com/kimfetti/Conferences/blob/master/ODSC_East_2020/ODSC_East_2020_KFessel_Deck.pdf">Presentation Slides</a></p>
       </center>
   </div>
+
+</div> 
+
+<hr>
+ 
+<div class="row">
   <div class="large-4 columns">
       <center>
       <h5>Demystifying Data Science 2019</h5>
@@ -64,11 +81,6 @@ permalink: "/events/"
       <p><a href="http://bit.ly/DDS19_Intro_to_Python">Colab Notebook</a></p>
       </center>
   </div>
-</div> 
-
-<hr>
- 
-<div class="row">
   <div class="large-4 columns">
       <center>
       <h5>ODSC NYC 2019</h5>
@@ -84,9 +96,6 @@ permalink: "/events/"
       <img src="http://placehold.it/303x170/fdfdfd/fdfdfd&amp;text=text">
   </div>
 
-  <div class="large-4 columns">
-      <img src="http://placehold.it/303x170/fdfdfd/fdfdfd&amp;text=text">
-  </div>
 </div>
 
 
