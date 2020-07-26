@@ -38,6 +38,7 @@ permalink: "/events/"
       <img src="{{ site.urlimg }}PyOhio_July2020.png" alt="PyOhio 2020"></a>
       <h5>July 2020</h5>
       <p>Great Scott! Delorean for<br>Datetime Manipulation in Python</p>
+      <p><a href="https://www.youtube.com/watch?v=-xSv-czVtys">Presenation Video</a></p>
       </center>
    </div>
 
