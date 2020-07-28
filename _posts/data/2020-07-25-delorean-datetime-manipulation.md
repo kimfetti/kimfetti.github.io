@@ -31,11 +31,7 @@ image:
 
 This year's pandemic necessitated different conference formats for data science professionals.  The organizers of PyOhio decided to ask speakers to create 5- or 10-minute pre-recorded talks to be streamed continuously while participants discussed the content in a live chat session.  The format was a success!  And I am proud to have created this video all about the Python library Delorean.
 
-Delorean makes working with datetimes in Python much less of a burden.  Its simple syntax allows users:
-- to do datetime arithmetic, 
-- to handle time zone shifts, 
-- to convert datetimes into human language like “3 days ago,” and
-- to generate equally spaced datetime intervals.  
+Delorean makes working with datetimes in Python much less of a burden.  Its simple syntax allows users: to do datetime arithmetic, to handle time zone shifts, to convert datetimes into human language like “3 days ago,” and to generate equally spaced datetime intervals.  
 
 Check out my video for a look at Delorean (along with many, many _Back to the Future_ references) or watch the [full PyOhio 2020 conference playlist on YouTube][1].
 
