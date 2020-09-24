@@ -8,15 +8,15 @@ layout: frontpage
 header:
   image_fullwidth: header5.png
 widget1:
-  title: "Web Scraping in Python: Real Python Podcast"
-  url: '/data/web%20scraping/realpython-podcast-web-scraping/'
-  image: RPP_June2020_thumb.png
-  text: "Do you want to get started with web scraping using Python? Find out more in this Real Python podcast."
+  title: "Measuring Statistical Dispersion with the Gini Coefficient"
+  url: '/mathematics/applications/gini-use-cases/'
+  image: gini_thumb.png
+  text: "The Gini coefficient is a good general-purpose measure of statistical dispersion.  This post includes a thorough mathematical explanation of the Gini coefficient as well as a few non-standard use cases."
 widget2:
-  title: "Level Up: spaCy NLP for the Win"
-  url: '/nlp/spacy-for-the-win/'
-  image: letters-thumb.png
-  text: "spaCy provides an easy-to-use framework for getting started with NLP.  This post covers the basics of spaCy and highlights its functionality on a small corpus of restaurant reviews." 
+  title: "How to Gather Data from YouTube"
+  url: '/data/web%20scraping/gather-youtube-data/'
+  image: youtube-thumb.png
+  text: "You can mine YouTube's massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, the video transcripts, as well as YouTube search results." 
 widget3:
     title: 'Past and Upcoming Events'
     url: '/events'
