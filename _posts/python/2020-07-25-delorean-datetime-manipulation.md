@@ -9,7 +9,7 @@ header:
     background-color: "#999999"
     image: logo.png
 categories:
-    - data
+    - python
     - datetime
 show_meta: true
 comments: true

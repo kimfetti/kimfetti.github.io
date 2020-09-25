@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel Blog</title>
-	<updated>2020-09-24T17:54:10-04:00</updated>
+	<updated>2020-09-24T20:29:01-04:00</updated>
 
 	<subtitle>Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -26,9 +26,42 @@
 
 	
 		<entry>
-			<id>http://localhost:4000//data/datetime/delorean-datetime-manipulation/</id>
+			<id>http://localhost:4000//python/course-report-python-ds/</id>
+			<title>Python for Data Science: An Interview with Course Report</title>
+			<link href="http://localhost:4000//python/course-report-python-ds/" rel="alternate" type="text/html" title="Python for Data Science: An Interview with Course Report" />
+			<updated>2020-09-15T00:00:00-04:00</updated>
+
+			
+				
+				<author>
+					
+						<name>KFessel</name>
+					
+					
+					
+				</author>
+			
+			<summary>&lt;em&gt;Python is one of the most popular computer programming languages in the world. Find out how Python is used for data science in interview with Course Report.&lt;/em&gt;</summary>
+			<content type="html" xml:base="http://localhost:4000//python/course-report-python-ds/">&lt;!--more--&gt;
+
+&lt;p&gt;In a recent interview with &lt;a href=&quot;https://www.coursereport.com/&quot;&gt;Course Report&lt;/a&gt;, I discussed the basics of Python and how Python is used for data science.  Python serves as an all-purpose programming language, so data scientists, engineers, analysts, and web developers alike utilize Python to build end-to-end projects, ready for launch into production.  Python also has incredibly simple syntax, which makes it a great first programming language for beginners.  We chat about these topics and many more in the video!&lt;/p&gt;
+
+&lt;p&gt;You can also check out a write up of our interview on the &lt;a href=&quot;https://www.coursereport.com/blog/how-is-python-used-for-data-science-metis&quot;&gt;Course Report blog&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+
+			
+				<category term="python" />
+			
+			
+
+			<published>2020-09-15T00:00:00-04:00</published>
+		</entry>
+	
+		<entry>
+			<id>http://localhost:4000//python/datetime/delorean-datetime-manipulation/</id>
 			<title>Delorean for Datetime Manipulation</title>
-			<link href="http://localhost:4000//data/datetime/delorean-datetime-manipulation/" rel="alternate" type="text/html" title="Delorean for Datetime Manipulation" />
+			<link href="http://localhost:4000//python/datetime/delorean-datetime-manipulation/" rel="alternate" type="text/html" title="Delorean for Datetime Manipulation" />
 			<updated>2020-07-25T00:00:00-04:00</updated>
 
 			
@@ -42,7 +75,7 @@
 				</author>
 			
 			<summary>&lt;em&gt;Working with dates and times in Python can lead to frustration, heartache, and, ironically, lost time – but it doesn’t have to!  This brief demo introduces Delorean, a library constructed to make datetime manipulation in Python easier.  &lt;/em&gt;</summary>
-			<content type="html" xml:base="http://localhost:4000//data/datetime/delorean-datetime-manipulation/">&lt;!--more--&gt;
+			<content type="html" xml:base="http://localhost:4000//python/datetime/delorean-datetime-manipulation/">&lt;!--more--&gt;
 
 &lt;p&gt;This year’s pandemic necessitated different conference formats for data science professionals.  The organizers of PyOhio decided to ask speakers to create 5- or 10-minute pre-recorded talks to be streamed continuously while participants discussed the content in a live chat session.  The format was a success!  And I am proud to have created this video all about the Python library Delorean.&lt;/p&gt;
 
@@ -53,7 +86,7 @@
 </content>
 
 			
-				<category term="data" />
+				<category term="python" />
 			
 				<category term="datetime" />
 			
@@ -997,39 +1030,6 @@ where \(p_u \) is the predicted class probability for the true class and \(\gamm
 			
 
 			<published>2019-09-10T00:00:00-04:00</published>
-		</entry>
-	
-		<entry>
-			<id>http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/</id>
-			<title>A Beginner's Guide to Object Detection</title>
-			<link href="http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/" rel="alternate" type="text/html" title="A Beginner's Guide to Object Detection" />
-			<updated>2019-09-01T00:00:00-04:00</updated>
-
-			
-				
-				<author>
-					
-						<name>KFessel</name>
-					
-					
-					
-				</author>
-			
-			<summary>&lt;em&gt;This post covers the basics of object detection: what it is, various approaches to it, the measurements used to judge its results, along with a few important considerations of modern object detection.&lt;/em&gt;</summary>
-			<content type="html" xml:base="http://localhost:4000//algorithms/literature%20reviews/beginners-guide-object-detection/">&lt;p&gt;Computer vision refers to the process by which computers interpret information from digital images or videos. While humans can quickly determine what items are present in a photograph and where those items are located, computers must be trained to do so, often with massive amounts of images and corresponding object labels. This task, called &lt;em&gt;object detection&lt;/em&gt;, was considered incredibly challenging just a few years ago, but recent developments in deep learning, specifically convolutional neural networks (CNNs), have substantially improved computers’ ability to successfully locate and identify objects.&lt;/p&gt;
-
-&lt;p&gt;Please continue to the &lt;a href=&quot;https://www.thisismetis.com/blog/a-beginners-guide-to-object-detection&quot;&gt;Metis blog&lt;/a&gt; to read my full post covering the basics of object detection.&lt;/p&gt;
-
-</content>
-
-			
-				<category term="algorithms" />
-			
-				<category term="literature reviews" />
-			
-			
-
-			<published>2019-09-01T00:00:00-04:00</published>
 		</entry>
 	
 </feed>
