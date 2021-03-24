@@ -2,18 +2,18 @@
 - name: LinkedIn
   url: https://www.linkedin.com/in/kimberlyfessel/
   class: icon-linkedin
-  title: "Professional profile"
+  title: "Professional Profile"
 
 - name: GitHub
   url: http://github.com/kimfetti
   class: icon-github
-  title: "Code and more"
+  title: "Code and More"
 
 
-#- name: YouTube
-#  url: http://www.youtube.com/PhlowMedia
-#  class: icon-youtube
-#  title: "Videos, Video-Anleitungen und Filme von Phlow auf YouTube"
+- name: YouTube
+  url: http://www.youtube.com/KimberlyFessel
+  class: icon-youtube
+  title: "Tutorial Videos on YouTube"
 
 - name: Twitter
   url: http://twitter.com/kimberlyfessel

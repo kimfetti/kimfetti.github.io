@@ -2,7 +2,7 @@
 layout: page
 title: "About"
 subheadline: ""
-teaser: "Kimberly Fessel is a Senior Data Scientist at Metis in New York City."
+teaser: "Kimberly Fessel is Lead Data Scientist at Metis."
 permalink: "/info/"
 header:
     image_fullwidth: "header5.png"
