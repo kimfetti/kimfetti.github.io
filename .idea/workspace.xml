@@ -3,19 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.jekyll-metadata" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_drafts/2022-04-03-accuracy-precision-recall.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/pr_accuracy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/pr_training_data.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/images/precision_recall_header.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/mathematics/data/accuracy-precision-recall/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/data/accuracy-precision-recall/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/python/course-report-python-ds/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/python/course-report-python-ds/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +75,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
           <entry key="js" value="51" />
-          <entry key="md" value="181231" />
+          <entry key="md" value="181282" />
           <entry key="py" value="20" />
           <entry key="scss" value="50" />
           <entry key="yml" value="277" />
@@ -91,7 +86,7 @@
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
           <entry key="JavaScript" value="51" />
-          <entry key="Markdown" value="181186" />
+          <entry key="Markdown" value="181237" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="54" />
           <entry key="Scratch" value="9" />
@@ -125,8 +120,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2020-06-05-gini-use-cases.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="690">
-                <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+              <first_editor relative-caret-position="76">
+                <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
               </first_editor>
               <second_editor />
             </state>
@@ -137,8 +132,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/math/2022-04-03-accuracy-precision-recall.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="120">
-                <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+              <first_editor relative-caret-position="358">
+                <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
               </first_editor>
               <second_editor />
             </state>
@@ -149,8 +144,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>[8]</find>
-      <find>[9]</find>
       <find>[10]</find>
       <find>[11]</find>
       <find>[12]</find>
@@ -179,6 +172,8 @@
       <find>inequality</find>
       <find>[3]</find>
       <find>[^1]</find>
+      <find>side</find>
+      <find>SI</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/_sass</dir>
@@ -246,9 +241,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="462" />
-    <option name="y" value="35" />
-    <option name="width" value="1300" />
+    <option name="x" value="-77" />
+    <option name="y" value="23" />
+    <option name="width" value="1560" />
     <option name="height" value="807" />
   </component>
   <component name="ProjectView">
@@ -379,10 +374,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="462" y="35" width="1300" height="807" extended-state="0" />
+    <frame x="-77" y="23" width="1560" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22846153" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19038461" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -740,8 +735,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2020-06-05-gini-use-cases.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="690">
-            <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+          <first_editor relative-caret-position="76">
+            <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           </first_editor>
           <second_editor />
         </state>
@@ -750,8 +745,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2022-04-03-accuracy-precision-recall.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <first_editor relative-caret-position="358">
+            <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
           </first_editor>
           <second_editor />
         </state>

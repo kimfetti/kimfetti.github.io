@@ -3,7 +3,7 @@ layout: page-fullwidth
 title: "Accuracy, Precision, and Recall — Never Forget Again!"
 subheadline: "Math Applications"
 meta_teaser: "Designing an effective classification model requires an upfront selection of an appropriate classification metric. This posts walks you through an example of three possible metrics (accuracy, precision, and recall) while teaching you how to easily remember the definition of each one."
-teaser: "<em>Designing an effective classification model requires an upfront selection of an appropriate classification metric. This posts walks you through an example of three possible metrics (accuracy, precision, and recall) while teaching you how to easily remember the definition of each one.</em>
+teaser: "<em>Designing an effective classification model requires an upfront selection of an appropriate classification metric. This posts walks you through an example of three possible metrics (accuracy, precision, and recall) while teaching you how to easily remember the definition of each one.</em>"
 
 
 header:
@@ -20,9 +20,12 @@ show_meta: true
 comments: true
 ---
 
+<center>
+<iframe width='818' height='500' src='//www.youtube.com/embed/qWfzIYCvBqo' frameborder='0' allowfullscreen></iframe>
+</center>
 
+<hr>
 
-## Introduction
 
 To design an effective supervised machine learning model, data scientists must first select appropriate metrics to judge their model’s success.  But choosing a useful metric often proves more challenging than anticipated, especially for classification models that have a slew of different metric options.
 
@@ -68,14 +71,14 @@ Both precision and recall are defined in terms of just one class, oftentimes the
 
 Precision measures the quality of model predictions for one particular class, so for the precision calculation, zoom in on just the apple side of the model.  You can forget about the orange side for now.  
 
-Precision equals the number of correct apple observations divided by all observations on the apple side of the model.  In the example depicted below, the model correctly identified 3 apples, but it classified 5 total fruits as apples.  The apple precision is 3 out of 5, or 60%.  To remember the definition of precision, note that preciSIon focuses on only the apple SIde of the model.
+Precision equals the number of correct apple observations divided by all observations on the apple side of the model.  In the example depicted below, the model correctly identified 3 apples, but it classified 5 total fruits as apples.  The apple precision is 3 out of 5, or 60%.  To remember the definition of precision, note that preci**SI**on focuses on only the apple **SI**de of the model.
 
 <center>
 <img src="{{ site.urlimg }}OA_precision.jpg" alt="Precision calculated as 60% for the apple class from example apple-orange model" width = "700">
 </center>
 <br>
 
-Recall, on the other hand, measures how well the model did for the actual observations of a particular class.  Now check how the model did specifically for all the actual apples. For this, you can pretend like all of the oranges don’t exist.  This model correctly identified 3 out of 4 actual apples; recall is 3 over 4, or 75%.  Remember this simple mnemonic: recALL focuses on ALL the actual apples.
+Recall, on the other hand, measures how well the model did for the actual observations of a particular class.  Now check how the model did specifically for all the actual apples. For this, you can pretend like all of the oranges don’t exist.  This model correctly identified 3 out of 4 actual apples; recall is 3 over 4, or 75%.  Remember this simple mnemonic: rec**ALL** focuses on **ALL** the actual apples.
 
 <center>
 <img src="{{ site.urlimg }}OA_recall.jpg" alt="Recall calculated as 75% for the apple class from example apple-orange model" width = "700">
@@ -110,13 +113,14 @@ Okay, what if we want to improve recall?  We could make our decision threshold l
       <img src="{{ site.urlimg }}OA_precision_boundaryLeft.jpg" alt="With the decision threshold decreased, precision decreased to 50% for the apple class" width = "450">
   </div>
 </div>
+<br>
 
 Monitoring and selecting an appropriate precision-recall tradeoff allows us to prioritize certain types of errors, either false positives or false negatives, as we adjust the decision threshold of our model.
 
 
 ## Conclusion
 
-Precision and recall offer new ways to judge classification model predictions as opposed to the standard accuracy computation.  With apple precision and recall, we focus in on the apple class.  High precision assures that what our model says is an apple actually is an apple (preciSIon = apple SIde), but recall prioritizes correctly identifying all of the actual apples (recALL = ALL apples).  
+Precision and recall offer new ways to judge classification model predictions as opposed to the standard accuracy computation.  With apple precision and recall, we focus in on the apple class.  High precision assures that what our model says is an apple actually is an apple (preci**SI**on = apple **SI**de), but recall prioritizes correctly identifying all of the actual apples (rec**ALL** = **ALL** apples).  
 
 Precision and recall allow us to distinguish between different types of errors, and there’s also a great tradeoff between precision and recall because we can’t blindly improve one without often sacrificing the other. The balance between precision and recall can also help us build more robust classification models.  In fact, practitioners often measure and try to improve something called the F1-score, which is the harmonic average between precision and recall, when building a classification model.  This ensures that both metrics stay healthy and that the dominant class doesn’t overwhelm the metric like it generally does with accuracy.
 
