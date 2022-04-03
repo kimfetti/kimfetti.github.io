@@ -48,7 +48,7 @@
 	<meta property="og:url" content="http://localhost:4000//visualizations/matplotlib-improvements/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Kimberly Fessel Blog">
+	<meta property="og:site_name" content="Kimberly Fessel's Blog">
 	
 	<meta property="article:author" content="https://www.facebook.com/">
 
@@ -69,28 +69,28 @@
 
 	
 
-	<link rel="icon" sizes="32x32" href="http://localhost:4000//assets/img/favicon-32x32.png">
+	<link rel="icon" sizes="32x32" href="http://localhost:4000/assets/img/favicon-32x32.png">
 
-	<link rel="icon" sizes="192x192" href="http://localhost:4000//assets/img/touch-icon-192x192.png">
+	<link rel="icon" sizes="192x192" href="http://localhost:4000/assets/img/touch-icon-192x192.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://localhost:4000//assets/img/apple-touch-icon-180x180-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://localhost:4000/assets/img/apple-touch-icon-180x180-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000//assets/img/apple-touch-icon-152x152-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000/assets/img/apple-touch-icon-152x152-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000//assets/img/apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/img/apple-touch-icon-144x144-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000//assets/img/apple-touch-icon-120x120-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000/assets/img/apple-touch-icon-120x120-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000//assets/img/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/assets/img/apple-touch-icon-114x114-precomposed.png">
 
 	
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000//assets/img/apple-touch-icon-76x76-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000/assets/img/apple-touch-icon-76x76-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000//assets/img/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/assets/img/apple-touch-icon-72x72-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" href="http://localhost:4000//assets/img/apple-touch-icon-precomposed.png">	
+	<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/assets/img/apple-touch-icon-precomposed.png">	
 
-	<meta name="msapplication-TileImage" content="http://localhost:4000//assets/img/msapplication_tileimage.png">
+	<meta name="msapplication-TileImage" content="http://localhost:4000/assets/img/msapplication_tileimage.png">
 
 	<meta name="msapplication-TileColor" content="#fabb00">
 
@@ -105,7 +105,7 @@
   <nav class="top-bar" role="navigation" data-topbar>
     <ul class="title-area">
       <li class="name">
-      <h1 class="show-for-small-only"><a href="http://localhost:4000/" class="icon-tree"> Kimberly Fessel Blog</a></h1>
+      <h1 class="show-for-small-only"><a href="http://localhost:4000/" class="icon-tree"> Kimberly Fessel's Blog</a></h1>
     </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Nav</span></a></li>
@@ -235,7 +235,7 @@
 <div id="masthead-with-background-color" style="background: #999999;">
 	<div class="row">
 		<figure class="small-12 columns">
-			<img src="https://kimfetti.github.io/images//lego_header.jpg" alt="Kimberly Fessel Blog">
+			<img src="https://kimfetti.github.io/images//lego_header.jpg" alt="Kimberly Fessel's Blog">
 		</figure><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
@@ -282,16 +282,14 @@
 
 <p>Let’s say, for example, we want to remove the top and right spines.  If we have imported Matplotlib’s pyplot submodule with:</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</code></pre></div></div>
 
 <p>we just need to add the following to our code:</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'top'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s">'right'</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">gca</span><span class="p">().</span><span class="n">spines</span><span class="p">[</span><span class="s">'top'</span><span class="p">].</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">gca</span><span class="p">().</span><span class="n">spines</span><span class="p">[</span><span class="s">'right'</span><span class="p">].</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p>and the top and right spines will no longer appear.  Removing these distracting lines allows more focus to be directed toward your data.</p>
 
@@ -308,9 +306,8 @@
 
 <p>One of my favorite methods for updating Matplotlib’s colors is directly passing <a href="https://htmlcolorcodes.com/">hex codes</a> into the color argument because it allows me to be extremely specific about my color choices.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#0000CC'</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(...,</span> <span class="n">color</span><span class="o">=</span><span class="s">'#0000CC'</span><span class="p">)</span>
+</code></pre></div></div>
 
 <p><a href="https://www.w3schools.com/colors/colors_picker.asp">This handy tool</a> can help you select an appropriate hex color by testing it against white and black text as well as comparing several lighter and darker shades.  Alternatively, you can take a more scientific approach when choosing your palette by checking out <a href="http://vrl.cs.brown.edu/color">Colorgorical</a> by Connor Gramazio from the Brown Visualization Research Lab.  The Colorgorical tool allows you to build a color palette by balancing various preferences like human perceptual difference and aesthetic pleasure.</p>
 
@@ -318,9 +315,8 @@
 
 <p>The <a href="https://xkcd.com/color/rgb/">xkcd color library</a> provides another great way to update Matplotlib’s default colors.  These 954 colors were specifically curated and named by several hundred thousand participants of the <a href="https://blog.xkcd.com/2010/05/03/color-survey-results/">xkcd color name survey</a>.  You can use them in Matplotlib by prefixing their names with “xkcd:”.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">'xkcd:lightish blue'</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(...,</span> <span class="n">color</span><span class="o">=</span><span class="s">'xkcd:lightish blue'</span><span class="p">)</span>
+</code></pre></div></div>
 
 <center>
 <img src="https://kimfetti.github.io/images/color.png" alt="Explore matplotlib colors" width="900" />
@@ -329,15 +325,14 @@
 
 <h2 id="layer-graph-objects">Layer Graph Objects</h2>
 
-<p>Matplotlib allows users to layer multiple graphics on top of each other, which proves convenient when comparing results or setting baselines.  Two useful properties should be utilized while layering: 1) <code class="highlighter-rouge">alpha</code> for controlling each component’s opacity and 2) <code class="highlighter-rouge">zorder</code> for moving objects to the foreground or background.</p>
+<p>Matplotlib allows users to layer multiple graphics on top of each other, which proves convenient when comparing results or setting baselines.  Two useful properties should be utilized while layering: 1) <code class="language-plaintext highlighter-rouge">alpha</code> for controlling each component’s opacity and 2) <code class="language-plaintext highlighter-rouge">zorder</code> for moving objects to the foreground or background.</p>
 
 <h3 id="opacity">Opacity</h3>
 
 <p>The alpha property in Matplotlib adjusts an object’s opacity.  This value ranges from zero to one with zero being fully transparent (invisible 👀) and one being entirely opaque.  Reducing alpha will make your plot objects see-through, allowing multiple layers to be seen at once as well as allowing overlapping points to be distinguished, say, in a scatter plot.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(...,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+</code></pre></div></div>
 
 <center>
 <img src="https://kimfetti.github.io/images/alpha.png" alt="Adjust matplotlib opacity" width="800" />
@@ -348,10 +343,9 @@
 
 <p>Matplotlib’s zorder property determines how close objects are to the foreground.  Objects with smaller zorder values appear closer to the background, while those with larger values present closer to the front.  If I’m making a scatter plot with an accompanying line plot, for example, I can bring the line forward by increasing its zorder.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c">#background</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">...</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>     <span class="c">#foreground</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">scatter</span><span class="p">(...,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>  <span class="c1">#background
+</span><span class="n">plt</span><span class="p">.</span><span class="n">plot</span><span class="p">(...,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>     <span class="c1">#foreground
+</span></code></pre></div></div>
 
 <center>
 <img src="https://kimfetti.github.io/images/zorder.png" alt="Control layer order with zorder" width="600" />
@@ -362,9 +356,8 @@
 
 <p>Many visuals can benefit from the annotation of main points or specific, illustrative examples because these directly convey ideas and boost the validity of results.  To add text to a Matplotlib figure, just include annotation code specifying the desired text and its location.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">TEXT</span><span class="p">,</span> <span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="n">Y_POSITION</span><span class="p">),</span> <span class="o">...</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">TEXT</span><span class="p">,</span> <span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="n">Y_POSITION</span><span class="p">),</span> <span class="p">...)</span>
+</code></pre></div></div>
 
 <p>The cereal dataset used to produced this blog’s visuals contains nutritional information about several brand name cereals along with a feature labeled as “rating.”  One might firstly assume that “rating” is a score indicating cereals that consumers prefer.  In the zorder figure above, however, I built a quick linear regression model showing that the correlation between calories per cup and rating is practically non-existent.  It seems unlikely that calories would not factor into consumer preference, so we may already be skeptical about our initial assumption about “rating.”</p>
 
@@ -390,19 +383,18 @@
 
 <p>In other cases you may want to completely remove the default x- and y-axes that Matplotlib provides and create your own axes based on some data aggregate.  This process requires three key steps: 1) remove all default spines, 2) remove tick marks, and 3) add new axes as horizontal and vertical lines.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="c">#1. Remove spines</span>
-<span class="k">for</span> <span class="n">spine</span> <span class="ow">in</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">spines</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-    <span class="n">spine</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#1. Remove spines
+</span><span class="k">for</span> <span class="n">spine</span> <span class="ow">in</span> <span class="n">plt</span><span class="p">.</span><span class="n">gca</span><span class="p">().</span><span class="n">spines</span><span class="p">.</span><span class="n">values</span><span class="p">():</span>
+    <span class="n">spine</span><span class="p">.</span><span class="n">set_visible</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 
-<span class="c">#2. Remove ticks</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
+<span class="c1">#2. Remove ticks
+</span><span class="n">plt</span><span class="p">.</span><span class="n">xticks</span><span class="p">([])</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">yticks</span><span class="p">([])</span>
 
-<span class="c">#3. Add horizontal and vertical lines</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">Y_POSITION</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c">#horizontal line</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c">#vertical line</span>
-</code></pre>
-</div>
+<span class="c1">#3. Add horizontal and vertical lines
+</span><span class="n">plt</span><span class="p">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">Y_POSITION</span><span class="p">,</span> <span class="p">...)</span>  <span class="c1">#horizontal line
+</span><span class="n">plt</span><span class="p">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="p">...)</span>  <span class="c1">#vertical line
+</span></code></pre></div></div>
 
 <center>
 <img src="https://kimfetti.github.io/images/new_axes.png" alt="Create new axes" width="550" />
@@ -413,15 +405,13 @@
 
 <p>Now that we have plotted the cereals’ fat and sugar contents on new axes, it appears that very few cereals are low in sugar but high in fat.  That is, the upper-left quadrant is nearly empty.  This seems reasonable because cereals typically are not savory.  To make this point abundantly clear, we could direct attention to this low-sugar, high-fat area by drawing a rectangle around it and annotating.  Matplotlib provides access to several shapes through its <a href="https://matplotlib.org/3.1.1/api/patches_api.html#module-matplotlib.patches">patches module</a>, including a rectangle or even a <a href="https://matplotlib.org/3.1.1/gallery/shapes_and_collections/dolphin.html#sphx-glr-gallery-shapes-and-collections-dolphin-py">dolphin</a>.  Begin by importing code for the rectangle:</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Rectangle</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Rectangle</span>
+</code></pre></div></div>
 
 <p>Then to create a rectangle on the figure, grab the current axes and add a rectangular patch with its location, width, and height:</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">((</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="n">Y_POSITION</span><span class="p">),</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">gca</span><span class="p">().</span><span class="n">add_patch</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">((</span><span class="n">X_POSITION</span><span class="p">,</span> <span class="n">Y_POSITION</span><span class="p">),</span> <span class="n">WIDTH</span><span class="p">,</span> <span class="n">HEIGHT</span><span class="p">,</span> <span class="p">...)</span>
+</code></pre></div></div>
 
 <p>Here, the x- and y-positions refer to the placement of the lower-left corner of the rectangle.</p>
 
@@ -436,32 +426,29 @@
 
 <p>If you intend to highlight an entire horizontal or vertical area, just layer a span into your visual:</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">axhspan</span><span class="p">(</span><span class="n">Y_START</span><span class="p">,</span> <span class="n">Y_END</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c">#horizontal shading</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">X_START</span><span class="p">,</span> <span class="n">X_END</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>  <span class="c">#vertical shading</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">axhspan</span><span class="p">(</span><span class="n">Y_START</span><span class="p">,</span> <span class="n">Y_END</span><span class="p">,</span> <span class="p">...)</span>  <span class="c1">#horizontal shading
+</span><span class="n">plt</span><span class="p">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">X_START</span><span class="p">,</span> <span class="n">X_END</span><span class="p">,</span> <span class="p">...)</span>  <span class="c1">#vertical shading
+</span></code></pre></div></div>
 
-<p>Previously discussed properties like <code class="highlighter-rouge">alpha</code> and <code class="highlighter-rouge">zorder</code> are critical here because you will likely want to make your shading transparent and/or move it to the background.</p>
+<p>Previously discussed properties like <code class="language-plaintext highlighter-rouge">alpha</code> and <code class="language-plaintext highlighter-rouge">zorder</code> are critical here because you will likely want to make your shading transparent and/or move it to the background.</p>
 
 <center>
 <img src="https://kimfetti.github.io/images/shading.png" alt="Shading for highlighting" width="800" />
 <p><em> Shading also provides an effective way to highlight a particular region of your plot.</em></p>
 </center>
 
-<p>If the area you would like to shade follows more complicated logic, however, you may instead <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill_between.html">shade between two user-defined lines</a>.  This approach takes a set of x-values, two sets of y-values for the first and second lines, and an optional <code class="highlighter-rouge">where</code> argument that allows you to use logic to filter down to your region of interest.</p>
+<p>If the area you would like to shade follows more complicated logic, however, you may instead <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.fill_between.html">shade between two user-defined lines</a>.  This approach takes a set of x-values, two sets of y-values for the first and second lines, and an optional <code class="language-plaintext highlighter-rouge">where</code> argument that allows you to use logic to filter down to your region of interest.</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">X_VALUES</span><span class="p">,</span> <span class="n">Y_LINE1</span><span class="p">,</span> <span class="n">Y_LINE2</span><span class="p">,</span> <span class="n">WHERE</span><span class="o">=</span><span class="n">FILTER</span> <span class="n">LOGIC</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span>
-</code></pre>
-</div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="n">gca</span><span class="p">().</span><span class="n">fill_between</span><span class="p">(</span><span class="n">X_VALUES</span><span class="p">,</span> <span class="n">Y_LINE1</span><span class="p">,</span> <span class="n">Y_LINE2</span><span class="p">,</span> <span class="n">WHERE</span><span class="o">=</span><span class="n">FILTER</span> <span class="n">LOGIC</span><span class="p">,</span> <span class="p">...)</span>
+</code></pre></div></div>
 
 <p>To shade the same area that was previously highlighted with a rectangle, simply define an array of equally spaced sugar values for the x-axis, fill between the median and max fat values on the y-axis (high fat), and filter down to sugar values less than the median (low sugar).</p>
 
-<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="n">sugars</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sugars_per_cup</span><span class="o">.</span><span class="nb">min</span><span class="p">(),</span> <span class="n">df</span><span class="o">.</span><span class="n">sugars_per_cup</span><span class="o">.</span><span class="nb">max</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">)</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sugars</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">df</span><span class="p">.</span><span class="n">sugars_per_cup</span><span class="p">.</span><span class="nb">min</span><span class="p">(),</span> <span class="n">df</span><span class="p">.</span><span class="n">sugars_per_cup</span><span class="p">.</span><span class="nb">max</span><span class="p">(),</span> <span class="mi">1000</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">sugars</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">fat_per_cup</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">df</span><span class="o">.</span><span class="n">fat_per_cup</span><span class="o">.</span><span class="nb">max</span><span class="p">(),</span> 
-                       <span class="n">WHERE</span><span class="o">=</span><span class="n">sugars</span> <span class="o">&lt;</span> <span class="n">df</span><span class="o">.</span><span class="n">sugars_per_cup</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span> <span class="o">...</span><span class="p">)</span>
-</code></pre>
-</div>
+<span class="n">plt</span><span class="p">.</span><span class="n">gca</span><span class="p">().</span><span class="n">fill_between</span><span class="p">(</span><span class="n">sugars</span><span class="p">,</span> <span class="n">df</span><span class="p">.</span><span class="n">fat_per_cup</span><span class="p">.</span><span class="n">median</span><span class="p">(),</span> <span class="n">df</span><span class="p">.</span><span class="n">fat_per_cup</span><span class="p">.</span><span class="nb">max</span><span class="p">(),</span> 
+                       <span class="n">WHERE</span><span class="o">=</span><span class="n">sugars</span> <span class="o">&lt;</span> <span class="n">df</span><span class="p">.</span><span class="n">sugars_per_cup</span><span class="p">.</span><span class="n">median</span><span class="p">(),</span> <span class="p">...)</span>
+</code></pre></div></div>
 
 <center>
 <img src="https://kimfetti.github.io/images/fill_between.png" alt="Fill between lines" width="600" />
@@ -570,7 +557,7 @@
             <h5 class="shadow-black">About This Site</h5>
 
             <p class="shadow-black">
-              Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!
+              Kimberly Fessel is Lead Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!
               <a href="http://localhost:4000//info/">More ›</a>
             </p>
           </div><!-- /.large-6.columns -->
@@ -652,9 +639,11 @@
           <section id="subfooter-right" class="small-12 medium-6 columns">
             <ul class="inline-list social-icons">
             
-              <li><a href="https://www.linkedin.com/in/kimberlyfessel/" target="_blank" class="icon-linkedin" title="Professional profile"></a></li>
+              <li><a href="https://www.linkedin.com/in/kimberlyfessel/" target="_blank" class="icon-linkedin" title="Professional Profile"></a></li>
             
-              <li><a href="http://github.com/kimfetti" target="_blank" class="icon-github" title="Code and more"></a></li>
+              <li><a href="http://github.com/kimfetti" target="_blank" class="icon-github" title="Code and More"></a></li>
+            
+              <li><a href="http://www.youtube.com/KimberlyFessel" target="_blank" class="icon-youtube" title="Tutorial Videos on YouTube"></a></li>
             
               <li><a href="http://twitter.com/kimberlyfessel" target="_blank" class="icon-twitter" title="Social on Twitter"></a></li>
             

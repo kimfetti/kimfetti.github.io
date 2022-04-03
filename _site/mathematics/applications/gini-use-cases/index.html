@@ -48,7 +48,7 @@
 	<meta property="og:url" content="http://localhost:4000//mathematics/applications/gini-use-cases/">
 	<meta property="og:locale" content="en_EN">
 	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Kimberly Fessel Blog">
+	<meta property="og:site_name" content="Kimberly Fessel's Blog">
 	
 	<meta property="article:author" content="https://www.facebook.com/">
 
@@ -69,28 +69,28 @@
 
 	
 
-	<link rel="icon" sizes="32x32" href="http://localhost:4000//assets/img/favicon-32x32.png">
+	<link rel="icon" sizes="32x32" href="http://localhost:4000/assets/img/favicon-32x32.png">
 
-	<link rel="icon" sizes="192x192" href="http://localhost:4000//assets/img/touch-icon-192x192.png">
+	<link rel="icon" sizes="192x192" href="http://localhost:4000/assets/img/touch-icon-192x192.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://localhost:4000//assets/img/apple-touch-icon-180x180-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://localhost:4000/assets/img/apple-touch-icon-180x180-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000//assets/img/apple-touch-icon-152x152-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000/assets/img/apple-touch-icon-152x152-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000//assets/img/apple-touch-icon-144x144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/assets/img/apple-touch-icon-144x144-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000//assets/img/apple-touch-icon-120x120-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000/assets/img/apple-touch-icon-120x120-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000//assets/img/apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/assets/img/apple-touch-icon-114x114-precomposed.png">
 
 	
-	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000//assets/img/apple-touch-icon-76x76-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000/assets/img/apple-touch-icon-76x76-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000//assets/img/apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/assets/img/apple-touch-icon-72x72-precomposed.png">
 
-	<link rel="apple-touch-icon-precomposed" href="http://localhost:4000//assets/img/apple-touch-icon-precomposed.png">	
+	<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/assets/img/apple-touch-icon-precomposed.png">	
 
-	<meta name="msapplication-TileImage" content="http://localhost:4000//assets/img/msapplication_tileimage.png">
+	<meta name="msapplication-TileImage" content="http://localhost:4000/assets/img/msapplication_tileimage.png">
 
 	<meta name="msapplication-TileColor" content="#fabb00">
 
@@ -105,7 +105,7 @@
   <nav class="top-bar" role="navigation" data-topbar>
     <ul class="title-area">
       <li class="name">
-      <h1 class="show-for-small-only"><a href="http://localhost:4000/" class="icon-tree"> Kimberly Fessel Blog</a></h1>
+      <h1 class="show-for-small-only"><a href="http://localhost:4000/" class="icon-tree"> Kimberly Fessel's Blog</a></h1>
     </li>
        <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
       <li class="toggle-topbar menu-icon"><a href="#"><span>Nav</span></a></li>
@@ -235,7 +235,7 @@
 <div id="masthead-with-background-color" style="background: #999999;">
 	<div class="row">
 		<figure class="small-12 columns">
-			<img src="https://kimfetti.github.io/images//logo.png" alt="Kimberly Fessel Blog">
+			<img src="https://kimfetti.github.io/images//logo.png" alt="Kimberly Fessel's Blog">
 		</figure><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
@@ -298,7 +298,7 @@
 
 <p><br /></p>
 
-<p>The Gini coefficient measures how much a population’s Lorenz curve deviates from perfect equality or how much a set of data diverges from equal values.  The Gini coefficient typically ranges from zero to one<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup>, where</p>
+<p>The Gini coefficient measures how much a population’s Lorenz curve deviates from perfect equality or how much a set of data diverges from equal values.  The Gini coefficient typically ranges from zero to one<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>, where</p>
 
 <ul>
   <li>zero represents perfect equality <em>(e.g. everyone has an equal amount)</em> and</li>
@@ -315,7 +315,7 @@ where \(A\) signifies the region enclosed between the line of perfect equality a
 
 <h2 id="gini-in-python">Gini in Python</h2>
 
-<p>To calculate a dataset’s Gini coefficient with Python, you have the option of computing the shaded area \(A\) with something like <code class="highlighter-rouge">scipy</code>’s <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html">quadrature</a> routine.  If this style of numerical integration proves slow or too complicated for applications at scale, you can utilize an alternative, <a href="https://en.wikipedia.org/wiki/Gini_coefficient#Definition">equivalent definition of the Gini coefficient</a>.</p>
+<p>To calculate a dataset’s Gini coefficient with Python, you have the option of computing the shaded area \(A\) with something like <code class="language-plaintext highlighter-rouge">scipy</code>’s <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.quad.html">quadrature</a> routine.  If this style of numerical integration proves slow or too complicated for applications at scale, you can utilize an alternative, <a href="https://en.wikipedia.org/wiki/Gini_coefficient#Definition">equivalent definition of the Gini coefficient</a>.</p>
 <blockquote>
   <p>The Gini coefficient may also be expressed as half of the data’s <a href="https://en.wikipedia.org/wiki/Mean_absolute_difference#Relative_mean_absolute_difference">relative mean absolute difference</a>, a normalized form of the average absolute difference among all pairs of observations in the dataset. 
 \[ G = \frac{\sum\limits_i \sum\limits_j |x_i - x_j|}{2\sum\limits_i\sum\limits_j x_j}\]</p>
@@ -325,7 +325,7 @@ where \(A\) signifies the region enclosed between the line of perfect equality a
 \[G = \frac{\sum\limits_i (2i - n - 1)x_i}{n\sum\limits_i x_i}, \]
 which is even speedier to compute.</p>
 
-<p>The best Python implementation of the Gini coefficient that I’ve found comes from <a href="https://github.com/oliviaguest/gini/blob/master/gini.py">Olivia Guest</a>. I will subsequently leverage her vectorized <code class="highlighter-rouge">numpy</code> routine to calculate Gini in the case studies that follow.</p>
+<p>The best Python implementation of the Gini coefficient that I’ve found comes from <a href="https://github.com/oliviaguest/gini/blob/master/gini.py">Olivia Guest</a>. I will subsequently leverage her vectorized <code class="language-plaintext highlighter-rouge">numpy</code> routine to calculate Gini in the case studies that follow.</p>
 
 <h2 id="case-1-baby-names">Case #1: Baby Names</h2>
 
@@ -346,9 +346,9 @@ which is even speedier to compute.</p>
 
 <p>Statistical dispersion appears to play a significant role.  To put it back in financial terms, some male names like the ones on my top 20 list are just extremely “wealthy.” (The most popular name, “Michael,” accounts for over 3% of all male children born since 1950.)   These ultra-popular masculine names likely pass down from generation to generation.  Females babies, on the other hand, are distributed more widely across a variety of names, so extra names share in the “wealth” of female children.  We can verify this theory by returning to the Gini coefficient.</p>
 
-<p>Consider how female children disperse across each name.  Some names in the dataset account for only 5 babies<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> since 1950, while “Jennifer” represents nearly 1.5 million individuals.  Tallying up all females born with each name since 1950 and sorting the names from least to most popular, we find the Gini coefficient to be 0.96, implying a huge disparity in the most popular versus the most unique names.</p>
+<p>Consider how female children disperse across each name.  Some names in the dataset account for only 5 babies<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup> since 1950, while “Jennifer” represents nearly 1.5 million individuals.  Tallying up all females born with each name since 1950 and sorting the names from least to most popular, we find the Gini coefficient to be 0.96, implying a huge disparity in the most popular versus the most unique names.</p>
 
-<p>Male names exhibit a very similar Lorenz curve but with a little more skew, registering a Gini coefficient of 0.97. The difference between male and female coefficients appears insignificant, but consider an alternative viewpoint.  Instead of aggregating across time, calculate a yearly Gini coefficient for each gender.  Plotting both the female and male Gini coefficients for each year since 1950 demonstrates a clear and persistent pattern where the male coefficient presents consistently higher.<sup id="fnref:3"><a href="#fn:3" class="footnote">3</a></sup>  Thus male names experience more statistical dispersion than female monikers.   Also of note, the Gini values for both genders have ticked downward since the 1990s, indicating a trending preference toward more diverse naming conventions.</p>
+<p>Male names exhibit a very similar Lorenz curve but with a little more skew, registering a Gini coefficient of 0.97. The difference between male and female coefficients appears insignificant, but consider an alternative viewpoint.  Instead of aggregating across time, calculate a yearly Gini coefficient for each gender.  Plotting both the female and male Gini coefficients for each year since 1950 demonstrates a clear and persistent pattern where the male coefficient presents consistently higher.<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">3</a></sup>  Thus male names experience more statistical dispersion than female monikers.   Also of note, the Gini values for both genders have ticked downward since the 1990s, indicating a trending preference toward more diverse naming conventions.</p>
 
 <center>
 <img src="https://kimfetti.github.io/images/gini_names.png" alt="The male Gini coefficient tracks consistently higher throughout time" width="700" />
@@ -366,7 +366,7 @@ which is even speedier to compute.</p>
 
 <p>Now shift to <a href="https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Inpatient2017">this 2017 healthcare pricing dataset</a> hosted by the Centers for Medicare and Medicaid Services, a federal agency of the United States.  These data, aggregated as procedural averages for individual hospitals, include the charges and eventual payments for over 500 separate inpatient procedures for Medicare patients.  I applied Gini coefficient calculations to determine which, if any, procedures require better billing standardization.  The underlying basis for my analysis boils down to this: the higher the Gini coefficient, the greater the disparity in what different hospitals charge for a given procedure.  Procedures with large Gini values could then necessitate regulation or more transparent cost details.</p>
 
-<p>The procedure, or diagnosis related group (DRG), with the highest Gini coefficient in this dataset<sup id="fnref:4"><a href="#fn:4" class="footnote">4</a></sup> is labeled as, “Alcohol/Drug Abuse or Dependency w Rehabilitation Therapy.”  This perhaps elicits little surprise given that rehabilitation therapies vary widely both in terms of treatment length and illness severity; we probably expect a wide range in what assorted hospitals charge.  In fact, all diagnoses with the largest Gini coefficients, such as coagulation disorders and psychoses, can vary in severity.  Procedural charges that show the most uniformity among the hospitals, on the other hand, mostly describe one-time cardiac events such as value replacement, percutaneous surgeries, or observation for chest pain.</p>
+<p>The procedure, or diagnosis related group (DRG), with the highest Gini coefficient in this dataset<sup id="fnref:4" role="doc-noteref"><a href="#fn:4" class="footnote" rel="footnote">4</a></sup> is labeled as, “Alcohol/Drug Abuse or Dependency w Rehabilitation Therapy.”  This perhaps elicits little surprise given that rehabilitation therapies vary widely both in terms of treatment length and illness severity; we probably expect a wide range in what assorted hospitals charge.  In fact, all diagnoses with the largest Gini coefficients, such as coagulation disorders and psychoses, can vary in severity.  Procedural charges that show the most uniformity among the hospitals, on the other hand, mostly describe one-time cardiac events such as value replacement, percutaneous surgeries, or observation for chest pain.</p>
 
 <center>
 <table width="800">
@@ -406,7 +406,7 @@ which is even speedier to compute.</p>
 </table>
 </center>
 
-<p>So what about billing regulation?  Do we need more safeguards in place to be sure hospitals are charging similar amounts for similar procedures?  Well, more cost transparency certainly doesn’t hurt, especially for treatments that range in duration or intensity, but let’s go back to the dataset.  In addition to the information about the amounts hospitals charge, the data also contain <a href="https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Downloads/Inpatient_Outpatient_FAQ.pdf">the total payments that the hospitals actually received</a>.  Applying the same type of analysis to the payments received yields much lower Gini values.  In fact, the Gini coefficient is lower for the average payments received than the hospital charges, for <em>every single procedure</em>.  This curious insight signals that the contracts in place for Medicare payments <em>already</em> do quite a lot to moderate and regularize procedural costs.<sup id="fnref:5"><a href="#fn:5" class="footnote">5</a></sup></p>
+<p>So what about billing regulation?  Do we need more safeguards in place to be sure hospitals are charging similar amounts for similar procedures?  Well, more cost transparency certainly doesn’t hurt, especially for treatments that range in duration or intensity, but let’s go back to the dataset.  In addition to the information about the amounts hospitals charge, the data also contain <a href="https://www.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Downloads/Inpatient_Outpatient_FAQ.pdf">the total payments that the hospitals actually received</a>.  Applying the same type of analysis to the payments received yields much lower Gini values.  In fact, the Gini coefficient is lower for the average payments received than the hospital charges, for <em>every single procedure</em>.  This curious insight signals that the contracts in place for Medicare payments <em>already</em> do quite a lot to moderate and regularize procedural costs.<sup id="fnref:5" role="doc-noteref"><a href="#fn:5" class="footnote" rel="footnote">5</a></sup></p>
 
 <center>
 <img src="https://kimfetti.github.io/images/gini_health.png" alt="Comparison of Gini coeffients for total payments vs hospital charges" width="600" />
@@ -424,22 +424,22 @@ which is even speedier to compute.</p>
 
 <p><a href="https://github.com/kimfetti/Blog/blob/master/gini_coefficient.ipynb">Check out this code on GitHub!</a></p>
 
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>The Gini coefficient is strictly non-negative, \(G \geq 0\), as long as the mean of the data is assumed positive.  Gini can theoretically be greater than one if some data values are negative, which occurs in the context of wealth if some people contribute negatively in the form of debts owed. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>The Gini coefficient is strictly non-negative, \(G \geq 0\), as long as the mean of the data is assumed positive.  Gini can theoretically be greater than one if some data values are negative, which occurs in the context of wealth if some people contribute negatively in the form of debts owed. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:2">
-      <p>The Social Security Administration does not include names that are given to fewer than 5 babies per gender per state due to privacy reasons; therefore, five children for one given female name since 1950 signifies the absolute minimum allowed. <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:2" role="doc-endnote">
+      <p>The Social Security Administration does not include names that are given to fewer than 5 babies per gender per state due to privacy reasons; therefore, five children for one given female name since 1950 signifies the absolute minimum allowed. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:3">
-      <p>The Gini values displayed in the yearly figure are less than the aggregate because popular names tend to stay popular year after year thus bolstering naming inequality and increasing the Gini coefficient. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:3" role="doc-endnote">
+      <p>The Gini values displayed in the yearly figure are less than the aggregate because popular names tend to stay popular year after year thus bolstering naming inequality and increasing the Gini coefficient. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:4">
-      <p>Some diagnosis related groups (DRGs) occur at as few as one hospital for the entire year.  I have filtered the dataset down to procedures that are documented by at least 50 hospitals to avoid high variance issues. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:4" role="doc-endnote">
+      <p>Some diagnosis related groups (DRGs) occur at as few as one hospital for the entire year.  I have filtered the dataset down to procedures that are documented by at least 50 hospitals to avoid high variance issues. <a href="#fnref:4" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
-    <li id="fn:5">
-      <p>The payments hospitals receive are strictly less than the amounts they charge. Decreasing a dataset’s mean while holding its standard deviation fixed <a href="https://repository.upenn.edu/gse_grad_pubs/6/">actually <em>increases</em> the Gini coefficient</a>.  Here we observe just the opposite effect so statistical dispersion must be lessened in the payments received. <a href="#fnref:5" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:5" role="doc-endnote">
+      <p>The payments hospitals receive are strictly less than the amounts they charge. Decreasing a dataset’s mean while holding its standard deviation fixed <a href="https://repository.upenn.edu/gse_grad_pubs/6/">actually <em>increases</em> the Gini coefficient</a>.  Here we observe just the opposite effect so statistical dispersion must be lessened in the payments received. <a href="#fnref:5" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -527,7 +527,7 @@ which is even speedier to compute.</p>
             <h5 class="shadow-black">About This Site</h5>
 
             <p class="shadow-black">
-              Kimberly Fessel is a Senior Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!
+              Kimberly Fessel is Lead Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!
               <a href="http://localhost:4000//info/">More ›</a>
             </p>
           </div><!-- /.large-6.columns -->
@@ -609,9 +609,11 @@ which is even speedier to compute.</p>
           <section id="subfooter-right" class="small-12 medium-6 columns">
             <ul class="inline-list social-icons">
             
-              <li><a href="https://www.linkedin.com/in/kimberlyfessel/" target="_blank" class="icon-linkedin" title="Professional profile"></a></li>
+              <li><a href="https://www.linkedin.com/in/kimberlyfessel/" target="_blank" class="icon-linkedin" title="Professional Profile"></a></li>
             
-              <li><a href="http://github.com/kimfetti" target="_blank" class="icon-github" title="Code and more"></a></li>
+              <li><a href="http://github.com/kimfetti" target="_blank" class="icon-github" title="Code and More"></a></li>
+            
+              <li><a href="http://www.youtube.com/KimberlyFessel" target="_blank" class="icon-youtube" title="Tutorial Videos on YouTube"></a></li>
             
               <li><a href="http://twitter.com/kimberlyfessel" target="_blank" class="icon-twitter" title="Social on Twitter"></a></li>
             
