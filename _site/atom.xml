@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
 	<title>Kimberly Fessel's Blog</title>
-	<updated>2022-04-03T13:59:45-04:00</updated>
+	<updated>2022-04-03T14:23:37-04:00</updated>
 
 	<subtitle>Kimberly Fessel is Lead Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
@@ -27,8 +27,8 @@
 	
 		<entry>
 			<id>http://localhost:4000//mathematics/data/accuracy-precision-recall/</id>
-			<title>Accuracy, Precision, and Recall - Never Forget Again!</title>
-			<link href="http://localhost:4000//mathematics/data/accuracy-precision-recall/" rel="alternate" type="text/html" title="Accuracy, Precision, and Recall - Never Forget Again!" />
+			<title>Accuracy, Precision, and Recall — Never Forget Again!</title>
+			<link href="http://localhost:4000//mathematics/data/accuracy-precision-recall/" rel="alternate" type="text/html" title="Accuracy, Precision, and Recall — Never Forget Again!" />
 			<updated>2022-04-03T00:00:00-04:00</updated>
 
 			
@@ -54,17 +54,25 @@
 
 &lt;p&gt;To make this study of classification metrics more relatable, consider building a model to classify apples and oranges on a flat surface such as the table shown in the image below.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/OR_training_data.jpg&quot; alt=&quot;Apples and oranges arranged on a table with most of the apples on the right side&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/OA_training_data.jpg&quot; alt=&quot;Apples and oranges arranged on a table with most of the apples on the right side&quot; width=&quot;700&quot; /&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Most of the oranges appear on the left side of the table, while the apples mostly show up on the right.  We could, therefore, create a classification model that divides the table down its middle.  Everything on the left side of the table will be considered an orange by the model, while everything on the right side will be considered an apple.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/OA_precision_recall_header.png&quot; alt=&quot;Left side identified as the orange side and right side as the apple side of the model&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/OA_precision_recall_header.png&quot; alt=&quot;Left side identified as the orange side and right side as the apple side of the model&quot; width=&quot;700&quot; /&gt;
+&lt;/center&gt;
 
 &lt;h2 id=&quot;what-is-accuracy&quot;&gt;What is accuracy?&lt;/h2&gt;
 
 &lt;p&gt;Once we’ve built a classification model, how can we determine if it’s doing a good job?  Accuracy provides one way to judge a classification model. To calculate accuracy just count up all of the correctly classified observations and divide by the total number of observations.  This classification model correctly classified 4 oranges along with 3 apples for a total of 7 correct observations, but there are 10 fruits overall. This model’s accuracy is 7 over 10, or 70%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/OA_accuracy.jpg&quot; alt=&quot;Accuracy calculated from example apple-orange model as 70%&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/OA_accuracy.png&quot; alt=&quot;Accuracy calculated from example apple-orange model as 70%&quot; width=&quot;700&quot; /&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;While accuracy proves to be one of the most popular classification metrics because of its simplicity, it has a few major flaws.  Imagine a situation where we have an imbalanced dataset; that is, what if we have 990 oranges and only 10 apples?  One classification model that achieves a very high accuracy predicts that all observations are oranges.  The accuracy would be 990 out of 1000, or 99%, but this model completely misses all of the apple observations.&lt;/p&gt;
 
@@ -78,11 +86,16 @@
 
 &lt;p&gt;Precision equals the number of correct apple observations divided by all observations on the apple side of the model.  In the example depicted below, the model correctly identified 3 apples, but it classified 5 total fruits as apples.  The apple precision is 3 out of 5, or 60%.  To remember the definition of precision, note that preciSIon focuses on only the apple SIde of the model.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/OA_precision.jpg&quot; alt=&quot;Precision calculated as 60% for the apple class from example apple-orange model&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/OA_precision.jpg&quot; alt=&quot;Precision calculated as 60% for the apple class from example apple-orange model&quot; width=&quot;700&quot; /&gt;
+&lt;/center&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;Recall, on the other hand, measures how well the model did for the actual observations of a particular class.  Now check how the model did specifically for all the actual apples. For this, you can pretend like all of the oranges don’t exist.  This model correctly identified 3 out of 4 actual apples; recall is 3 over 4, or 75%.  Remember this simple mnemonic: recALL focuses on ALL the actual apples.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/OA_recall.jpg&quot; alt=&quot;Recall calculated as 75% for the apple class from example apple-orange model&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+&lt;center&gt;
+&lt;img src=&quot;https://kimfetti.github.io/images/OA_recall.jpg&quot; alt=&quot;Recall calculated as 75% for the apple class from example apple-orange model&quot; width=&quot;700&quot; /&gt;
+&lt;/center&gt;
 
 &lt;h2 id=&quot;precision-recall-tradeoff&quot;&gt;Precision-Recall Tradeoff&lt;/h2&gt;
 
@@ -92,15 +105,28 @@
 
 &lt;p&gt;Let’s say you’d like to improve the precision of your model because it’s very important to avoid falsely claiming that an actual orange is an apple (false positive).  You can just move the decision threshold up, and precision gets better. For our apple-orange model, that means shifting the model line to the right.  In the example image, the updated model boundary yields perfect precision of 100% since all predicted apples are actually apples.  When we do this, however, recall will likely decrease because moving the threshold up leaves out actual apples in addition to the erroneous oranges. Here, recall dropped to 50%.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/OA_precision_boundaryRight.jpg&quot; alt=&quot;With the decision threshold increased, precision increased to 100% for the apple class&quot; width=&quot;500&quot; /&gt;
-&lt;img src=&quot;https://kimfetti.github.io/images/OA_recall_boundaryRight.jpg&quot; alt=&quot;With the decision threshold increased, recall decreased to 50% for the apple class&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;
+      &lt;img src=&quot;https://kimfetti.github.io/images/OA_precision_boundaryRight.jpg&quot; alt=&quot;With the decision threshold increased, precision increased to 100% for the apple class&quot; width=&quot;450&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;
+      &lt;img src=&quot;https://kimfetti.github.io/images/OA_recall_boundaryRight.jpg&quot; alt=&quot;With the decision threshold increased, recall decreased to 50% for the apple class&quot; width=&quot;450&quot; /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Okay, so what if we want to improve recall?  We could make our decision threshold lower by moving our model line to the left.  We now capture more actual apples on the apple side of our model, but as we do this, our precision likely decreases since more oranges sneak into the apple side as well. With this update, recall improved to 100% but recall declined to 50%.&lt;/p&gt;
+&lt;p&gt;Okay, what if we want to improve recall?  We could make our decision threshold lower by moving our model line to the left.  We now capture more actual apples on the apple side of our model, but as we do this, our precision likely decreases since more oranges sneak into the apple side as well. With this update, recall improved to 100% but recall declined to 50%.&lt;/p&gt;
 
 &lt;p&gt;Monitoring and selecting an appropriate precision-recall tradeoff allows us to prioritize certain types of errors, either false positives or false negatives, as we adjust the decision threshold of our model.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://kimfetti.github.io/images/OA_recall_boundaryLeft.jpg&quot; alt=&quot;With the decision threshold decreased, recall increased to 100% for the apple class&quot; width=&quot;500&quot; /&gt;
-&lt;img src=&quot;https://kimfetti.github.io/images/OA_precision_boundaryLeft.jpg&quot; alt=&quot;With the decision threshold decreased, precision decreased to 50% for the apple class&quot; width=&quot;500&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;
+      &lt;img src=&quot;https://kimfetti.github.io/images/OA_recall_boundaryLeft.jpg&quot; alt=&quot;With the decision threshold decreased, recall increased to 100% for the apple class&quot; width=&quot;450&quot; /&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;large-6 columns&quot;&gt;
+      &lt;img src=&quot;https://kimfetti.github.io/images/OA_precision_boundaryLeft.jpg&quot; alt=&quot;With the decision threshold decreased, precision decreased to 50% for the apple class&quot; width=&quot;450&quot; /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 

@@ -2,16 +2,16 @@
 layout: page-fullwidth
 title: "Accuracy, Precision, and Recall — Never Forget Again!"
 subheadline: "Math Applications"
-meta_teaser: "hello"
-teaser: "<em>hello</em>"
+meta_teaser: "Designing an effective classification model requires an upfront selection of an appropriate classification metric. This posts walks you through an example of three possible metrics (accuracy, precision, and recall) while teaching you how to easily remember the definition of each one."
+teaser: "<em>Designing an effective classification model requires an upfront selection of an appropriate classification metric. This posts walks you through an example of three possible metrics (accuracy, precision, and recall) while teaching you how to easily remember the definition of each one.</em>
 
 
 header:
     background-color: "#999999"
     image: logo.png
 image:
-    thumb: gini_thumb.png
-    homepage: gini_header.png
+    thumb: OA_thumb.png
+    homepage: OA_precision_recall_header.png
     caption: "Photo and modification by Kimberly Fessel."
 categories:
     - mathematics
@@ -36,19 +36,26 @@ In this post, let’s review accuracy but also define two other classification m
 
 To make this study of classification metrics more relatable, consider building a model to classify apples and oranges on a flat surface such as the table shown in the image below.  
 
-<img src="{{ site.urlimg }}OA_training_data.jpg" alt="Apples and oranges arranged on a table with most of the apples on the right side" width = "1000">
+<center>
+<img src="{{ site.urlimg }}OA_training_data.jpg" alt="Apples and oranges arranged on a table with most of the apples on the right side" width = "700" >
+</center>
+<br>
 
 Most of the oranges appear on the left side of the table, while the apples mostly show up on the right.  We could, therefore, create a classification model that divides the table down its middle.  Everything on the left side of the table will be considered an orange by the model, while everything on the right side will be considered an apple. 
 
-<img src="{{ site.urlimg }}OA_precision_recall_header.png" alt="Left side identified as the orange side and right side as the apple side of the model" width = "1000">
-
+<center>
+<img src="{{ site.urlimg }}OA_precision_recall_header.png" alt="Left side identified as the orange side and right side as the apple side of the model" width = "700">
+</center>
 
 
 ## What is accuracy?
 
 Once we’ve built a classification model, how can we determine if it’s doing a good job?  Accuracy provides one way to judge a classification model. To calculate accuracy just count up all of the correctly classified observations and divide by the total number of observations.  This classification model correctly classified 4 oranges along with 3 apples for a total of 7 correct observations, but there are 10 fruits overall. This model’s accuracy is 7 over 10, or 70%.
 
-<img src="{{ site.urlimg }}OA_accuracy.png" alt="Accuracy calculated from example apple-orange model as 70%" width = "1000">
+<center>
+<img src="{{ site.urlimg }}OA_accuracy.png" alt="Accuracy calculated from example apple-orange model as 70%" width = "700">
+</center>
+<br>
 
 While accuracy proves to be one of the most popular classification metrics because of its simplicity, it has a few major flaws.  Imagine a situation where we have an imbalanced dataset; that is, what if we have 990 oranges and only 10 apples?  One classification model that achieves a very high accuracy predicts that all observations are oranges.  The accuracy would be 990 out of 1000, or 99%, but this model completely misses all of the apple observations.
 
@@ -63,12 +70,16 @@ Precision measures the quality of model predictions for one particular class, so
 
 Precision equals the number of correct apple observations divided by all observations on the apple side of the model.  In the example depicted below, the model correctly identified 3 apples, but it classified 5 total fruits as apples.  The apple precision is 3 out of 5, or 60%.  To remember the definition of precision, note that preciSIon focuses on only the apple SIde of the model.
 
-<img src="{{ site.urlimg }}OA_precision.jpg" alt="Precision calculated as 60% for the apple class from example apple-orange model" width = "1000">
+<center>
+<img src="{{ site.urlimg }}OA_precision.jpg" alt="Precision calculated as 60% for the apple class from example apple-orange model" width = "700">
+</center>
+<br>
 
 Recall, on the other hand, measures how well the model did for the actual observations of a particular class.  Now check how the model did specifically for all the actual apples. For this, you can pretend like all of the oranges don’t exist.  This model correctly identified 3 out of 4 actual apples; recall is 3 over 4, or 75%.  Remember this simple mnemonic: recALL focuses on ALL the actual apples.
 
-<img src="{{ site.urlimg }}OA_recall.jpg" alt="Recall calculated as 75% for the apple class from example apple-orange model" width = "1000">
-
+<center>
+<img src="{{ site.urlimg }}OA_recall.jpg" alt="Recall calculated as 75% for the apple class from example apple-orange model" width = "700">
+</center>
 
 ## Precision-Recall Tradeoff
 
@@ -78,15 +89,29 @@ Some classification models, such as logistic regression, not only predict which 
 
 Let’s say you’d like to improve the precision of your model because it’s very important to avoid falsely claiming that an actual orange is an apple (false positive).  You can just move the decision threshold up, and precision gets better. For our apple-orange model, that means shifting the model line to the right.  In the example image, the updated model boundary yields perfect precision of 100% since all predicted apples are actually apples.  When we do this, however, recall will likely decrease because moving the threshold up leaves out actual apples in addition to the erroneous oranges. Here, recall dropped to 50%.
 
-<img src="{{ site.urlimg }}OA_precision_boundaryRight.jpg" alt="With the decision threshold increased, precision increased to 100% for the apple class" width = "500">
-<img src="{{ site.urlimg }}OA_recall_boundaryRight.jpg" alt="With the decision threshold increased, recall decreased to 50% for the apple class" width = "500">
+<div class="row">
+  <div class="large-6 columns">
+      <img src="{{ site.urlimg }}OA_precision_boundaryRight.jpg" alt="With the decision threshold increased, precision increased to 100% for the apple class" width = "450">
+  </div>
+  <div class="large-6 columns">
+      <img src="{{ site.urlimg }}OA_recall_boundaryRight.jpg" alt="With the decision threshold increased, recall decreased to 50% for the apple class" width = "450">
+  </div>
+</div>
+<br>
 
-Okay, so what if we want to improve recall?  We could make our decision threshold lower by moving our model line to the left.  We now capture more actual apples on the apple side of our model, but as we do this, our precision likely decreases since more oranges sneak into the apple side as well. With this update, recall improved to 100% but recall declined to 50%.
+
+Okay, what if we want to improve recall?  We could make our decision threshold lower by moving our model line to the left.  We now capture more actual apples on the apple side of our model, but as we do this, our precision likely decreases since more oranges sneak into the apple side as well. With this update, recall improved to 100% but recall declined to 50%.
+
+<div class="row">
+  <div class="large-6 columns">
+      <img src="{{ site.urlimg }}OA_recall_boundaryLeft.jpg" alt="With the decision threshold decreased, recall increased to 100% for the apple class" width = "450">
+  </div>
+  <div class="large-6 columns">
+      <img src="{{ site.urlimg }}OA_precision_boundaryLeft.jpg" alt="With the decision threshold decreased, precision decreased to 50% for the apple class" width = "450">
+  </div>
+</div>
 
 Monitoring and selecting an appropriate precision-recall tradeoff allows us to prioritize certain types of errors, either false positives or false negatives, as we adjust the decision threshold of our model.
-
-<img src="{{ site.urlimg }}OA_recall_boundaryLeft.jpg" alt="With the decision threshold decreased, recall increased to 100% for the apple class" width = "500">
-<img src="{{ site.urlimg }}OA_precision_boundaryLeft.jpg" alt="With the decision threshold decreased, precision decreased to 50% for the apple class" width = "500">
 
 
 ## Conclusion

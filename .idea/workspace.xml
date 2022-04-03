@@ -3,84 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="d36ddb3d-19ce-4e94-933f-b28908b60453" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_accordion.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_accordion.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_alert-boxes.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_alert-boxes.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_block-grid.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_block-grid.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_breadcrumbs.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_breadcrumbs.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_button-groups.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_button-groups.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_buttons.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_buttons.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_clearing.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_clearing.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_dropdown-buttons.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_dropdown-buttons.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_dropdown.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_dropdown.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_flex-video.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_flex-video.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_forms.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_forms.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_global.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_global.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_grid.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_grid.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_inline-lists.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_inline-lists.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_keystrokes.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_keystrokes.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_panels.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_panels.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_reveal.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_reveal.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_side-nav.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_side-nav.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_sub-nav.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_sub-nav.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_tables.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_tables.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_thumbs.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_thumbs.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_top-bar.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_top-bar.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_type.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_type.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_visibility.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/2d4797e07f0f271442ff6d42fffc6dd2bbe3af68/_visibility.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_01_settings_colors.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_01_settings_colors.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_02_settings_typography.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_02_settings_typography.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_03_settings_mixins_media_queries.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_03_settings_mixins_media_queries.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_04_settings_global.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_04_settings_global.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_05_normalize.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_05_normalize.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_06_typography.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_06_typography.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_07_layout.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_07_layout.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_09_elements.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_09_elements.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_11_syntax-highlighting.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_11_syntax-highlighting.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_functions.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/.sass-cache/634af1732fbc0b2772e7c5f5413353291f5c18e5/_functions.scssc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2021-08-25-precision-vs-recall.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithms/literature reviews/beginners-guide-object-detection/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithms/literature reviews/beginners-guide-object-detection/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/algorithms/literature reviews/object-detection-challenges/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/css/styles_feeling_responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/css/styles_feeling_responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/xslt/atom.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/xslt/atom.xslt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/assets/xslt/rss.xslt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/assets/xslt/rss.xslt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.jekyll-metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/2022-04-03-accuracy-precision-recall.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/archive_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/archive_template/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/index_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/index_template/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/blog/page2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/blog/page2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/changelog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/changelog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/contact/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/contact/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/data/web scraping/gather-youtube-data/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/gather-youtube-data/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/python-web-scraping/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/data/web scraping/realpython-podcast-web-scraping/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/data/web scraping/realpython-podcast-web-scraping/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/design/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/design/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/documentation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/documentation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/events/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/events/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/getting-started/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/getting-started/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/headers/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/headers/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/humans.txt" beforeDir="false" afterPath="$PROJECT_DIR$/_site/humans.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/pr_accuracy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/pr_training_data.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/images/precision_recall_header.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/info/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/info/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/mathematics/applications/gini-use-cases/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/applications/gini-use-cases/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/mathematics/course-report-math-ds/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/course-report-math-ds/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/visualizations/planetary-birthday-problem/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/nlp/spacy-for-the-win/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/pages/info_template/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/pages/info_template/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/mathematics/data/accuracy-precision-recall/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/mathematics/data/accuracy-precision-recall/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/python/course-report-python-ds/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/python/course-report-python-ds/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/python/datetime/delorean-datetime-manipulation/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/python/datetime/delorean-datetime-manipulation/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/roadmap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/roadmap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/search/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/search/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/matplotlib-improvements/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_site/visualizations/puzzles/down-and-up/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/visualizations/puzzles/down-and-up/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/pr_accuracy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/pr_training_data.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/precision_recall_header.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -115,7 +51,7 @@
           <entry key="jpg" value="25" />
           <entry key="js" value="4" />
           <entry key="list-posts" value="1" />
-          <entry key="md" value="232" />
+          <entry key="md" value="234" />
           <entry key="png" value="46" />
           <entry key="py" value="1" />
           <entry key="scss" value="47" />
@@ -131,7 +67,7 @@
           <entry key="HTML" value="78" />
           <entry key="Image" value="74" />
           <entry key="JavaScript" value="4" />
-          <entry key="Markdown" value="231" />
+          <entry key="Markdown" value="233" />
           <entry key="PLAIN_TEXT" value="56" />
           <entry key="Python" value="1" />
           <entry key="Scratch" value="3" />
@@ -144,7 +80,7 @@
           <entry key="2019-11-12-gather-youtube-data" value="7" />
           <entry key="html" value="189" />
           <entry key="js" value="51" />
-          <entry key="md" value="180741" />
+          <entry key="md" value="181231" />
           <entry key="py" value="20" />
           <entry key="scss" value="50" />
           <entry key="yml" value="277" />
@@ -155,7 +91,7 @@
           <entry key="Bash" value="9" />
           <entry key="HTML" value="189" />
           <entry key="JavaScript" value="51" />
-          <entry key="Markdown" value="180696" />
+          <entry key="Markdown" value="181186" />
           <entry key="PLAIN_TEXT" value="50" />
           <entry key="Python" value="54" />
           <entry key="Scratch" value="9" />
@@ -186,11 +122,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
+        <entry file="file://$PROJECT_DIR$/_posts/math/2020-06-05-gini-use-cases.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="77">
-                <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+              <first_editor relative-caret-position="690">
+                <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
               </first_editor>
               <second_editor />
             </state>
@@ -198,11 +134,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_drafts/2022-04-03-accuracy-precision-recall.md">
+        <entry file="file://$PROJECT_DIR$/_posts/math/2022-04-03-accuracy-precision-recall.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="353">
-                <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+              <first_editor relative-caret-position="120">
+                <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               </first_editor>
               <second_editor />
             </state>
@@ -304,14 +240,14 @@
         <option value="$PROJECT_DIR$/_data/socialmedia.yml" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_posts/math/2021-08-25-precision-vs-recall.md" />
-        <option value="$PROJECT_DIR$/_posts/math/2022-04-03-accuracy-precision-recall.md" />
         <option value="$PROJECT_DIR$/_drafts/2022-04-03-accuracy-precision-recall.md" />
+        <option value="$PROJECT_DIR$/_posts/math/2022-04-03-accuracy-precision-recall.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="104" />
-    <option name="y" value="23" />
+    <option name="x" value="462" />
+    <option name="y" value="35" />
     <option name="width" value="1300" />
     <option name="height" value="807" />
   </component>
@@ -443,7 +379,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="104" y="23" width="1300" height="807" extended-state="0" />
+    <frame x="462" y="35" width="1300" height="807" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22846153" />
@@ -774,11 +710,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/2022-04-03-accuracy-precision-recall.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="628">
+            <caret line="91" column="13" lean-forward="true" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="-1013">
+            <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/math/2020-06-05-gini-use-cases.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor>
-            <caret selection-end-line="26" selection-end-column="3" />
+          <first_editor relative-caret-position="690">
+            <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
           </first_editor>
           <second_editor />
         </state>
@@ -787,35 +750,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/math/2022-04-03-accuracy-precision-recall.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/math/2018-12-10-planetary-birthday-problem.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="77">
-            <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_drafts/2022-04-03-accuracy-precision-recall.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="353">
-            <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+          <first_editor relative-caret-position="120">
+            <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           </first_editor>
           <second_editor />
         </state>
