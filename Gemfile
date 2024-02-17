@@ -12,3 +12,5 @@ gem 'asciidoctor', '~> 1.5.4'
 gem 'coderay', '1.1.1'
 
 gem "kramdown-parser-gfm"
+
+gem "webrick", "~> 1.8"

@@ -71,6 +71,7 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
+    webrick (1.8.1)
 
 PLATFORMS
   ruby
@@ -83,6 +84,7 @@ DEPENDENCIES
   jekyll-gist
   jekyll-paginate
   kramdown-parser-gfm
+  webrick (~> 1.8)
 
 BUNDLED WITH
    1.17.1
