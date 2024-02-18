@@ -3,10 +3,10 @@
 <?xml-stylesheet type="text/css" href="//assets/css/atom.css" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
-	<title>Kimberly Fessel's Blog</title>
-	<updated>2022-04-03T17:51:11-04:00</updated>
+	<title>Kimberly Fessel&apos;s Blog</title>
+	<updated>2024-02-17T15:23:13-05:00</updated>
 
-	<subtitle>Kimberly Fessel is Lead Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
+	<subtitle>Kimberly Fessel is a data science consultant. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!</subtitle>
 
 	
 		
@@ -466,8 +466,8 @@ which is even speedier to compute.&lt;/p&gt;
 	
 		<entry>
 			<id>http://localhost:4000//data/web%20scraping/python-web-scraping/</id>
-			<title>Let's Scrape the Web: PyCon 2020 Video Tutorial</title>
-			<link href="http://localhost:4000//data/web%20scraping/python-web-scraping/" rel="alternate" type="text/html" title="Let's Scrape the Web: PyCon 2020 Video Tutorial" />
+			<title>Let&apos;s Scrape the Web: PyCon 2020 Video Tutorial</title>
+			<link href="http://localhost:4000//data/web%20scraping/python-web-scraping/" rel="alternate" type="text/html" title="Let&apos;s Scrape the Web: PyCon 2020 Video Tutorial" />
 			<updated>2020-05-04T00:00:00-04:00</updated>
 
 			
@@ -702,7 +702,7 @@ var height = 400;
 var svg = d3.select(&quot;div#pencilContainer&quot;).append(&quot;svg&quot;)
     .attr(&quot;width&quot;, width*.6)
     .attr(&quot;height&quot;, height)
-    .style('transform', 'translate(40%, 0%)');
+    .style(&apos;transform&apos;, &apos;translate(40%, 0%)&apos;);
 
 var objects = svg.append(&quot;g&quot;);
 
@@ -724,9 +724,9 @@ var rects = pencils.append(&quot;rect&quot;)
     .style(&quot;stroke&quot;, pencilColor);
 
 var triangles = pencils.append(&quot;path&quot;)
-    .attr('d', function(d, i) {
+    .attr(&apos;d&apos;, function(d, i) {
         var x = 0, y = 50;
-        return 'M ' + (50+x) + ' ' + y + ' l ' + y/2 + ' ' + -y + ' l ' + y/2 + ' ' + y + ' z';
+        return &apos;M &apos; + (50+x) + &apos; &apos; + y + &apos; l &apos; + y/2 + &apos; &apos; + -y + &apos; l &apos; + y/2 + &apos; &apos; + y + &apos; z&apos;;
      })
     .attr(&quot;fill&quot;, pencilColor)
     .style(&quot;fill-opacity&quot;, .4)
@@ -734,9 +734,9 @@ var triangles = pencils.append(&quot;path&quot;)
     .style(&quot;stroke&quot;, pencilColor);
 
 var tips = pencils.append(&quot;path&quot;)
-    .attr('d', function(d, i) {
+    .attr(&apos;d&apos;, function(d, i) {
         var x = 12.5, y = 25;
-        return 'M ' + (50+x) + ' ' + y + ' l ' + y/2 + ' ' + -y + ' l ' + y/2 + ' ' + y + ' z';
+        return &apos;M &apos; + (50+x) + &apos; &apos; + y + &apos; l &apos; + y/2 + &apos; &apos; + -y + &apos; l &apos; + y/2 + &apos; &apos; + y + &apos; z&apos;;
     })
     .style(&quot;fill-opacity&quot;, .7)
     .style(&quot;stroke-width&quot;,&quot;.2em&quot;)
@@ -842,7 +842,7 @@ Now you understand the origin of the puzzle.&lt;/p&gt;
 
 &lt;div style=&quot;width: 100%; padding-bottom: 15px&quot; id=&quot;contraContainer&quot;&gt;
     &lt;div style=&quot;float: left; width: 10%; height: 400; padding-left: 5%;&quot;&gt;
-        &lt;input name=&quot;danceButton&quot; type=&quot;button&quot; value=&quot;Dance!&quot; onclick=&quot;moveBlushers('left', 0); sickBlusher(); moveBlushers('center', 2500); sickGrinner();&quot; /&gt;
+        &lt;input name=&quot;danceButton&quot; type=&quot;button&quot; value=&quot;Dance!&quot; onclick=&quot;moveBlushers(&apos;left&apos;, 0); sickBlusher(); moveBlushers(&apos;center&apos;, 2500); sickGrinner();&quot; /&gt;
         &lt;br /&gt;
         &lt;input name=&quot;resetButton&quot; type=&quot;button&quot; value=&quot;Reset&quot; onclick=&quot;makeWell()&quot; /&gt;
     &lt;/div&gt;
@@ -862,7 +862,7 @@ var h = 200;
 var canvas = d3.select(&quot;div#contraContainer&quot;).append(&quot;svg&quot;)
     .attr(&quot;width&quot;, w*.75)
     .attr(&quot;height&quot;, h)
-    .style('transform', 'translate(30%, 0%)');
+    .style(&apos;transform&apos;, &apos;translate(30%, 0%)&apos;);
 
 var blushGroup = canvas.append(&quot;g&quot;)
     .attr(&quot;id&quot;, &quot;blushers&quot;);
@@ -871,7 +871,7 @@ var blushers = blushGroup.selectAll(&quot;image&quot;)
   .data(contraData)
   .enter()
   .append(&quot;image&quot;)
-    .attr('xlink:href', function (d, i) {
+    .attr(&apos;xlink:href&apos;, function (d, i) {
         if (i == 0) {
           return sickEmoji;
         }
@@ -881,8 +881,8 @@ var blushers = blushGroup.selectAll(&quot;image&quot;)
     })
     .attr(&quot;x&quot;, function (d, i) { return w/75+d*(w/10); })
     .attr(&quot;y&quot;, 0)
-    .attr('width', w/13)
-    .attr('height', w/13);
+    .attr(&apos;width&apos;, w/13)
+    .attr(&apos;height&apos;, w/13);
     
 var grinGroup = canvas.append(&quot;g&quot;)
     .attr(&quot;id&quot;, &quot;grinners&quot;);
@@ -891,11 +891,11 @@ var grinners = grinGroup.selectAll(&quot;image&quot;)
   .data(contraData)
   .enter()
   .append(&quot;image&quot;)
-    .attr('xlink:href', grinEmoji)
+    .attr(&apos;xlink:href&apos;, grinEmoji)
     .attr(&quot;x&quot;, function (d, i) { return w/75+d*(w/10); })
     .attr(&quot;y&quot;, 100)
-    .attr('width', w/14)
-    .attr('height', w/14);
+    .attr(&apos;width&apos;, w/14)
+    .attr(&apos;height&apos;, w/14);
 
 var sickNum = 1;
 
@@ -962,7 +962,7 @@ function makeWell() {
 
     d3.select(&quot;#blushers&quot;)
       .selectAll(&quot;image&quot;)
-        .attr('xlink:href', function (d, i) {
+        .attr(&apos;xlink:href&apos;, function (d, i) {
             if (i == 0) { return sickEmoji; }
             else { return blushEmoji; }
         })
@@ -1025,7 +1025,7 @@ function makeWell() {
 					
 				</author>
 			
-			<summary>&lt;em&gt;You can mine YouTube's massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, the video transcripts, as well as YouTube search results.&lt;/em&gt;</summary>
+			<summary>&lt;em&gt;You can mine YouTube&apos;s massive content library for many different types of data.  This post provides instructions for obtaining the videos themselves, the video transcripts, as well as YouTube search results.&lt;/em&gt;</summary>
 			<content type="html" xml:base="http://localhost:4000//data/web%20scraping/gather-youtube-data/">&lt;p&gt;Since its 2005 inception, YouTube has entertained, educated, and inspired more than &lt;a href=&quot;https://biographon.com/youtube-stats/&quot;&gt;one billion people&lt;/a&gt;.  It now ranks as the &lt;a href=&quot;https://www.alexa.com/siteinfo/youtube.com&quot;&gt;2nd most visited website&lt;/a&gt; on the planet, and its users upload 300 hours of video content every minute.  YouTube clearly dominates as the world’s premier source of &lt;a href=&quot;https://www.youtube.com/watch?v=_OBlgSz8sSM&quot;&gt;cute baby moments&lt;/a&gt;, &lt;a href=&quot;https://www.youtube.com/watch?v=vq8G81oOHhY&quot;&gt;epic sports fails&lt;/a&gt;, and &lt;a href=&quot;https://www.youtube.com/watch?v=AS7_6Uv_Bn0&quot;&gt;hilarious cat videos&lt;/a&gt;, but its vast troves of content can also be leverage to strengthen a wide variety of data science projects.  In this post, I share how you can gain access to three types of YouTube data: the videos themselves for use in computer vision tasks, the video transcripts for natural language processing (NLP), and video search results for hybrid machine learning efforts.&lt;/p&gt;
 
 &lt;p&gt;Please continue to the &lt;a href=&quot;https://www.thisismetis.com/blog/how-to-gather-data-from-youtube&quot;&gt;Metis blog&lt;/a&gt; to read my full post covering data collection from YouTube.&lt;/p&gt;
