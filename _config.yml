@@ -14,7 +14,7 @@ title: "Kimberly Fessel's Blog"
 slogan: "Discovering data's what why and how"
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
-description: 'Kimberly Fessel is a data science consultant. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!'
+description: 'Kimberly Fessel is Lead Data Scientist at Metis. Her enthusiasm for data storytelling often leads her toward better math, better visuals, and better science!'
 
 # The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :)
 credits: '<p>Template with &hearts; by <a href="http://phlow.de/">Phlow</a> with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> based on <a href="http://phlow.github.io/feeling-responsive/">Feeling Responsive</a>.</p>'
@@ -142,9 +142,9 @@ defaults:
 #   ___/ / /___/ /_/ /
 #  /____/_____/\____/    Verify Website to Webmaster Tools
 
-# google_author:             'https://plus.google.com/105464329327164540117'
-google_site_verification:  '0i7S3_9OAkyZCUbwxJm894Lwm5ZCXZUf7-elR3o0YhU'
-# bing_webmastertools_id:    '0FB4C028ABCF07C908C54386ABD2D97F'
+google_author:             'https://plus.google.com/105464329327164540117'
+google_site_verification:  'Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ'
+bing_webmastertools_id:    '0FB4C028ABCF07C908C54386ABD2D97F'
 # yandex_site_verification:  ''
 # alexa_verify_id:           ''
 
@@ -229,8 +229,7 @@ sass:
 #
 # used in _includes/footer_scripts
 
-google_analytics_tracking_id: 'G-XR4FVBBJVE'
-#'UA-131656438-1'
+google_analytics_tracking_id: 'UA-131656438-1'
 
 
 
